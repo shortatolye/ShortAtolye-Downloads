@@ -1,0 +1,22 @@
+{
+ "version": "2026.11.22",
+ "note": "Gokyuzu Haritam guncelleme dosyasi. Yeni ogeleri ilgili listeye ekleyip version alanini degistirin. s: uydugu burclar.",
+ "films": [
+  {"t": "Oyuncak Hikayesi 5", "a": "Andrew Stanton, McKenna Harris", "y": 2026, "s": ["Yengeç", "Aslan", "Balık"]},
+  {"t": "D.İ.S.C.O.", "a": "Yerli komedi", "y": 2026, "s": ["Aslan", "İkizler"]},
+  {"t": "Efes'in Sırrı", "a": "Gökhan Tiryaki", "y": 2026, "s": ["Yay", "Akrep"]},
+  {"t": "Kardeş Takımı 3", "a": "Bedran Güzel", "y": 2026, "s": ["İkizler", "Aslan"]},
+  {"t": "Hoplayanlar", "a": "Daniel Chong", "y": 2026, "s": ["İkizler", "Kova"]},
+  {"t": "Avatar: Kül ve Ateş", "a": "James Cameron", "y": 2025, "s": ["Yay", "Balık"]}
+ ],
+ "books": [
+  {"t": "Bekle Beni", "a": "Zülfü Livaneli", "y": 0, "s": ["Yengeç", "Balık"]},
+  {"t": "Sırların Sırrı", "a": "Dan Brown", "y": 2025, "s": ["Akrep", "Kova", "İkizler"]},
+  {"t": "Sarı Yüz", "a": "R.F. Kuang", "y": 2023, "s": ["İkizler", "Akrep"]},
+  {"t": "Kendime Düşünceler", "a": "Marcus Aurelius", "y": 0, "s": ["Oğlak", "Başak"]}
+ ],
+ "foods": [],
+ "places": [],
+ "music": [],
+ "chars": []
+}
