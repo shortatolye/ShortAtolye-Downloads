@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle state) {
         super.onCreate(state);
         web = new WebView(this);
-        web.setBackgroundColor(0xFF0D1022);
+        web.setBackgroundColor(0xFFF7F4EE);
 
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
