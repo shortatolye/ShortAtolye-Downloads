@@ -32,33 +32,33 @@ Daemon will be stopped at the end of the build
 > Task :app:processReleaseManifest
 > Task :app:desugarReleaseFileDependencies
 > Task :app:mergeReleaseStartupProfile
+> Task :app:processReleaseManifestForPackage
 > Task :app:mergeReleaseArtProfile
 > Task :app:mergeReleaseShaders
 > Task :app:compileReleaseShaders NO-SOURCE
 > Task :app:generateReleaseAssets UP-TO-DATE
 > Task :app:mergeReleaseAssets
-> Task :app:processReleaseManifestForPackage
 > Task :app:compressReleaseAssets
 > Task :app:extractReleaseVersionControlInfo
-> Task :app:processReleaseJavaRes NO-SOURCE
 > Task :app:processReleaseResources
-> Task :app:collectReleaseDependencies
+> Task :app:processReleaseJavaRes NO-SOURCE
 > Task :app:mergeReleaseJavaResource
 > Task :app:mergeExtDexRelease
 > Task :app:compileReleaseJavaWithJavac
 > Task :app:dexBuilderRelease
 > Task :app:mergeReleaseGlobalSynthetics
+> Task :app:collectReleaseDependencies
 > Task :app:sdkReleaseDependencyData
 > Task :app:validateSigningRelease
+> Task :app:optimizeReleaseResources
 > Task :app:writeReleaseAppMetadata
 > Task :app:writeReleaseSigningConfigVersions
-> Task :app:optimizeReleaseResources
 > Task :app:mergeDexRelease
 > Task :app:compileReleaseArtProfile
 > Task :app:packageRelease
 > Task :app:createReleaseApkListingFileRedirect
 > Task :app:assembleRelease
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1795447221132.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1795449659683.json
 
-BUILD SUCCESSFUL in 56s
+BUILD SUCCESSFUL in 44s
 38 actionable tasks: 38 executed
