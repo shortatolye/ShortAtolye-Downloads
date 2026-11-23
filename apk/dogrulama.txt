@@ -1,0 +1,113 @@
+== imza ==
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v3.2 scheme (APK Signature Scheme v3.2): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+V2 Signer: certificate DN: CN=Gokyuzu Haritam, O=ShortAtolye, C=TR
+V2 Signer: certificate SHA-256 digest: 592d544e6e0fdaadb999b81352165dd912fd38a3a1fc3c54c1e8950be8cc1b84
+V2 Signer: certificate SHA-1 digest: fdb140c44c447e049abc80f970c4a20a0327214c
+V2 Signer: certificate MD5 digest: aaa1bb3abaab2e7491225a3d0179d443
+V2 Signer: key algorithm: RSA
+V2 Signer: key size (bits): 2048
+V2 Signer: public key SHA-256 digest: 7b8a03b149e6a5a19fa1d63d88bf9b064b5391998cecf5f91b5833fd29d6899d
+V2 Signer: public key SHA-1 digest: b91ba170edffacbb19efb0e1ea001d2c49de2389
+V2 Signer: public key MD5 digest: 62f996fa155f188f0489eafc3f37b713
+== paket ==
+package: name='com.shortatolye.gokyuzuharitam' versionCode='1' versionName='1.0' platformBuildVersionName='14' platformBuildVersionCode='34' compileSdkVersion='34' compileSdkVersionCodename='14'
+targetSdkVersion:'34'
+application-label:'Gökyüzü Haritam'
+application-label-af:'Gökyüzü Haritam'
+application-label-am:'Gökyüzü Haritam'
+application-label-ar:'Gökyüzü Haritam'
+application-label-as:'Gökyüzü Haritam'
+application-label-az:'Gökyüzü Haritam'
+application-label-be:'Gökyüzü Haritam'
+application-label-bg:'Gökyüzü Haritam'
+application-label-bn:'Gökyüzü Haritam'
+application-label-bs:'Gökyüzü Haritam'
+application-label-ca:'Gökyüzü Haritam'
+application-label-cs:'Gökyüzü Haritam'
+application-label-da:'Gökyüzü Haritam'
+application-label-de:'Gökyüzü Haritam'
+application-label-el:'Gökyüzü Haritam'
+application-label-en-AU:'Gökyüzü Haritam'
+application-label-en-CA:'Gökyüzü Haritam'
+application-label-en-GB:'Gökyüzü Haritam'
+application-label-en-IN:'Gökyüzü Haritam'
+application-label-en-XC:'Gökyüzü Haritam'
+application-label-es:'Gökyüzü Haritam'
+application-label-es-US:'Gökyüzü Haritam'
+application-label-et:'Gökyüzü Haritam'
+application-label-eu:'Gökyüzü Haritam'
+application-label-fa:'Gökyüzü Haritam'
+application-label-fi:'Gökyüzü Haritam'
+application-label-fr:'Gökyüzü Haritam'
+application-label-fr-CA:'Gökyüzü Haritam'
+application-label-gl:'Gökyüzü Haritam'
+application-label-gu:'Gökyüzü Haritam'
+application-label-hi:'Gökyüzü Haritam'
+application-label-hr:'Gökyüzü Haritam'
+application-label-hu:'Gökyüzü Haritam'
+application-label-hy:'Gökyüzü Haritam'
+application-label-in:'Gökyüzü Haritam'
+application-label-is:'Gökyüzü Haritam'
+application-label-it:'Gökyüzü Haritam'
+application-label-iw:'Gökyüzü Haritam'
+application-label-ja:'Gökyüzü Haritam'
+application-label-ka:'Gökyüzü Haritam'
+application-label-kk:'Gökyüzü Haritam'
+application-label-km:'Gökyüzü Haritam'
+application-label-kn:'Gökyüzü Haritam'
+application-label-ko:'Gökyüzü Haritam'
+application-label-ky:'Gökyüzü Haritam'
+application-label-lo:'Gökyüzü Haritam'
+application-label-lt:'Gökyüzü Haritam'
+application-label-lv:'Gökyüzü Haritam'
+application-label-mk:'Gökyüzü Haritam'
+application-label-ml:'Gökyüzü Haritam'
+application-label-mn:'Gökyüzü Haritam'
+application-label-mr:'Gökyüzü Haritam'
+application-label-ms:'Gökyüzü Haritam'
+application-label-my:'Gökyüzü Haritam'
+application-label-nb:'Gökyüzü Haritam'
+application-label-ne:'Gökyüzü Haritam'
+application-label-nl:'Gökyüzü Haritam'
+application-label-or:'Gökyüzü Haritam'
+application-label-pa:'Gökyüzü Haritam'
+application-label-pl:'Gökyüzü Haritam'
+application-label-pt:'Gökyüzü Haritam'
+application-label-pt-BR:'Gökyüzü Haritam'
+application-label-pt-PT:'Gökyüzü Haritam'
+application-label-ro:'Gökyüzü Haritam'
+application-label-ru:'Gökyüzü Haritam'
+application-label-si:'Gökyüzü Haritam'
+application-label-sk:'Gökyüzü Haritam'
+application-label-sl:'Gökyüzü Haritam'
+application-label-sq:'Gökyüzü Haritam'
+application-label-sr:'Gökyüzü Haritam'
+application-label-sr-Latn:'Gökyüzü Haritam'
+application-label-sv:'Gökyüzü Haritam'
+application-label-sw:'Gökyüzü Haritam'
+application-label-ta:'Gökyüzü Haritam'
+application-label-te:'Gökyüzü Haritam'
+application-label-th:'Gökyüzü Haritam'
+application-label-tl:'Gökyüzü Haritam'
+application-label-tr:'Gökyüzü Haritam'
+application-label-uk:'Gökyüzü Haritam'
+application-label-ur:'Gökyüzü Haritam'
+application-label-uz:'Gökyüzü Haritam'
+application-label-vi:'Gökyüzü Haritam'
+application-label-zh-CN:'Gökyüzü Haritam'
+application-label-zh-HK:'Gökyüzü Haritam'
+application-label-zh-TW:'Gökyüzü Haritam'
+application-label-zu:'Gökyüzü Haritam'
+launchable-activity: name='com.shortatolye.gokyuzuharitam.MainActivity'  label='' icon=''
+== boyut ==
+-rw-r--r-- 1 runner runner 1928213 Nov 23 15:21 apk/GokyuzuHaritam.apk
+== sha256 ==
+7fa997644009591af7f5250cf77f6f66ca378bcfa6c3cbcd6a97869c268bb70a  apk/GokyuzuHaritam.apk
