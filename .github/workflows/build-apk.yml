@@ -1,0 +1,58 @@
+name: APK derle
+
+on:
+  push:
+    branches: [android-app]
+    paths-ignore: ['apk/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apk-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: APK derle
+        run: |
+          set -o pipefail
+          mkdir -p apk
+          gradle --no-daemon assembleRelease 2>&1 | tee apk/derleme-kaydi.txt
+
+      - name: APK'yi dogrula
+        run: |
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          APK=app/build/outputs/apk/release/app-release.apk
+          cp "$APK" apk/GokyuzuHaritam.apk
+          {
+            echo "== imza =="; "$BT/apksigner" verify --verbose --print-certs apk/GokyuzuHaritam.apk
+            echo "== paket =="; "$BT/aapt2" dump badging apk/GokyuzuHaritam.apk | grep -E "^(package|sdkVersion|targetSdkVersion|application-label|launchable)"
+            echo "== boyut =="; ls -l apk/GokyuzuHaritam.apk
+            echo "== sha256 =="; sha256sum apk/GokyuzuHaritam.apk
+          } > apk/dogrulama.txt 2>&1
+          cat apk/dogrulama.txt
+
+      - name: Sonucu depoya yaz
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          echo "${{ job.status }} $(date -u +%FT%TZ) ${GITHUB_SHA}" > apk/durum.txt
+          git add apk/
+          git commit -m "APK derleme sonucu: ${{ job.status }}" || exit 0
+          git push
