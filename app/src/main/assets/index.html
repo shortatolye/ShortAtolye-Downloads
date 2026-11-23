@@ -2264,11 +2264,16 @@ function planetSVG(key,size){
 
 // ===== ISIM VERITABANI =====
 // Ad|Arapca yazilis (bos: Turkce kokenli, ebced yaklasik)|cinsiyet e/k/u|koken|etiket (Q Kur'an'da gecer, P peygamber, S Islam tarihinde onemli sahsiyet; a/t/h/s anlam temasi ates/toprak/hava/su)|anlam
-const NAMES_RAW=`Abdullah|عبدالله|e|Ar|QS|Allah'ın kulu
-Abdurrahman|عبدالرحمن|e|Ar|S|Rahmân olan Allah'ın kulu
-Abdülkadir|عبدالقادر|e|Ar|S|Kudret sahibi Allah'ın kulu
-Abdülhamit|عبدالحميد|e|Ar||Övgüye layık olan Allah'ın kulu
-Abdülkerim|عبدالكريم|e|Ar||Cömert olan Allah'ın kulu
+const NAMES_RAW=`Abdullah|عبدالله|e|Ar|AQS|Allah'ın kulu
+Abdurrahman|عبدالرحمن|e|Ar|AS|Rahmân olan Allah'ın kulu
+Abdürrahim|عبدالرحيم|e|Ar|B|Rahîm olan Allah'ın kulu
+Abdülaziz|عبدالعزيز|e|Ar|B|Azîz olan Allah'ın kulu
+Abdüssamed|عبدالصمد|e|Ar|B|Samed olan Allah'ın kulu
+Abdülvahap|عبدالوهاب|e|Ar|B|Vehhâb olan Allah'ın kulu
+Abdülbaki|عبدالباقي|e|Ar|B|Bâkî olan Allah'ın kulu
+Abdülkadir|عبدالقادر|e|Ar|BS|Kudret sahibi Allah'ın kulu
+Abdülhamit|عبدالحميد|e|Ar|B|Övgüye layık olan Allah'ın kulu
+Abdülkerim|عبدالكريم|e|Ar|B|Cömert olan Allah'ın kulu
 Ahmet|احمد|e|Ar|QS|Çok övülmüş; Peygamber Efendimizin isimlerinden, Kur'an'da Saf suresinde geçer
 Ahsen|احسن|u|Ar|Q|En güzel, daha iyi
 Akif|عاكف|e|Ar|Q|Kendini ibadete veren, bir işe sebatla bağlanan
@@ -2390,7 +2395,21 @@ Zekeriya|زكريا|e|İb|QP|Hz. Zekeriya
 Zeki|ذكي|e|Ar||Akıllı, anlayışlı
 Zeyd|زيد|e|Ar|QS|Artma, çoğalma; Kur'an'da adı geçen tek sahabe
 Zübeyr|زبير|e|Ar|S|Güçlü, akıllı; sahabe Hz. Zübeyr
+Bayram||e|Tr||Bayram, sevinç günü
+Bedir|بدر|e|Ar|h|Dolunay; Bedir Savaşı
+Cuma|جمعه|e|Ar|Q|Cuma günü; toplanma (Cuma suresi)
+Kadir|قادر|e|Ar||Gücü yeten; Kadir gecesine nispetle de verilir
+Kurban|قربان|e|Ar|Q|Allah'a yakınlaşmak için sunulan; Kurban Bayramı
+Mevlüt|مولود|e|Ar||Doğan, yeni doğmuş; Mevlid kandili
+Muharrem|محرم|e|Ar||Hicri yılın ilk ayı; saygın, dokunulmaz
+Recep|رجب|e|Ar||Hicri takvimin yedinci ayı; saygı gösterilen
+Şaban|شعبان|e|Ar||Hicri takvimin sekizinci ayı
+Şafak|شفق|u|Ar|Qh|Tan kızıllığı (İnşikâk suresinde geçer)
 Ada||k|Tr|s|Ada
+Emetullah|امةالله|k|Ar|B|Allah'ın kulu (kadın)
+Bedriye|بدريه|k|Ar|h|Dolunay gibi parlak
+Kadriye|قدريه|k|Ar||Kadir gecesine ait, değerli
+Nisan|نيسان|k|Ar|s|Yılın dördüncü ayı; bereketli yağmurlarıyla bilinir
 Aliye|عاليه|k|Ar|Q|Yüce, yüksek
 Alya|عليا|k|Ar|h|Yüce, yüksek; gökyüzü
 Asya|آسيا|k|Rum|t|Asya kıtası
@@ -2409,7 +2428,6 @@ Defne|دفنه|k|Rum|t|Defne ağacı; zafer ve barış simgesi
 Derya|دريا|k|Fa|s|Deniz, okyanus
 Dilara|دلآرا|k|Fa||Gönül süsleyen, sevgili
 Duru||k|Tr|s|Berrak, saf, temiz
-Ecrin|اجرين|k|Ar||Mükâfatlar, sevaplar
 Ela||k|Tr|t|Ela göz rengi; açık kahverengi
 Elif|الف|k|Ar||Arap alfabesinin ilk harfi; ince uzun, düzgün boylu
 Emine|امينه|k|Ar|S|Güvenilir kadın
@@ -2629,109 +2647,151 @@ const DEEP_STRONG=[
 "Haritanda hava baskın: zihnin, iletişim gücün ve insanlarla kurduğun bağlar seni tanımlar. Fikirler senin için nefes almak gibidir.",
 "Haritanda su baskın: sezgilerin, merhametin ve duygusal derinliğin seni tanımlar. İnsanlar seninle konuşunca anlaşıldığını hisseder."];
 
-// ===== ISIM ONERISI: anlam + ebced + yildizname (isim ve anne ismi) + dogum bilgisi =====
-const EL_NAME=['ateş','toprak','hava','su'];
-const EL_COMPAT=(a,b)=>a===b?2:((a===0&&b===2)||(a===2&&b===0)||(a===1&&b===3)||(a===3&&b===1))?1:0;
+// ===== ISIM ONERISI: tesmiye (ad koyma) adabi + lugat + takvim gelenekleri + ses uyumu =====
+// Gayba dair hicbir hesap kullanilmaz: yildizname, burc, esma eslestirmesi ve astrolojik unsur yoktur.
 const NAME_IDX={};for(const x of NAMES){const k=trKey(x.n);(NAME_IDX[k]=NAME_IDX[k]||[]).push(x);}
-function nameInfo(name,arOverride){
+function nameInfo(name){
   const k=trKey(name);const db=(NAME_IDX[k]||[])[0];
-  if(arOverride&&/[؀-ۿ]/.test(arOverride)){const ar=arOverride.replace(/\s/g,'');return{n:name,ar,v:ebced(ar),exact:true,db};}
   if(db&&db.ar)return{n:name,ar:db.ar,v:ebced(db.ar),exact:true,db};
   const parts=String(name).trim().split(/\s+/).filter(Boolean).map(w=>tr2ar(w));
-  const ar=parts.map(p=>p.ar).join(' '),exact=parts.every(p=>p.exact);return{n:name,ar,v:ebced(ar),exact,db};
+  const ar=parts.map(p=>p.ar).join(' ');return{n:name,ar,v:ebced(ar),exact:parts.every(p=>p.exact),db};
 }
 const syl=n=>(trKey(n).match(/[aeiou]/g)||[]).length;
-// Yildizname usulu: (isim + anne ismi) ebced toplami 12'ye bolunur; kalan burcu verir (1 Hamel ... 0 = Hut)
-function yildizname(total){const r=total%12;return r===0?11:r-1;}
+// Yalniz Allah'a ait olup tek basina ad olarak konmayan isimler (basina "Abd" getirilerek konur)
+const DIVINE_ONLY=new Set(['allah','rahman','samed','ahad','halik','hallak','kuddus','kayyum','rezzak','muheymin','mutekebbir','cebbar','kahhar','bari','musavvir','malikulmulk','zulcelal','mubdi','muid','mumit','muhyi']);
+// Diyanet gorevlilerince anlami nedeniyle uygun bulunmayan bazi isimler
+const NAME_CAUTION={ecrin:'"ücret" anlamına geldiği için Diyanet görevlilerince önerilmiyor',sanem:'"put" anlamına gelir',aleyna:'anlamı nedeniyle Diyanet görevlilerince önerilmiyor'};
+// Hicri takvim (aritmetik takvim; resmi takvimle 1 gün fark olabilir)
+const HIJRI_M=['Muharrem','Safer','Rebiülevvel','Rebiülahir','Cemaziyelevvel','Cemaziyelahir','Recep','Şaban','Ramazan','Şevval','Zilkade','Zilhicce'];
+const hijriToJD=(y,m,d)=>d+Math.ceil(29.5*(m-1))+(y-1)*354+Math.floor((3+11*y)/30)+1948439.5-1;
+function hijriArith(jd){jd=Math.floor(jd-.5)+.5;const y=Math.floor((30*(jd-1948439.5)+10646)/10631);const m=Math.min(12,Math.ceil((jd-(29+hijriToJD(y,1,1)))/29.5)+1);return{y,m,d:jd-hijriToJD(y,m,1)+1};}
+// Astronomik ay basi: kavusumdan sonra, UTC gece yarisini 2 saat gecerken Ay-Gunes uzanimi 8 dereceyi asmissa ay ertesi gun baslar
+// (Turkiye'nin kullandigi uluslararasi takvim olcutune yakin bir yaklasim; 2023-2026 arasi 18 bilinen tarihin 17'si dogru)
+const elongAt=jd=>{const a=rawPositions(jd);return nrm(a.moon-a.sun);};
+function conjBefore(jd){let t=jd,e=elongAt(t);t-=e/12.19;for(let i=0;i<6;i++){e=elongAt(t);if(e>180)e-=360;t-=e/12.19;}return t;}
+function hijriMonthStart(conj){const D=Math.floor(conj-.5)+.5,T=D+1+2/24,e=elongAt(T);return e>=8&&e<180?D+1:D+2;}
+function jdToHijri(jd){
+  jd=Math.floor(jd-.5)+1;let c=conjBefore(jd),s=hijriMonthStart(c);if(s>jd+1e-4){c=conjBefore(c-2);s=hijriMonthStart(c);}
+  const lab=hijriArith(s+14);return{y:lab.y,m:lab.m,d:Math.floor(jd-s+1e-6)+1};
+}
+const near=(h,m,d,tol)=>h.m===m&&Math.abs(h.d-d)<=(tol??1);
+function birthCustoms(C){
+  const H=C.hijri,out=[],add=(names,why)=>out.push({names,why});
+  if(near(H,3,12))add(['Mevlüt','Mevlüde','Muhammed','Ahmet'],'Doğum, Mevlid Kandili\'ne (12 Rebiülevvel) denk geliyor; bu geceye nispetle Mevlüt, Mevlüde ya da Peygamber Efendimizin adı verilegelmiştir.');
+  if(near(H,7,27))add(['Miraç'],'Doğum, Miraç Kandili\'ne (27 Recep) denk geliyor; bu geceye nispetle Miraç adı verilegelmiştir.');
+  else if(H.m===7)add(['Recep'],'Doğum, Hicri takvimde Recep ayında; üç ayların başı olan bu aya nispetle Recep adı verilegelmiştir.');
+  if(near(H,8,15))add(['Berat'],'Doğum, Berat Kandili\'ne (15 Şaban) denk geliyor; bu geceye nispetle Berat adı verilegelmiştir.');
+  else if(H.m===8)add(['Şaban'],'Doğum, Hicri takvimde Şaban ayında; bu aya nispetle Şaban adı verilegelmiştir.');
+  if(near(H,9,27))add(['Kadir','Kadriye'],'Doğum, Kadir Gecesi\'ne (27 Ramazan) denk geliyor; bu geceye nispetle Kadir, Kadriye adları verilegelmiştir.');
+  if(H.m===9)add(['Ramazan'],'Doğum, Ramazan ayında; bu aya nispetle Ramazan adı verilegelmiştir.');
+  if(H.m===10&&H.d<=3)add(['Bayram'],'Doğum, Ramazan Bayramı günlerine denk geliyor; Bayram adı verilegelmiştir.');
+  if(H.m===12&&H.d>=10&&H.d<=13)add(['Kurban','Bayram'],'Doğum, Kurban Bayramı günlerine denk geliyor; Kurban, Bayram adları verilegelmiştir.');
+  if(H.m===1&&H.d<=10)add(['Muharrem'],'Doğum, Hicri yılın ilk günlerinde (Muharrem); bu aya nispetle Muharrem adı verilegelmiştir.');
+  if(C.wd===5)add(['Cuma'],'Doğum günü Cuma; bu güne nispetle Cuma adı verilegelmiştir.');
+  if(C.m===4)add(['Nisan'],'Doğum, Nisan ayında.');
+  if(C.m===9)add(['Eylül'],'Doğum, Eylül ayında.');
+  const doy=(C.m-1)*30.5+C.d;if(doy>=80&&doy<=172)add(['Bahar'],'Doğum, ilkbahar mevsiminde.');
+  if(C.phase==='full')add(['Bedir','Bedriye'],'Doğduğu gece gökyüzünde dolunay vardı; "bedr" dolunay demektir.');
+  if(C.phase==='hilal')add(['Hilal'],'Doğduğu günlerde gökyüzünde yeni hilal görünüyordu.');
+  if(C.vakit==='seher')add(['Seher','Şafak'],'Seher vaktinde, tan ağarırken doğdu.');
+  if(C.vakit==='gece')add(['Leyla'],'Gece doğdu; "leyl" gece demektir.');
+  return out;
+}
 function childProfile(o){
   const[y,m,d]=o.date.split('-').map(Number);const city=findCity(o.city)||null;const hasT=!!o.time;
-  const h=hasT?(+o.time.split(':')[0]+ +o.time.split(':')[1]/60):12;
-  const lat=city?city.lat:39.93,lon=city?city.lon:32.86,tz=tzInfo(city||{tz:'TR'},y,m,d,h);
-  const ch=chartFromJD(julian(y,m,d,h-tz.off),lat,lon,'P',!hasT);
-  const sunS=ch.pos.sun.sign;const chM=chartFromJD(julian(y,m,d,0-tz.off),lat,lon,'P',true),chN=chartFromJD(julian(y,m,d,23.99-tz.off),lat,lon,'P',true);
-  const sunEdge=!hasT&&(chM.pos.sun.sign!==chN.pos.sun.sign);
-  const eb=elementBalance(ch).el,dom=eb.indexOf(Math.max(...eb));
-  const mz=mizacScore(ch),mi=mz.indexOf(Math.max(...mz));const wd=new Date(Date.UTC(y,m-1,d)).getUTCDay();
-  return{y,m,d,hasT,ch,sunS,sunEdge,el:SIGNS[sunS].el,dom,mizac:MIZAC[mi],wd,asc:hasT?signOf(ch.asc):null,moonS:ch.pos.moon.sign};
+  const h=hasT?(+o.time.split(':')[0]+ +o.time.split(':')[1]/60):12,lat=city?city.lat:39.93,lon=city?city.lon:32.86,tz=tzInfo(city||{tz:'TR'},y,m,d,h);
+  const jd=julian(y,m,d,h-tz.off),wd=new Date(Date.UTC(y,m-1,d)).getUTCDay();
+  // Hicri gun aksamla baslar: gun batimindan sonra dogum bir sonraki Hicri gune sayilir
+  const st=sunTimes(y,m,d,tz.off,lat,lon);const after=hasT&&st.set!=null&&h>st.set;const hijri=jdToHijri(julian(y,m,d,12)+(after?1:0));
+  const a=rawPositions(jd),el=nrm(a.moon-a.sun);const phase=Math.abs(el-180)<14?'full':(el>12&&el<45)?'hilal':'';
+  let vakit='';if(hasT&&st.rise!=null){if(h>=st.rise-1.5&&h<st.rise)vakit='seher';else if(st.set!=null&&(h>st.set+1.5||h<st.rise-1.5))vakit='gece';}
+  const seventh=new Date(Date.UTC(y,m-1,d+6));
+  return{y,m,d,hasT,wd,hijri,after,phase,vakit,seventh,city};
 }
-function scoreName(x,C,o){
-  const ni=nameInfo(x.n),mo=o.motherV,why=[];let s=0,yz=null,tot=null;
-  if(mo){tot=ni.v+mo;yz=yildizname(tot);
-    if(o.trad){if(yz===C.sunS){s+=3;why.push(`Yıldızname burcu (${SIGNS[yz].n}) çocuğun Güneş burcuyla aynı`);}
-      else{const c=EL_COMPAT(SIGNS[yz].el,C.el);if(c===2){s+=2;why.push(`Yıldızname burcu ${SIGNS[yz].n}, çocuğun burcuyla aynı unsurdan (${EL_NAME[C.el]})`);}else if(c===1){s+=1;why.push(`Yıldızname burcu ${SIGNS[yz].n}, çocuğun unsuruyla uyumlu`);}}}}
-  const tm=x.t.match(/[aths]/),te=tm?'aths'.indexOf(tm[0]):-1;
-  if(te>=0&&te===C.dom){s+=1;why.push(`Anlamı çocuğun haritasında baskın olan ${EL_NAME[C.dom]} unsuruyla örtüşüyor`);}
-  if(/[QPS]/.test(x.t)&&o.pref==='islami')s+=4;
+// Ad koyma adabi derecesi: 1) Abdullah, Abdurrahman 2) Allah'in isimlerine "Abd" eklenerek 3) peygamber adlari 4) Islam buyuklerinin adlari 5) Kur'an'da gecen guzel kelimeler
+function adabTier(x){if(/A/.test(x.t))return[5,'Peygamber Efendimizin "Allah katında isimlerin en güzeli Abdullah ve Abdurrahman\'dır" hadisinde andığı isimlerden (Müslim, Âdâb 2)'];
+  if(/B/.test(x.t))return[4,'Allah\'ın güzel isimlerinden birine kulluğu bildiren isim; hadiste övülen isimlerin türünden'];
+  if(/P/.test(x.t))return[3.5,'Peygamber adı; çocuklara peygamber adlarının verilmesi tavsiye edilmiştir'];
+  if(/S/.test(x.t))return[3,'Sahabe ya da İslam büyüklerinden birinin adı'];
+  if(/Q/.test(x.t))return[2,'Kur\'an-ı Kerim\'de geçen, anlamı güzel bir kelime'];return[0,''];}
+function scoreName(x,C,o,customs){
+  const why=[];let s=0;const[t,tw]=adabTier(x);const w=o.pref==='islami'?1.6:o.pref==='hepsi'?1:.4;if(t){s+=t*w;why.push(tw);}
+  for(const c of customs)if(c.names.some(n=>trKey(n)===trKey(x.n))){s+=6;why.push(c.why);}
+  if(o.elders.some(e=>trKey(e)===trKey(x.n))){s+=6;why.push('Aile büyüğünün adını yaşatma geleneği');}
   const sy=syl(x.n);if(sy>=2&&sy<=3)s+=.3;
-  if(o.surname){const last=trKey(x.n).slice(-1),first=trKey(o.surname)[0];if('aeiou'.includes(last)&&'aeiou'.includes(first)){s-=.3;}else s+=.1;
-    const tsy=sy+syl(o.surname);if(tsy>=4&&tsy<=6){s+=.3;why.push('Soyadıyla hece dengesi iyi');}}
-  if(/Q/.test(x.t))why.push('Kur\'an-ı Kerim\'de geçen bir kelime ya da isim');else if(/P/.test(x.t))why.push('Peygamber adı');else if(/S/.test(x.t))why.push('İslam tarihinde örnek bir şahsiyetin adı');
-  return{x,ni,s,why,yz,tot};
+  if(o.surname){const last=trKey(x.n).slice(-1),first=trKey(o.surname)[0];if('aeiou'.includes(last)&&'aeiou'.includes(first))s-=.4;const tsy=sy+syl(o.surname);if(tsy>=4&&tsy<=6){s+=.3;why.push('Soyadıyla söylenişi dengeli');}}
+  return{x,ni:nameInfo(x.n),s,why};
 }
-function nameCard(r,C,o,rank){
-  const x=r.x,ni=r.ni;let esm='';
-  if(r.tot){const D=esmaDecompose(r.tot);const e=D.exact[0]||null;esm=e?`Yâ ${e.n} (${e.v})`:D.pairs.length?D.pairs[0].map(z=>`Yâ ${z.n}`).join(' + '):'';}
-  const yzTxt=r.yz!=null?`${ARAB_SIGNS[r.yz]} (${SIGNS[r.yz].n}, ${EL_NAME[SIGNS[r.yz].el]})`:'';
+function nameWarn(n){const k=trKey(n);const w=[];if(DIVINE_ONLY.has(k))w.push('Bu isim yalnız Allah\'a ait isimlerdendir; tek başına konmaz. Başına "Abd" getirilerek (ör. Abdurrahman) verilir.');if(NAME_CAUTION[k])w.push(`Bu isim ${NAME_CAUTION[k]}.`);return w;}
+function nameCard(r,o,rank){
+  const x=r.x,ni=r.ni,warn=nameWarn(x.n);
   return `<section class="card ncard"><div class="nhead"><div><div class="nname">${rank?`<span class="nrank">${rank}</span>`:''}${esc(x.n)}${o.surname?` <span class="nsur">${esc(o.surname)}</span>`:''}</div>
     <div class="nmeta">${[x.o?(x.g==='e'?'Erkek':x.g==='k'?'Kız':'Kız / Erkek'):'',NAME_ORIGIN[x.o]||x.o||'',/Q/.test(x.t)?'Kur\'an\'da geçer':''].filter(Boolean).join(' · ')}</div></div>${ni.ar?`<div class="nar" dir="rtl" lang="ar">${ni.ar}</div>`:''}</div>
     <p class="nmean">${esc(x.m)}</p>
-    <div class="ngrid"><div><span>Ebced değeri</span><b>${ni.v}</b>${ni.exact?'':'<em>Türkçe kökenli, yaklaşık</em>'}</div>
-    ${r.tot?`<div><span>Anne adıyla toplam</span><b>${r.tot}</b></div><div><span>Yıldızname burcu</span><b>${yzTxt}</b></div>${esm?`<div><span>Toplamın esması</span><b>${esm}</b></div>`:''}`:''}</div>
+    ${warn.map(w=>`<div class="note err small">${w}</div>`).join('')}
+    <div class="ngrid"><div><span>Hece</span><b>${syl(x.n)}</b></div><div><span>Ebced değeri (edebî bilgi)</span><b>${ni.v}</b>${ni.exact?'':'<em>Türkçe kökenli, yaklaşık</em>'}</div></div>
     ${r.why.length?`<ul class="nwhy">${r.why.map(w=>`<li>${w}</li>`).join('')}</ul>`:''}</section>`;
 }
 function secIsim(){
   const t=new Date();const o=STATE.nm||{};
-  return `<section class="card hero"><h3>İsim Önerisi</h3><p>Bebeğinizin doğum bilgisi ve anne-baba adlarıyla, anlamı güzel isimleri geleneksel ebced hesabıyla birlikte sıralar. Her ismin anlamı, kökeni ve Arapça yazılışı gösterilir.</p>
+  return `<section class="card hero"><h3>İsim Önerisi</h3><p>Anlamı güzel isimleri; İslami ad koyma adabına, bebeğin doğduğu zamana (Hicri ay, mübarek gün ve geceler, mevsim, vakit) ve soyadıyla ses uyumuna göre sıralar. Her ismin anlamı, kökeni ve Arapça yazılışı gösterilir. Gayba dair hiçbir hesap kullanılmaz.</p>
    <div class="form f2"><label>Doğum tarihi (ya da beklenen tarih)<input type="date" id="n_date" value="${o.date||isoD(t)}"></label><label>Doğum saati (biliniyorsa)<input type="time" id="n_time" value="${o.time||''}"></label>
    <label>Doğum yeri<input id="n_city" list="cityList" value="${esc(o.city||'')}" placeholder="ör. Mersin"></label><label>Cinsiyet<select id="n_g"><option value="k" ${o.g==='k'?'selected':''}>Kız</option><option value="e" ${o.g==='e'?'selected':''}>Erkek</option><option value="" ${o.g===''?'selected':''}>Henüz bilinmiyor</option></select></label>
    <label>Anne adı<input id="n_mother" value="${esc(o.mother||'')}" placeholder="ör. Ayşe"></label><label>Baba adı<input id="n_father" value="${esc(o.father||'')}" placeholder="ör. Mehmet"></label>
-   <label>Soyadı<input id="n_surname" value="${esc(o.surname||'')}"></label><label>İsim tercihi<select id="n_pref">${[['hepsi','Hepsi'],['islami','Kur\'an\'da geçen ve İslami isimler öncelikli'],['tr','Türkçe kökenli'],['klasik','Arapça / Farsça klasik']].map(([v,l])=>`<option value="${v}" ${o.pref===v?'selected':''}>${l}</option>`).join('')}</select></label>
+   <label>Kardeş adları (virgülle)<input id="n_sib" value="${esc(o.sib||'')}" placeholder="ör. Elif, Yusuf"></label><label>Adı yaşatılmak istenen aile büyükleri (virgülle)<input id="n_eld" value="${esc(o.eld||'')}" placeholder="ör. Hatice, Osman"></label>
+   <label>Soyadı<input id="n_surname" value="${esc(o.surname||'')}"></label><label>İsim tercihi<select id="n_pref">${[['hepsi','Hepsi'],['islami','İslami isimler öncelikli'],['tr','Türkçe kökenli'],['klasik','Arapça / Farsça klasik']].map(([v,l])=>`<option value="${v}" ${o.pref===v?'selected':''}>${l}</option>`).join('')}</select></label>
    <label>Baş harf (isteğe bağlı)<input id="n_letter" maxlength="1" value="${esc(o.letter||'')}" placeholder="ör. E"></label></div>
-   <label class="tog"><input type="checkbox" id="n_trad" ${o.trad===false?'':'checked'}> Geleneksel ebced / yıldızname uyumunu sıralamaya kat</label>
    <div class="actions"><button class="btn" id="n_go">İsimleri öner</button></div><div id="n_msg"></div></section>
    <div id="n_out"></div>
    <section class="card"><h3>Kendi Seçtiğiniz İsmi İnceleyin</h3><div class="row"><input id="n_test" placeholder="ör. Elif Nur"><button class="btn sm" id="n_testGo">İncele</button></div><div id="n_testOut"></div></section>
-   <details class="card small"><summary><b>Bu hesap nasıl yapılıyor? Dinî açıdan nasıl değerlendiriliyor?</b></summary>
-   <p><b>Ebced:</b> Arap harflerinin her birine bir sayı değeri verilir; ismin değeri, harflerinin toplamıdır. Türkçe kökenli isimlerde Osmanlıca yazılış tahminen kurulduğu için değer yaklaşıktır.</p>
-   <p><b>Yıldızname usulü:</b> Halk geleneğinde ismin ebced değeri ile anne isminin ebced değeri toplanır, 12'ye bölünür; kalan sayı burcu gösterir (1 Hamel/Koç … 12 ya da 0 Hût/Balık). Program bu burcu, çocuğun doğum tarihine göre Güneş burcuyla karşılaştırır. Aynı toplamın karşılık geldiği esma da gösterilir.</p>
-   <p><b>Baba adı</b> geleneksel hesapta kullanılmaz; program onu yalnızca aynı ismin tekrarını önlemek için kullanır.</p>
-   <p><b>Dinî değerlendirme:</b> İslam geleneğinde çocuğa anlamı güzel bir isim koymak anne babanın görevlerinden sayılır; bu yüzden program her ismin anlamını öne çıkarır ve yalnızca anlamı güzel isimleri listeler. Ebced ve yıldızname hesaplarının ise ayet ve hadislerde bir dayanağı yoktur. TDV İslâm Ansiklopedisi, harfleri yıldızlarla ilişkilendirip dünya hayatına dair anlam çıkarmayı ilmî açıdan dayanaksız ve dinen haram sayar. Bu hesaplar burada yalnızca kültürel bilgi olarak gösterilir; çocuğun geleceği hakkında bir şey söylemez. İsterseniz yukarıdaki kutuyu kapatarak sıralamayı yalnızca anlam, doğum bilgisi ve ses uyumuna göre yaptırabilirsiniz.</p></details>`;
+   <details class="card small"><summary><b>Hangi bilgilere dayanıyor?</b></summary>
+   <p><b>1. Ad koyma (tesmiye) adabı:</b> Peygamber Efendimiz "Allah katında isimlerin en güzeli Abdullah ve Abdurrahman'dır" buyurmuş, peygamber adlarının verilmesini tavsiye etmiş, anlamı çirkin isimleri değiştirmiştir. Sıralama buna göre yapılır: önce Abdullah ve Abdurrahman, sonra Allah'ın isimlerine "Abd" eklenen isimler, peygamber adları, sahabe ve İslam büyüklerinin adları, Kur'an'da geçen güzel kelimeler. Yalnız Allah'a ait isimler (Rahmân, Samed gibi) tek başına önerilmez; anlamı uygun görülmeyen isimler listeye alınmaz.</p>
+   <p><b>2. Lügat:</b> Her ismin anlamı, kökeni ve Arapça yazılışı gösterilir. Son karar ismin anlamına göre verilmelidir.</p>
+   <p><b>3. Doğum zamanı:</b> Anadolu'da çocuğa doğduğu zamana nispetle ad koymak yaygın bir gelenektir: Recep, Şaban, Ramazan aylarında; Mevlid, Miraç, Berat kandillerinde ve Kadir gecesinde; bayramlarda, Cuma günü, seherde ya da dolunayda doğan çocuklara bu zamanın adı verilir. Hicri tarih, yeni ayın gökyüzündeki konumuna göre astronomik olarak hesaplanır; Diyanet takvimiyle nadiren bir gün fark olabilir.</p>
+   <p><b>4. İsim koyma vakti:</b> Sünnete göre isim, doğduğu gün ya da akika ile birlikte yedinci gün konur; sağ kulağa ezan, sol kulağa kamet okunur. Program yedinci günün tarihini gösterir.</p>
+   <p><b>5. Ses uyumu ve aile:</b> Soyadıyla söyleniş dengesi, anne-baba ve kardeş adlarının tekrarlanmaması ve aile büyüklerinin adını yaşatma geleneği dikkate alınır.</p>
+   <p><b>Kullanılmayanlar:</b> Yıldızname, burç, doğum haritası ve esma eşleştirmesi bu bölümde kullanılmaz. Ebced değeri yalnızca edebî bilgi olarak (tarih düşürme sanatındaki karşılığı) gösterilir; sıralamaya hiçbir etkisi yoktur.</p></details>`;
 }
+const listIn=v=>String(v||'').split(/[,;]/).map(x=>x.trim()).filter(Boolean);
 function readIsim(){
-  const o={date:$('#n_date').value,time:$('#n_time').value,city:$('#n_city').value.trim(),g:$('#n_g').value,mother:$('#n_mother').value.trim(),father:$('#n_father').value.trim(),surname:$('#n_surname').value.trim(),pref:$('#n_pref').value,letter:$('#n_letter').value.trim(),trad:$('#n_trad').checked};
+  const o={date:$('#n_date').value,time:$('#n_time').value,city:$('#n_city').value.trim(),g:$('#n_g').value,mother:$('#n_mother').value.trim(),father:$('#n_father').value.trim(),sib:$('#n_sib').value.trim(),eld:$('#n_eld').value.trim(),surname:$('#n_surname').value.trim(),pref:$('#n_pref').value,letter:$('#n_letter').value.trim()};
   if(!o.date)throw new Error('Doğum tarihini (ya da beklenen tarihi) girin.');if(o.city&&!findCity(o.city))throw new Error(`"${o.city}" şehir listesinde bulunamadı; listeden seçin ya da boş bırakın.`);
-  STATE.nm=o;o.motherV=o.mother?nameInfo(o.mother).v:0;return o;
+  STATE.nm=o;o.elders=listIn(o.eld);o.avoid=new Set([o.mother,o.father,...listIn(o.sib)].filter(Boolean).map(trKey));return o;
 }
-function childCard(C,o){
-  const S=SIGNS[C.sunS];
-  return `<section class="card"><h3>Bebeğin Gökyüzü Özeti</h3><div class="big3"><div><span>Güneş burcu</span><b>${S.g}${VS} ${S.n}</b></div><div><span>Ay</span><b>${C.hasT?SIGNS[C.moonS].n:'saat gerekli'}</b></div><div><span>Yükselen</span><b>${C.asc!=null?SIGNS[C.asc].n:'saat gerekli'}</b></div></div>
-   <p>Klasik adıyla ${ARAB_SIGNS[C.sunS]} burcu, ${EL_NAME[C.el]} unsuru. ${C.hasT?`Haritada baskın unsur ${EL_NAME[C.dom]}, Marifetname'ye göre mizacı ${C.mizac.n}.`:'Doğum saati girilirse Ay, yükselen ve mizaç da hesaba katılır.'} Doğduğu gün ${WD_NAME[C.wd]}; geleneksel adıyla ${CLS[WD_RULER[C.wd]]} günü.</p>
-   ${C.sunEdge?'<div class="note small">Bu tarihte Güneş burç değiştiriyor; doğum saati girilmezse burç kesin değildir.</div>':''}
-   ${o.mother?`<p class="small">Anne adı <b>${esc(o.mother)}</b>, ebced değeri <b>${o.motherV}</b>${nameInfo(o.mother).exact?'':' (yaklaşık)'}.</p>`:'<div class="note small">Anne adı girilmediği için yıldızname hesabı yapılmadı.</div>'}</section>`;
+function childCard(C,customs){
+  const H=C.hijri,sv=C.seventh,sh=jdToHijri(julian(sv.getUTCFullYear(),sv.getUTCMonth()+1,sv.getUTCDate(),12));
+  return `<section class="card"><h3>Doğum Günü Bilgileri</h3><div class="big3"><div><span>Miladi</span><b>${pad(C.d)}.${pad(C.m)}.${C.y}</b></div><div><span>Hicri (yaklaşık)</span><b>${H.d} ${HIJRI_M[H.m-1]} ${H.y}</b></div><div><span>Gün</span><b>${WD_NAME[C.wd]}</b></div></div>
+   ${C.after?'<p class="small">Doğum gün batımından sonra olduğu için Hicri tarih bir sonraki güne sayıldı (Hicri gün akşamla başlar).</p>':''}
+   <p><b>İsim koyma vakti:</b> Sünnete göre isim doğduğu gün ya da yedinci gün konur. Yedinci gün: <b>${pad(sv.getUTCDate())}.${pad(sv.getUTCMonth()+1)}.${sv.getUTCFullYear()} ${WD_NAME[sv.getUTCDay()]}</b> (${sh.d} ${HIJRI_M[sh.m-1]}). Akika kurbanı da bu gün kesilir; sağ kulağa ezan, sol kulağa kamet okunarak isim verilir.</p>
+   ${customs.length?`<p><b>Doğduğu zamana nispetle verilebilecek isimler:</b></p><ul>${customs.map(c=>`<li>${c.why} <b>${c.names.join(', ')}</b></li>`).join('')}</ul>`:'<p class="small">Bu tarih özel bir Hicri ay, kandil ya da bayrama denk gelmiyor.</p>'}
+   <p class="small">Hicri tarih astronomik olarak hesaplandı; Diyanet takvimiyle nadiren bir gün fark olabilir. Kesin bilgi için Diyanet takvimine bakın.</p></section>`;
 }
 function runIsim(){
-  try{const o=readIsim(),C=childProfile(o);
-    const avoid=new Set([o.mother,o.father].filter(Boolean).map(trKey));
-    let L=NAMES.filter(x=>(o.g===''||x.g===o.g||x.g==='u')&&!avoid.has(trKey(x.n)));
-    if(o.pref==='tr')L=L.filter(x=>x.o==='Tr');if(o.pref==='klasik')L=L.filter(x=>x.o==='Ar'||x.o==='Fa');
+  try{const o=readIsim(),C=childProfile(o),customs=birthCustoms(C);
+    const extra=[...customs.flatMap(c=>c.names),...o.elders].filter(n=>!NAME_IDX[trKey(n)]).map(n=>({n,ar:'',g:'u',o:'',t:'',m:'Aile büyüğünün adı'}));
+    let L=NAMES.concat(extra).filter(x=>(o.g===''||x.g===o.g||x.g==='u')&&!o.avoid.has(trKey(x.n))&&!nameWarn(x.n).length);
+    if(o.pref==='tr')L=L.filter(x=>x.o==='Tr'||o.elders.some(e=>trKey(e)===trKey(x.n)));if(o.pref==='klasik')L=L.filter(x=>x.o==='Ar'||x.o==='Fa');
     if(o.letter)L=L.filter(x=>x.n.toLocaleUpperCase('tr').startsWith(o.letter.toLocaleUpperCase('tr')));
     if(!L.length)throw new Error('Bu seçimlerle eşleşen isim bulunamadı; tercihleri genişletin.');
-    const R=L.map(x=>scoreName(x,C,o)).sort((a,b)=>b.s-a.s||a.x.n.localeCompare(b.x.n,'tr'));
-    STATE.nmRes={R,C,o,shown:12};drawIsim();
+    let R=L.map(x=>scoreName(x,C,o,customs)).sort((a,b)=>b.s-a.s||a.x.n.localeCompare(b.x.n,'tr'));
+    if(o.pref!=='islami'){// cesitlilik: ozel zaman/aile isimleri once, sonra her adab derecesinden sirayla birer isim
+      const hs=s=>{let h=2166136261;for(const c of s)h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0;},seed=o.date+(o.surname||'');
+      const top=R.filter(r=>r.s>=6),rest=R.filter(r=>r.s<6).sort((a,b)=>(b.s-a.s)||(hs(seed+a.x.n)-hs(seed+b.x.n))),G={};for(const r of rest){const t=adabTier(r.x)[0];(G[t]=G[t]||[]).push(r);}
+      const keys=Object.keys(G).map(Number).sort((a,b)=>b-a),mix=[];while(keys.some(k=>G[k].length))for(const k of keys)if(G[k].length)mix.push(G[k].shift());R=top.concat(mix);}
+    STATE.nmRes={R,C,o,customs,shown:12};drawIsim();
   }catch(e){$('#n_out').innerHTML='';$('#n_msg').innerHTML=`<div class="note err">${esc(e.message)}</div>`;}
 }
 function drawIsim(){
-  const{R,C,o,shown}=STATE.nmRes;$('#n_msg').innerHTML='';
-  $('#n_out').innerHTML=childCard(C,o)+`<h3 class="sech">Önerilen İsimler</h3><p class="small">${R.length} uygun isim arasından en uyumlu ${Math.min(shown,R.length)} tanesi. Sıralama bir öneridir; son karar ismin anlamına ve ailenin gönlüne kalmıştır.</p>`+
-   R.slice(0,shown).map((r,i)=>nameCard(r,C,o,i+1)).join('')+(shown<R.length?`<div class="actions"><button class="btn ghost" id="n_more">Daha fazla isim göster</button></div>`:'');
+  const{R,C,o,customs,shown}=STATE.nmRes;$('#n_msg').innerHTML='';
+  $('#n_out').innerHTML=childCard(C,customs)+`<h3 class="sech">Önerilen İsimler</h3><p class="small">${R.length} uygun isim arasından ilk ${Math.min(shown,R.length)} tanesi. Sıralama bir öneridir; son karar ismin anlamına ve ailenin gönlüne kalmıştır.</p>`+
+   R.slice(0,shown).map((r,i)=>nameCard(r,o,i+1)).join('')+(shown<R.length?`<div class="actions"><button class="btn ghost" id="n_more">Daha fazla isim göster</button></div>`:'');
   if($('#n_more'))$('#n_more').onclick=()=>{STATE.nmRes.shown+=12;drawIsim();};
 }
 function runIsimTest(){
-  try{const nm=$('#n_test').value.trim();if(!nm)return;const o=readIsim(),C=childProfile(o);
+  try{const nm=$('#n_test').value.trim();if(!nm)return;const o=readIsim(),C=childProfile(o),customs=birthCustoms(C);
     const db=(NAME_IDX[trKey(nm)]||[])[0];const parts=nm.split(/\s+/);
-    const x=db||{n:nm,ar:'',g:'u',o:'',t:'',m:parts.map(p=>{const d=(NAME_IDX[trKey(p)]||[])[0];return d?`${d.n}: ${d.m}`:`${p}: anlamı veritabanında yok`;}).join(' · ')};
-    const r=scoreName(x,C,{...o,trad:o.trad});r.ni=nameInfo(nm);if(o.motherV){r.tot=r.ni.v+o.motherV;r.yz=yildizname(r.tot);}
-    $('#n_testOut').innerHTML=nameCard(r,C,o,0);
+    const x=db||{n:nm,ar:'',g:'u',o:'',t:parts.map(p=>((NAME_IDX[trKey(p)]||[])[0]||{t:''}).t).join(''),m:parts.map(p=>{const d=(NAME_IDX[trKey(p)]||[])[0];return d?`${d.n}: ${d.m}`:`${p}: anlamı veritabanında yok; bir lügatten ya da din görevlisinden teyit edin`;}).join(' · ')};
+    $('#n_testOut').innerHTML=nameCard(scoreName(x,C,o,customs),o,0);
   }catch(e){$('#n_testOut').innerHTML=`<div class="note err">${esc(e.message)}</div>`;}
 }
 function bindIsim(){$('#n_go').onclick=runIsim;$('#n_testGo').onclick=runIsimTest;$('#n_test').onkeydown=e=>{if(e.key==='Enter')runIsimTest();};if(STATE.nmRes)drawIsim();}
