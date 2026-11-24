@@ -74,7 +74,21 @@ pre{background:var(--soft);padding:10px;border-radius:10px;overflow:auto;font-si
 .mcard img{width:100%;border-radius:12px;display:block}
 .tagx{background:#f3ecdb;color:#7a5a10;border-radius:6px;font-size:11px;padding:1px 6px;margin-left:4px}
 .up,.big3 .up{color:#24894f}.dn,.big3 .dn{color:#c0412f}.flat,.big3 .flat{color:var(--muted)}
-.fwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.fchart{width:100%;height:auto;margin-top:10px;display:block}@media(max-width:700px){.fchart{min-width:680px}}.fline{fill:none;stroke:var(--gold);stroke-width:1.8}.fgrid{stroke:var(--line);stroke-width:1}.fax{fill:var(--muted);font-size:11px}
+.fwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.fchart{width:100%;height:auto;margin-top:10px;display:block}.sb .sbh{display:flex;align-items:center;gap:12px;margin-bottom:6px}.sb .sbh h3{margin:0}.sb .sbh svg{flex:none}
+.basis{margin-top:10px;font-size:13px;color:var(--muted,#6b6f86)}.basis summary{cursor:pointer;color:var(--gold);font-weight:600;list-style:none}.basis summary::before{content:'ⓘ ';}.basis ul{margin:6px 0 0 18px}
+.qa{padding:8px 0;border-bottom:1px dashed var(--line)}.qa:last-of-type{border-bottom:0}.qa b{color:var(--ink)}.qa p{margin:3px 0 0}
+.chip.warn{background:#fbeee9;border-color:#ecc9bd}
+.words{display:flex;flex-wrap:wrap;gap:10px}.words span{font-family:var(--serif);font-size:24px;padding:6px 16px;border-radius:12px;background:linear-gradient(135deg,#fbf4e3,#f1eafb);border:1px solid var(--line)}
+.big1{font-family:var(--serif);font-size:28px;color:var(--gold);margin:2px 0 6px}
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.pal div{display:flex;flex-direction:column;gap:2px;font-size:13px}.pal i{display:block;height:54px;border-radius:10px;border:1px solid var(--line)}.pal span{color:#6b6f86}
+ol.ten li{font-family:var(--serif);font-size:18px;line-height:1.55;margin:4px 0}
+.letter{font-family:var(--serif);font-size:19px;line-height:1.75;background:#fffdf7;border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+.poem{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.8;text-align:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.prctl{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:10px 0}.prctl label{display:flex;flex-direction:column;font-size:13px;gap:3px}.prctl .chk{flex-direction:row;align-items:center;gap:6px}.altbox{display:flex;align-items:center;gap:6px;font-size:14px}
+.prwrap{display:flex;justify-content:center;background:#efe9dc;border-radius:14px;padding:10px}.prwrap canvas{max-width:100%;max-height:78vh;height:auto;border-radius:8px;box-shadow:0 8px 30px rgba(31,36,64,.25)}
+.prwrap.fs,.prwrap:fullscreen{position:fixed;inset:0;z-index:999;background:#000;border-radius:0;align-items:center;padding:0}.prwrap.fs canvas,.prwrap:fullscreen canvas{max-height:100vh;max-width:100vw;box-shadow:none;border-radius:0}
+@media(max-width:700px){.grid3{grid-template-columns:1fr}.words span{font-size:20px}.big1{font-size:24px}.fchart{min-width:680px}}.fline{fill:none;stroke:var(--gold);stroke-width:1.8}.fgrid{stroke:var(--line);stroke-width:1}.fax{fill:var(--muted);font-size:11px}
 .frange{fill:rgba(201,162,77,.10)}.ftick{stroke:var(--muted);stroke-width:1.5}.ftick.up{stroke:#24894f}.ftick.dn{stroke:#c0412f}.fbu{fill:#3fa56b}.fbd{fill:#d0533f}
 details.fev{border-top:1px solid var(--line);padding:9px 0}details.fev summary{cursor:pointer;line-height:1.5;color:var(--ink);font-weight:400;font-size:14px}.fd{color:var(--muted);font-size:13px;margin-right:4px}.ftbl td,.ftbl th{font-size:12.5px}
 .rtitle{font-family:var(--serif);color:var(--ink);font-size:28px;margin:10px 0 0}.rsec{font-family:var(--serif);color:var(--gold);font-size:22px;margin:26px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
@@ -1530,9 +1544,9 @@ function secTech(ch,p){
 }
 
 // ===== YAYGINLASMA OZELLIKLERI + GAYBA DAIR YORUM ICERMEYEN TAKVIM/HESAP BOLUMLERI =====
-const SIMPLE_TABS=['ozet','der','sum','syn','isim','esm','mzt','fin','rap'];
+const SIMPLE_TABS=['ozet','der','sin','yak','mis','sum','syn','isim','esm','mzt','fin','rap'];
 const NOCHART_TABS=['ozet','upd','fin','lun','ecl','pos','esm','mzt','hesap','syn','isim'];
-const FB_TABS=['der','per','hou','pla','pos','car','life','fear','rel','phy','mar','tech'];
+const FB_TABS=['der','sin','yak','per','hou','pla','pos','car','life','fear','rel','phy','mar','tech'];
 
 // ---------- Bugun karti (astronomik bilgi + gunun esmasi) ----------
 const GUNUN_ESMA=['Latîf','Selâm','Fettâh','Rezzâk','Vedûd','Sabûr','Hafîz','Rahmân','Rahîm','Kerîm','Halîm','Şekûr','Mü\'min','Nûr','Hâdî','Reşîd','Alîm','Hakîm','Vehhâb','Gaffâr','Tevvâb','Bâsıt','Mucîb','Vekîl','Hayy','Kayyûm','Ganiyy','Muğnî','Kuddûs','Afüvv'];
@@ -2799,29 +2813,759 @@ function bindIsim(){$('#n_go').onclick=runIsim;$('#n_testGo').onclick=runIsimTes
 // ===== DERIN PORTRE =====
 const sent=(t,i)=>{const s=String(t).match(/[^.!?]+[.!?]+/g)||[t];return (s[Math.min(i,s.length-1)]||'').trim();};
 const HP=(k,title,body,cls)=>`<section class="card pcard ${cls||''}"><div class="phead">${planetSVG(k,58)}<h3>${title}</h3></div>${body}</section>`;
+
+// ===== IMZA BOLUMLERI ICERIK VERITABANI =====
+// Element: 0 ates, 1 toprak, 2 hava, 3 su  |  Nitelik: 0 oncu, 1 sabit, 2 degisken
+const EL_N=['ateş','toprak','hava','su'],MOD_N=['öncü','sabit','değişken'];
+
+// ---------- DERIN PORTRE (ikinci tekil sahis) ----------
+const DP_LIFE=[ // hayata durus: baskin element
+ 'Hayata bir sahne gibi bakarsın: bir şey olacaksa bunu biri başlatmalı, o kişi de çoğu zaman sen olursun. Beklemek seni köreltir, denemek diriltir. Düşsen bile "en azından denedim" demeyi, hiç kalkmamış olmaya tercih edersin.',
+ 'Hayata bir bahçıvan gibi bakarsın: bugün ektiğinin yarın biteceğini bilir, sabrı bir erdem olarak değil bir yöntem olarak yaşarsın. Sözden çok sonuca, vaatten çok emeğe inanırsın. Gösterişli başlangıçlar seni kandırmaz; sen bitişe bakarsın.',
+ 'Hayata bir pencere gibi bakarsın: her manzara başka bir açıdan da görülebilir. Fikirler, insanlar ve sohbetler seni canlı tutar. Tek bir doğruya kilitlenmek sana dar gelir; anlamak, ikna olmaktan daha değerlidir.',
+ 'Hayata bir nehir gibi bakarsın: yüzeyde olanla derinde akan aynı değildir. Olayları önce kalbinle tartar, sonra aklınla adlandırırsın. Bir yerin, bir insanın havasını sözler söylenmeden sezersin; bu sezgi senin pusulandır.'];
+const DP_LIFE_MOD=[' Yeni bir yola girmek seni korkutmaz; asıl zorlandığın şey yolun ortasındaki tekdüze kısımlardır.',' Bir kez bir yola girdiğinde sonuna kadar gidersin; seni durdurmak zor, yön değiştirtmek daha zordur.',' Şartlar değiştiğinde sen de esnersin; bu uyum gücü seni ayakta tutar ama bazen nereye ait olduğunu sorgulatır.'];
+const DP_JUSTICE=[ // Jupiter elementi
+ 'Adalet senin için bir duygudur: haksızlığa uğrayan birini gördüğünde önce harekete geçer, sonra düşünürsün. Güçlünün zayıfı ezmesine katlanamazsın.',
+ 'Adalet senin için emeğin karşılığıdır: kim ne kadar çalıştıysa o kadar almalı. Kayırmacılık ve hak edilmemiş kazanç seni içten içe öfkelendirir.',
+ 'Adalet senin için tarafların eşit dinlenmesidir: herkesin söz hakkı olmalı, kurallar herkese aynı işlemeli. Tek taraflı yargılara mesafelisin.',
+ 'Adalet senin için merhametle birlikte anlam kazanır: kuralın arkasındaki insanı görmeden hüküm vermek sana zor gelir. Bazen affetmeyi, cezalandırmaktan daha adil bulursun.'];
+const DP_POWER=[ // Sun elementi + Saturn tonu
+ 'Otoriteyle ilişkin dolaysızdır: saygı duyduğun lideri canla başla izlersin, saygı duymadığına boyun eğmekte zorlanırsın. Yönetmek sana doğal gelir; yönetilmek ise ancak karşındaki gerçekten yetkinse.',
+ 'Otoriteye yapı olarak saygı duyarsın: kuralların bir anlamı olduğuna inanırsın. Zamanla kendin de sorumluluk alan, güvenilen kişi olursun; gücü gösterişle değil süreklilikle kazanırsın.',
+ 'Otoriteyi sorgularsın: "Neden böyle?" sorusu senin için saygısızlık değil, bir ihtiyaçtır. Gücü paylaşan, fikir alan yönetimlerde parlarsın; tepeden inme emirler seni uzaklaştırır.',
+ 'Otoriteyle ilişkin duygusal bir zeminde kurulur: korunduğunu hissettiğin yerde sadık, ezildiğini hissettiğin yerde içine kapanık olursun. Gücü, insanları kollamak için kullandığında en iyi halindesin.'];
+const DP_MONEY=[ // 2. ev burcu (yoksa Venus) elementi
+ 'Parayı bir yakıt gibi görürsün: kazanmak da harcamak da hızlıdır. Fırsat gördüğünde risk almaktan çekinmezsin; asıl dikkat etmen gereken, anlık heveslerin bütçeyi sarsması.',
+ 'Parayı bir güvence olarak görürsün: biriktirmek sana huzur verir. Kaliteli ve kalıcı olana harcarsın; dikkat etmen gereken, güvenlik kaygısının cömertliğini gölgelemesi.',
+ 'Parayı bir araç olarak görürsün: bilgi, deneyim ve insanlarla bağ kurmak için. Birden fazla gelir kapısı ilgini çeker; dikkat etmen gereken, dağınıklık ve takip edilmeyen küçük harcamalar.',
+ 'Parayı duygularınla birlikte yaşarsın: huzursuzken harcamak ya da sevdiklerine fazla vermek mümkündür. Sezgin seni çoğu zaman doğru yere götürür; dikkat etmen gereken, duygusal kararların hesabı geciktirmesi.'];
+const DP_ALONE=[ // Ay elementi
+ 'Yalnızlık sana kısa süreliğine iyi gelir; enerjini toplarsın. Uzayınca huzursuzlanır, hareket ve insan ararsın.',
+ 'Yalnızlık senin için bir dinlenme odasıdır. Kendi düzeninde, kendi temponda olmak seni toparlar; yalnız kalmak senin için kimsesizlik anlamına gelmez.',
+ 'Yalnızlıkta zihnin konuşmaya devam eder; kitap, müzik ya da yazı seninle olur. Ama uzun süre kimseyle fikir paylaşamamak seni soldurur.',
+ 'Yalnızlık sana hem ihtiyaç hem sınavdır: kalabalıktan sonra kendine dönmen gerekir, ama fazla içe kapandığında duyguların büyür. Güvendiğin birkaç insan senin sığınağındır.'];
+const DP_FRIEND=[ // 11. ev (yoksa Venus) elementi
+ 'Dostlukta sadakat ve heyecan ararsın: birlikte bir şey yapabildiğin, seni ileri iten insanlar. Dostunu savunurken kendini öne atarsın.',
+ 'Dostlukta az ama öz olanı seçersin. Yıllara yayılmış, sınanmış bağlar senin hazinendir; bir kez güvenini kazanan kolay kolay kaybetmez.',
+ 'Dostlukta zihin arkadaşlığı ararsın: saatlerce konuşabildiğin, seni düşündüren insanlar. Geniş bir çevren olabilir; derinlik için birkaç kişi yeter.',
+ 'Dostlukta duygusal yakınlık ararsın: anlaşıldığını hissettiğin, sessizliğin bile rahat olduğu insanlar. Dostlarının dertlerini kendi derdin gibi taşırsın.'];
+const DP_MOTIV=[ // Mars elementi
+ 'Seni harekete geçiren şey meydan okumadır: "yapamazsın" denmesi bile yakıtın olabilir. Hedef netse enerjin tükenmez.',
+ 'Seni harekete geçiren şey somut sonuçtur: elle tutulur bir ilerleme, bir ürün, biriken bir emek. Anlamsız telaş seni yorar.',
+ 'Seni harekete geçiren şey merak ve fikirdir: yeni bir bilgi, ilginç bir insan, bir proje fikri. Tekrar eden işler hevesini çabuk söndürür.',
+ 'Seni harekete geçiren şey anlam ve bağdır: yaptığın işin birine dokunduğunu hissetmek. Kalbin olmadığı yerde gücün de azalır.'];
+const DP_TALENT=[ // Merkur elementi
+ 'Yeteneğin hızlı kavrayış ve ikna gücündedir: bir fikri heyecanla anlatıp insanları peşinden sürükleyebilirsin. Hitabet, liderlik ve girişimcilik geliştirebileceğin alanlar.',
+ 'Yeteneğin somutlaştırmadadır: dağınık bir fikri plana, planı işe dönüştürürsün. Zanaat, düzenleme, hesap ve el becerisi geliştirebileceğin alanlar.',
+ 'Yeteneğin bağlantı kurmadadır: fikirleri, insanları, bilgileri birbirine bağlarsın. Yazı, öğretmek, iletişim ve teknoloji geliştirebileceğin alanlar.',
+ 'Yeteneğin sezgi ve hayal gücündedir: söylenmeyeni duyar, görünmeyeni hayal edersin. Sanat, danışmanlık, şifa veren işler ve hikâye anlatıcılığı geliştirebileceğin alanlar.'];
+const DP_UNUSED=[ // en zayif element
+ 'Haritanda ateş az: harekete geçmek, kendini ortaya koymak ve risk almak sana zor gelebilir. Potansiyelin çoğu zaman "doğru anı beklerken" bekler. Küçük cesaretler bu kapıyı açar.',
+ 'Haritanda toprak az: fikirlerini somut adımlara dökmek, düzen kurmak ve sabırla sürdürmek emek ister. Yarım kalan işlerin içinde büyük bir potansiyel saklı olabilir.',
+ 'Haritanda hava az: duygularına ya da işine o kadar gömülürsün ki geri çekilip bakmak, konuşup paylaşmak zor gelebilir. Fikirlerini yazıya ve söze dökmek sana yeni kapılar açar.',
+ 'Haritanda su az: duygularını tanımak ve göstermek ikinci planda kalabilir. İnsanlar seni olduğundan mesafeli sanabilir; kalbini biraz daha açtığında ilişkilerin derinleşir.'];
+const DP_MATURE=[ // Saturn elementi
+ 'Gençken sabırsızlık sayılan ateşin, olgunlukla kararlı bir liderliğe dönüşür. Her savaşı kazanmak zorunda olmadığını öğrendikçe gücün artar.',
+ 'Gençken katılık sayılan ciddiyetin, olgunlukla güven veren bir sağlamlığa dönüşür. Kendine biraz daha yumuşak davrandıkça başkalarına da daha çok alan açarsın.',
+ 'Gençken dağınıklık sayılan merakın, olgunlukla bilgeliğe dönüşür. Bir konuda derinleşmeyi seçtikçe sözün daha çok dinlenir.',
+ 'Gençken alınganlık sayılan hassasiyetin, olgunlukla derin bir şefkate dönüşür. Kendi yaranı tanıdıkça başkasının yarasına daha iyi dokunursun.'];
+const DP_PLANET_CORE={ // baskin gezegen
+ sun:'Haritanın merkezinde Güneş duruyor: sen ışığını göstermek için yaratılmış biri gibisin. Görünmez kaldığında solar, takdir gördüğünde çiçek açarsın.',
+ moon:'Haritanın merkezinde Ay duruyor: hayatı önce hissederek yaşarsın. Ruh halin hava durumun gibidir; değişir ama her zaman bir anlamı vardır.',
+ mercury:'Haritanın merkezinde Merkür duruyor: zihnin hiç susmaz. Soru sormak, öğrenmek, anlatmak senin nefes alma biçimin.',
+ venus:'Haritanın merkezinde Venüs duruyor: güzellik, uyum ve sevgi senin dilindir. Çirkinliğe, kabalığa ve kavgaya fazlasıyla duyarlısın.',
+ mars:'Haritanın merkezinde Mars duruyor: içinde hep bir yere yetişmeye çalışan bir enerji var. Mücadele etmeden durmak sana göre değil.',
+ jupiter:'Haritanın merkezinde Jüpiter duruyor: büyük düşünür, umudu kolay kaybetmezsin. Bilgi, inanç ve cömertlik seni tanımlar.',
+ saturn:'Haritanın merkezinde Satürn duruyor: erken olgunlaşmış, sorumluluğu sırtlanmış bir ruhsun. Kolay kazanılana değil, emekle kurulana güvenirsin.',
+ uranus:'Haritanın merkezinde Uranüs duruyor: kalıplara sığmayan, kendi yolunu çizen birisin. Özgürlüğün kısıtlandığında içinde bir şimşek çakar.',
+ neptune:'Haritanın merkezinde Neptün duruyor: görünenin ötesini sezen, hayal ile gerçek arasında köprü kuran birisin. Sanat ve maneviyat sana iyi gelir.',
+ pluto:'Haritanın merkezinde Plüton duruyor: yüzeyle yetinmeyen, derine inen, kriz anlarında güçlenen birisin. Hayatın birkaç kez baştan kurulmuş gibi hissettirebilir.'};
+const DP_HIDDEN_H=[ // gizli taraf: 12. evdeki / Pluton evi icin alan isimleri yerine metin sablonu kullanilir
+];
+
+// ---------- SON BOLUMLER ----------
+const ANIMALS=[ // [element][nitelik]
+ [{n:'Şahin',d:'bird',why:'hızlı karar, keskin bakış ve ilk hamleyi yapma cesareti'},{n:'Aslan',d:'lion',why:'onurlu duruş, cömert yürek ve koruyucu güç'},{n:'Anka kuşu',d:'phoenix',why:'küllerinden yeniden doğma, umut ve keşif tutkusu'}],
+ [{n:'Dağ keçisi',d:'goat',why:'sarp yollarda sabırla tırmanma, kararlılık ve dayanıklılık'},{n:'Kaplumbağa',d:'turtle',why:'sabır, sağlamlık ve kendi temposuna güven'},{n:'Baykuş',d:'owl',why:'dikkat, ayrıntıyı görme ve sessiz bilgelik'}],
+ [{n:'Güvercin',d:'dove',why:'barış, köprü kurma ve zarif bir denge arayışı'},{n:'Kurt',d:'wolf',why:'bağımsız ruh ama sürüsüne sadakat; özgürlük ve dayanışma'},{n:'Kelebek',d:'butterfly',why:'merak, hafiflik ve sürekli dönüşüm'}],
+ [{n:'Yunus',d:'dolphin',why:'şefkat, koruyuculuk ve duygusal zekâ'},{n:'Kartal',d:'eagle',why:'derinlikten yükselme, sezgi ve dönüştürücü güç'},{n:'Kuğu',d:'swan',why:'zarafet, hassasiyet ve sessiz derinlik'}]];
+const LAND_BASE=['güneşin yakıp parlattığı geniş bir plato','yaşlı dağların eteğinde, zeytin ve çam ağaçlarıyla örtülü bir vadi','rüzgârın durmadan estiği, ufku açık bir tepe','ayışığının üzerine gümüş bir yol serdiği sakin bir koy'];
+const LAND_DETAIL=['ufukta batmakta olan kızıl bir güneş','arkada heybetli bir dağ silsilesi','gökyüzünde süzülen kuşlar','yakından akan berrak bir dere'];
+const EL_COLORS=[[['#c8553d','kiremit kırmızısı'],['#e9a23b','kehribar']],[['#6b8f4e','zeytin yeşili'],['#8a6a45','toprak kahvesi']],[['#7fa7c9','gök mavisi'],['#d9dde8','sis grisi']],[['#2f5d7c','derin deniz mavisi'],['#6fa8a1','su yeşili']]];
+const EL_COLOR_MEAN=['canlılık, cesaret ve sıcaklık','sağlamlık, bereket ve güven','açıklık, düşünce ve özgürlük','derinlik, sezgi ve şefkat'];
+const SIGN_COLOR=[['#d2452e','al kırmızı'],['#5f8f5a','çayır yeşili'],['#e8c547','limon sarısı'],['#c9ccd6','inci gümüşü'],['#e0a526','güneş altını'],['#9a8462','buğday rengi'],['#e5a5b5','gül pembesi'],['#7a1f3d','bordo'],['#5b3f9a','mor'],['#3d4a5c','antrasit'],['#3fa7c7','turkuaz'],['#6e8fd6','lavanta mavisi']];
+const ARCHETYPE={
+ sun:{n:'Hükümdar',d:'Sorumluluğu üstlenen, ışığını başkalarını aydınlatmak için kullanan bilge yönetici. Halk hikâyelerindeki âdil padişah gibi; gücü kendisi için değil, emanet için taşır.'},
+ moon:{n:'Koruyucu',d:'Evini, sevdiklerini ve yaralıları kanatları altına alan şefkatli bekçi. Masallardaki kapısını her yolcuya açan ev sahibi gibi.'},
+ mercury:{n:'Haberci Gezgin',d:'Şehirden şehre bilgi ve hikâye taşıyan, her dili biraz konuşan meraklı yolcu. Nasreddin Hoca gibi; bir cümleyle en karışık meseleyi çözer.'},
+ venus:{n:'Sanatkâr',d:'Hayatı güzelleştirmek için yaşayan, kavgayı uyuma çeviren zarif ruh. Divan şiirinin gül bahçesindeki bülbül gibi.'},
+ mars:{n:'Yiğit',d:'Haksızlık karşısında ilk ayağa kalkan, cesur ve dürüst savaşçı. Dede Korkut hikâyelerindeki alp erenler gibi.'},
+ jupiter:{n:'Bilge Hoca',d:'Bildiğini paylaşan, umut veren, yol gösteren öğretmen. Kervansarayda yolculara öğüt veren yaşlı bilge gibi.'},
+ saturn:{n:'Usta',d:'Yıllarını bir zanaata vermiş, sabrı ve disipliniyle eser bırakan usta. Mimar Sinan\'ın kalfalarından biri gibi; taşı taş üstüne sabırla koyar.'},
+ uranus:{n:'Mucit',d:'Herkesin baktığı yere bakıp başka bir şey gören, alışılmışı değiştiren yenilikçi. Gökyüzüne uçmaya çalışan Hezarfen gibi.'},
+ neptune:{n:'Şair',d:'Görünmeyeni hisseden, kelimelerle ya da renklerle başka dünyalar açan hayalperest. Yunus Emre\'nin dizelerindeki gönül yolcusu gibi.'},
+ pluto:{n:'Simyacı',d:'Kurşunu altına çevirmeye çalışan, krizlerden güçlenerek çıkan dönüştürücü. Küllerinden doğan efsanevi kuş gibi.'}};
+const BOOK_A={sun:['Işığın Bedeli','Güneşe Yürüyen Adımlar'],moon:['Ay Işığında Bir Ev','Kalbin Gelgitleri'],mercury:['Bin Sorunun Cevabı','Yollarda Yazılan Mektuplar'],venus:['Gül ve Terazi','Güzelliğin Sessiz Dili'],mars:['Ateşten Bir Yemin','Durmayan Yürek'],jupiter:['Ufkun Ötesindeki Kapı','Bilgeliğin Yolu'],saturn:['Taş Taş Üstüne','Sabrın Mimarı'],uranus:['Şimşeğin Çocuğu','Kalıpların Dışında'],neptune:['Sisin Ardındaki Kıyı','Rüyalar ve Gerçekler'],pluto:['Küllerden Doğan','Derinlerdeki Işık']};
+// Kuzey dugum burcu: bu omurde yonelinen yer (gelisim yonu) ve birakilan aliskanlik
+const NODE_SIGN=[
+ {go:'kendi ayakları üzerinde durmak ve cesaretle "ben" demek',from:'herkesi memnun etmek için kendini geri plana atmak'},
+ {go:'sadeliği, sabrı ve kendi değerini bulmak',from:'krizlerden ve başkalarının yüklerinden beslenmek'},
+ {go:'merakla öğrenmek, dinlemek ve farklı görüşlere açılmak',from:'tek bir doğruya fazla bağlanmak'},
+ {go:'duygularını kabul etmek ve bir yuva kurmak',from:'her şeyi statü ve başarıyla ölçmek'},
+ {go:'kalbini açıp yaratıcılığını cesurca göstermek',from:'kalabalığın içinde kaybolmak ve geri durmak'},
+ {go:'düzen kurmak, hizmet etmek ve somut adımlar atmak',from:'hayallerde ve belirsizlikte kaybolmak'},
+ {go:'iş birliği yapmak ve karşısındakini gerçekten görmek',from:'her şeyi tek başına halletme ısrarı'},
+ {go:'paylaşmak, dönüşmek ve derin bağlara cesaret etmek',from:'konfora ve sahip olduklarına aşırı tutunmak'},
+ {go:'anlam aramak, ufkunu genişletmek ve inancını derinleştirmek',from:'bilgiyi biriktirip uygulamamak, dağılmak'},
+ {go:'sorumluluk alıp bir hedef için olgunlaşmak',from:'aileye ve geçmişe aşırı bağımlılık'},
+ {go:'topluluğa katılmak ve ortak iyiye hizmet etmek',from:'onaylanma ve alkış beklentisi'},
+ {go:'teslimiyet, şefkat ve manevi derinlik',from:'mükemmeliyetçilik ve her şeyi kontrol etme ihtiyacı'}];
+const Q_EL={
+ sat:['Gerçekten kazanman gereken savaşları, kazanmak istediğin savaşlardan nasıl ayırıyorsun?','Kendine verdiğin sözleri, başkalarına verdiklerin kadar ciddiye alıyor musun?','Her şeyi bilmek zorunda olmadığında kendini nasıl hissediyorsun?','Başkalarının yükünü taşırken kendi yükünü kime emanet ediyorsun?'],
+ moon:['En son ne zaman hiçbir şey yapmadan, sadece dinlendin?','Güvende hissetmek için neye sahip olman gerekiyor; bu gerçekten öyle mi?','Hissettiklerini düşünmeye çevirip sakladığın anlar oluyor mu?','Başkalarının duygularını taşırken kendi duygularına ne kadar yer kalıyor?'],
+ venus:['Sevgiyi kazanılması gereken bir şey gibi mi, yoksa paylaşılan bir şey gibi mi yaşıyorsun?','Sana iyi gelen sade güzellikleri hayatına ne kadar sık davet ediyorsun?','Sevdiğin birine en son ne zaman ne düşündüğünü açıkça söyledin?','Sevgide verdiğin ile beklediğin arasında bir denge var mı?'],
+ weak:['Cesaret gerektiren hangi küçük adımı uzun zamandır erteliyorsun?','Hangi güzel fikrin hâlâ bir plana dönüşmeyi bekliyor?','Kafanın içinde kalan hangi düşünceyi bir dostunla paylaşmak sana iyi gelirdi?','Hangi duyguna isim koymaktan kaçınıyorsun?']};
+
+// ---------- HAYATIN SINAVLARI (ucuncu sahis, kisi uzerine) ----------
+const SAT_SIGN=[
+ 'sabırla beklemek ve tek başına değil birlikte ilerlemeyi öğrenmek','değerini sahip olduklarıyla ölçmemek ve güvenliği içinde kurmak','düşüncelerini derinleştirmek, söze dökmekten çekinmemek','duygularını göstermek ve kendi iç yuvasını kurmak','takdir beklemeden kendini ifade etmek','mükemmeliyetçiliği bırakıp "yeterince iyi" diyebilmek','ilişkilerde sorumluluğu paylaşmak, adil ama katı olmamak','kontrolü bırakmak ve güvenmeyi öğrenmek','inancını sorgulayarak sahiplenmek, bilgiyi hayata geçirmek','başarıyı sağlıklı bir ölçüde tutmak, kendine yumuşak davranmak','topluluk içinde kendi sesini korumak','belirsizliğe tahammül etmek, iç dünyasına zaman ayırmak'];
+const PLUTO_H=[ // kontrol ve donusum alani
+ 'kendi kimliği ve imajı','para, mülk ve öz değer','sözler, fikirler ve haklı çıkma','ev, aile ve kökler','aşk, çocuklar ve kendini ifade','iş düzeni, sağlık ve günlük rutinler','eş ve ortaklıklar','ortak kaynaklar, mahremiyet ve güven','inançlar ve dünya görüşü','kariyer, statü ve otorite','arkadaş çevresi ve gruplar','iç dünya ve görünmeyen korkular'];
+const CHIRON_H=[ // hassas nokta ve sifa alani
+ {w:'"olduğum gibi yeterli miyim?" sorusu',h:'kendini kabul ettikçe başkalarına cesaret verir'},
+ {w:'değer görmek ve maddi güven',h:'kendi değerini içten kurdukça başkalarına bolluk duygusu aşılar'},
+ {w:'anlaşılmak, kendini ifade etmek',h:'doğru kelimeleri bulduğunda başkalarının sesine ses olur'},
+ {w:'aile içinde görülmek, ait olmak',h:'kendi yuvasını kurduğunda başkalarına sığınak olur'},
+ {w:'kendini göstermek, eğlenmek, sevilmek',h:'çekinmeden yarattıkça başkalarını da cesaretlendirir'},
+ {w:'işe yaramak, yeterince iyi olmak',h:'kendine iyi baktıkça başkalarına da şifa olur'},
+ {w:'ilişkide eşit ve değerli olmak',h:'sağlıklı bağ kurdukça başkalarına ilişkide rehber olur'},
+ {w:'güvenmek ve derin bağlarda incinmemek',h:'kendi krizlerini işledikçe başkalarına zor zamanlarda yol gösterir'},
+ {w:'inanmak, anlam bulmak',h:'kendi anlamını bulduğunda başkalarına umut olur'},
+ {w:'başarı ve otoriteyle ilişki',h:'kendi otoritesini kurdukça başkalarına adil bir rehber olur'},
+ {w:'bir gruba ait olmak, farklı olmak',h:'farkını kabul ettikçe başkalarının farkını da kucaklar'},
+ {w:'görünmeyen kaygılar, iç dünya',h:'kendi iç sesini dinledikçe başkalarına manevi destek olur'}];
+const SNODE_H=[ // guney dugum evi: tekrar eden konfor alani
+ 'her şeyi kendi başına halletme','maddi güvenliğe ve alışkanlıklara tutunma','çok konuşup az derinleşme','geçmişe, eve ve aileye sığınma','alkış ve onay bekleme','her şeyi düzeltme ve kusur arama','karşısındakine göre şekil alma','krizleri ve dramı büyütme','her şeyi bildiğini sanma','kontrol ve statü kaygısı','kalabalıkta kaybolma','dünyadan kaçıp içe kapanma'];
+// Gergin acilar: [kalip, ders, gelisim]
+const HARD={
+ 'sun-moon':['İstediği ile ihtiyaç duyduğu arasında gidip gelebilir; kafası bir şey, kalbi başka bir şey söyleyebilir.','İç sesini uzlaştırmak','İki tarafı da dinleyip ortak bir yol bulmak'],
+ 'sun-saturn':['Kendini yeterince iyi bulmama, takdiri hak etmek için fazla çalışma eğilimi olabilir.','Kendine yumuşak davranmak','Başarıyı kendine izin vererek yaşamak'],
+ 'moon-saturn':['Duygularını göstermeyi zayıflık sanıp içine atabilir; "güçlü olmalıyım" diye yük taşıyabilir.','Duyguları güvenle göstermek','Yardım istemeyi bir olgunluk olarak görmek'],
+ 'venus-saturn':['Sevilmeyi hak etmesi gerektiğine inanabilir; ilişkilerde temkinli ve geç açılan biri olabilir.','Sevgiyi kabul etmek','Kendini sevgiye layık görmek'],
+ 'mars-saturn':['Öfkesini bastırıp sonra birden patlatabilir; ya fazla ya da çok az hareket edebilir.','Enerjiyi dengeli kullanmak','Disiplinle sabrı birleştirmek'],
+ 'mercury-saturn':['Söylediklerinin yanlış anlaşılacağı kaygısıyla susabilir ya da kendi fikrini küçümseyebilir.','Kendi sesine güvenmek','Sözünü sakin ama net söylemek'],
+ 'sun-pluto':['Güç ve kontrol konuları hayatında sık gündeme gelebilir; ya kontrol etme ya da kontrol edilme hissiyle sınanabilir.','Gücü paylaşmak','İradesini yapıcı işlerde kullanmak'],
+ 'moon-pluto':['Duyguları yoğundur; kaybetme korkusu sahiplenmeye dönüşebilir.','Bırakabilmek','Derin duygularını güvenle ifade etmek'],
+ 'venus-pluto':['İlişkilerde "hep ya da hiç" tutumu, kıskançlık ya da aşırı bağlanma eğilimi olabilir.','Sevgide güven','Bağlılığı özgürlükle dengelemek'],
+ 'mars-pluto':['İradesi çok güçlüdür; geri adım atmak ona yenilgi gibi gelebilir.','Gücünü ölçülü kullanmak','Kararlılığını yapıcı hedeflere yöneltmek'],
+ 'mercury-pluto':['Sözleri keskin olabilir; tartışmada son sözü söyleme ihtiyacı duyabilir.','Dinleyerek ikna etmek','Derin zekâsını yaralamadan kullanmak'],
+ 'sun-mars':['Çabuk parlayan bir enerji; sabırsızlık ve rekabeti kişisel algılama eğilimi olabilir.','Öfkeyi yönlendirmek','Cesaretini adalet için kullanmak'],
+ 'moon-mars':['Duygusal tepkileri hızlıdır; incindiğinde önce saldırıp sonra pişman olabilir.','Duyguyla tepki arasına bir nefes koymak','Hislerini sakin bir dille söylemek'],
+ 'venus-mars':['Sevgi ve istek arasında çekişme; ilişkilerde tutku ile huzur arasında gidip gelme olabilir.','İstekle şefkati dengelemek','Tutkusunu sevgiyle uyumlu yaşamak'],
+ 'mercury-mars':['Hızlı ve sert konuşabilir; tartışmayı kazanmak, anlaşmaktan önemli hale gelebilir.','Sözü yumuşatmak','Fikirlerini cesurca ama kırmadan savunmak'],
+ 'moon-uranus':['Duygusal ihtiyaçları değişkendir; yakınlık ile özgürlük arasında bölünebilir.','İstikrarla özgürlüğü uzlaştırmak','Değişime açıklığını güvenle birleştirmek'],
+ 'sun-uranus':['Kurallara ve kısıtlamalara karşı ani tepkiler verebilir.','Özgürlüğü sorumlulukla taşımak','Farklılığını yapıcı yeniliklere çevirmek'],
+ 'venus-uranus':['İlişkilerde sıkışmışlık hissine çok duyarlıdır; ani soğumalar yaşanabilir.','Bağlılıkta özgürlüğü bulmak','Sevgide dürüst ve açık olmak'],
+ 'moon-neptune':['Başkalarının duygularını sünger gibi çekebilir; sınırları bulanıklaşabilir.','Sağlıklı sınır koymak','Şefkatini kendini tüketmeden yaşamak'],
+ 'sun-neptune':['Kendini net tanımlamakta zorlanabilir; hayal kırıklığı ya da kurban rolüne düşme riski olabilir.','Gerçekçi bir benlik algısı','Hayal gücünü somut işlerde kullanmak'],
+ 'venus-neptune':['Sevdiği insanı idealize edip sonra hayal kırıklığı yaşayabilir.','Gerçeği sevmek','Şefkatini gerçekçi beklentilerle yaşamak'],
+ 'mars-neptune':['Enerjisi dağılabilir; ne istediğinden emin olamama, kararsızlık yaşanabilir.','Niyeti netleştirmek','Gücünü bir ideal uğruna toplamak'],
+ 'mercury-neptune':['Dağınıklık, ayrıntı kaçırma ya da söyleneni olduğundan farklı duyma olabilir.','Netlik','Sezgisini yazı ve sanatla ifade etmek'],
+ 'jupiter-saturn':['Büyüme isteği ile güvenlik kaygısı arasında gidip gelebilir.','Riskle temkini dengelemek','Sabırla büyümek'],
+ 'sun-jupiter':['Aşırı iyimserlik, fazla söz verme ya da kendini abartma eğilimi olabilir.','Ölçülü olmak','Cömertliğini dengeli kullanmak'],
+ 'moon-jupiter':['Duygusal ya da maddi aşırılıklar; fazla verme ya da fazla tüketme olabilir.','Kanaat','Cömertliğini kendini tüketmeden yaşamak'],
+ 'venus-jupiter':['Konfora, harcamaya ve keyfe fazla düşkünlük olabilir.','Ölçü','Zevkini sağlıklı sınırlar içinde yaşamak'],
+ 'mars-jupiter':['Kapasitesinden fazlasını üstlenip yorulabilir.','Gücünü doğru ölçmek','Enerjisini büyük ama gerçekçi hedeflere yöneltmek'],
+ 'sun-chiron':['Kendini değersiz hissettiği anlar yaşayabilir; eleştiriye fazla duyarlı olabilir.','Kendini kabul','Yarasından başkalarına şifa çıkarmak'],
+ 'moon-chiron':['Duygusal olarak incinmiş hissetme eğilimi; anlaşılmama kaygısı olabilir.','Kendi duygularına şefkat','Başkalarının acısını anlama yeteneğini kullanmak']};
+const SOFT={
+ 'sun-moon':'İrade ile duygu uyum içinde; içi ile dışı arasında büyük bir çatışma yok.',
+ 'sun-jupiter':'İyimserlik ve cömertlik; zor zamanlarda bile umudunu koruyabilir.',
+ 'moon-venus':'Şefkatli, sevgi dolu ve uyumlu bir duygusal doğa.',
+ 'moon-jupiter':'Duygusal cömertlik ve iç huzur; insanlara güven verir.',
+ 'venus-jupiter':'Sevgi ve güzelliğe açık; sosyal ilişkilerde kolaylık.',
+ 'mars-jupiter':'Enerji ve inanç birlikte; büyük hedefler için cesaret.',
+ 'mercury-jupiter':'Geniş düşünme, öğrenme ve öğretme kolaylığı.',
+ 'sun-saturn':'Disiplin ve sorumluluk duygusu; sabırla kalıcı işler kurma gücü.',
+ 'moon-saturn':'Duygusal olgunluk; zor zamanlarda soğukkanlılık.',
+ 'mars-saturn':'Dayanıklılık ve azim; uzun soluklu çalışma gücü.',
+ 'venus-saturn':'Sadakat ve kalıcı bağlar kurma yeteneği.',
+ 'mercury-saturn':'Disiplinli ve derin düşünme; dikkatli konuşma.',
+ 'sun-mars':'Canlılık ve cesaret; harekete geçme kolaylığı.',
+ 'venus-mars':'Sevgi ile istek uyum içinde; ilişkilerde sıcaklık.',
+ 'mercury-venus':'Hoş, nazik ve ikna edici bir konuşma tarzı.',
+ 'moon-neptune':'Güçlü sezgi ve şefkat; sanatsal duyarlılık.',
+ 'sun-pluto':'Kriz anlarında toparlanma ve yenilenme gücü.',
+ 'mercury-uranus':'Hızlı, özgün ve yenilikçi zekâ.'};
+const HOUSE_LESSON={6:'günlük düzen, iş ve beden bakımıyla',8:'güven, paylaşım ve kayıplarla yüzleşmekle',12:'iç dünyası, yalnızlık ve görünmeyen kaygılarla'};
+const TIP_WEAK=[
+ ['Her gün ertelediğin küçük bir işi ilk saatte yap.','Haftada bir kez fikrini açıkça söylemeyi dene.'],
+ ['Gününü üç somut işle sınırla ve bitirince işaretle.','Ay sonunda gelir ve giderlerini bir kâğıda yaz.'],
+ ['Hislerini akşam birkaç cümleyle yaz.','Haftada bir kez farklı görüşte biriyle sakin bir sohbet et.'],
+ ['Gün içinde birkaç dakika durup ne hissettiğine isim ver.','Sevdiğin birine bu hafta neden değerli olduğunu söyle.']];
+const TIP_SAT=['Öfkelendiğinde cevap vermeden önce on nefes say.','Kendine verdiğin sözlerin bir listesini tut; küçük olanlarla başla.','Bir konuda derinleşmek için haftada bir saat ayır.','"Hayır" demen gereken bir yerde nazikçe hayır de.'];
+const TIP_MOON=['Duygusal olarak doluysan önce yürüyüşe çık, sonra konuş.','Dinlenmeyi bir ödül değil bir ihtiyaç olarak takvimine yaz.','Kafandaki endişeyi bir dostunla paylaş; söylenen kaygı küçülür.','Başkasının duygusunu üstlenmeden önce "bu benim mi?" diye sor.'];
+
+// ---------- NASIL YAKLASILMALI (ucuncu sahis) ----------
+const AP_MOON=[ // her burc: [uzgunken, yalnizken, huzurlu ortam, sevgiyi nasil hissetmek ister, hassas konular]
+ ['Üzgünken uzun konuşmalar yerine birlikte bir şey yapmak (yürüyüş, spor, kısa bir gezi) ona daha iyi gelir.','Yalnız hissettiğinde ona macera teklif edin; "hadi çıkalım" demek "nasılsın"dan etkilidir.','Hareketli, canlı ve özgür hissettiği ortamlar.','Sevildiğini, onun için zaman ayrıldığında ve heyecanla karşılandığında hisseder.','Görmezden gelinmek ve kısıtlanmak.'],
+ ['Üzgünken önce sakin bir ortam, sıcak bir yemek ve sessiz bir yakınlık ister; çözüm sonra gelir.','Yalnız hissettiğinde yanında oturun; az konuşun, çok bulunun.','Düzenli, rahat, güzel kokulu ve sakin bir ev.','Sevgiyi dokunuşta, sözünü tutmakta ve sürekli olmakta hisseder.','Ani değişiklikler ve güvensizlik.'],
+ ['Üzgünken konuşmak ister; dinlenmek ve fikir alışverişi ona iyi gelir.','Yalnız hissettiğinde mesaj atın, bir haber paylaşın, onu sohbete davet edin.','Konuşmanın, müziğin ve fikirlerin aktığı hafif bir ortam.','Sevildiğini, ilgi gösterilip fikirleri merak edildiğinde hisseder.','Sıkıcı rutin ve dinlenmemek.'],
+ ['Üzgünken şefkat ister: yargılamadan dinlenmek, sarılmak, "buradayım" duymak.','Yalnız hissettiğinde onu evinize, sofranıza çağırın; ait olduğunu hissettirin.','Sıcak, güvenli ve aile havası taşıyan bir ortam.','Sevgiyi korunmakta, hatırlanmakta ve önemsenmekte hisseder.','Reddedilmek ve aileyle ilgili eleştiriler.'],
+ ['Üzgünken görülmek ister; sevildiğini ve önemli olduğunu duymak onu hemen toparlar.','Yalnız hissettiğinde onu bir etkinliğe, bir kutlamaya davet edin.','Sıcak, neşeli ve kendini ifade edebildiği bir ortam.','Sevgiyi açık takdirde, ilgide ve küçük jestlerde hisseder.','Küçümsenmek ve takdir görmemek.'],
+ ['Üzgünken pratik destek ister: işini kolaylaştırmak sözlerden daha çok teselli eder.','Yalnız hissettiğinde ona küçük bir yardım isteyin; işe yaradığını hissetmek ona iyi gelir.','Düzenli, temiz ve sakin bir ortam.','Sevgiyi emekte, ayrıntıya gösterilen özende ve yardımda hisseder.','Dağınıklık, eleştiri ve sağlığıyla ilgili kaygılar.'],
+ ['Üzgünken huzurlu bir ortam ve nazik bir dil ister; kavgadan uzak kalmak onu dinlendirir.','Yalnız hissettiğinde ona bir arkadaş buluşması ya da güzel bir etkinlik önerin.','Uyumlu, estetik ve gerginlikten uzak bir ortam.','Sevgiyi incelikte, eşit muamelede ve birlikte geçirilen güzel zamanda hisseder.','Kabalık, adaletsizlik ve çatışma.'],
+ ['Üzgünken önce yalnız kalmak isteyebilir; ısrarla sorgulamak yerine kapıyı açık bırakın.','Yalnız hissettiğinde derin ve dürüst bir sohbet onu açar; yüzeysel teselli değil.','Mahrem, sakin ve güvenilir bir ortam.','Sevgiyi sadakatte, sır tutmakta ve derin bağlılıkta hisseder.','İhanet, yalan ve mahremiyetin çiğnenmesi.'],
+ ['Üzgünken umut ister: geniş bir bakış açısı, biraz mizah ve "bu da geçer" hissi.','Yalnız hissettiğinde onu bir yolculuğa, bir derse ya da yeni bir deneyime çağırın.','Ferah, özgür ve öğrenmeye açık bir ortam.','Sevgiyi özgürlüğüne saygıda ve birlikte keşfetmekte hisseder.','Kısıtlanmak ve dar görüşlülük.'],
+ ['Üzgünken duygularını hemen göstermeyebilir; pratik bir yardım ve sessiz destek ona daha çok dokunur.','Yalnız hissettiğinde onu ciddiye alın; birlikte bir plan yapmak iyi gelir.','Düzenli, sakin ve sorumlulukların net olduğu bir ortam.','Sevgiyi güvenilirlikte, sözün tutulmasında ve emeğine saygıda hisseder.','Başarısız görünmek ve ciddiye alınmamak.'],
+ ['Üzgünken biraz mesafe ve anlayış ister; duygularını önce aklıyla çözmek isteyebilir.','Yalnız hissettiğinde onu bir gruba, bir topluluğa, bir arkadaş sohbetine davet edin.','Özgür, eşitlikçi ve fikirlerin konuşulduğu bir ortam.','Sevgiyi bağımsızlığına saygıda ve dostça yakınlıkta hisseder.','Sahiplenilmek ve kalıplara sokulmak.'],
+ ['Üzgünken yumuşak bir ses, müzik, dua ya da sessiz bir yakınlık ona iyi gelir.','Yalnız hissettiğinde ona şefkatle yaklaşın; yanında olduğunuzu hissettirmeniz yeter.','Sakin, sanatsal ve huzur veren bir ortam.','Sevgiyi anlaşılmakta, şefkatte ve ruhsal yakınlıkta hisseder.','Sert sözler, kabalık ve duygularının hafife alınması.']];
+const AP_VENUS=[ // [hediye, iltifat, sevgiyi gosterme, sosyal aktivite, romantik iliski]
+ ['Spor ekipmanı, macera deneyimi, sürpriz bir etkinlik bileti.','Cesaretini, enerjisini ve öncülüğünü övün.','Sevgisini heyecanla ve doğrudan gösterir; ilk adımı atar.','Spor, yarışma, açık hava ve yeni yerler keşfetmek.','Heyecanı ve ilk günkü coşkuyu canlı tutmak önemlidir.'],
+ ['Kaliteli ve kalıcı bir eşya, güzel bir yemek, doğal kokular, el emeği.','Zevkini, güvenilirliğini ve sakinliğini övün.','Sevgisini emekle, dokunuşla ve süreklilikle gösterir.','Güzel bir sofra, doğa yürüyüşü, müzik dinlemek.','Sabır, sadakat ve fiziksel yakınlık önemlidir.'],
+ ['Kitap, bir atölye kaydı, ilginç bir alet, mektup ya da not.','Zekâsını, esprilerini ve konuşma yeteneğini övün.','Sevgisini sözle, mesajla ve ilgiyle gösterir.','Sohbet, kafe, kitap fuarı, oyun geceleri.','Konuşmanın hiç bitmemesi ve zihinsel uyum önemlidir.'],
+ ['Anlamlı ve kişisel bir hediye: fotoğraf albümü, el yapımı bir şey, aileye dair bir hatıra.','Şefkatini, koruyuculuğunu ve sıcaklığını övün.','Sevgisini bakım vererek, yemek yaparak, koruyarak gösterir.','Ev davetleri, aile buluşmaları, deniz kenarı.','Güven, duygusal yakınlık ve yuva hissi önemlidir.'],
+ ['Gösterişli ve özel bir hediye; adına hazırlanmış bir sürpriz.','Yaratıcılığını, cömertliğini ve ışığını açıkça övün.','Sevgisini cömertçe, gösterişli jestlerle ve koruyarak gösterir.','Konser, tiyatro, kutlamalar ve sahne olan her yer.','Hayranlık, sadakat ve onurlandırılmak önemlidir.'],
+ ['Kullanışlı ve özenle seçilmiş bir hediye; sağlığına ya da düzenine katkı yapan bir şey.','Emeğini, inceliğini ve yardımseverliğini övün.','Sevgisini hizmetle, ayrıntılarla ve pratik yardımla gösterir.','Atölyeler, gönüllülük, sakin yürüyüşler.','Özen, güven ve küçük şeylere dikkat önemlidir.'],
+ ['Zarif ve estetik bir hediye: sanat eseri, güzel bir aksesuar, bir koku.','Zarafetini, nezaketini ve adaletini övün.','Sevgisini incelikle, ilgiyle ve uyum kurarak gösterir.','Sanat sergisi, şık bir akşam yemeği, dans.','Eşitlik, incelik ve uyum önemlidir.'],
+ ['Anlamı derin bir hediye; bir sırrı, ortak bir hatırayı hatırlatan bir şey.','Derinliğini, sezgisini ve gücünü övün.','Sevgisini yoğun bağlılıkla ve sadakatle gösterir.','Baş başa derin sohbetler, gizemli yerler, belgeseller.','Güven, mahremiyet ve dürüstlük önemlidir.'],
+ ['Bir yolculuk, kitap, kurs ya da yeni bir kültürü tanıtan bir deneyim.','İyimserliğini, bilgisini ve cesaretini övün.','Sevgisini birlikte keşfederek, eğlenerek ve özgürlük tanıyarak gösterir.','Gezi, felsefi sohbetler, kamp, yeni deneyimler.','Özgürlük, ortak ideal ve birlikte büyümek önemlidir.'],
+ ['Kaliteli ve uzun ömürlü bir hediye; işine yarayacak klasik bir eşya.','Başarısını, emeğini ve güvenilirliğini övün.','Sevgisini sorumluluk alarak ve geleceği planlayarak gösterir.','Sakin akşam yemekleri, tarihi yerler, planlı geziler.','Ciddiyet, sadakat ve ortak hedefler önemlidir.'],
+ ['Sıra dışı ve yenilikçi bir hediye; teknolojik bir alet ya da beklenmedik bir deneyim.','Özgünlüğünü, açık fikirliliğini ve dostluğunu övün.','Sevgisini dostlukla, özgürlük tanıyarak ve sürprizlerle gösterir.','Topluluk etkinlikleri, bilim, teknoloji ve fikir buluşmaları.','Dostluk, özgürlük ve zihinsel uyum önemlidir.'],
+ ['Duygusal değeri olan bir hediye: müzik, şiir, sanat, manevi bir kitap.','Şefkatini, hayal gücünü ve inceliğini övün.','Sevgisini fedakârlıkla, şefkatle ve sezgiyle gösterir.','Müzik, sinema, deniz kenarı, sakin sanat ortamları.','Ruhsal yakınlık, romantizm ve şefkat önemlidir.']];
+const AP_MERC=[ // element: [nasil konusulmali, elestiriye yaklasim, tartismada, karar verirken, mizah, rahatsiz eden sozler]
+ ['Kısa, net ve doğrudan konuşulmasından hoşlanır; lafı dolandırmak sabrını tüketir.','Eleştiriye önce sert tepki verebilir ama dürüst eleştiriye saygı duyar; mesele dolaysız söylenmeli.','Tartışmada hızla parlar; ona alan tanıyıp sakinleşince konuşmak en iyisidir.','Hızlı karar verir; seçenekleri kısa ve net sunun, uzun analiz onu sıkar.','Hızlı, şakacı ve meydan okuyan bir mizahı vardır.','"Yavaş ol", "sen bilmezsin", "boş ver" gibi onu küçümseyen sözler.'],
+ ['Somut, sakin ve örneklerle konuşulmasından hoşlanır; boş vaatler onu ikna etmez.','Eleştiriyi gerekçesi ve çözümüyle birlikte sunarsanız dikkate alır.','Tartışmada inatlaşabilir; ona düşünme zamanı tanıyın, baskı yapmayın.','Kararlarını yavaş verir; bilgi ve zaman isteyin, aceleye getirmeyin.','Kuru, ince ve gerçekçi bir mizahı vardır.','"Çok yavaşsın", "hep aynı şeyi yapıyorsun" gibi emeğini küçümseyen sözler.'],
+ ['Fikir alışverişine dayalı, merak dolu ve canlı bir konuşmadan hoşlanır.','Eleştiriyi mantıklı bir gerekçeyle sunarsanız tartışmaya açıktır.','Tartışmayı bir fikir maçına çevirebilir; duyguları değil argümanları konuşun.','Seçenekleri tartmayı sever; artı ve eksileri birlikte konuşun.','Nükteli, kelime oyunlarını seven ve ironik bir mizahı vardır.','"Çok konuşuyorsun", "saçmalama" gibi fikrini değersizleştiren sözler.'],
+ ['Yumuşak, sıcak ve duygusunu anlayan bir dille konuşulmasından hoşlanır.','Eleştiriyi kişisel algılayabilir; önce takdir, sonra öneri ve sevgiyle söyleyin.','Tartışmada kırılıp içine kapanabilir; ses tonunu yumuşak tutun.','Kararlarını hisleriyle verir; "sen ne hissediyorsun?" diye sormak onu rahatlatır.','Sıcak, şefkatli ve hikâye anlatan bir mizahı vardır.','"Abartıyorsun", "bu kadar hassas olma" gibi duygularını hafife alan sözler.']];
+const AP_MARS=[ // element: [ofkelendiginde, stres altinda, baski altinda tepki, motivasyon kaybi, tartismayi artiran iletisim]
+ ['Öfkelendiğinde ona alan tanıyın; ateş çabuk yanar, çabuk söner. Aynı sertlikle karşılık vermeyin.','Stres altındayken hareket etmesine izin verin; spor ya da yürüyüş önerin.','Baskı altında karşı saldırıya geçebilir.','Ona yeni bir hedef ya da küçük bir meydan okuma sunun.','Emir vermek, sabırsızlıkla karşılık vermek ve onu kontrol etmeye çalışmak.'],
+ ['Öfkelendiğinde zorlamayın; sessizleşir ve uzun süre kızgın kalabilir. Sakin bir zamanda konuşun.','Stres altındayken düzenini koruyun; pratik bir yardım en iyi destektir.','Baskı altında inatlaşır ve geri çekilir.','Somut bir ilerlemeyi, emeğinin sonucunu ona gösterin.','Aceleye getirmek, plansız değişiklikler ve emeğini görmezden gelmek.'],
+ ['Öfkelendiğinde konuşmak ister; dinleyin ama tartışmayı uzatmayın.','Stres altındayken zihni dağılabilir; listeleri ve öncelikleri birlikte belirleyin.','Baskı altında alaycılaşabilir ya da konuyu değiştirebilir.','İlginç bir fikir, yeni bir proje ya da öğrenme fırsatı sunun.','Onu susturmak, sorularını cevapsız bırakmak, tekdüze tartışmalar.'],
+ ['Öfkelendiğinde önce kırgınlığını görün; çoğu öfkenin altında bir incinme vardır.','Stres altındayken güvende hissetmesi için sakin bir ortam sağlayın.','Baskı altında içine kapanır ya da duygusal tepki verir.','Yaptığı işin bir insana dokunduğunu, değer kattığını hatırlatın.','Soğuk ve mesafeli davranmak, duygularını yok saymak.']];
+const AP_SUN=[ // element: [deger verilme, basarisizlikta, is ortaminda, etkilendigi davranislar]
+ ['Fikri sorulduğunda, öncülüğü tanındığında ve inisiyatif bırakıldığında değerli hisseder.','Başarısızlıkta acımayın; hemen yeni bir hedefe odaklanmasına yardım edin.','İş ortamında özerklik ve hızlı ilerleme ister; mikro yönetimden hoşlanmaz.','Cesaret, açık sözlülük ve kararlılık.'],
+ ['Emeği ve güvenilirliği görüldüğünde değerli hisseder.','Başarısızlıkta neyin işe yaradığını birlikte somut olarak konuşun.','İş ortamında net görevler, istikrar ve adil karşılık ister.','Sözünü tutmak, dakiklik ve sağlam duruş.'],
+ ['Fikirleri dinlendiğinde ve zekâsı takdir edildiğinde değerli hisseder.','Başarısızlıkta durumu farklı açılardan konuşmak ona iyi gelir.','İş ortamında çeşitlilik, iletişim ve fikir özgürlüğü ister.','Zekice sorular, açık fikirlilik ve iyi sohbet.'],
+ ['Duyguları önemsendiğinde ve yanında olunduğunda değerli hisseder.','Başarısızlıkta önce teselli, sonra çözüm; sevildiğini bilmek ona güç verir.','İş ortamında güvenli bir ekip ve anlamlı bir amaç ister.','Samimiyet, sadakat ve incelik.']];
+const AP_SAT=[ // element: [guven zedelendiginde, guveni kazanmayi kolaylastiran]
+ ['Güveni zedelendiğinde açık bir özür ve hızlı bir telafi bekler.','Dürüst ve cesur olmak, söylediğinin arkasında durmak.'],
+ ['Güveni zedelendiğinde sözle değil davranışla, zamanla yeniden kazanılır.','Sözünü tutmak, tutarlı ve sabırlı olmak.'],
+ ['Güveni zedelendiğinde neyin neden olduğunu açıkça konuşmak ister.','Şeffaf olmak, bilgiyi saklamamak, fikrine saygı duymak.'],
+ ['Güveni zedelendiğinde içine kapanır; şefkatli, sabırlı ve samimi bir yaklaşım gerekir.','Sır tutmak, duygularına saygı duymak, yanında olmak.']];
+const AP_FAMILY=['Aile ortamında sorumluluk almayı ve yön vermeyi sever; ona danışmak onu memnun eder.','Aile ortamında gelenek, düzen ve sadakat ister; değişiklikleri önceden konuşun.','Aile ortamında esneklik ve hoşgörü ister; katı kurallar onu bunaltır.'];
+const AP_DECIDE_MOD=['Önemli kararlarda hızlı davranmak ister; zamanlamayı birlikte konuşun.','Önemli kararlarda kesinleşene kadar düşünür; bir kez karar verince geri dönmesi zordur.','Önemli kararlarda seçenekleri açık tutmak ister; kesinlik baskısı onu huzursuz eder.'];
+
+// ===== BIRLESIK YORUM MOTORU + IMZA BOLUMLERI =====
+// Her yorum; gezegen, burc, ev, ev yoneticisi, aci, orb, element, nitelik, asalet ve retro bilgisinden birlikte uretilir.
+const SK=['sun','moon','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto'];
+const PORD=['sun','moon','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto','chiron'];
+const pkey=(a,b)=>PORD.indexOf(a)<PORD.indexOf(b)?a+'-'+b:b+'-'+a;
+const hashN=s=>{let h=2166136261;for(const c of String(s))h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0;};
+const to2nd=t=>t.replace(/(\S*)$/,w=>{const v=(w.match(/[aeıioöuü](?=[^aeıioöuü]*$)/)||['e'])[0];return w+'s'+({a:'ın',ı:'ın',e:'in',i:'in',o:'un',u:'un',ö:'ün',ü:'ün'}[v]);});
+const sent1=t=>(String(t).match(/[^.!?]+[.!?]+/)||[t])[0].trim();
+const pn=k=>k==='asc'?'Yükselen':k==='mc'?'MC':(PL[k]?PL[k].n:k);
+function aspLabel(a){return `${pn(a.p)}–${pn(a.q)} ${a.asp.n.toLocaleLowerCase('tr')} (orb ${a.orb.toFixed(1)}°)`;}
+function CM(ch,p){
+  if(ch._cm&&ch._cmP===p)return ch._cm;
+  const mi=moonInfo(ch),ai=ascInfo(ch,p);
+  const hasH=!ch.noTime&&!(p.mode==='range'&&ch.cands&&ch.cands.length>1);
+  const P={};for(const k of [...SK,'chiron','node'])if(ch.pos[k]){const q=ch.pos[k];P[k]={k,s:q.sign,h:hasH?q.house:null,dg:SK.includes(k)?dignity(k,q.sign):'',r:!!q.retro&&!['sun','moon','node'].includes(k),lon:q.lon};}
+  const moonAlt=!mi.sure&&ch.moonRange?[signOf(ch.moonRange.from),signOf(ch.moonRange.to)]:[P.moon.s];
+  const asp=(ch.aspects||[]).filter(a=>!a.asp.minor).filter(a=>hasH||!['asc','mc'].includes(a.p)&&!['asc','mc'].includes(a.q)).filter(a=>p.mode!=='unknown'||(a.p!=='moon'&&a.q!=='moon'));
+  const heavy=['mars','saturn','uranus','neptune','pluto','chiron'];
+  const isHard=a=>a.asp.t==='s'||(a.asp.t==='c'&&(heavy.includes(a.p)||heavy.includes(a.q))&&!['asc','mc'].includes(a.p)&&!['asc','mc'].includes(a.q));
+  const hard=asp.filter(a=>isHard(a)&&a.p!=='asc'&&a.q!=='asc'&&a.p!=='mc'&&a.q!=='mc'),soft=asp.filter(a=>a.asp.t==='h'&&!['asc','mc'].includes(a.p)&&!['asc','mc'].includes(a.q));
+  const eb=elementBalance(ch),el=eb.el,md=eb.md,ord=[0,1,2,3].sort((a,b)=>el[b]-el[a]);
+  const domEl=ord[0],secEl=ord[1],weakEl=ord[3],domMod=md.indexOf(Math.max(...md));
+  // baskin gezegen
+  const sc={};for(const k of SK){let s=0;if(k==='sun'||k==='moon')s+=1;
+    if(hasH&&SIGNS[signOf(ch.asc)].ruler===k)s+=3;if(SIGNS[P.sun.s].ruler===k)s+=2;if(SIGNS[P.moon.s].ruler===k)s+=1;
+    if(P[k].h&&[1,4,7,10].includes(P[k].h))s+=2;if(['Yönetici','Yücelim'].includes(P[k].dg))s+=1.5;if(['Zarar','Düşüş'].includes(P[k].dg))s-=.5;
+    for(const a of asp)if(a.p===k||a.q===k){s+=.3;if(a.orb<2)s+=.3;if([a.p,a.q].some(x=>x==='sun'||x==='moon')&&k!=='sun'&&k!=='moon')s+=.4;}
+    if(['uranus','neptune','pluto'].includes(k))s-=1.2;sc[k]=s;}
+  const fd=finalDispositor(ch);if(fd)sc[fd]+=2;
+  const dom=SK.slice().sort((a,b)=>sc[b]-sc[a])[0];
+  const ruler=h=>hasH?SIGNS[signOf(ch.cusps[h-1])].ruler:null;
+  const cuspS=h=>hasH?signOf(ch.cusps[h-1]):null;
+  const inH=h=>hasH?SK.filter(k=>P[k].h===h):[];
+  const retro=SK.filter(k=>P[k].r);
+  const unasp=SK.filter(k=>!asp.some(a=>a.p===k||a.q===k));
+  const pats=aspectPatterns(ch);
+  const seed=hashN(Math.round(ch.jd*1440)+'');
+  const m={ch,p,P,mi,ai,hasH,moonAlt,asp,hard,soft,el,md,domEl,secEl,weakEl,domMod,dom,sc,fd,ruler,cuspS,inH,retro,unasp,pats,seed,
+    ascS:(ai.sure||p.est)&&!ch.noTime?signOf(ch.asc):null,nodeS:P.node.s,nodeH:P.node.h,sNodeH:hasH?((P.node.h+5)%12)+1:null};
+  ch._cm=m;ch._cmP=p;return m;
+}
+// gosterge etiketleri
+const sgn=s=>SIGNS[s].n;
+const pLab=(m,k)=>{const q=m.P[k];if(!q)return '';const ms=k==='moon'&&m.moonAlt.length>1?m.moonAlt.map(sgn).join(' / ')+' (kesin değil)':sgn(q.s);return `${pn(k)} ${ms}${q.h?`, ${q.h}. ev`:''}${q.dg?` (${q.dg.toLocaleLowerCase('tr')})`:''}${q.r?' R':''}`;};
+const ascLab=m=>m.ascS!=null?`Yükselen ${sgn(m.ascS)}${m.p.est?' (tahmini)':''}`:null;
+const elLab=m=>`Baskın element: ${EL_N[m.domEl]} · Baskın nitelik: ${MOD_N[m.domMod]} · En zayıf element: ${EL_N[m.weakEl]}`;
+function basis(list){const L=[...new Set(list.filter(Boolean))];if(!L.length)return '';return `<details class="basis"><summary>Bu yorum neye dayanıyor?</summary><ul>${L.map(x=>`<li>${x}</li>`).join('')}</ul></details>`;}
+function SB(title,body,bs,k,cls){const img=k?planetSVG(k,52):'';return `<section class="card sb ${cls||''}"><div class="sbh">${img}<h3>${title}</h3></div>${body}${basis(bs||[])}</section>`;}
+const topHard=(m,n,f)=>m.hard.filter(f||(()=>true)).slice(0,n);
+const hasAsp=(m,a,b,list)=>(list||m.asp).find(x=>(x.p===a&&x.q===b)||(x.p===b&&x.q===a));
+const elOf=(m,k)=>SIGNS[m.P[k].s].el;
+function noteTop(m){const n=[];
+  if(m.p.mode==='unknown')n.push('Doğum saati bilinmediği için yükselen, evler ve ev yöneticileri bu yorumda kullanılmadı; Ay\'ın açıları da hesaba katılmadı.');
+  else if(!m.hasH)n.push('Doğum saati bir aralık olarak verildiği ve yükselen bu aralıkta değiştiği için evler ve ev yöneticileri bu yorumda kullanılmadı.');
+  else if(m.p.est)n.push('Yükselen ve evler, seçtiğiniz tahmini doğum saatine göre hesaplandı.');
+  if(m.moonAlt.length>1)n.push(`Ay doğum gününde ${sgn(m.moonAlt[0])} burcundan ${sgn(m.moonAlt[1])} burcuna geçiyor; Ay'a dayanan cümlelerde iki olasılık birlikte verildi.`);
+  return n.length?`<div class="note small">${n.join(' ')}</div>`:'';}
+const moonTxt=(m,arr,i)=>{const a=m.moonAlt,g=s=>i===undefined?arr[s]:arr[s][i];if(a.length<2)return g(a[0]);return `${g(a[0])} <span class="small">(Ay ${sgn(a[1])} burcundaysa: ${g(a[1])})</span>`;};
+
+// ================= DERIN KARAKTER PORTRESI =================
+function deepParts(m){
+  const {P,ch}=m,sun=P.sun.s,moon=P.moon.s,nm=esc(m.p.name||'');
+  const S={};
+  // 1
+  S.core={t:'Sen aslında nasıl bir insansın?',k:'sun',b:`<p class="dtext">${DEEP_SUN[sun]}</p><p class="dtext">${DP_PLANET_CORE[m.dom]}</p>`,bs:[pLab(m,'sun'),`Baskın gezegen: ${pn(m.dom)} (yükselen yöneticisi, açısal konum, asalet ve açı sayısından hesaplandı)`]};
+  // 2
+  {let b,bs=[];if(m.ascS!=null){b=`<p class="dtext">${DEEP_ASC[m.ascS]}</p>`;bs.push(ascLab(m));const h1=m.inH(1);if(h1.length){b+=`<p>1. evindeki ${h1.map(pn).join(', ')} bu ilk izlenime ${h1.map(k=>PL[k].theme.split(',')[0]).join(' ve ')} katar.</p>`;bs.push(...h1.map(k=>pLab(m,k)));}}
+    else{b=`<p class="small">Doğum saati kesin olmadan yükselen bilinemez; insanlar seni çoğunlukla Güneş burcunun ve Ay'ının yansımasıyla tanır.</p><p class="dtext">${sent(DEEP_SUN[sun],0)} ${sent(DEEP_SUN[sun],2)}</p>`;bs.push(pLab(m,'sun'));}
+    S.seen={t:'İnsanların gördüğü tarafın',k:'asc',b,bs};}
+  // 3
+  {const h12=m.inH(12);let b=`<p class="dtext">${m.moonAlt.map(s=>sent(DEEP_MOON[s],1)).join(' ')}</p>`;const bs=[pLab(m,'moon'),pLab(m,'pluto')];
+    if(h12.length){b+=`<p>12. evinde ${h12.map(pn).join(', ')} var: ${h12.map(k=>PL[k].theme.split(',')[0]).join(', ')} konularını çoğu zaman içinde, kimseye göstermeden yaşarsın.</p>`;bs.push(...h12.map(k=>pLab(m,k)));}
+    if(P.pluto.h)b+=`<p>Plüton ${P.pluto.h}. evde: ${PLUTO_H[P.pluto.h-1]} konusunda dışarıdan görünenden çok daha yoğun hislerin var.</p>`;
+    else b+=`<p>Plüton ${sgn(P.pluto.s)} burcunda; bu yerleşimi kuşağınla paylaşırsın ama yoğunluğu sende ${m.hard.some(a=>a.p==='pluto'||a.q==='pluto')?'kişisel gezegenlerine yaptığı açılar nedeniyle daha belirgindir':'sessiz bir arka plan gibi durur'}.</p>`;
+    S.hidden={t:'İnsanların kolayca göremediği tarafın',k:'pluto',b,bs};}
+  // 4
+  {const els=[...new Set(m.moonAlt.map(s=>SIGNS[s].el))];let b=els.map(me=>`<p class="dtext">${DEEP_COMBO[SIGNS[sun].el][me]}</p>`).join('');const bs=[pLab(m,'sun'),pLab(m,'moon')];
+    if(m.hasH){const ic=m.cuspS(4),h4=m.inH(4);b+=`<p>Kalbinin en iç odası (4. ev) ${sgn(ic)} burcunda: evinde ve iç dünyanda ${SIGNS[ic].kw.split(', ').slice(0,2).join(' ve ')} bir havaya ihtiyaç duyarsın.${h4.length?` Orada ${h4.map(pn).join(', ')} de var; ${h4.map(k=>PL[k].theme.split(',')[0]).join(' ve ')} iç dünyanın önemli bir parçası.`:''}</p>`;bs.push(`4. ev başlangıcı ${sgn(ic)}`,...h4.map(k=>pLab(m,k)));}
+    if(m.el[3]>=6)b+='<p>Haritanda su güçlü: iç dünyan derin, sezgilerin keskin.</p>';
+    S.inner={t:'İç dünyan',k:'moon',b,bs};}
+  // 5
+  S.needs={t:'Duygusal ihtiyaçların',k:'moon',b:m.moonAlt.length>1?`<div class="note small">Ay doğum gününde ${sgn(m.moonAlt[0])} burcundan ${sgn(m.moonAlt[1])} burcuna geçiyor; ikisini de oku.</div>`+m.moonAlt.map(s=>`<h4>${sgn(s)} Ayı</h4><p class="dtext">${DEEP_MOON[s]}</p>`).join(''):`<p class="dtext">${DEEP_MOON[moon]}</p>`,bs:[pLab(m,'moon')]};
+  // 6
+  {const it=[...SIGNS[sun].str.split(', ').slice(0,3),...SIGNS[moon].str.split(', ').slice(0,2)];if(m.ascS!=null)it.push(...SIGNS[m.ascS].str.split(', ').slice(0,1));
+    const dig=SK.slice(0,7).filter(k=>['Yönetici','Yücelim'].includes(P[k].dg));const bs=[pLab(m,'sun'),pLab(m,'moon'),ascLab(m),elLab(m)];
+    let b=`<p class="dtext">${DEEP_STRONG[m.domEl]}</p><div class="chips">${[...new Set(it.map(cap))].map(x=>`<span class="chip">${esc(x)}</span>`).join('')}</div>`;
+    if(dig.length){b+=`<p>${dig.map(k=>`${pn(k)} kendi gücünde (${P[k].dg.toLocaleLowerCase('tr')})`).join(', ')}: ${dig.map(k=>PL[k].theme.split(',')[0]).join(', ')} alanında doğal bir rahatlığın var.</p>`;bs.push(...dig.map(k=>pLab(m,k)));}
+    const sf=m.soft.filter(a=>SOFT[pkey(a.p,a.q)]).slice(0,2);if(sf.length){b+=ul(sf.map(a=>SOFT[pkey(a.p,a.q)]));bs.push(...sf.map(aspLabel));}
+    S.strong={t:'En güçlü özelliklerin',k:m.dom,b,bs};}
+  // 7
+  {const bs=[pLab(m,'chiron')];let b='';
+    if(P.chiron){if(P.chiron.h){const c=CHIRON_H[P.chiron.h-1];b+=`<p>Kiron ${P.chiron.h}. evinde: senin için en hassas konu ${c.w} olabilir. Bu yara aynı zamanda armağanındır: onu tanıyıp kabul ettikçe, aynı konuda zorlanan insanlara en iyi anlayışı sen gösterebilirsin.</p>`;}
+      else b+=`<p>Kiron ${sgn(P.chiron.s)} burcunda: ${SIGNS[P.chiron.s].kw.split(', ')[0]} olmakla ilgili konularda kendini kolay incinmiş hissedebilirsin; aynı konu, başkalarına en iyi anlayışı gösterebildiğin yerdir.</p>`;}
+    const mh=topHard(m,2,a=>[a.p,a.q].includes('moon')&&HARD[pkey(a.p,a.q)]);
+    if(mh.length){b+=`<p>Duygusal tarafında şu gerilim öne çıkıyor:</p>`+ul(mh.map(a=>HARD[pkey(a.p,a.q)][0]));bs.push(...mh.map(aspLabel));}
+    b+=`<p>${SIGNS[m.moonAlt[0]].fears?`Seni en çok sarsabilecek kaygılar: ${SIGNS[m.moonAlt[0]].fears.slice(0,2).join('; ').toLocaleLowerCase('tr')}.`:''}</p>`;bs.push(pLab(m,'moon'));
+    S.sens={t:'En hassas tarafların',k:'chiron',b,bs};}
+  // 8
+  {const w=[...SIGNS[sun].weak.split(', ').slice(0,2),...SIGNS[moon].weak.split(', ').slice(0,2)];const hh=topHard(m,3,a=>HARD[pkey(a.p,a.q)]&&!(a.p==='moon'||a.q==='moon'));
+    let b=`<p>Gölge, kötü taraf demek değildir; ışığın fazla parladığı ya da hiç ulaşmadığı yerdir. Sende gölge en çok şu biçimlerde görünebilir:</p><div class="chips">${[...new Set(w)].map(x=>`<span class="chip warn">${esc(x)}</span>`).join('')}</div>`;
+    if(hh.length)b+=ul(hh.map(a=>HARD[pkey(a.p,a.q)][0]));
+    S.shadow={t:'Gölge yönlerin',k:'pluto',b,bs:[pLab(m,'sun'),pLab(m,'moon'),...hh.map(aspLabel)]};}
+  // 9
+  S.life={t:'Hayata karşı duruşun',k:'sun',b:`<p class="dtext">${DP_LIFE[m.domEl]}${DP_LIFE_MOD[m.domMod]}</p>`,bs:[elLab(m)]};
+  // 10
+  {const je=elOf(m,'jupiter');let b=`<p class="dtext">${DP_JUSTICE[je]}</p>`;const sj=hasAsp(m,'jupiter','saturn',m.hard);if(sj)b+='<p>Jüpiter ile Satürn arasındaki gerilim, merhamet ile kural arasında sık sık tartmanı gerektirir; doğru dengeyi bulduğunda adil bir hakem olursun.</p>';
+    S.justice={t:'Adalet anlayışın',k:'jupiter',b,bs:[pLab(m,'jupiter'),sj?aspLabel(sj):'']};}
+  // 11
+  {let b=`<p class="dtext">${DP_POWER[elOf(m,'sun')]}</p>`;const bs=[pLab(m,'sun'),pLab(m,'saturn')];
+    for(const o of ['saturn','pluto']){const a=hasAsp(m,'sun',o,m.hard);if(a){b+=`<p>${HARD[pkey('sun',o)][0]} Bu gerilimin olgun hali: ${HARD[pkey('sun',o)][2].toLocaleLowerCase('tr')}.</p>`;bs.push(aspLabel(a));}}
+    if(m.hasH){const r=m.ruler(10);b+=`<p>Kariyer evinin (10. ev) yöneticisi ${pn(r)}, ${m.P[r].h}. evde: toplumdaki yerini ${HOUSES[m.P[r].h-1].dom} üzerinden kurarsın.</p>`;bs.push(`10. ev yöneticisi ${pn(r)} ${m.P[r].h}. evde`);}
+    S.power={t:'Güç ve otoriteyle ilişkin',k:'saturn',b,bs};}
+  // 12
+  {const s2=m.hasH?m.cuspS(2):P.venus.s;let b=`<p class="dtext">${DP_MONEY[SIGNS[s2].el]}</p>`;const bs=[m.hasH?`2. ev başlangıcı ${sgn(s2)}`:pLab(m,'venus')];
+    if(m.hasH){const r=m.ruler(2);b+=`<p>Para evinin yöneticisi ${pn(r)} ${m.P[r].h}. evde: kazancın en çok ${HOUSES[m.P[r].h-1].dom} ile bağlantılı olabilir.</p>`;bs.push(`2. ev yöneticisi ${pn(r)} ${m.P[r].h}. evde`);const h2=m.inH(2);if(h2.length){b+=`<p>2. evinde ${h2.map(pn).join(', ')} var; maddi konular hayatında önemli bir yer tutar.</p>`;bs.push(...h2.map(k=>pLab(m,k)));}}
+    S.money={t:'Para ile ilişkin',k:'venus',b,bs};}
+  // 13
+  {let b=`<p class="dtext">${DP_ALONE[SIGNS[m.moonAlt[0]].el]}</p>`;const bs=[pLab(m,'moon')];const ms=hasAsp(m,'moon','saturn');if(ms){b+='<p>Ay ile Satürn arasındaki bağ, erken yaşta kendi kendine yetmeyi öğrendiğini düşündürür; yalnızlık sana tanıdık ama her zaman seçilmiş değil.</p>';bs.push(aspLabel(ms));}
+    if(m.hasH&&m.inH(12).length>=2)b+='<p>12. evinin kalabalık olması, inzivaya ve iç dünyana zaman ayırmanın senin için bir ihtiyaç olduğunu gösterir.</p>';
+    S.alone={t:'Yalnızlıkla ilişkin',k:'moon',b,bs};}
+  // 14
+  S.love={t:'Sevgi anlayışın',k:'venus',b:`<p class="dtext">${DEEP_VENUS[P.venus.s]}</p>${P.venus.h?`<p>Venüs ${P.venus.h}. evinde: sevgi ve güzellik en çok ${HOUSES[P.venus.h-1].dom} alanında hayatına girer.</p>`:''}`,bs:[pLab(m,'venus')]};
+  // 15
+  {const s11=m.hasH?m.cuspS(11):P.venus.s;let b=`<p class="dtext">${DP_FRIEND[SIGNS[s11].el]}</p>`;const h11=m.inH(11);if(h11.length)b+=`<p>11. evinde ${h11.map(pn).join(', ')} var: arkadaş çevren hayatında belirleyici bir rol oynar.</p>`;
+    S.friend={t:'Dostluk anlayışın',k:'mercury',b,bs:[m.hasH?`11. ev başlangıcı ${sgn(s11)}`:pLab(m,'venus'),...h11.map(k=>pLab(m,k))]};}
+  // 16
+  {let b=`<p class="dtext">${DEEP_MARS[P.mars.s]}</p>`;const bs=[pLab(m,'mars')];for(const o of ['moon','saturn','pluto']){const a=hasAsp(m,'mars',o,m.hard);if(a&&HARD[pkey('mars',o)]){b+=`<p>${HARD[pkey('mars',o)][0]}</p>`;bs.push(aspLabel(a));}}
+    S.anger={t:'Öfke ve kırgınlıklarla baş etme biçimin',k:'mars',b,bs};}
+  // 17
+  {let b=`<p class="dtext">${DP_MOTIV[elOf(m,'mars')]}</p>`;const bs=[pLab(m,'mars')];if(P.sun.h){b+=`<p>Güneşin ${P.sun.h}. evde: ${HOUSES[P.sun.h-1].dom} alanında iz bırakmak seni gerçekten canlandırır.</p>`;bs.push(pLab(m,'sun'));}
+    if(m.hasH){const mc=signOf(ch.mc);b+=`<p>Tepe noktan (MC) ${sgn(mc)} burcunda: ${SIGNS[mc].kw.split(', ').slice(0,2).join(' ve ')} olarak tanınmak istersin.</p>`;bs.push(`MC ${sgn(mc)}`);}
+    S.motiv={t:'Motivasyon kaynakların',k:'mars',b,bs};}
+  // 18
+  {let b=`<p class="dtext">${DP_UNUSED[m.weakEl]}</p>`;const bs=[elLab(m)];
+    const un=m.unasp.filter(k=>!['uranus','neptune','pluto'].includes(k));if(un.length){b+=`<p>${un.map(pn).join(', ')} haritanda diğer gezegenlerle büyük açı yapmıyor: ${un.map(k=>PL[k].theme.split(',')[0]).join(', ')} yeteneğin bazen kendi başına, diğer yanlarınla bağlantısız çalışabilir. Bilinçli olarak hayatına kattığında güçlenir.</p>`;bs.push(...un.map(k=>`${pn(k)} açısız`));}
+    const rp=m.retro.filter(k=>['mercury','venus','mars'].includes(k));if(rp.length){b+=`<p>${rp.map(pn).join(', ')} retro: bu alanlardaki yeteneğin geç ama derin olgunlaşır.</p>`;bs.push(...rp.map(k=>pLab(m,k)));}
+    S.unused={t:'Potansiyelini kullanamadığın alanlar',k:'node',b,bs};}
+  // 19
+  {let b=`<p class="dtext">${DP_TALENT[elOf(m,'mercury')]}</p><p class="dtext">${DEEP_MERC[P.mercury.s]}</p>`;const bs=[pLab(m,'mercury')];if(P.jupiter.h){b+=`<p>Jüpiter ${P.jupiter.h}. evinde: ${HOUSES[P.jupiter.h-1].dom} alanında öğrenmek ve büyümek sana kolay gelir.</p>`;bs.push(pLab(m,'jupiter'));}
+    S.talent={t:'Geliştirebileceğin yetenekler',k:'mercury',b,bs};}
+  // 20
+  {let b=`<p class="dtext">${DP_MATURE[elOf(m,'saturn')]}</p>`;const bs=[pLab(m,'saturn'),pLab(m,'node')];
+    if(m.nodeH)b+=`<p class="dtext">${DEEP_NODE_H[m.nodeH-1]}</p>`;else b+=`<p>Kuzey Ay Düğümün ${sgn(m.nodeS)} burcunda: olgunluk yolun ${NODE_SIGN[m.nodeS].go} yönünde.</p>`;
+    if(P.saturn.h)b+=`<p class="dtext">${DEEP_SAT_H[P.saturn.h-1]}</p>`;
+    S.mature={t:'Olgunlaştıkça dönüşebilecek özelliklerin',k:'saturn',b,bs};}
+  return S;
+}
+function deepExtras(m,S){
+  const {P}=m,nm=m.p.name||'',sun=P.sun.s,moon=m.moonAlt[0];
+  const an=m.dom==='pluto'&&!(m.domEl===0&&m.domMod===2)?{n:'Anka kuşu',d:'phoenix',why:'küllerinden yeniden doğma ve dönüşüm gücü'}:ANIMALS[m.domEl][m.domMod];
+  const ten=[];for(const k of Object.keys(S)){const t=(S[k].b.match(/<p class="dtext">([^<]+)<\/p>/)||[])[1];if(t){const ss=t.match(/[^.!?]+[.!?]+/g)||[];const pick=ss[(m.seed>>>(ten.length%8))%Math.max(1,ss.length)]||ss[0];if(pick&&!ten.includes(pick.trim()))ten.push(pick.trim());}if(ten.length>=10)break;}
+  const kw=[];const addK=(s,n)=>{for(const w of SIGNS[s].kw.split(', ').slice(0,n)){const c=cap(w);if(!kw.includes(c))kw.push(c);}};addK(sun,2);addK(moon,1);if(m.ascS!=null)addK(m.ascS,1);addK(P[m.dom].s,2);addK(P.venus.s,1);
+  const pal=[[...EL_COLORS[m.domEl][0],EL_COLOR_MEAN[m.domEl]+' (baskın element)'],[...EL_COLORS[m.domEl][1],'baskın elementin ikinci tonu'],[SIGN_COLOR[sun][0],SIGN_COLOR[sun][1],`Güneş burcun ${sgn(sun)}`],[SIGN_COLOR[moon][0],SIGN_COLOR[moon][1],`Ay burcun ${sgn(moon)}`],[...EL_COLORS[m.secEl][0],EL_COLOR_MEAN[m.secEl]+' (ikinci güçlü element)']];
+  const ar=ARCHETYPE[m.dom],bk=BOOK_A[m.dom][m.seed%2];
+  const ns=NODE_SIGN[m.nodeS];
+  const film=`Film, ${LAND_BASE[m.domEl]} üzerinde açılıyor; ${LAND_DETAIL[m.secEl]} görünüyor. Kahramanımız ${SIGNS[sun].kw.split(', ').slice(0,2).join(' ve ')} biri: ${ar.n.toLocaleLowerCase('tr')} ruhlu, ${P.sun.h?HOUSES[P.sun.h-1].dom.split(',')[0]+' alanında iz bırakmak isteyen':'kendi yolunu arayan'} bir insan. Yol boyunca karşısına hep aynı sınav çıkıyor: ${SAT_SIGN[P.saturn.s]}. İlk yarıda eski alışkanlığına, yani ${ns.from} eğilimine sığınıyor. Kırılma anında yanında beklemediği biri beliriyor. Final sahnesinde ${ns.go} yolunda attığı küçük ama cesur adımlar, onu başladığı yerden çok daha uzağa taşıyor.`;
+  const qs=[Q_EL.sat[elOf(m,'saturn')],Q_EL.moon[SIGNS[moon].el],Q_EL.venus[elOf(m,'venus')],Q_EL.weak[m.weakEl],`Hayatında ${ns.go} için bu ay atabileceğin en küçük adım ne olabilir?`];
+  const letter=`<p>${nm?'Sevgili '+esc(nm)+',':'Sevgili dostum,'}</p><p>${sent(DEEP_SUN[sun],0)} Bunu sen de biliyorsun ama belki kimse sana açıkça söylemedi. ${sent(DEEP_MOON[moon],0)}</p>
+   <p>Hayatın sana sık sık aynı dersi hatırlatıyor gibi: ${SAT_SIGN[P.saturn.s]}. Bu bir ceza değil; ustalaşacağın bir zanaat. ${DP_MATURE[elOf(m,'saturn')].split('. ')[0]}.</p>
+   <p>Güçlü yanlarını unutma: ${SIGNS[sun].str.split(', ').slice(0,3).join(', ').toLocaleLowerCase('tr')}. Bunlar seni taşıyan rüzgâr. Yönün ise belli: ${ns.go}.</p>
+   <p>Yorulduğunda kendine iyi davran. Sen haritandan büyüksün; seni sen yapan, seçimlerin ve niyetindir.</p><p style="text-align:right">— Gökyüzü Haritam</p>`;
+  const bsA=[elLab(m),`Baskın gezegen: ${pn(m.dom)}`];
+  let o=`<h3 class="sech">Seni Anlatan Her Şey</h3>`;
+  o+=SB('Seni anlatan 10 cümle',`<ol class="ten">${ten.slice(0,10).map(x=>`<li>${x}</li>`).join('')}</ol>`,['Yukarıdaki bölümlerden seçildi']);
+  o+=SB('Seni anlatan 5 kelime',`<div class="words">${kw.slice(0,5).map(x=>`<span>${esc(x)}</span>`).join('')}</div>`,[pLab(m,'sun'),pLab(m,'moon'),ascLab(m),`Baskın gezegen ${pn(m.dom)} (${sgn(P[m.dom].s)})`,pLab(m,'venus')]);
+  o+=`<div class="grid2">`+SB('Sembolik hayvanın',`<p class="big1">${an.n}</p><p>${cap(an.why)}. Bu hayvan, haritandaki ${EL_N[m.domEl]} ağırlığının ve ${MOD_N[m.domMod]} niteliğin bir sembolü olarak seçildi.</p>`,bsA)
+    +SB('Seni anlatan doğa manzarası',`<p>${cap(LAND_BASE[m.domEl])}; ${LAND_DETAIL[m.secEl]}.</p><p class="small">Manzara baskın (${EL_N[m.domEl]}) ve ikinci güçlü (${EL_N[m.secEl]}) elementinden kuruldu.</p>`,[elLab(m)])+`</div>`;
+  o+=SB('Renk paletin',`<div class="pal">${pal.map(c=>`<div><i style="background:${c[0]}"></i><b>${cap(c[1])}</b><span>${c[2]}</span></div>`).join('')}</div>`,[elLab(m),pLab(m,'sun'),pLab(m,'moon')]);
+  o+=SB('Edebi karakter arketipin',`<p class="big1">${ar.n}</p><p>${ar.d}</p>`,[`Baskın gezegen: ${pn(m.dom)}`]);
+  o+=`<div class="grid2">`+SB('Hayatın bir kitap olsaydı',`<p class="big1">“${bk}”</p><p class="small">Alt başlık: ${ns.go} üzerine</p>`,[`Baskın gezegen: ${pn(m.dom)}`,pLab(m,'node')])
+    +SB('Hayatın bir film olsaydı',`<p>${film}</p>`,[elLab(m),pLab(m,'sun'),pLab(m,'saturn'),pLab(m,'node')])+`</div>`;
+  o+=SB('Kendin hakkında düşünmen için 5 soru',`<ol>${qs.map(q=>`<li>${q}</li>`).join('')}</ol>`,[pLab(m,'saturn'),pLab(m,'moon'),pLab(m,'venus'),elLab(m),pLab(m,'node')]);
+  o+=SB('Sana özel kısa bir mektup',`<div class="letter">${letter}</div>`,[pLab(m,'sun'),pLab(m,'moon'),pLab(m,'saturn'),pLab(m,'node')]);
+  return {html:o,an,kw,pal,ar,bk,ten};
+}
 function secDeep(ch,p){
-  const sun=ch.pos.sun.sign,moon=ch.pos.moon.sign,ai=ascInfo(ch,p),mi=moonInfo(ch),nm=esc(p.name||'');
-  const eb=elementBalance(ch).el,tot=eb.reduce((a,b)=>a+b,0),dom=eb.indexOf(Math.max(...eb)),weak=eb.indexOf(Math.min(...eb));
-  const moonAlt=!mi.sure&&ch.moonRange?[signOf(ch.moonRange.from),signOf(ch.moonRange.to)]:[moon];
-  const ascS=ai.sure||p.est?signOf(ch.asc):null;
-  const quotes=[sent(DEEP_SUN[sun],1),mi.sure?sent(DEEP_MOON[moon],0):null,ascS!=null?sent(DEEP_ASC[ascS],0):null,sent(DEEP_VENUS[ch.pos.venus.sign],0),sent(DEEP_MARS[ch.pos.mars.sign],1),sent(DEEP_MERC[ch.pos.mercury.sign],0),sent(DEEP_SUN[sun],4)].filter(Boolean);
+  const m=CM(ch,p),S=deepParts(m),nm=esc(p.name||''),sun=m.P.sun.s;
+  const quotes=[sent(DEEP_SUN[sun],1),m.mi.sure?sent(DEEP_MOON[m.P.moon.s],0):null,m.ascS!=null?sent(DEEP_ASC[m.ascS],0):null,sent(DEEP_VENUS[m.P.venus.s],0),sent(DEEP_MARS[m.P.mars.s],1),sent(DEEP_SUN[sun],4)].filter(Boolean);
   let o=`<section class="card hero deephero"><div class="dplanets">${planetSVG('sun',84)}${planetSVG('moon',64)}</div><h3>${nm?nm+', ':''}seni anlatan satırlar</h3>
-   <p class="small">${SIGNS[sun].n} Güneşi${mi.sure?`, ${SIGNS[moon].n} Ayı`:''}${ascS!=null?` ve ${SIGNS[ascS].n} yükseleniyle`:''} doğmuş birinin iç dünyası. Her paragrafı okurken kendine şunu sor: Bu ben miyim?</p>
-   <ul class="dquotes">${quotes.map(q=>`<li>${q}</li>`).join('')}</ul></section>`;
-  o+=HP('sun',`Özün — Güneş ${SIGNS[sun].n} burcunda`,`<p class="dtext">${DEEP_SUN[sun]}</p>${ch.noTime?'':`<p>Işığın en çok <b>${HOUSES[ch.pos.sun.house-1].dom}</b> alanında parlar (${ch.pos.sun.house}. ev).</p>`}`);
-  o+=HP('moon',`Kalbin — Ay ${moonAlt.map(s=>SIGNS[s].n).join(' / ')} burcunda`,moonAlt.length>1?`<div class="note small">Ay, doğum gününde ${SIGNS[moonAlt[0]].n} burcundan ${SIGNS[moonAlt[1]].n} burcuna geçiyor. İkisini de oku; hangisi sana daha yakınsa doğum saatin muhtemelen o tarafa düşer.</div>`+moonAlt.map(s=>`<h4>${SIGNS[s].n} Ayı</h4><p class="dtext">${DEEP_MOON[s]}</p>`).join(''):`<p class="dtext">${DEEP_MOON[moon]}</p>`);
-  if(ascS!=null)o+=HP('asc',`Dışarıya yansıyan yüzün — ${SIGNS[ascS].n} yükselen${p.est?' (tahmini)':''}`,`<p class="dtext">${DEEP_ASC[ascS]}</p>`);
-  else if(ch.cands&&ch.cands.length>1)o+=HP('asc','Dışarıya yansıyan yüzün — olası yükselenler',`<p class="small">${ai.note}</p>`+[...new Set(ch.cands.map(c=>c.sign))].map(s=>`<h4>${SIGNS[s].n} yükselen</h4><p>${DEEP_ASC[s]}</p>`).join(''));
-  o+=H('Aklın ve kalbin',[...new Set(moonAlt.map(s=>SIGNS[s].el))].map(me=>`<p class="dtext">${DEEP_COMBO[SIGNS[sun].el][me]}</p>`).join(''));
-  o+=HP('venus',`Sevdiğinde — Venüs ${SIGNS[ch.pos.venus.sign].n} burcunda`,`<p class="dtext">${DEEP_VENUS[ch.pos.venus.sign]}</p>`);
-  o+=HP('mars',`Bir şey istediğinde — Mars ${SIGNS[ch.pos.mars.sign].n} burcunda`,`<p class="dtext">${DEEP_MARS[ch.pos.mars.sign]}</p>`);
-  o+=HP('mercury',`Düşünürken — Merkür ${SIGNS[ch.pos.mercury.sign].n} burcunda`,`<p class="dtext">${DEEP_MERC[ch.pos.mercury.sign]}</p>`);
-  o+=H('Unsurların',`<p class="dtext">${DEEP_STRONG[dom]}</p>${eb[weak]<=tot*.12?`<p class="dtext">${DEEP_LACK[weak]}</p>`:''}`);
-  if(!ch.noTime){o+=HP('saturn',`Emek isteyen alanın — Satürn ${ch.pos.saturn.house}. evde`,`<p class="dtext">${DEEP_SAT_H[ch.pos.saturn.house-1]}</p>`);
-    o+=HP('node',`Büyüme yönün — Kuzey Ay Düğümü ${ch.pos.node.house}. evde`,`<p class="dtext">${DEEP_NODE_H[ch.pos.node.house-1]}</p>`);}
-  else o+=`<div class="note small">Doğum saati girilirse yükselen, Satürn'ün ve Kuzey Ay Düğümü'nün evleri de bu portreye eklenir.</div>`;
-  o+=`<p class="small">Bu satırlar haritanın eğilimlerini anlatır; geleceğe dair bir şey söylemez. Seni sen yapan asıl şey, seçimlerin ve niyetindir.</p>`;
+   <p class="small">Bu portre yalnızca Güneş burcuna göre yazılmadı: Güneş, Ay, ${m.ascS!=null?'yükselen, ':''}Merkür, Venüs, Mars, Satürn, ${m.hasH?'evler, ev yöneticileri, ':''}açılar, asaletler ve element dengesi birlikte okundu. Her bölümün altındaki "Bu yorum neye dayanıyor?" bağlantısı, hangi göstergelerin kullanıldığını gösterir.</p>
+   <ul class="dquotes">${quotes.map(q=>`<li>${q}</li>`).join('')}</ul></section>`+noteTop(m);
+  const groups=[['Özün',['core','seen','hidden','inner','needs']],['Işığın ve gölgen',['strong','sens','shadow','life','justice']],['Güç, para ve insanlar',['power','money','alone','love','friend']],['Enerjin ve gelişimin',['anger','motiv','unused','talent','mature']]];
+  for(const [g,ks] of groups){o+=`<h3 class="sech">${g}</h3>`;for(const k of ks){const s=S[k];o+=SB(s.t,s.b,s.bs,s.k);}}
+  o+=deepExtras(m,S).html;
+  o+=`<p class="small">Bu satırlar astrolojik sembollerin anlattığı eğilimlerdir; kesin kişilik tespiti ya da geleceğe dair bilgi değildir. Seni sen yapan asıl şey, seçimlerin ve niyetindir.</p>`;
   return o;
+}
+
+// ================= HAYATIN SINAVLARI =================
+const MONEY3=['Parayı hızlı kazanıp hızlı harcama, ani heveslerle risk alma eğilimine dikkat etmesi faydalı olabilir.','Güvenlik kaygısıyla fazla biriktirme, cömertliği erteleme ya da değişime direnme eğilimine dikkat etmesi faydalı olabilir.','Birçok fikre aynı anda para ayırma, küçük harcamaları takip etmeme eğilimine dikkat etmesi faydalı olabilir.','Duygusal durumuna göre harcama ya da sevdiklerine gücünü aşan ölçüde verme eğilimine dikkat etmesi faydalı olabilir.'];
+const POWER3=['Otoriteyle ilişkisi dolaysızdır: saygı duyduğu lideri izler, duymadığına itiraz eder. Kendisi yönettiğinde hızlı ama sabırsız olabilir.','Otoriteye ve kurallara saygı duyar; sorumluluğu sırtlanmaya yatkındır. Fazla yük alıp kimseye devretmemek onun sınavı olabilir.','Otoriteyi sorgular; eşitlikçi ve fikir alışverişine açık yapılarda rahattır. Tepeden inme emirler onu uzaklaştırır.','Otoriteyle ilişkisi duygusaldır: korunduğu yerde sadık, ezildiğini hissettiği yerde içine kapanıktır. Gücü koruyuculukla kullandığında en iyi halindedir.'];
+const EXCESS={sun:'kendini merkeze koyma ve takdir bekleme',moon:'duygusal tepkiler ve geçmişe takılma',mercury:'fazla düşünme ve çok konuşma',venus:'konfor, harcama ve onay arayışı',mars:'acelecilik ve öfke',jupiter:'aşırı iyimserlik, fazla söz verme ve ölçüyü kaçırma',saturn:'kendine ve başkalarına aşırı sertlik',uranus:'ani kopuşlar ve kurallara tepki',neptune:'kaçış, erteleme ve hayallere sığınma',pluto:'kontrol etme ve her şeyi derinden sorgulama'};
+function secSinav(ch,p){
+  const m=CM(ch,p),{P}=m,nm=esc(p.name||''),who=nm||'Bu kişi';
+  const hardK=m.hard.filter(a=>HARD[pkey(a.p,a.q)]).slice(0,5);
+  const sat=P.saturn,ns=NODE_SIGN[m.nodeS];
+  let o=`<section class="card hero"><h3>${nm?nm+' — ':''}Hayatın Sınavları</h3>
+   <p>Bu bölüm haritadaki sembolik gerilimleri, üzerinde düşünülecek davranış temaları ve hayat dersleri olarak okur. Satürn, Plüton, Kiron, Ay düğümleri, 6., 8. ve 12. evler, 2., 4., 7. ve 10. evlerin yöneticileri, retro gezegenler, gergin ve destekleyici açılar birlikte değerlendirildi.</p>
+   <div class="note"><b>Önemli:</b> Allah'ın bir kulunu hangi konuda sınadığı doğum haritasından bilinemez; gaybı yalnızca O bilir. Burada yazılanlar kişinin kusuru, ilahi bir ceza ya da gezegenlerin sebep olduğu olaylar değildir. Yalnızca astrolojik sembolizme dayanan, insanın kendini sorgulaması için sunulmuş temalardır.</div></section>`+noteTop(m);
+  // 1
+  {let b=`<p class="dtext">Bu haritanın temel gelişim teması: <b>${ns.go}</b>. Kuzey Ay Düğümü ${sgn(m.nodeS)} burcunda${m.nodeH?`, ${m.nodeH}. evde (${HOUSES[m.nodeH-1].dom})`:''}; geleneksel yorumda bu nokta kişinin büyüyeceği yönü gösterir.</p>
+     <p class="dtext">Satürn ${sgn(sat.s)} burcunda${sat.r?' ve retro':''}: olgunlaşma alanı <b>${SAT_SIGN[sat.s]}</b> olabilir.${sat.h?` Satürn ${sat.h}. evde olduğu için bu ders en çok ${HOUSES[sat.h-1].dom} alanında hissedilebilir.`:''}</p>`;
+    o+=SB('1. Hayatın temel gelişim teması',b,[pLab(m,'node'),pLab(m,'saturn')],'saturn');}
+  // 2
+  {let b=`<h4>Hangi davranışları kendisine engel olabilir?</h4>`;b+=hardK.length?ul(hardK.slice(0,3).map(a=>HARD[pkey(a.p,a.q)][0])):`<p>Haritada kişisel gezegenler arasında belirgin bir gergin açı yok. Engel daha çok ${SIGNS[P.sun.s].weak.split(', ').slice(0,2).join(' ve ').toLocaleLowerCase('tr')} biçiminde görünebilir.</p>`;
+    b+=`<h4>Hangi konularda aşırıya kaçabilir?</h4><p>Baskın gezegen ${pn(m.dom)} olduğu için ${EXCESS[m.dom]} eğilimi öne çıkabilir.${hasAsp(m,'jupiter','sun',m.hard)||hasAsp(m,'jupiter','moon',m.hard)||hasAsp(m,'jupiter','venus',m.hard)?' Jüpiter\'in kişisel gezegenlerle gergin açısı ölçüyü kaçırma temasını güçlendirir.':''}</p>`;
+    const fixed=m.md[1]>=Math.max(m.md[0],m.md[2]);
+    b+=`<h4>Kontrol etme isteği hangi alanlarda ortaya çıkabilir?</h4><p>${P.pluto.h?`Plüton ${P.pluto.h}. evde: kontrol ihtiyacı en çok <b>${PLUTO_H[P.pluto.h-1]}</b> konusunda belirginleşebilir.`:`Plüton ${sgn(P.pluto.s)} burcunda; doğum saati bilinmediği için ev konumu kullanılamadı.`}${fixed?' Sabit nitelik baskın olduğu için başladığı şeyi bırakmakta ve değişime izin vermekte zorlanabilir.':''}</p>`;
+    const fears=[...(SIGNS[P.sun.s].fears||[]).slice(0,1),...(SIGNS[m.moonAlt[0]].fears||[]).slice(0,2)];if(sat.h)fears.push(cap(HOUSES[sat.h-1].fear));
+    b+=`<h4>Korkuları ve güvensizlikleri hangi temalarla ilişkili olabilir?</h4>${ul([...new Set(fears)])}`;
+    o+=SB('2. Zorlayıcı davranış kalıpları',b,[...hardK.slice(0,3).map(aspLabel),`Baskın gezegen ${pn(m.dom)}`,pLab(m,'pluto'),pLab(m,'sun'),pLab(m,'moon'),pLab(m,'saturn')],'pluto');}
+  // 3
+  {let b=`<h4>Hayatında hangi davranış kalıplarını tekrarlayabilir?</h4><p>Güney Ay Düğümü ${sgn((m.nodeS+6)%12)} burcunda${m.sNodeH?`, ${m.sNodeH}. evde`:''}: zorlandığında şu tanıdık alışkanlıklara geri dönebilir: ${m.sNodeH?`<b>${SNODE_H[m.sNodeH-1]}</b>; `:''}<b>${ns.from}</b>. Bu alan ona tanıdık ve rahat gelir ama büyüme orada değildir.</p>`;
+    b+=`<h4>Hangi konularda sabretmeyi öğrenmesi gerekebilir?</h4><p>${sat.h?`${cap(HOUSES[sat.h-1].dom)} konusunda sonuçlar geç ama kalıcı gelebilir.`:`Satürn'ün işaret ettiği konularda sonuçlar geç ama kalıcı gelebilir.`} ${['Ateş elementindeki Mars sabırsızlığı artırabilir; beklemek onun için ayrı bir emektir.','Toprak elementindeki Mars sabrı kolaylaştırır; asıl ders, gereğinden fazla beklememektir.','Hava elementindeki Mars ilgiyi çabuk dağıtabilir; aynı işte kalmak sabır ister.','Su elementindeki Mars duygular yatışmadan karar vermemeyi öğretir.'][elOf(m,'mars')]}</p>`;
+    b+=`<h4>Neleri kabullenmekte zorlanabilir?</h4><p>${['Yavaşlığı, beklemeyi ve başkalarının temposunu.','Ani değişiklikleri, kontrol edemediği gelişmeleri.','Mantıkla açıklanamayan duyguları ve belirsizliği.','Mesafeyi, soğukluğu ve duygularının karşılık bulmamasını.'][SIGNS[sat.s].el]}${m.md[1]>m.md[2]?' Sabit nitelik ağır bastığı için alışkanlıklarını değiştirmek de zaman alabilir.':''}</p>`;
+    const H68=[6,8,12].filter(h=>m.inH(h).length);if(H68.length){b+=`<h4>6., 8. ve 12. evler</h4>`+ul(H68.map(h=>`${h}. evde ${m.inH(h).map(pn).join(', ')}: ${m.inH(h).map(k=>PL[k].theme.split(',')[0]).join(', ')} konusundaki dersler ${HOUSE_LESSON[h]} iç içe yaşanabilir.`));}
+    if(m.retro.length){b+=`<h4>Retro gezegenler</h4>`+ul(m.retro.filter(k=>RETRO_TXT[k]).map(k=>RETRO_TXT[k].split('(')[0].trim()));}
+    o+=SB('3. Tekrarlayan hayat dersleri',b,[pLab(m,'node'),`Güney Düğüm ${sgn((m.nodeS+6)%12)}${m.sNodeH?', '+m.sNodeH+'. ev':''}`,pLab(m,'saturn'),pLab(m,'mars'),...H68.flatMap(h=>m.inH(h).map(k=>pLab(m,k))),...m.retro.map(k=>pLab(m,k))],'node');}
+  // 4
+  {let b=`<h4>Hangi özelliklerini geliştirmesi faydalı olabilir?</h4>`+(hardK.length?ul(hardK.map(a=>`<b>${HARD[pkey(a.p,a.q)][1]}</b>: ${HARD[pkey(a.p,a.q)][2]}.`)):`<p>${['Ateş az: harekete geçmek, kendini ortaya koymak ve risk almak.','Toprak az: fikirleri somut adımlara dökmek ve sabırla sürdürmek.','Hava az: geri çekilip bakmak, konuşmak ve paylaşmak.','Su az: duygularını tanımak ve göstermek.'][m.weakEl]}</p>`);
+    const mh=hardK.find(a=>[a.p,a.q].includes('moon'));
+    b+=`<h4>Hangi duygusal alışkanlıklarını değiştirmesi faydalı olabilir?</h4><p>${mh?HARD[pkey(mh.p,mh.q)][0]+' Bunun yerine '+HARD[pkey(mh.p,mh.q)][2].toLocaleLowerCase('tr')+' denenebilir.':['Duygularını hemen eyleme dökme; önce bir nefes almak iyi gelir.','Duygularını uzun süre içinde taşıma; konuşmak yükü hafifletir.','Duygularını sadece düşünceye çevirme; hissetmeye de izin vermek gerekir.','Başkalarının duygularını üstlenme; kendi duygusuyla başkasınınkini ayırmak önemlidir.'][SIGNS[m.moonAlt[0]].el]}</p>`;
+    b+=`<h4>Güç, otorite ve sorumlulukla ilişkisi nasıldır?</h4><p>${POWER3[elOf(m,'sun')]}${hasAsp(m,'sun','saturn',m.hard)?' Güneş–Satürn gerilimi, takdiri hak etmek için kendini fazla zorlama temasını ekler.':''}${hasAsp(m,'sun','pluto',m.hard)?' Güneş–Plüton gerilimi, güç mücadelelerine çekilme eğilimini artırabilir.':''}</p>`;
+    const s2=m.hasH?m.cuspS(2):P.venus.s;b+=`<h4>Para ve maddiyatla ilgili hangi alışkanlıklarına dikkat etmelidir?</h4><p>${MONEY3[SIGNS[s2].el]}${m.hasH?` 2. evin yöneticisi ${pn(m.ruler(2))} ${P[m.ruler(2)].h}. evde; kazanç ve harcama ${HOUSES[P[m.ruler(2)].h-1].dom} ile bağlantılı olabilir.`:''}</p>`;
+    let fam=`Aile ve yakın ilişkilerde ${['bağımsızlığını korurken yakınlığa da alan açmak','sadakatini esneklikle dengelemek','sözünü duygusal yakınlıkla desteklemek','sevgisini sınır koymayı unutmadan yaşamak'][elOf(m,'venus')]} onun gelişim alanı olabilir.`;
+    if(m.hasH){const r4=m.ruler(4),r7=m.ruler(7);fam+=` 4. evin yöneticisi ${pn(r4)} ${P[r4].h}. evde; 7. evin yöneticisi ${pn(r7)} ${P[r7].h}. evde. Aile konuları ${HOUSES[P[r4].h-1].dom.split(',')[0]}, ortaklıklar ise ${HOUSES[P[r7].h-1].dom.split(',')[0]} ile iç içe yaşanabilir.`;}
+    const vh=hardK.find(a=>[a.p,a.q].includes('venus'));if(vh)fam+=' '+HARD[pkey(vh.p,vh.q)][0];
+    b+=`<h4>Aile ve ilişkilerinde hangi konularda gelişebilir?</h4><p>${fam}</p>`;
+    o+=SB('4. Geliştirilmesi gereken özellikler',b,[...hardK.map(aspLabel),pLab(m,'moon'),pLab(m,'sun'),pLab(m,'venus'),m.hasH?`2. ev yöneticisi ${pn(m.ruler(2))}`:'',m.hasH?`4. ev yöneticisi ${pn(m.ruler(4))}, 7. ev yöneticisi ${pn(m.ruler(7))}`:'',elLab(m)],'mars');}
+  // 5
+  {const dig=SK.slice(0,7).filter(k=>['Yönetici','Yücelim'].includes(P[k].dg));const it=[...SIGNS[P.sun.s].str.split(', '),...SIGNS[m.moonAlt[0]].str.split(', ').slice(0,2)];
+    let b=`<h4>Hangi özelliklerini doğru kullanırsa ilerleyebilir?</h4><div class="chips">${[...new Set(it.map(cap))].map(x=>`<span class="chip">${esc(x)}</span>`).join('')}</div><p>${['Ateş baskın: canlılığı, cesareti ve başlatma gücü onu tanımlar.','Toprak baskın: sağduyusu, sabrı ve emeğe dayalı güvenilirliği onu tanımlar.','Hava baskın: zihni, iletişim gücü ve insanlarla kurduğu bağlar onu tanımlar.','Su baskın: sezgisi, merhameti ve duygusal derinliği onu tanımlar.'][m.domEl]}</p>`;
+    if(dig.length)b+=`<p>${dig.map(k=>`${pn(k)} (${P[k].dg.toLocaleLowerCase('tr')})`).join(', ')}: ${dig.map(k=>PL[k].theme.split(',')[0]).join(', ')} alanında doğal bir güç taşır.</p>`;
+    o+=SB('5. Kullanabileceği güçlü yönler',b,[pLab(m,'sun'),pLab(m,'moon'),elLab(m),...dig.map(k=>pLab(m,k))],m.dom);}
+  // 6
+  {const sf=m.soft.slice(0,6);const items=sf.map(a=>SOFT[pkey(a.p,a.q)]||`${pn(a.p)} ile ${pn(a.q)} uyumlu: ${(PL[a.p]?PL[a.p].theme.split(',')[0]:'')} ile ${(PL[a.q]?PL[a.q].theme.split(',')[0]:'')} birbirini destekler.`);
+    const gt=m.pats.filter(x=>x.t==='gt'||x.t==='kite');const mr=mutualReceptions(ch);
+    let b=`<h4>En büyük gelişim fırsatları nelerdir?</h4>${items.length?ul([...new Set(items)]):'<p>Belirgin bir uyumlu açı yok; destek daha çok bilinçli emekle kurulur.</p>'}`;
+    if(gt.length)b+=`<p><b>Büyük üçgen:</b> ${gt[0].p.map(pn).join(', ')} arasında akan bir yetenek var; risk, bu kolaylığı fazla rahatlıkla harcamak.</p>`;
+    if(mr.length)b+=`<p><b>Karşılıklı ağırlama:</b> ${mr.map(x=>x.map(pn).join(' ve ')).join('; ')} birbirinin burcunda; bu gezegenler birbirine yardım eder.</p>`;
+    if(P.jupiter.h)b+=`<p>Jüpiter ${P.jupiter.h}. evde: ${HOUSES[P.jupiter.h-1].dom} alanında kapılar daha kolay açılabilir.</p>`;
+    if(P.chiron)b+=`<h4>Hangi konularda kendisini affetmeyi öğrenebilir?</h4><p>${P.chiron.h?`${cap(CHIRON_H[P.chiron.h-1].w)} konusunda kendine fazla yüklenebilir. Bu yarayı kabul ettikçe ${CHIRON_H[P.chiron.h-1].h}.`:`Kiron ${sgn(P.chiron.s)} burcunda; ${SIGNS[P.chiron.s].kw.split(', ')[0]} olmakla ilgili konularda kendine karşı daha şefkatli olabilir.`}</p>`;
+    o+=SB('6. Sembolik fırsat ve destek temaları',b,[...sf.map(aspLabel),...gt.slice(0,1).map(x=>'Büyük üçgen: '+x.p.map(pn).join(', ')),...mr.map(x=>'Karşılıklı ağırlama: '+x.map(pn).join('–')),pLab(m,'jupiter'),pLab(m,'chiron')],'jupiter');}
+  // 7
+  {const tips=[...TIP_WEAK[m.weakEl],TIP_SAT[elOf(m,'saturn')],TIP_MOON[SIGNS[m.moonAlt[0]].el],`Bu ay "${ns.go}" için küçük ve somut bir adım belirleyin.`];
+    let b=ul(tips)+`<h4>Hayatında neye daha fazla önem vermesi faydalı olabilir?</h4><p>${cap(ns.go)}.${m.nodeH?` Özellikle ${HOUSES[m.nodeH-1].dom} alanına daha çok zaman ve emek ayırmak.`:''}</p>`;
+    o+=SB('7. Günlük hayatta uygulanabilecek somut tavsiyeler',b,[elLab(m),pLab(m,'saturn'),pLab(m,'moon'),pLab(m,'node')],'sun');}
+  // 8
+  {const rows=[pLab(m,'saturn'),pLab(m,'pluto'),pLab(m,'chiron'),pLab(m,'node'),`Güney Düğüm ${sgn((m.nodeS+6)%12)}${m.sNodeH?', '+m.sNodeH+'. ev':''}`,...m.hard.slice(0,8).map(aspLabel),...m.soft.slice(0,5).map(aspLabel),...m.retro.map(k=>pLab(m,k)+' (retro)'),elLab(m)];
+    if(m.hasH)for(const h of [2,4,6,7,8,10,12])rows.push(`${h}. ev: başlangıç ${sgn(m.cuspS(h))}, yöneticisi ${pn(m.ruler(h))} (${P[m.ruler(h)].h}. evde)${m.inH(h).length?', içinde '+m.inH(h).map(pn).join(', '):''}`);
+    o+=SB('8. Bu yorum hangi harita göstergelerine dayanıyor?',`<ul class="small">${[...new Set(rows.filter(Boolean))].map(x=>`<li>${x}</li>`).join('')}</ul>`,[],null);}
+  o+=`<p class="small">Bu bölüm kesin bir hüküm değil, üzerinde düşünülecek bir aynadır. Zorluklar karşısında insanın sabrı, niyeti ve emeği belirleyicidir.</p>`;
+  return o;
+}
+
+// ================= NASIL YAKLASILMALI =================
+const APOL_MARS=['Özrü dolaysız ve kısa yapın; uzun açıklamalar yerine "haklısın, özür dilerim" deyin.','Özrü davranışla destekleyin; söz verdiğiniz değişikliği gösterin.','Ne olduğunu açıkça konuşun; neden öyle davrandığınızı anlatmanız ona iyi gelir.','Kırgınlığını kabul edin; önce duygusunu görün, sonra açıklama yapın.'];
+const APOL_MOON=['Barıştıktan sonra eskiyi tekrar tekrar açmayın.','Barışmak için ona zaman tanıyın; acele ettirmeyin.','Barıştıktan sonra konuyu hafif bir sohbetle kapatın.','Barışmayı sıcak bir jestle (bir yemek, sarılmak, bir not) mühürleyin.'];
+const BOUND=['Sınırlar: Onun hızına ayak uydurmak zorunda değilsiniz; kendi temponuzu nazikçe söyleyin.','Sınırlar: Değişiklikleri önceden konuşun; ama onun inadına göre kendi ihtiyaçlarınızı ertelemeyin.','Sınırlar: Fikir tartışmalarını kişisel saldırıya dönüştürmeyin; bir konuyu kapatmak istediğinizde açıkça söyleyin.','Sınırlar: Şefkatli olun ama onun her duygusunu üstlenmek zorunda değilsiniz; kendi duygunuzu da ifade edin.'];
+const MUTUAL=['Birlikte yeni şeyler denemek ve rekabeti oyuna çevirmek ilişkiyi canlı tutar.','Birlikte kalıcı bir şey kurmak (bir ev düzeni, birikim, ortak bir rutin) bağı güçlendirir.','Birlikte öğrenmek, konuşmak ve fikir paylaşmak ilişkiyi besler.','Birlikte sessiz ve güvenli anlar yaşamak, duyguları paylaşmak bağı derinleştirir.'];
+function secYaklas(ch,p){
+  const m=CM(ch,p),{P}=m,nm=esc(p.name||'');
+  const me=elOf(m,'mercury'),ma=elOf(m,'mars'),se=elOf(m,'sun'),sa=elOf(m,'saturn'),vs=P.venus.s,mo=SIGNS[m.moonAlt[0]];
+  const likes=[...new Set([...SIGNS[P.sun.s].likes,...mo.likes.slice(0,3),...SIGNS[vs].likes.slice(0,2)])],dis=[...new Set([...SIGNS[P.sun.s].dislikes,...mo.dislikes.slice(0,3),...SIGNS[vs].dislikes.slice(0,2)])];
+  const Q=(q,a)=>`<div class="qa"><b>${q}</b><p>${a}</p></div>`;
+  let o=`<section class="card hero"><h3>${nm?nm+' — ':''}Bu İnsana Nasıl Yaklaşılmalı?</h3>
+   <p>Eşinizin, çocuğunuzun, arkadaşınızın ya da iş arkadaşınızın haritasını incelerken onu daha iyi anlamanız için hazırlanmış bir iletişim rehberi. Ay (duygular), Merkür (konuşma), Venüs (sevgi), Mars (öfke ve enerji), Güneş (değer görme), Satürn (güven)${m.ascS!=null?', yükselen':''} ve açılar birlikte kullanıldı.</p>
+   <div class="note small">Bunlar kesin kişilik tespitleri değil, astrolojik sembolizme dayanan olası eğilimlerdir. Bu rehber birini anlamak içindir; manipüle etmek, korkularını kullanmak ya da kontrol etmek için değil. En doğru bilgi her zaman karşınızdakine sormaktır.</div></section>`+noteTop(m);
+  o+=SB('Bu kişi nelerden hoşlanabilir?',
+    Q('Nasıl konuşulmasından hoşlanır?',AP_MERC[me][0])+Q('Hangi davranışlardan etkilenebilir?',AP_SUN[se][3])+Q('Kendisine nasıl değer verilmesini ister?',AP_SUN[se][0])+Q('Hangi tür hediyelerden hoşlanabilir?',AP_VENUS[vs][0])+Q('Nasıl iltifatlar duymaktan hoşlanabilir?',AP_VENUS[vs][1])
+    +Q('Nasıl bir ortamda huzurlu hissedebilir?',moonTxt(m,AP_MOON,2))+Q('Hangi sosyal aktiviteler ilgisini çekebilir?',AP_VENUS[vs][3])+Q('Nasıl bir mizah anlayışı olabilir?',AP_MERC[me][4])+Q('Sevgisini nasıl gösterebilir?',AP_VENUS[vs][2])+Q('Sevgiyi nasıl hissetmek isteyebilir?',moonTxt(m,AP_MOON,3))+Q('Hangi davranışlar güvenini kazanmayı kolaylaştırabilir?',AP_SAT[sa][1])
+    +`<p><b>Sevebileceği şeyler:</b></p><div class="chips">${likes.map(x=>`<span class="chip">${esc(x)}</span>`).join('')}</div>`,
+    [pLab(m,'mercury'),pLab(m,'sun'),pLab(m,'venus'),pLab(m,'moon'),pLab(m,'saturn')],'venus');
+  const ch1=P.chiron&&P.chiron.h?` Kiron ${P.chiron.h}. evde olduğu için ${CHIRON_H[P.chiron.h-1].w} konusu da hassas olabilir.`:'';
+  o+=SB('Bu kişi nelerden hoşlanmayabilir?',
+    Q('Hangi sözler onu rahatsız edebilir?',AP_MERC[me][5])+Q('Hangi davranışlar onu uzaklaştırabilir?',dis.slice(0,4).join(', ')+'.')+Q('Hangi tutumlar güvenini zedeleyebilir?',moonTxt(m,AP_MOON,4)+ch1)+Q('Eleştiriye nasıl yaklaşabilir?',AP_MERC[me][1])+Q('Baskı altında nasıl tepki verebilir?',AP_MARS[ma][2])
+    +Q('Hangi konularda hassas olabilir?',`${(mo.fears||[]).slice(0,2).join('; ')}.`)+Q('Hangi iletişim biçimleri tartışmayı artırabilir?',AP_MARS[ma][4])
+    +`<p><b>Hoşlanmayabileceği şeyler:</b></p><div class="chips">${dis.map(x=>`<span class="chip warn">${esc(x)}</span>`).join('')}</div>`,
+    [pLab(m,'mercury'),pLab(m,'moon'),pLab(m,'mars'),pLab(m,'sun'),pLab(m,'venus'),pLab(m,'chiron')],'mars');
+  const mm=SIGNS[m.moonAlt[0]].mod,sm=SIGNS[P.sun.s].mod;
+  const mh=m.hard.find(a=>[a.p,a.q].includes('moon')&&HARD[pkey(a.p,a.q)]);
+  o+=SB('Bu kişiye nasıl yaklaşılmalı?',
+    Q('Üzgün olduğunda',moonTxt(m,AP_MOON,0))+Q('Öfkelendiğinde',AP_MARS[ma][0])+Q('Stres altındayken',AP_MARS[ma][1])+Q('Başarısızlık yaşadığında',AP_SUN[se][1])+Q('Kendini yalnız hissettiğinde',moonTxt(m,AP_MOON,1))
+    +Q('Tartışma sırasında',AP_MERC[me][2])+Q('İş ortamında',AP_SUN[se][2])+Q('Aile ortamında',AP_FAMILY[mm])+Q('Romantik ilişkilerde',AP_VENUS[vs][4]+(mh?` ${HARD[pkey(mh.p,mh.q)][0]} Bu yüzden sabırlı ve güven veren bir tutum önemlidir.`:''))
+    +Q('Önemli bir karar verirken',AP_MERC[me][3]+' '+AP_DECIDE_MOD[sm])+Q('Güveni zedelendiğinde',AP_SAT[sa][0])+Q('Motivasyonunu kaybettiğinde',AP_MARS[ma][3]),
+    [pLab(m,'moon'),pLab(m,'mars'),pLab(m,'sun'),pLab(m,'mercury'),pLab(m,'venus'),pLab(m,'saturn'),mh?aspLabel(mh):''],'moon');
+  const doL=[AP_MERC[me][0],AP_SUN[se][0],AP_VENUS[vs][1].replace('övün','övmek iyi gelir'),moonTxt(m,AP_MOON,3)],avL=[AP_MERC[me][5],AP_MARS[ma][4],...dis.slice(0,2).map(x=>x+'.')];
+  o+=SB('Bu kişinin iletişim rehberi',
+    `<div class="grid2"><div><h4>Onunla konuşurken yapılabilecekler</h4>${ul(doL)}</div><div><h4>Kaçınılabilecek davranışlar</h4>${ul(avL)}</div></div>`
+    +Q('İlişkiyi güçlendirebilecek yaklaşımlar',MUTUAL[SIGNS[vs].el]+' '+AP_VENUS[vs][4])+Q('Özür ve barışma',APOL_MARS[ma]+' '+APOL_MOON[mo.el])+Q('Kendisini değerli hissettirebilecek davranışlar',AP_SUN[se][0]+' '+AP_VENUS[vs][1])
+    +Q('Sevgi ve takdir beklentileri',moonTxt(m,AP_MOON,3)+' '+AP_VENUS[vs][2])+Q('Sağlıklı sınırlar',BOUND[mo.el].replace('Sınırlar: ',''))+Q('İlişkinin karşılıklı gelişmesi için',`${MUTUAL[mo.el]} Unutmayın: iyi bir ilişki tek tarafın uyumuyla değil, iki tarafın birbirini anlama çabasıyla gelişir; siz de kendi ihtiyaçlarınızı açıkça söyleyin.`),
+    [pLab(m,'mercury'),pLab(m,'sun'),pLab(m,'venus'),pLab(m,'moon'),pLab(m,'mars')],'mercury');
+  return o;
+}
+
+// ===== MISTIK PORTRE: haritaya ozel parametrik resim motoru (Canvas, ucretsiz, cevrimdisi) =====
+// Ayni harita + ayni secenekler her zaman ayni resmi uretir. Rastgelelik yalnizca haritadan turetilen tohumla yapilir.
+const PR_FMT={sq:[1080,1080,'Kare'],v:[1080,1920,'Dikey (hikâye / duvar kâğıdı)'],h:[1920,1080,'Yatay']};
+const PR_STYLE={gece:'Gece mistik',altin:'Altın gravür',sulu:'Suluboya'};
+const hx=h=>{h=h.replace('#','');return[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];};
+const mixC=(a,b,t)=>{const A=hx(a),B=hx(b);return '#'+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,'0')).join('');};
+const rgba=(h,a)=>{const[r,g,b]=hx(h);return `rgba(${r},${g},${b},${a})`;};
+function prRng(seed){let s=(seed%2147483646)+1;return()=>{s=(s*16807)%2147483647;return(s-1)/2147483646;};}
+function moonPhaseName(e){e=nrm(e);if(e<10||e>350)return'yeni ay';if(e<80)return'büyüyen hilal';if(e<100)return'ilk dördün';if(e<170)return'büyüyen şişkin ay';if(e<190)return'dolunay';if(e<260)return'küçülen şişkin ay';if(e<280)return'son dördün';return'küçülen hilal';}
+// --------- sembol secimi (cizim ve aciklama ayni listeyi kullanir) ---------
+function portraitSymbols(m){
+  const {P,ch}=m,sy=[];const add=(id,n,why,bs,grp)=>sy.push({id,n,why,bs,grp});
+  const an=m.dom==='pluto'&&!(m.domEl===0&&m.domMod===2)?{n:'Anka kuşu',d:'phoenix',why:'küllerinden yeniden doğma ve dönüşüm gücü'}:ANIMALS[m.domEl][m.domMod];
+  add('animal',an.n,`${cap(an.why)}. Haritandaki ${EL_N[m.domEl]} ağırlığını ve ${MOD_N[m.domMod]} niteliği temsil eder.`,[elLab(m),m.dom==='pluto'?'Baskın gezegen Plüton':''],'guc');
+  add('land',['Plato ve kumullar','Dağlar ve orman','Rüzgârlı tepeler','Deniz ve koy'][m.domEl],`${cap(LAND_BASE[m.domEl])}: baskın elementin ${EL_N[m.domEl]} doğası.`,[elLab(m)],'guc');
+  const e=nrm(P.moon.lon-P.sun.lon),ph=moonPhaseName(e);
+  add('moon',`Ay (${ph})`,`Doğduğun anda gökyüzündeki Ay'ın gerçek evresi: ${ph}. Ay, duygusal dünyanı ve iç ihtiyaçlarını temsil eder.`,[`Güneş–Ay açısı ${Math.round(e)}°`,pLab(m,'moon')],'manevi');
+  if(!ch.noTime&&ch.isDay)add('sun','Ufuktaki Güneş','Gündüz doğdun; Güneş ufkun üzerindeydi. Görünür olma, iz bırakma ve iradeni temsil eder.',['Doğum anında Güneş ufkun üzerinde'],'guc');
+  add('ring','Yıldız çemberi',`Gökyüzündeki çember, gezegenlerin doğduğun andaki gerçek derecelerine göre yerleştirildi. Aralarındaki çizgiler haritandaki açılardır.`,[`${m.asp.length} büyük açı`],'manevi');
+  const angular=k=>P[k].h&&[1,4,7,10].includes(P[k].h),strong=k=>['Yönetici','Yücelim'].includes(P[k].dg);
+  const emph=s=>[P.sun.s,P.moon.s,m.ascS].filter(x=>x===s).length,opp=m.asp.filter(a=>a.asp.a===180&&SK.includes(a.p)&&SK.includes(a.q)).length,h=k=>m.hasH?m.inH(k).length:0;
+  const C=[];const cand=(sc,id,n,why,bs,grp)=>{if(sc>=1.5)C.push({sc,id,n,why,bs,grp});};
+  cand((angular('saturn')?2:0)+(strong('saturn')?2:0)+(m.dom==='saturn'?3:0)+emph(9),'castle','Tepedeki kale','Satürn haritanda güçlü: sabırla kurulan, zamana dayanan yapılar ve sorumluluk dersi.',[pLab(m,'saturn'),m.dom==='saturn'?'Baskın gezegen Satürn':''],'ders');
+  cand(opp*.6+emph(6)*1.5+h(7)*.8,'bridge','Köprü','Haritanda karşıtlıklar ve ilişki teması öne çıkıyor: iki ucu birleştirme, denge ve uzlaşma dersi.',[opp?`${opp} karşıt açı`:'',emph(6)?'Terazi vurgusu':'',h(7)?`7. evde ${h(7)} gezegen`:''],'ders');
+  if(m.domEl!==3)cand((angular('jupiter')?2:0)+(strong('jupiter')?2:0)+emph(8)*1.5+h(9)+(m.domEl===0&&m.domMod===2?2:0),'road','Ufka uzanan yol','Jüpiter ve 9. ev teması: anlam arayışı, yolculuk ve ufkunu genişletme isteği.',[pLab(m,'jupiter'),h(9)?'9. evde '+m.inH(9).map(pn).join(', '):''],'manevi');
+  cand((m.dom==='jupiter'?3:0)+(hasAsp(m,'jupiter','saturn')?1.5:0),'columns','Antik sütunlar','Jüpiter ve Satürn birlikte: bilgelik, gelenek ve kalıcı değerlere saygı.',[hasAsp(m,'jupiter','saturn')?aspLabel(hasAsp(m,'jupiter','saturn')):'',m.dom==='jupiter'?'Baskın gezegen Jüpiter':''],'guc');
+  cand((m.nodeH&&[9,12].includes(m.nodeH)?2:0)+(angular('neptune')?2:0)+(m.dom==='neptune'?3:0)+(m.domEl===3?1:0),'lighthouse','Fener','Karanlıkta yol gösteren ışık: sezgin, inancın ve başkalarına yön verme yeteneğin.',[m.nodeH&&[9,12].includes(m.nodeH)?pLab(m,'node'):'',angular('neptune')||m.dom==='neptune'?pLab(m,'neptune'):'',m.domEl===3?'Baskın element su':''],'manevi');
+  if(m.domEl!==1)cand((m.secEl===1?1.5:0)+(SIGNS[m.moonAlt[0]].el===1?1:0)+h(4)*.5,'tree','Yalnız ağaç','Toprak elementi destekçin: kök salma, sabır ve sessiz büyüme.',[pLab(m,'moon'),elLab(m)],'guc');
+  C.sort((a,b)=>b.sc-a.sc||a.id.localeCompare(b.id));for(const x of C.slice(0,2))sy.push(x);
+  add('compass','Pusula',`Pusulanın iğnesi Kuzey Ay Düğümünün gökyüzündeki derecesini (${fmtDeg(P.node.lon)}) gösterir: gelişim yönün, ${NODE_SIGN[m.nodeS].go}.`,[pLab(m,'node')],'ders');
+  return{an,sy,e,ph};
+}
+// --------- yardimci cizimler ---------
+function smoothPoly(c,pts,close=true){c.beginPath();const n=pts.length;c.moveTo((pts[0][0]+pts[1][0])/2,(pts[0][1]+pts[1][1])/2);
+  for(let i=1;i<=n;i++){const a=pts[i%n],b=pts[(i+1)%n];c.quadraticCurveTo(a[0],a[1],(a[0]+b[0])/2,(a[1]+b[1])/2);}if(close)c.closePath();}
+function poly(c,pts){c.beginPath();pts.forEach((q,i)=>i?c.lineTo(q[0],q[1]):c.moveTo(q[0],q[1]));c.closePath();}
+function ridge(c,W,H,base,amp,rough,rnd,col){const ph=[rnd()*6,rnd()*6,rnd()*6],f=[1.3+rnd(),3+rnd()*2,7+rnd()*5];c.beginPath();c.moveTo(0,H);
+  for(let x=0;x<=W;x+=W/120){const t=x/W;let y=Math.sin(t*f[0]*Math.PI+ph[0])*.6+Math.sin(t*f[1]*Math.PI+ph[1])*.3*rough+Math.sin(t*f[2]*Math.PI+ph[2])*.15*rough;
+    if(rough>1.5)y+=Math.abs(Math.sin(t*f[2]*2*Math.PI+ph[1]))*.25;c.lineTo(x,base-amp*(.5+.5*y));}
+  c.lineTo(W,H);c.closePath();c.fillStyle=col;c.fill();}
+function ridgeY(W,base,amp,rough,seed,x){const rnd=prRng(seed);const ph=[rnd()*6,rnd()*6,rnd()*6],f=[1.3+rnd(),3+rnd()*2,7+rnd()*5];const t=x/W;let y=Math.sin(t*f[0]*Math.PI+ph[0])*.6+Math.sin(t*f[1]*Math.PI+ph[1])*.3*rough+Math.sin(t*f[2]*Math.PI+ph[2])*.15*rough;if(rough>1.5)y+=Math.abs(Math.sin(t*f[2]*2*Math.PI+ph[1]))*.25;return base-amp*(.5+.5*y);}
+// --------- hayvanlar (yerel koordinat: genislik ~200 birim, taban y=0) ---------
+const ANIMAL_DRAW={
+  bird(c,col,T,kind){const big=kind==='eagle';c.fillStyle=col;c.beginPath();c.moveTo(0,0);c.quadraticCurveTo(-30,-26,-70,-22);
+    if(big){for(let i=0;i<4;i++){c.lineTo(-78-i*6,-20+i*5);c.lineTo(-74-i*6,-14+i*5);}}else c.quadraticCurveTo(-92,-18,-100,-5);
+    c.quadraticCurveTo(-60,-8,-40,5);c.quadraticCurveTo(-20,8,0,12);c.quadraticCurveTo(20,8,40,5);c.quadraticCurveTo(60,-8,big?96:100,big?-2:-5);
+    if(big){for(let i=3;i>=0;i--){c.lineTo(74+i*6,-14+i*5);c.lineTo(78+i*6,-20+i*5);}}else c.quadraticCurveTo(92,-18,70,-22);
+    c.quadraticCurveTo(30,-26,0,0);c.fill();c.beginPath();c.ellipse(0,-5,5,8,0,0,7);c.fill();c.beginPath();c.moveTo(-7,9);c.lineTo(0,big?30:26);c.lineTo(7,9);c.fill();},
+  phoenix(c,col,T){const g=c.createLinearGradient(0,-40,0,90);g.addColorStop(0,T.glow?'#ffd36b':'#c9a24d');g.addColorStop(.5,'#e0662f');g.addColorStop(1,rgba('#b3261e',0));
+    c.save();if(T.glow){c.shadowColor='#ffb347';c.shadowBlur=40;}c.fillStyle=g;
+    for(const s of [-1,1]){c.beginPath();c.moveTo(0,0);c.bezierCurveTo(s*30,-60,s*80,-70,s*110,-40);c.bezierCurveTo(s*80,-40,s*70,-20,s*60,-15);c.bezierCurveTo(s*70,-10,s*60,0,s*40,5);c.quadraticCurveTo(s*20,10,0,14);c.fill();}
+    for(const[dx,len]of[[-12,110],[0,140],[12,110]]){c.beginPath();c.moveTo(-5,10);c.bezierCurveTo(dx*2,50,dx*4+20,len*.7,dx*3,len);c.bezierCurveTo(dx*2-10,len*.7,dx,40,5,10);c.fill();}
+    c.beginPath();c.ellipse(0,-6,6,10,0,0,7);c.fill();c.beginPath();c.moveTo(-3,-14);c.quadraticCurveTo(-8,-30,4,-34);c.quadraticCurveTo(0,-24,4,-14);c.fill();c.restore();},
+  lion(c,col,T){const mane=mixC(col,'#000000',.25);c.fillStyle=mane;c.beginPath();for(let i=0;i<=48;i++){const a=i/48*Math.PI*2,r=i%2?52:64;c.lineTo(Math.cos(a)*r,-60+Math.sin(a)*r*1.05);}c.fill();
+    c.fillStyle=col;c.beginPath();c.ellipse(0,-56,34,38,0,0,7);c.fill();c.beginPath();c.arc(-26,-88,9,0,7);c.arc(26,-88,9,0,7);c.fill();
+    c.fillStyle=T.bg;c.beginPath();c.ellipse(-12,-64,4,3,0,0,7);c.ellipse(12,-64,4,3,0,0,7);c.fill();c.beginPath();c.moveTo(-7,-46);c.lineTo(7,-46);c.lineTo(0,-38);c.fill();
+    c.strokeStyle=T.bg;c.lineWidth=2;c.beginPath();c.moveTo(0,-38);c.lineTo(0,-32);c.moveTo(-10,-28);c.quadraticCurveTo(0,-34,10,-28);c.stroke();},
+  wolf(c,col){c.fillStyle=col;smoothPoly(c,[[20,0],[14,0],[12,-35],[18,-55],[22,-70],[30,-86],[40,-99],[31,-103],[21,-97],[17,-102],[12,-114],[7,-98],[0,-90],[-12,-62],[-28,-36],[-37,-16],[-35,-1],[-52,0],[-60,-7],[-44,-7],[-30,-5],[5,-1]]);c.fill();},
+  goat(c,col){c.fillStyle=col;poly(c,[[-32,0],[-28,0],[-27,-22],[-10,-24],[12,-24],[13,0],[17,0],[18,-24],[24,-29],[29,-42],[35,-53],[44,-52],[42,-59],[33,-67],[27,-69],[22,-62],[16,-48],[-20,-46],[-30,-44],[-37,-49],[-34,-38],[-35,-22]]);c.fill();
+    c.strokeStyle=col;c.lineWidth=5;c.lineCap='round';c.beginPath();c.moveTo(28,-67);c.bezierCurveTo(22,-86,4,-88,2,-72);c.stroke();c.beginPath();c.moveTo(35,-53);c.lineTo(34,-44);c.lineTo(31,-50);c.fill();},
+  turtle(c,col,T){c.fillStyle=col;c.beginPath();c.ellipse(-30,-4,10,6,0,0,7);c.ellipse(28,-4,10,6,0,0,7);c.fill();c.beginPath();c.ellipse(48,-14,11,9,0,0,7);c.fill();
+    c.beginPath();c.moveTo(-48,-6);c.bezierCurveTo(-44,-52,40,-52,44,-6);c.closePath();c.fill();c.strokeStyle=T.bg;c.globalAlpha=.5;c.lineWidth=2;
+    for(const[x,y]of[[-22,-22],[0,-30],[22,-22],[-10,-12],[12,-12]]){c.beginPath();for(let i=0;i<6;i++){const a=i/6*Math.PI*2;c.lineTo(x+Math.cos(a)*9,y+Math.sin(a)*8);}c.closePath();c.stroke();}c.globalAlpha=1;},
+  owl(c,col,T){c.fillStyle=col;c.beginPath();c.ellipse(0,-45,30,42,0,0,7);c.fill();poly(c,[[-24,-78],[-18,-98],[-10,-82]]);c.fill();poly(c,[[24,-78],[18,-98],[10,-82]]);c.fill();
+    c.fillStyle=T.bg;c.beginPath();c.arc(-12,-62,11,0,7);c.arc(12,-62,11,0,7);c.fill();c.fillStyle=T.glow?'#ffd36b':col;c.beginPath();c.arc(-12,-62,5,0,7);c.arc(12,-62,5,0,7);c.fill();
+    c.fillStyle=T.bg;poly(c,[[-4,-52],[4,-52],[0,-44]]);c.fill();c.strokeStyle=col;c.lineWidth=5;c.beginPath();c.moveTo(-60,2);c.lineTo(60,-2);c.stroke();},
+  butterfly(c,col,T,kind,pal){const g1=pal[0],g2=pal[2]||pal[1];for(const s of [-1,1]){const g=c.createRadialGradient(s*30,-50,4,s*30,-50,70);g.addColorStop(0,g2);g.addColorStop(1,g1);c.fillStyle=g;
+      c.beginPath();c.ellipse(s*36,-58,40,30,s*-.5,0,7);c.fill();c.beginPath();c.ellipse(s*26,-18,24,20,s*.5,0,7);c.fill();}
+    c.fillStyle=col;c.beginPath();c.ellipse(0,-38,5,30,0,0,7);c.fill();c.strokeStyle=col;c.lineWidth=2;c.beginPath();c.moveTo(-2,-66);c.quadraticCurveTo(-12,-90,-20,-94);c.moveTo(2,-66);c.quadraticCurveTo(12,-90,20,-94);c.stroke();},
+  dolphin(c,col){c.fillStyle=col;c.beginPath();c.moveTo(-50,0);c.quadraticCurveTo(0,-62,52,-8);c.lineTo(62,-2);c.lineTo(50,0);c.quadraticCurveTo(0,-38,-44,10);c.closePath();c.fill();
+    poly(c,[[-4,-30],[6,-48],[14,-29]]);c.fill();poly(c,[[-50,0],[-66,-8],[-58,4],[-62,16],[-46,8]]);c.fill();poly(c,[[18,-18],[16,-6],[26,-14]]);c.fill();},
+  swan(c,col,T){c.fillStyle=col;c.beginPath();c.moveTo(-60,-10);c.bezierCurveTo(-50,-46,20,-40,40,-20);c.quadraticCurveTo(48,-6,30,0);c.lineTo(-50,0);c.closePath();c.fill();
+    c.strokeStyle=col;c.lineWidth=11;c.lineCap='round';c.beginPath();c.moveTo(28,-22);c.bezierCurveTo(52,-50,14,-70,24,-96);c.stroke();c.beginPath();c.ellipse(30,-98,10,7,.2,0,7);c.fill();
+    c.fillStyle=T.glow?'#e09a3e':'#c98a3a';poly(c,[[38,-100],[52,-95],[38,-94]]);c.fill();}
+};
+const ANIMAL_KIND={'Şahin':'bird','Kartal':'eagle','Güvercin':'bird','Anka kuşu':'phoenix','Aslan':'lion','Kurt':'wolf','Dağ keçisi':'goat','Kaplumbağa':'turtle','Baykuş':'owl','Kelebek':'butterfly','Yunus':'dolphin','Kuğu':'swan'};
+// --------- nesneler ---------
+function drawCastle(c,x,y,s,col,T){c.save();c.translate(x,y);c.scale(s,s);c.fillStyle=col;c.fillRect(-60,-70,120,70);
+  for(const tx of [-70,40]){c.fillRect(tx,-120,30,120);for(let i=0;i<3;i++)c.fillRect(tx+i*11,-130,7,10);}c.fillRect(-15,-150,30,80);for(let i=0;i<3;i++)c.fillRect(-15+i*11,-160,7,10);
+  for(let i=0;i<10;i++)c.fillRect(-60+i*12,-80,7,10);c.fillStyle=T.glow?'#ffcf6e':T.bg;c.globalAlpha=T.glow?.9:.6;c.beginPath();c.moveTo(-10,0);c.lineTo(-10,-22);c.arc(0,-22,10,Math.PI,0);c.lineTo(10,0);c.fill();
+  c.fillRect(-60,-100,6,10);c.fillRect(50,-100,6,10);c.fillRect(-3,-130,6,12);c.restore();}
+function drawLighthouse(c,x,y,s,col,T,dir){c.save();c.translate(x,y);c.scale(s,s);if(dir<0)c.scale(-1,1);
+  if(T.glow){const g=c.createLinearGradient(0,-190,-420,-150);g.addColorStop(0,'rgba(255,220,140,.55)');g.addColorStop(1,'rgba(255,220,140,0)');c.fillStyle=g;c.beginPath();c.moveTo(0,-190);c.lineTo(-420,-230);c.lineTo(-420,-130);c.fill();}
+  c.fillStyle=col;c.beginPath();c.moveTo(-22,0);c.lineTo(-13,-170);c.lineTo(13,-170);c.lineTo(22,0);c.fill();c.fillStyle=T.bg;c.globalAlpha=.35;for(const yy of [-40,-95,-150])c.fillRect(-20,yy,40,14);c.globalAlpha=1;
+  c.fillStyle=T.glow?'#ffe08a':mixC(col,'#ffffff',.4);c.fillRect(-11,-196,22,24);c.fillStyle=col;c.beginPath();c.moveTo(-16,-196);c.lineTo(0,-214);c.lineTo(16,-196);c.fill();c.fillRect(-18,-172,36,4);c.restore();}
+function drawBridge(c,x,y,w,col){c.save();c.fillStyle=col;c.beginPath();c.moveTo(x-w/2,y);c.lineTo(x-w/2,y-w*.16);c.lineTo(x+w/2,y-w*.16);c.lineTo(x+w/2,y);
+  for(let i=2;i>=0;i--){const ax=x-w/2+w*(i+.5)/3;c.lineTo(ax+w*.13,y);c.arc(ax,y,w*.13,0,Math.PI,true);}c.closePath();c.fill();
+  for(let i=0;i<=12;i++)c.fillRect(x-w/2+i*w/12-2,y-w*.16-14,4,14);c.fillRect(x-w/2,y-w*.16-16,w,4);c.restore();}
+function drawColumns(c,x,y,s,col){c.save();c.translate(x,y);c.scale(s,s);c.fillStyle=col;c.fillRect(-110,-8,220,8);c.fillRect(-100,-16,200,8);
+  const hs=[150,150,95,150];hs.forEach((h,i)=>{const cx=-75+i*50;c.fillRect(cx-11,-16-h,22,h);c.fillRect(cx-16,-26-h,32,10);});c.fillRect(-92,-186,90,14);c.beginPath();c.moveTo(-92,-186);c.lineTo(-47,-206);c.lineTo(-2,-186);c.fill();c.restore();}
+function drawTree(c,x,y,s,col){c.save();c.translate(x,y);c.scale(s,s);c.fillStyle=col;c.beginPath();c.moveTo(-8,0);c.quadraticCurveTo(-4,-60,-30,-100);c.lineTo(-22,-104);c.quadraticCurveTo(0,-80,4,-110);c.lineTo(10,-108);c.quadraticCurveTo(8,-60,10,0);c.fill();
+  for(const[a,b,r]of[[-40,-120,40],[0,-150,50],[40,-118,40],[-15,-105,34],[22,-100,30],[-62,-100,26],[62,-96,24]]){c.beginPath();c.arc(a,b,r,0,7);c.fill();}c.restore();}
+function drawPine(c,x,y,h,col){c.fillStyle=col;c.beginPath();c.moveTo(x,y-h);c.lineTo(x-h*.28,y);c.lineTo(x+h*.28,y);c.fill();}
+function drawCompass(c,x,y,r,ang,T){c.save();c.translate(x,y);c.strokeStyle=T.line;c.fillStyle=T.line;c.lineWidth=2;c.globalAlpha=.85;c.beginPath();c.arc(0,0,r,0,7);c.stroke();c.lineWidth=1;c.beginPath();c.arc(0,0,r*.78,0,7);c.stroke();
+  for(let i=0;i<32;i++){const a=i/32*Math.PI*2,l=i%8===0?.22:i%4===0?.14:.07;c.beginPath();c.moveTo(Math.cos(a)*r,Math.sin(a)*r);c.lineTo(Math.cos(a)*r*(1-l),Math.sin(a)*r*(1-l));c.stroke();}
+  c.font=`${Math.round(r*.22)}px Georgia,serif`;c.textAlign='center';c.textBaseline='middle';[['K',0,-1],['D',1,0],['G',0,1],['B',-1,0]].forEach(([t,dx,dy])=>c.fillText(t,dx*r*1.22,dy*r*1.22));
+  c.rotate(ang);c.globalAlpha=1;c.fillStyle=T.accent;c.beginPath();c.moveTo(0,-r*.7);c.lineTo(r*.1,0);c.lineTo(-r*.1,0);c.fill();c.fillStyle=T.line;c.globalAlpha=.5;c.beginPath();c.moveTo(0,r*.7);c.lineTo(r*.1,0);c.lineTo(-r*.1,0);c.fill();c.globalAlpha=1;c.beginPath();c.arc(0,0,r*.06,0,7);c.fill();c.restore();}
+function drawMoon(c,x,y,r,e,T){c.save();if(T.glow){c.shadowColor=rgba('#fff3c4',.9);c.shadowBlur=r*1.6;}
+  c.fillStyle=T.moonDark;c.beginPath();c.arc(x,y,r,0,7);c.fill();c.shadowBlur=0;const er=nrm(e)*Math.PI/180,sg=nrm(e)<180?1:-1,k=Math.cos(er);
+  c.fillStyle=T.moon;c.beginPath();for(let i=0;i<=40;i++){const t=-Math.PI/2+i/40*Math.PI;c.lineTo(x+sg*r*Math.cos(t),y+r*Math.sin(t));}
+  for(let i=0;i<=40;i++){const t=Math.PI/2-i/40*Math.PI;c.lineTo(x+sg*k*r*Math.cos(t),y+r*Math.sin(t));}c.closePath();c.fill();
+  if(!T.glow){c.strokeStyle=rgba(T.line,.6);c.lineWidth=1.5;c.beginPath();c.arc(x,y,r,0,7);c.stroke();}c.restore();}
+// --------- tema ---------
+function prTheme(style,m,pal){const c0=pal[0][0],c1=pal[1][0],c2=pal[2][0],c3=pal[4][0];
+  if(style==='altin')return{bg:'#f6efe0',sky:['#f8f1e2','#f1e6cc','#ead9b5'],star:'#a4802f',line:'#9c7426',accent:'#7a1f3d',land:['#d9c494','#c3a86a','#a8884a','#7d6332'],ink:'#5b4520',moon:'#fff8e6',moonDark:'#e6d6b0',sea:['#e8dcbf','#d6c49a'],text:'#3a2c12',glow:false,hatch:true};
+  if(style==='sulu')return{bg:'#fbf7f1',sky:[mixC(c2,'#ffffff',.75),mixC(c3,'#ffffff',.7),mixC(c0,'#ffffff',.6)],star:mixC(c1,'#ffffff',.2),line:mixC(c1,'#4a3c66',.5),accent:c2,land:[mixC(c3,'#ffffff',.45),mixC(c0,'#ffffff',.35),mixC(c1,'#ffffff',.25),mixC(c1,'#3a3355',.2)],ink:mixC(c1,'#2b2540',.45),moon:'#fffdf5',moonDark:mixC(c3,'#ffffff',.5),sea:[mixC(c3,'#ffffff',.4),mixC(c3,'#ffffff',.15)],text:'#2b2540',glow:false,soft:true};
+  return{bg:'#0b1029',sky:['#070b22','#1a1745',mixC(c0,'#2a1f52',.55)],star:'#fff6dc',line:'#d8b45a',accent:'#f0c75e',land:[mixC(c3,'#141a3a',.55),mixC(c0,'#10142e',.62),mixC(c1,'#0c1026',.7),'#070a1c'],ink:'#05071a',moon:'#fff4d2',moonDark:'#1c2148',sea:[mixC(c3,'#0b1336',.55),'#060a20'],text:'#f5ecd6',glow:true};}
+// --------- ana cizim ---------
+function drawPortrait(cv,m,opt){
+  const[W,H]=PR_FMT[opt.fmt];cv.width=W;cv.height=H;const c=cv.getContext('2d');const S=Math.min(W,H)/1080;
+  const X=deepExtras(m,deepParts(m)),pal=X.pal,T=prTheme(opt.style,m,pal),PS=portraitSymbols(m),ids=new Set(PS.sy.map(s=>s.id));
+  const rnd=prRng(m.seed+opt.alt*7919),flip=opt.alt%2===1,hor=H*(opt.fmt==='v'?.64:.66);
+  // gokyuzu
+  const g=c.createLinearGradient(0,0,0,hor);g.addColorStop(0,T.sky[0]);g.addColorStop(.6,T.sky[1]);g.addColorStop(1,T.sky[2]);c.fillStyle=g;c.fillRect(0,0,W,H);
+  if(T.soft){for(let i=0;i<7;i++){const gx=rnd()*W,gy=rnd()*hor,gr=300*S+rnd()*300*S,rg=c.createRadialGradient(gx,gy,10,gx,gy,gr);rg.addColorStop(0,rgba(pal[i%5][0],.22));rg.addColorStop(1,rgba(pal[i%5][0],0));c.fillStyle=rg;c.fillRect(0,0,W,H);}}
+  for(let i=0;i<(T.glow?420:220);i++){const x=rnd()*W,y=rnd()*hor*.95,r=(rnd()**3)*2.6*S+.4;c.fillStyle=rgba(T.star,T.glow?.25+rnd()*.75:.25+rnd()*.5);c.beginPath();c.arc(x,y,r,0,7);c.fill();}
+  // yildiz cemberi: gezegenlerin gercek dereceleri ve acilar
+  const rcx=W*(flip?.36:.64)*(opt.fmt==='h'?1:1),rcy=hor*(opt.fmt==='v'?.36:.4),rr=Math.min(W*.27,hor*.3),start=m.ascS!=null?m.ch.asc:m.P.sun.lon-90;
+  const ang=l=>Math.PI-(nrm(l-start))*Math.PI/180,pt=l=>[rcx+Math.cos(ang(l))*rr,rcy-Math.sin(ang(l))*rr];
+  c.save();c.strokeStyle=rgba(T.line,.35);c.lineWidth=1.2*S;c.beginPath();c.arc(rcx,rcy,rr,0,7);c.stroke();c.setLineDash([2*S,8*S]);c.beginPath();c.arc(rcx,rcy,rr*1.12,0,7);c.stroke();c.setLineDash([]);
+  for(let i=0;i<12;i++){const a=ang(i*30);c.beginPath();c.moveTo(rcx+Math.cos(a)*rr*1.06,rcy-Math.sin(a)*rr*1.06);c.lineTo(rcx+Math.cos(a)*rr*1.12,rcy-Math.sin(a)*rr*1.12);c.stroke();}
+  for(const a of m.asp){if(!SK.includes(a.p)||!SK.includes(a.q)||a.asp.a===0)continue;const[x1,y1]=pt(m.P[a.p].lon),[x2,y2]=pt(m.P[a.q].lon);c.strokeStyle=a.asp.t==='h'?rgba(T.glow?'#9cc8ff':T.line,.45):rgba(T.glow?'#ff9c8a':T.accent,.4);c.lineWidth=(a.orb<2?1.8:1)*S;c.beginPath();c.moveTo(x1,y1);c.lineTo(x2,y2);c.stroke();}
+  for(const k of SK){const[x,y]=pt(m.P[k].lon),big=k==='sun'||k==='moon'?7:k===m.dom?6:4;if(T.glow){c.shadowColor=T.star;c.shadowBlur=14*S;}c.fillStyle=k===m.dom?T.accent:T.star;c.beginPath();c.arc(x,y,big*S,0,7);c.fill();c.shadowBlur=0;
+    if(opt.glyph!==false){c.fillStyle=rgba(T.line,.85);c.font=`${Math.round(17*S)}px "Segoe UI Symbol","Noto Sans Symbols 2",serif`;c.textAlign='center';c.textBaseline='middle';const a=ang(m.P[k].lon);c.fillText(PL[k].g+VS,rcx+Math.cos(a)*rr*.86,rcy-Math.sin(a)*rr*.86);}}
+  c.restore();
+  // ay ve gunes
+  const mx=W*(flip?.82:.18),my=hor*(opt.fmt==='v'?.17:.2),mr=(opt.fmt==='h'?62:70)*S;drawMoon(c,mx,my,mr,PS.e,T);
+  if(ids.has('sun')){const sx=W*(flip?.2:.8),sy=hor-10*S,sg=c.createRadialGradient(sx,sy,10,sx,sy,260*S);sg.addColorStop(0,rgba(T.glow?'#ffd27a':'#e9a23b',.9));sg.addColorStop(.25,rgba('#f2a446',.45));sg.addColorStop(1,rgba('#f2a446',0));c.fillStyle=sg;c.fillRect(0,0,W,hor+40*S);c.fillStyle=rgba('#ffd98a',.95);c.beginPath();c.arc(sx,sy,46*S,Math.PI,0);c.fill();}
+  // manzara
+  const el=m.domEl,L=T.land,rs=m.seed+opt.alt*31;let groundY=hor;
+  if(m.secEl===1||el===1)ridge(c,W,H,hor-40*S,(el===1?300:180)*S,2.2,prRng(rs+1),mixC(L[0],T.sky[2],.35));
+  if(m.secEl===0&&!ids.has('sun')){const sx=W*(flip?.25:.75);const sg=c.createRadialGradient(sx,hor,5,sx,hor,200*S);sg.addColorStop(0,rgba('#ff8a50',.8));sg.addColorStop(1,rgba('#ff8a50',0));c.fillStyle=sg;c.fillRect(0,hor-200*S,W,220*S);}
+  if(el===3){ridge(c,W,H,hor+2*S,50*S,1,prRng(rs+2),mixC(L[1],T.sky[2],.25));const sg=c.createLinearGradient(0,hor,0,H);sg.addColorStop(0,T.sea[0]);sg.addColorStop(1,T.sea[1]);c.fillStyle=sg;c.fillRect(0,hor,W,H-hor);
+    c.strokeStyle=rgba(T.line,.22);for(let i=0;i<45;i++){const yy=hor+rnd()*(H-hor),x=rnd()*W,w=(30+rnd()*90)*S;c.lineWidth=1*S;c.beginPath();c.moveTo(x,yy);c.quadraticCurveTo(x+w/2,yy-4*S,x+w,yy);c.stroke();}
+    c.strokeStyle=rgba(T.moon,T.glow?.5:.6);for(let i=0;i<60;i++){const yy=hor+(i/60)**1.6*(H-hor),w=(10+i*4)*S*(.6+rnd()*.8);c.lineWidth=(1+i/30)*S;c.beginPath();c.moveTo(mx-w/2,yy);c.lineTo(mx+w/2,yy);c.stroke();}
+    c.fillStyle=L[2];c.beginPath();c.moveTo(flip?W:0,H);c.quadraticCurveTo(flip?W*.7:W*.3,H-(H-hor)*.35,flip?W*.45:W*.55,H);c.fill();}
+  else if(el===0){ridge(c,W,H,hor+30*S,90*S,.5,prRng(rs+3),L[1]);ridge(c,W,H,hor+140*S,110*S,.4,prRng(rs+4),L[2]);ridge(c,W,H,hor+260*S,90*S,.3,prRng(rs+5),L[3]);}
+  else if(el===1){ridge(c,W,H,hor+30*S,200*S,2.4,prRng(rs+6),L[1]);ridge(c,W,H,hor+170*S,120*S,1,prRng(rs+7),L[2]);for(let i=0;i<34;i++){const x=rnd()*W,y=hor+190*S+rnd()*(H-hor-190*S)*.35;drawPine(c,x,y,(60+rnd()*80)*S,i%3?L[3]:mixC(L[3],L[2],.4));}c.fillStyle=L[3];c.fillRect(0,H-(H-hor)*.3,W,H);}
+  else{ridge(c,W,H,hor+40*S,120*S,.6,prRng(rs+8),L[1]);ridge(c,W,H,hor+150*S,120*S,.5,prRng(rs+9),L[2]);ridge(c,W,H,hor+280*S,100*S,.4,prRng(rs+10),L[3]);
+    c.fillStyle=rgba(T.glow?'#c9c4e8':'#ffffff',T.glow?.12:.55);for(let i=0;i<6;i++){const x=rnd()*W,y=hor*.5+rnd()*hor*.35,w=(160+rnd()*220)*S;c.beginPath();c.ellipse(x,y,w,w*.14,0,0,7);c.ellipse(x+w*.3,y-w*.06,w*.5,w*.12,0,0,7);c.fill();}}
+  if(m.secEl===2&&el!==2){c.strokeStyle=rgba(T.ink,.7);c.lineWidth=2.4*S;for(let i=0;i<6;i++){const x=W*(.3+rnd()*.4),y=hor*(.45+rnd()*.3),w=(10+rnd()*10)*S;c.beginPath();c.moveTo(x-w,y-w*.4);c.quadraticCurveTo(x-w/2,y-w*.8,x,y);c.quadraticCurveTo(x+w/2,y-w*.8,x+w,y-w*.4);c.stroke();}}
+  if(m.secEl===3&&el!==3&&!ids.has('bridge')){c.fillStyle=rgba(T.sea[0],.9);c.beginPath();const bx=W*(flip?.7:.3);c.moveTo(bx-20*S,hor+60*S);c.bezierCurveTo(bx+120*S,hor+200*S,bx-220*S,hor+330*S,bx+40*S,H);c.lineTo(bx+220*S,H);c.bezierCurveTo(bx-80*S,hor+330*S,bx+200*S,hor+200*S,bx+10*S,hor+60*S);c.fill();}
+  // nesneler
+  const ink=T.ink,gk=ANIMAL_KIND[PS.an.n],ground=!['bird','eagle','phoenix'].includes(gk),slot=ground?[.14,.38,.5]:[.14,.86,.38];let si=0;const sx=()=>{const v=slot[si++%4];return W*(flip?1-v:v);};
+  if(ids.has('road')){c.fillStyle=rgba(T.glow?'#e8d9a8':'#ffffff',T.glow?.28:.55);const rx=W*(flip?.42:.58);c.beginPath();c.moveTo(W*.38,H);c.bezierCurveTo(W*.45,H*.86,rx-140*S,hor+120*S,rx,hor+30*S);c.lineTo(rx+6*S,hor+30*S);c.bezierCurveTo(rx-100*S,hor+120*S,W*.6,H*.86,W*.66,H);c.fill();}
+  if(ids.has('castle')){const x=sx(),by=hor+(el===3?8:el===1?150:110)*S;c.fillStyle=mixC(L[2],ink,.4);c.beginPath();c.ellipse(x,by+30*S,210*S,60*S,0,Math.PI,0);c.fill();drawCastle(c,x,by,1.1*S,ink,T);}
+  if(ids.has('columns')){const x=sx();drawColumns(c,x,hor+(el===3?-20:150)*S,1.1*S,ink);}
+  if(ids.has('lighthouse')){const x=sx();drawLighthouse(c,x,hor+(el===3?40:90)*S,1.5*S,ink,T,x<W/2?-1:1);}
+  if(ids.has('bridge')){const bx=sx(),bw=Math.min(380*S,W*.34),cx2=Math.min(Math.max(bx,bw/2+50*S),W-bw/2-50*S),by=hor+(el===3?60:150)*S;if(el!==3){c.fillStyle=rgba(T.sea[0],.95);c.beginPath();c.moveTo(cx2-10*S,hor+40*S);c.bezierCurveTo(cx2+60*S,by-40*S,cx2-90*S,by+60*S,cx2-40*S,H);c.lineTo(cx2+70*S,H);c.bezierCurveTo(cx2-20*S,by+60*S,cx2+110*S,by-40*S,cx2+10*S,hor+40*S);c.fill();}drawBridge(c,cx2,by,bw,ink);}
+  if(ids.has('tree')){const x=sx();drawTree(c,x,hor+(H-hor)*.42,1.5*S,ink);}
+  // hayvan
+  const kind=ANIMAL_KIND[PS.an.n]||'bird',fn=ANIMAL_DRAW[kind==='eagle'?'bird':kind];
+  const sky=['bird','eagle','phoenix'].includes(kind),foot=H-(opt.named?250:150)*S,ax=W*(sky?(flip?.68:.32):(flip?.28:.72)),ay=sky?hor*(opt.fmt==='v'?.6:.58):kind==='butterfly'?Math.min(foot,hor+(H-hor)*.55):kind==='swan'||kind==='dolphin'?Math.min(foot,hor+(H-hor)*.5):Math.min(foot,hor+(H-hor)*.62),as=(sky?1.9:kind==='butterfly'?1.6:kind==='turtle'?1.8:2.3)*S;
+  c.save();c.translate(ax,ay);c.scale(flip&&!sky?-as:as,as);if(T.glow&&kind!=='phoenix'){c.shadowColor=rgba(T.accent,.6);c.shadowBlur=24;}
+  fn(c,kind==='butterfly'?mixC(ink,'#000000',.2):(T.glow?mixC(ink,'#2a2350',.5):ink),T,kind,pal.map(x=>x[0]));c.restore();
+  // pusula
+  drawCompass(c,W*(flip?.1:.9),H-(opt.named?200:110)*S,58*S,-(nrm(m.P.node.lon)*Math.PI/180),T);
+  // cerceve ve yazilar
+  c.strokeStyle=rgba(T.line,.8);c.lineWidth=2*S;c.strokeRect(24*S,24*S,W-48*S,H-48*S);c.lineWidth=1*S;c.strokeRect(34*S,34*S,W-68*S,H-68*S);
+  c.textAlign='center';c.textBaseline='alphabetic';
+  if(opt.named&&opt.name){const bh=170*S;const bg=c.createLinearGradient(0,H-bh-60*S,0,H);bg.addColorStop(0,rgba(T.bg,0));bg.addColorStop(1,rgba(T.bg,.85));c.fillStyle=bg;c.fillRect(0,H-bh-60*S,W,bh+60*S);
+    c.fillStyle=T.text;c.font=`600 ${Math.round(70*S)}px "Cormorant Garamond",Georgia,serif`;c.fillText(opt.name,W/2,H-128*S);c.font=`italic ${Math.round(30*S)}px "Cormorant Garamond",Georgia,serif`;c.fillStyle=rgba(T.text,.85);c.fillText('Ruhunun sembolik portresi',W/2,H-86*S);}
+  c.font=`${Math.round(20*S)}px "Cormorant Garamond",Georgia,serif`;c.fillStyle=rgba(T.text,.7);c.fillText('✦ Gökyüzü Haritam',W/2,H-50*S);
+  return{PS,X};
+}
+// --------- metinler ve bolum ---------
+function portraitPrompt(m,PS,X,opt){
+  const enEl=['sunlit plateau with warm dunes','mountain valley with pine forests and olive trees','windswept open hills with drifting clouds','calm moonlit bay with a silver path on the sea'][m.domEl];
+  const enAn={'Şahin':'a falcon in flight','Aslan':'a noble lion','Anka kuşu':'a phoenix rising in golden flames','Dağ keçisi':'a mountain goat on a cliff','Kaplumbağa':'an ancient tortoise','Baykuş':'a wise owl on a branch','Güvercin':'a white dove','Kurt':'a lone wolf howling at the moon','Kelebek':'a large luminous butterfly','Yunus':'a leaping dolphin','Kartal':'a soaring eagle','Kuğu':'a white swan on still water'}[PS.an.n]||'a bird';
+  const enObj={castle:'a stone castle on a hill',bridge:'an old arched stone bridge',road:'a winding road toward the horizon',columns:'ancient marble columns',lighthouse:'a lighthouse casting a warm beam',tree:'a solitary old tree'};
+  const objs=PS.sy.filter(s=>enObj[s.id]).map(s=>enObj[s.id]);
+  const st={gece:'mystical night scene, deep navy and violet sky, glowing gold accents, ethereal light',altin:'antique gold engraving style on cream paper, fine line hatching, vintage star atlas',sulu:'soft watercolor painting, pastel washes, delicate paper texture'}[opt.style];
+  return `A symbolic, artistic portrait landscape (no people, no text). ${cap(enEl)}. In the sky: the moon as a ${{'yeni ay':'new moon','büyüyen hilal':'waxing crescent','ilk dördün':'first quarter moon','büyüyen şişkin ay':'waxing gibbous moon','dolunay':'full moon','küçülen şişkin ay':'waning gibbous moon','son dördün':'last quarter moon','küçülen hilal':'waning crescent'}[PS.ph]}, a faint celestial ring of stars connected by thin geometric lines. ${cap(enAn)} as the main figure${objs.length?', with '+objs.join(', '):''}. A small antique compass in the corner. Color palette: ${X.pal.map(p=>p[0]).join(', ')}. Style: ${st}. Harmonious composition, high detail, ${opt.fmt==='v'?'vertical 9:16':opt.fmt==='h'?'horizontal 16:9':'square 1:1'}.`;
+}
+function portraitTexts(m,PS,X){
+  const G=g=>PS.sy.filter(s=>s.grp===g);const nm=esc(m.p.name||'');
+  const story=`Bir ${['sabah','öğle','akşam','gece'][(m.seed>>>3)%4]} vakti, ${LAND_BASE[m.domEl]}. Gökyüzünde ${PS.ph} asılı; yıldızlar doğduğun andaki yerlerinde. ${cap(PS.an.n)} ${['bir an durup ufka bakıyor','sessizce yolunu seçiyor','rüzgârı dinliyor','ışığa doğru dönüyor'][m.seed%4]}: ${PS.an.why}. ${PS.sy.find(s=>s.grp==='ders'&&s.id!=='compass')?`İleride ${PS.sy.find(s=>s.grp==='ders'&&s.id!=='compass').n.toLocaleLowerCase('tr')} duruyor; kolay değil ama oraya varmak için gereken sabır onda var. `:''}Köşedeki pusula hep aynı yönü gösteriyor: ${NODE_SIGN[m.nodeS].go}.`;
+  const poem=`${nm?nm+',':'Sen'} ${EL_N[m.domEl]} ile yoğrulmuş bir yolcusun.<br>${cap(PS.ph)} senin için yanıyor; ışığı az ya da çok, ama hep yolunu gösteriyor.<br>${cap(X.ar.n.toLocaleLowerCase('tr'))} ruhun ${SIGNS[m.P.sun.s].kw.split(', ')[0]}, kalbin ${SIGNS[m.moonAlt[0]].kw.split(', ')[0]}.<br>Taşıdığın yük ağır görünse de, ${SAT_SIGN[m.P.saturn.s].split(' ve ')[0]} senin ustalığın olacak.<br>Ve sen ilerledikçe, ${NODE_SIGN[m.nodeS].go} kendi ışığını yakacak.`;
+  const L=a=>a.length?ul(a.map(s=>`<b>${s.n}</b>: ${s.why}`)):'<p class="small">Bu grupta sembol yok.</p>';
+  return `<div class="grid2">${SB('Bu resim neden seni temsil ediyor?',`<p>Resimdeki her unsur haritandaki bir göstergeden seçildi. Manzara baskın elementin (${EL_N[m.domEl]}), hayvan element ve nitelik dengenden, renkler Güneş, Ay ve element dengenden, gökyüzündeki çember gezegenlerinin gerçek derecelerinden, Ay'ın şekli doğduğun andaki gerçek evresinden geliyor. Aynı harita her zaman aynı temel sembolleri ve renkleri üretir; "alternatif" yalnızca yerleşimi ve yıldızları değiştirir.</p>`,[elLab(m),pLab(m,'sun'),pLab(m,'moon')])}
+   ${SB('Renklerinin sembolik anlamları',`<div class="pal">${X.pal.map(c=>`<div><i style="background:${c[0]}"></i><b>${cap(c[1])}</b><span>${c[2]}</span></div>`).join('')}</div>`,[elLab(m)])}</div>
+   ${SB('Resimdeki her nesnenin anlamı',ul(PS.sy.map(s=>`<b>${s.n}</b>: ${s.why}<br><span class="small">Dayanak: ${s.bs.filter(Boolean).join(' · ')||'—'}</span>`)),[])}
+   ${SB('Resmin anlattığı karakter hikâyesi',`<p class="dtext">${story}</p>`,[elLab(m),pLab(m,'node')])}
+   <div class="grid3">${SB('Güçlü taraflarını temsil eden semboller',L(G('guc')),[])}${SB('Hayat derslerini temsil eden semboller',L(G('ders')),[])}${SB('Manevi ve duygusal arayışını temsil eden semboller',L(G('manevi')),[])}</div>
+   ${SB('Sana özel kısa bir edebi metin',`<p class="poem">${poem}</p>`,[pLab(m,'sun'),pLab(m,'moon'),pLab(m,'saturn'),pLab(m,'node')])}`;
+}
+function secPortre(ch,p){
+  const m=CM(ch,p),o=STATE.pr||(STATE.pr={fmt:'sq',style:'gece',alt:0,named:!!p.name});
+  return `<section class="card hero"><h3>Ruhunun Sembolik Portresi — Bu Seni Anlatan Resim</h3>
+   <p>Bu resim hazır bir burç görseli değil: senin haritandan, gezegenlerinin gerçek derecelerinden, doğduğun andaki Ay evresinden, baskın elementinden ve açılarından adım adım çizildi. Aynı harita her zaman aynı sembolleri ve renkleri üretir.</p>
+   <div class="prctl"><label>Biçim<select id="prFmt">${Object.entries(PR_FMT).map(([k,v])=>`<option value="${k}" ${o.fmt===k?'selected':''}>${v[2]}</option>`).join('')}</select></label>
+   <label>Tarz<select id="prSty">${Object.entries(PR_STYLE).map(([k,v])=>`<option value="${k}" ${o.style===k?'selected':''}>${v}</option>`).join('')}</select></label>
+   <div class="altbox"><button class="btn sm ghost" id="prPrev" aria-label="Önceki alternatif">◀</button><span id="prAltN">Alternatif ${o.alt+1} / 4</span><button class="btn sm ghost" id="prNext" aria-label="Sonraki alternatif">▶</button></div>
+   <label class="chk"><input type="checkbox" id="prNamed" ${o.named?'checked':''} ${p.name?'':'disabled'}> İsim yazılsın${p.name?'':' (profilde isim yok)'}</label></div>
+   <div class="prwrap" id="prWrap"><canvas id="prCv"></canvas></div>
+   <div class="actions"><button class="btn" id="prDl">PNG indir</button><button class="btn ghost" id="prWall">Telefon duvar kâğıdı</button><button class="btn ghost" id="prShare">Paylaş</button><button class="btn ghost" id="prFull">Tam ekran</button><button class="btn ghost" id="prPrompt">Yapay zekâ promptunu kopyala</button></div><div id="prMsg" class="small"></div>
+   <p class="small">Bu resim gerçek ruhun, fiziksel görünümün ya da metafizik bir bilginin tespiti değildir; astrolojik sembolizme dayanan özgün bir sanat çalışmasıdır. Ücretli bir servis kullanılmaz; resim bu cihazda çizilir.</p></section>
+   <div id="prTexts"></div>`;
+}
+function bindPortre(){
+  if(!STATE.ch||!$('#prCv'))return;const m=CM(STATE.ch,STATE.p),o=STATE.pr,nm=STATE.p.name||'';let last;
+  const draw=()=>{last=drawPortrait($('#prCv'),m,{...o,name:nm,named:o.named&&!!nm});$('#prAltN').textContent=`Alternatif ${o.alt+1} / 4`;$('#prTexts').innerHTML=portraitTexts(m,last.PS,last.X);};
+  draw();
+  $('#prFmt').onchange=e=>{o.fmt=e.target.value;draw();};$('#prSty').onchange=e=>{o.style=e.target.value;draw();};$('#prNamed').onchange=e=>{o.named=e.target.checked;draw();};
+  $('#prPrev').onclick=()=>{o.alt=(o.alt+3)%4;draw();};$('#prNext').onclick=()=>{o.alt=(o.alt+1)%4;draw();};
+  const fname=(sfx)=>`gokyuzu-portre-${o.style}-${sfx||o.fmt}-${o.alt+1}.png`;
+  const blobOf=cv=>new Promise(r=>cv.toBlob(r,'image/png'));
+  $('#prDl').onclick=async()=>{$('#prMsg').textContent=dlMsg(await saveFile(fname(),await blobOf($('#prCv'))));};
+  $('#prWall').onclick=async()=>{const cv=document.createElement('canvas');drawPortrait(cv,m,{...o,fmt:'v',name:nm,named:false});$('#prMsg').textContent=dlMsg(await saveFile(fname('duvar'),await blobOf(cv)))+' Telefonda Ayarlar › Duvar kâğıdı bölümünden seçebilirsiniz.';};
+  $('#prShare').onclick=async()=>{const b=await blobOf($('#prCv'));if(APP()){AndroidBridge.shareFile(fname(),await toB64(b));return;}
+    try{const f=new File([b],fname(),{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[f]}))await navigator.share({files:[f],title:'Ruhumun sembolik portresi'});else throw 0;}catch(e){$('#prMsg').textContent='Paylaşma bu tarayıcıda desteklenmiyor; PNG olarak indirip Instagram, WhatsApp, Telegram ya da X\'te paylaşabilirsiniz.';}};
+  $('#prFull').onclick=()=>{const w=$('#prWrap');if(w.requestFullscreen&&!APP())w.requestFullscreen().catch(()=>w.classList.add('fs'));else w.classList.toggle('fs');};
+  $('#prWrap').onclick=e=>{if($('#prWrap').classList.contains('fs')&&e.target.id==='prWrap')$('#prWrap').classList.remove('fs');};
+  $('#prPrompt').onclick=async()=>{const t=portraitPrompt(m,last.PS,last.X,o);try{await copyText(t);$('#prMsg').innerHTML='Prompt kopyalandı. Claude, ChatGPT, Gemini gibi bir görsel üretim aracına yapıştırabilirsiniz. Promptta isim ve doğum bilgisi yoktur.';}catch(e){$('#prMsg').innerHTML=`<textarea readonly rows="5" style="width:100%">${esc(t)}</textarea>`;}};
 }
 
 // ===== UYGULAMA =====
@@ -3334,7 +4078,7 @@ function bindUpdate(){
 }
 
 // ---- Ana akis ----
-const TABS=[['ozet','Özet'],['der','Derin Portre'],['sum','Harita'],['per','Kişilik'],['hou','Evler'],['pla','Gezegenler'],['pos','Konum Yorumu'],['tech','Teknik Analiz'],['car','Meslek'],['life','Yaşam & Zevkler'],['fear','Korkular & Gelişim'],['rel','İlişkiler'],['phy','Fiziksel'],['mar','Marifetname'],['esm','Esmalar'],['isim','İsim Önerisi'],['mzt','Mizaç Testi'],['lun','Ay Takvimi'],['ecl','Tutulma Takvimi'],['sr','Güneş Dönüşü'],['num','Numeroloji'],['syn','Uyum Testi'],['fin','Finansal Astroloji'],['rap','Tam Rapor'],['hesap','Hesabım'],['upd','Güncelleme']];
+const TABS=[['ozet','Özet'],['der','Derin Portre'],['sin','Hayatın Sınavları'],['yak','Nasıl Yaklaşılmalı'],['mis','Mistik Portre'],['sum','Harita'],['per','Kişilik'],['hou','Evler'],['pla','Gezegenler'],['pos','Konum Yorumu'],['tech','Teknik Analiz'],['car','Meslek'],['life','Yaşam & Zevkler'],['fear','Korkular & Gelişim'],['rel','İlişkiler'],['phy','Fiziksel'],['mar','Marifetname'],['esm','Esmalar'],['isim','İsim Önerisi'],['mzt','Mizaç Testi'],['lun','Ay Takvimi'],['ecl','Tutulma Takvimi'],['sr','Güneş Dönüşü'],['num','Numeroloji'],['syn','Uyum Testi'],['fin','Finansal Astroloji'],['rap','Tam Rapor'],['hesap','Hesabım'],['upd','Güncelleme']];
 const STATE={tab:'ozet'};
 function render(){
   const{ch,p,num}=STATE;STATE.mode=STATE.mode||store.get('bwMode','simple');
@@ -3352,7 +4096,7 @@ function render(){
     case 'sr':body=`<div class="row"><label>Yıl <input id="srYear" type="number" value="${STATE.srYear||new Date().getFullYear()}" style="width:90px"></label><label>Bulunacağınız şehir <input id="srCity" list="cityList" value="${esc(STATE.srCity||($('#srCityMain').value||p.cityName))}"></label><button class="btn sm" id="srGo">Hesapla</button></div>`+'<div id="srBody"></div>';break;
     case 'num':body=secNum(ch,p,num);break;case 'phy':body=secPhys(ch);break;case 'mar':body=secMarifet(ch,p);break;case 'esm':body=secEsma(ch,p);break;
     case 'pos':body=secPlacement(ch);break;case 'tech':body=secTech(ch,p);break;case 'lun':body=secLunForm();break;case 'ecl':body=secEclForm();break;case 'fin':body=secFinAstro()+secFinForm();break;case 'syn':body=secSyn();break;case 'upd':body=secUpdate();break;
-    case 'mzt':body=secMizacTest();break;case 'der':body=secDeep(ch,p);break;case 'isim':body=secIsim();break;case 'rap':body=secRapor(ch,p);break;case 'hesap':body=secHesap();break;
+    case 'mzt':body=secMizacTest();break;case 'der':body=secDeep(ch,p);break;case 'sin':body=secSinav(ch,p);break;case 'yak':body=secYaklas(ch,p);break;case 'mis':body=secPortre(ch,p);break;case 'isim':body=secIsim();break;case 'rap':body=secRapor(ch,p);break;case 'hesap':body=secHesap();break;
   }
   $('#nav').innerHTML=nav;$('#out').innerHTML=body;
   $$('.tab[data-tab]').forEach(b=>b.onclick=()=>{STATE.tab=b.dataset.tab;render();window.scrollTo({top:$('#nav').offsetTop-8,behavior:'smooth'});});
@@ -3369,6 +4113,7 @@ function render(){
   if(STATE.tab==='esm'){$('#esGo').onclick=runEsma;if(ch||STATE.esN)runEsma();}
   if(STATE.tab==='mzt')$('#mzGo').onclick=runMizacTest;
   if(STATE.tab==='isim')bindIsim();
+  if(STATE.tab==='mis'&&ch)bindPortre();
   if(STATE.tab==='rap')bindRapor();
   if(STATE.tab==='hesap')bindHesap();
   if(STATE.tab==='fin'){bindFinAstro();$('#fnGo').onclick=runFin;$('#fnSearch').onclick=wdSearch;$('#fnQ').onkeydown=e=>{if(e.key==='Enter')wdSearch();};$('#fnAsset').onchange=()=>{$('#fnManual').style.display=$('#fnAsset').value==='manual'?'':'none';};}
