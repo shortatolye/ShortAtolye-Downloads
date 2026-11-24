@@ -88,7 +88,22 @@ ol.ten li{font-family:var(--serif);font-size:18px;line-height:1.55;margin:4px 0}
 .prctl{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:10px 0}.prctl label{display:flex;flex-direction:column;font-size:13px;gap:3px}.prctl .chk{flex-direction:row;align-items:center;gap:6px}.altbox{display:flex;align-items:center;gap:6px;font-size:14px}
 .prwrap{display:flex;justify-content:center;background:#efe9dc;border-radius:14px;padding:10px}.prwrap canvas{max-width:100%;max-height:78vh;height:auto;border-radius:8px;box-shadow:0 8px 30px rgba(31,36,64,.25)}
 .prwrap.fs,.prwrap:fullscreen{position:fixed;inset:0;z-index:999;background:#000;border-radius:0;align-items:center;padding:0}.prwrap.fs canvas,.prwrap:fullscreen canvas{max-height:100vh;max-width:100vw;box-shadow:none;border-radius:0}
-@media(max-width:700px){.grid3{grid-template-columns:1fr}.words span{font-size:20px}.big1{font-size:24px}.fchart{min-width:680px}}.fline{fill:none;stroke:var(--gold);stroke-width:1.8}.fgrid{stroke:var(--line);stroke-width:1}.fax{fill:var(--muted);font-size:11px}
+#nav{display:block!important}.cats,.subs{display:flex;gap:6px;flex-wrap:wrap}.subs{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.cat{background:linear-gradient(180deg,#fff,#faf6ee);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:7px 12px;cursor:pointer;font-size:13px;font-family:inherit;font-weight:600;display:flex;gap:6px;align-items:center}.cat span{color:var(--gold);font-size:15px}.cat.on{background:linear-gradient(135deg,#1f2440,#3a2f6b);color:#fff;border-color:#1f2440}.cat.on span{color:#f0c75e}.cat.mode{font-weight:500;color:var(--muted)}
+#bnav{display:none}
+.chipbtn.on{background:var(--ink);color:#fff;border-color:var(--ink)}.qzb.ok{background:#e3f2e6;border-color:#7cb38a}.qzb.bad{background:#fbe5e1;border-color:#d99a8c}
+.tlwrap{overflow-x:auto;padding:8px}.tl{display:block}.tld{cursor:pointer}.acg{width:100%;height:auto;display:block;border-radius:10px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:10px 0}.cw{font-size:12px;text-align:center;color:var(--muted)}.cd{min-height:58px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px;font-size:12px}.cd.e{background:transparent;border:0}.cd.t{border:2px solid var(--gold)}.cd b{display:block}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin:1px}.dot.lun{background:#3f6fd6}.dot.ing{background:#9c7426}.dot.sta{background:#d0453a}.dot.per{background:#8a5cc9}.dot.bd{background:#e5a5b5}.dot.jr{background:#4f9f8a}
+.pbar{height:12px;background:#f0ebe0;border-radius:6px;overflow:hidden}.pbar i{display:block;height:100%;border-radius:6px}
+tr.on td{background:#fbf3df}
+.zk{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.zkb{width:130px;height:130px;border-radius:50%;border:3px solid var(--gold2);background:radial-gradient(circle at 35% 30%,#fff,#f3e9d2);font-size:38px;font-family:var(--serif);color:var(--ink);cursor:pointer}.zkb:active{transform:scale(.97)}
+.chips label.chip{display:inline-flex;align-items:center;gap:5px;cursor:pointer}.chips label.chip input{margin:0}
+.lnk{background:none;border:0;padding:0;color:var(--gold);font:inherit;text-decoration:underline;cursor:pointer}.cd[data-d]{cursor:pointer}
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.sb{position:relative}.favb{position:absolute;top:10px;right:12px;background:none;border:0;font-size:20px;color:var(--gold);cursor:pointer;line-height:1}.sb .sbh h3{padding-right:28px}
+.onb{background:linear-gradient(135deg,#fffaf0,#f3eefc);border-color:var(--gold2)}.onb ol{padding-left:20px}.onb li{margin:4px 0}
+@media(max-width:700px){.cats,.subs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.cats::-webkit-scrollbar,.subs::-webkit-scrollbar{display:none}.cat,.tab{flex:none}#bnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:4px 2px calc(4px + env(safe-area-inset-bottom))}#bnav button{flex:1;background:none;border:0;font-family:inherit;font-size:11px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:1px;padding:4px 0;cursor:pointer}#bnav button span{font-size:19px;color:var(--ink)}#bnav button.on{color:var(--gold);font-weight:700}#bnav button.on span{color:var(--gold)}body{padding-bottom:70px}.cd{min-height:44px;font-size:11px}.zkb{width:110px;height:110px}.grid3{grid-template-columns:1fr}.words span{font-size:20px}.big1{font-size:24px}.fchart{min-width:680px}}.fline{fill:none;stroke:var(--gold);stroke-width:1.8}.fgrid{stroke:var(--line);stroke-width:1}.fax{fill:var(--muted);font-size:11px}
 .frange{fill:rgba(201,162,77,.10)}.ftick{stroke:var(--muted);stroke-width:1.5}.ftick.up{stroke:#24894f}.ftick.dn{stroke:#c0412f}.fbu{fill:#3fa56b}.fbd{fill:#d0533f}
 details.fev{border-top:1px solid var(--line);padding:9px 0}details.fev summary{cursor:pointer;line-height:1.5;color:var(--ink);font-weight:400;font-size:14px}.fd{color:var(--muted);font-size:13px;margin-right:4px}.ftbl td,.ftbl th{font-size:12.5px}
 .rtitle{font-family:var(--serif);color:var(--ink);font-size:28px;margin:10px 0 0}.rsec{font-family:var(--serif);color:var(--gold);font-size:22px;margin:26px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
@@ -121,7 +136,7 @@ blockquote.deepq{margin:12px 0;padding:10px 16px;border-left:3px solid var(--gol
 @media(max-width:700px){#nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}#nav::-webkit-scrollbar{display:none}.tab{flex:none}input,select,textarea{font-size:16px}.big3 b{font-size:15px}.fb{display:flex;margin:6px 0 0}#hdrPlanets{display:none}header h1{font-size:26px}.deephero .dplanets{position:static;margin-bottom:6px}.deephero h3{padding-right:0}.dtext{font-size:18px}.nname{font-size:26px}.nar{font-size:28px}}
 @media(max-width:820px){.form{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}ul.cols,.clist{columns:1}}
 @media(max-width:480px){.form,.form.f2{grid-template-columns:1fr}.big3 b{font-size:15px}.card{padding:14px 14px}}
-@media print{body{background:#fff;color:#111}.panel,#nav,.actions,#msg,footer,.fb,.noprint,header{display:none}.rsec{break-before:page}.card{background:#fff;border-color:#ccc;break-inside:avoid;box-shadow:none}.small{color:#444}}
+@media print{#bnav,.favb{display:none!important}body{background:#fff;color:#111}.panel,#nav,.actions,#msg,footer,.fb,.noprint,header{display:none}.rsec{break-before:page}.card{background:#fff;border-color:#ccc;break-inside:avoid;box-shadow:none}.small{color:#444}}
 </style>
 </head>
 <body>
@@ -1544,9 +1559,9 @@ function secTech(ch,p){
 }
 
 // ===== YAYGINLASMA OZELLIKLERI + GAYBA DAIR YORUM ICERMEYEN TAKVIM/HESAP BOLUMLERI =====
-const SIMPLE_TABS=['ozet','der','sin','yak','mis','sum','syn','isim','esm','mzt','fin','rap'];
-const NOCHART_TABS=['ozet','upd','fin','lun','ecl','pos','esm','mzt','hesap','syn','isim'];
-const FB_TABS=['der','sin','yak','per','hou','pla','pos','car','life','fear','rel','phy','mar','tech'];
+const PRO_TABS=['pla','hou','pos','tech','lab','num','acg'];const SIMPLE_TABS={includes:k=>!PRO_TABS.includes(k)};
+const NOCHART_TABS=['ozet','upd','fin','lun','ecl','pos','esm','mzt','hesap','syn','isim','bug','tak','man','def','fav','ogr'];
+const FB_TABS=['der','sin','yak','kar','coc','per','hou','pla','pos','car','life','fear','rel','phy','mar','tech'];
 
 // ---------- Bugun karti (astronomik bilgi + gunun esmasi) ----------
 const GUNUN_ESMA=['Latîf','Selâm','Fettâh','Rezzâk','Vedûd','Sabûr','Hafîz','Rahmân','Rahîm','Kerîm','Halîm','Şekûr','Mü\'min','Nûr','Hâdî','Reşîd','Alîm','Hakîm','Vehhâb','Gaffâr','Tevvâb','Bâsıt','Mucîb','Vekîl','Hayy','Kayyûm','Ganiyy','Muğnî','Kuddûs','Afüvv'];
@@ -1639,8 +1654,8 @@ async function makeCard(o){
   const cx=W/2,cy=340;c.strokeStyle='rgba(156,116,38,.75)';c.lineWidth=3;c.beginPath();c.arc(cx,cy,230,0,7);c.stroke();c.lineWidth=1.5;c.beginPath();c.arc(cx,cy,178,0,7);c.stroke();
   c.fillStyle='#9c7426';c.font='44px "Segoe UI Symbol","Noto Sans Symbols 2",serif';c.textAlign='center';c.textBaseline='middle';
   SIGNS.forEach((sg,i)=>{const t=(i*30+15-90)*RD;c.fillText(sg.g+VS,cx+204*Math.cos(t),cy+204*Math.sin(t));});
-  const im=o.planet?await svgImg(planetSVG(o.planet,300)):null;
-  if(im)c.drawImage(im,cx-150,cy-150,300,300);else{c.font='bold 70px "Segoe UI",system-ui,sans-serif';c.fillText(o.center||'✦',cx,cy);}
+  const im=o.img||(o.planet?await svgImg(planetSVG(o.planet,300)):null);const isz=o.imgSize||300;
+  if(im)c.drawImage(im,cx-isz/2,cy-isz/2,isz,isz);else{c.font='bold 70px "Segoe UI",system-ui,sans-serif';c.fillText(o.center||'✦',cx,cy);}
   c.textBaseline='alphabetic';c.fillStyle='#1f2440';c.font='600 72px "Cormorant Garamond",Georgia,serif';c.fillText(o.title,cx,680);
   c.fillStyle='#6b6f86';c.font='36px "Segoe UI",system-ui,sans-serif';c.fillText(o.subtitle||'',cx,738);
   let y=810;
@@ -1660,7 +1675,7 @@ function showShare(cv,fname){
 }
 function shareNatal(){
   const{ch,p}=STATE;const S=summaryData(ch,p);
-  makeCard({planet:'sun',center:S.sun.g+VS,title:p.name||'Doğum Haritam',subtitle:`${pad(p.d)}.${pad(p.m)}.${p.y} · ${p.cityName}`,big:[['Güneş',S.sun.n],['Ay',S.mi.short.length>12?'?':S.mi.short],['Yükselen',S.ai.short.length>12?'?':S.ai.short]],
+  makeCard({planet:'sun',center:S.sun.g+VS,title:privName(p)||'Doğum Haritam',subtitle:privSub(p),big:[['Güneş',S.sun.n],['Ay',S.mi.short.length>12?'?':S.mi.short],['Yükselen',S.ai.short.length>12?'?':S.ai.short]],
    sections:[['Güçlü yanlarım',S.strengths.slice(0,4)],['Mizacım',[`${S.mizac.n}: ${S.mizac.ch.split('. ')[0]}`]],['En iyi anlaştığım burçlar',[S.best.map(i=>SIGNS[i].n).join(', ')]]].concat(S.esmas.length?[['İsmimin esmaları',[S.esmas.map(e=>`Yâ ${e.n} (${e.v})`).join(' · ')]]]:[])}).then(cv=>showShare(cv,'gokyuzu-haritam.png'));
 }
 
@@ -1799,13 +1814,18 @@ alter table public.gh_profiles enable row level security;
 create policy "kendi kaydini oku" on public.gh_profiles for select using (auth.uid() = user_id);
 create policy "kendi kaydini ekle" on public.gh_profiles for insert with check (auth.uid() = user_id);
 create policy "kendi kaydini guncelle" on public.gh_profiles for update using (auth.uid() = user_id);`;
-function backupData(){return{v:2,at:new Date().toISOString(),profiles:store.get('bwAstroProfiles',[]),extra:store.get('bwAstroExtra',{}),feedback:store.get('bwFeedback',{}),assets:store.get('bwAstroAssets',[]),finCustom:store.get('bwFinCustom',{}),finExtra:store.get('bwFinExtra',{})};}
+function backupData(){return{v:2,at:new Date().toISOString(),profiles:store.get('bwAstroProfiles',[]),extra:store.get('bwAstroExtra',{}),feedback:store.get('bwFeedback',{}),assets:store.get('bwAstroAssets',[]),finCustom:store.get('bwFinCustom',{}),finExtra:store.get('bwFinExtra',{}),notes:Object.fromEntries(NOTE_KEYS.map(k=>[k,store.get(k,null)]).filter(x=>x[1]!=null))};}
+const NOTE_KEYS=['bwEvents','bwJournal','bwShukur','bwDua','bwRuya','bwFav','bwZikir','bwPriv'];
 function restoreData(d){if(!d||typeof d!=='object')throw new Error('Geçersiz yedek.');
   const cur=store.get('bwAstroProfiles',[]),seen=new Set(cur.map(x=>x.a_name+'|'+x.a_surname+'|'+x.a_date));
   for(const x of (d.profiles||[]))if(!seen.has(x.a_name+'|'+x.a_surname+'|'+x.a_date))cur.push(x);
   const ok=[store.set('bwAstroProfiles',cur.slice(0,100))];
   if(d.finCustom&&typeof d.finCustom==='object')ok.push(store.set('bwFinCustom',{...store.get('bwFinCustom',{}),...d.finCustom}));
   if(d.finExtra&&typeof d.finExtra==='object'){const fx=store.get('bwFinExtra',{});for(const[k,arr]of Object.entries(d.finExtra)){const m=new Map([...(fx[k]||[]),...arr].map(x=>[String(x[0]),x[1]]));fx[k]=[...m.entries()].sort((p,q)=>p[0]<q[0]?-1:1);}ok.push(store.set('bwFinExtra',fx));}
+  if(d.notes&&typeof d.notes==='object')for(const k of NOTE_KEYS){const v=d.notes[k];if(v==null)continue;const cur=store.get(k,null);
+    if(Array.isArray(v)){const ids=new Set((cur||[]).map(x=>x&&x.id||x&&x.key));ok.push(store.set(k,[...(cur||[]),...v.filter(x=>x&&typeof x==='object'&&!ids.has(x.id||x.key))]));}
+    else if(k==='bwEvents'&&typeof v==='object'){const c=cur||{};for(const[pk,arr]of Object.entries(v)){if(!Array.isArray(arr))continue;const ids=new Set((c[pk]||[]).map(x=>x.id));c[pk]=[...(c[pk]||[]),...arr.filter(x=>x&&!ids.has(x.id))];}ok.push(store.set(k,c));}
+    else if(typeof v==='object'&&!cur)ok.push(store.set(k,v));}
   if(typeof fResetCache==='function')fResetCache();
   if(d.extra)mergeData(Object.fromEntries(Object.entries(d.extra).map(([k,v])=>[k,v.map(it=>({...it,s:it.s}))])));
   store.set('bwFeedback',{...store.get('bwFeedback',{}),...(d.feedback||{})});if(d.assets)store.set('bwAstroAssets',[...new Map([...store.get('bwAstroAssets',[]),...d.assets].map(a=>[a.n,a])).values()]);
@@ -1813,7 +1833,7 @@ function restoreData(d){if(!d||typeof d!=='object')throw new Error('Geçersiz ye
 function secHesap(){
   const c=store.get('bwCloud',{}),sess=store.get('bwSess',null);
   return H('Hesabım',`<p>Kayıtlı kişileriniz, eklediğiniz içerikler ve geri bildirimleriniz bu cihazda saklanır. Başka cihaza taşımak için yedek alabilir ya da bulut hesabı kullanabilirsiniz.</p>
-   <p class="small">Bu cihazda: ${store.get('bwAstroProfiles',[]).length} kayıtlı kişi · ${Object.keys(fbGet()).length} geri bildirim · ${Object.keys(store.get('bwFinCustom',{})).length} özel fiyat serisi. Yedek bunların hepsini ve eklenen kitap/film/fiyat güncellemelerini kapsar.</p>
+   <p class="small">Bu cihazda: ${store.get('bwAstroProfiles',[]).length} kayıtlı kişi · ${Object.values(store.get('bwEvents',{})).flat().length} hayat olayı · ${['bwJournal','bwShukur','bwDua','bwRuya'].reduce((a,k)=>a+store.get(k,[]).length,0)} defter kaydı · ${store.get('bwFav',[]).length} favori · ${Object.keys(fbGet()).length} geri bildirim · ${Object.keys(store.get('bwFinCustom',{})).length} özel fiyat serisi. Yedek bunların hepsini ve eklenen kitap/film/fiyat güncellemelerini kapsar.</p>
    <h4>1) Yedek al / geri yükle</h4><div class="actions"><button class="btn" id="bkOut">Yedeği kopyala</button><button class="btn ghost" id="bkFile">Yedeği dosya olarak indir</button><button class="btn ghost" id="bkIn">Yapıştırılan yedeği yükle</button></div>
    <textarea id="bkTxt" rows="4" placeholder="Yedek metni burada görünür ya da buraya yapıştırılır"></textarea><div id="bkMsg" class="small"></div>
    <h4>2) Bulut hesabı (her cihazda aynı kayıtlar)</h4>
@@ -1821,6 +1841,7 @@ function secHesap(){
    `<div class="form f2"><label>E-posta<input id="clMail" type="email" placeholder="ornek@mail.com"></label><label style="justify-content:end"><button class="btn" id="clSend">Giriş kodu gönder</button></label></div>
     <div class="form f2"><label>E-postanıza gelen kod<input id="clCode" inputmode="numeric" placeholder="6 haneli kod"></label><label style="justify-content:end"><button class="btn ghost" id="clVerify">Giriş yap</button></label></div>`}
    <div id="clMsg" class="small"></div>
+   <h4>3) Verilerimi sil</h4><p class="small">Bu cihazdaki kayıtlı kişileri, olayları, defterleri, favorileri, ayarları ve önbelleği tamamen siler. Geri alınamaz; önce yedek almanız önerilir.</p><button class="btn ghost" id="wipeBtn">Tüm verilerimi bu cihazdan sil</button><div id="wipeMsg" class="small"></div>
    <details class="small"><summary>Bulut ayarları (yönetici)</summary><div class="form f2"><label>Supabase adresi<input id="clUrl" value="${esc(c.url||'')}" placeholder="https://xxxx.supabase.co"></label><label>Anon (public) anahtar<input id="clKey" value="${esc(c.key||'')}"></label></div><button class="btn sm" id="clSave">Kaydet</button>
    <p>Bulut özelliği için Supabase projesinde şu tablo kurulmalı ve e-posta şablonunda giriş kodu ({{ .Token }}) gönderilmelidir:</p><pre>${esc(CLOUD_SQL)}</pre><p>Claude üzerindeki paylaşılan sayfa dış bağlantıları engellediği için bulut, programın sitede ya da telefona kurulan sürümünde çalışır.</p></details>`);
 }
@@ -2050,13 +2071,17 @@ function fSeries(key){
   let from=T[0];if(meta.from){const[y,m]=meta.from.split('-').map(Number);from=julian(y,m,1,0);}
   return F_SER[key]={key,meta,T,V,from:Math.max(from,T[0],F_SKY0+5),last:T[T.length-1]};
 }
-function fPrice(S,jd){const T=S.T;if(jd<T[0]||jd>T[T.length-1])return null;let lo=0,hi=T.length-1;while(hi-lo>1){const m=(lo+hi)>>1;if(T[m]<=jd)lo=m;else hi=m;}const f=(jd-T[lo])/((T[hi]-T[lo])||1);return S.V[lo]+(S.V[hi]-S.V[lo])*f;}
-function fBase(S,H,cut){cut=Math.min(cut??S.last,S.last);const k='b'+H+':'+Math.round(cut);if(S[k])return S[k];const ch=[];for(let j=S.from;j+H<=cut;j+=7){const a=fPrice(S,j),b=fPrice(S,j+H);if(a&&b)ch.push((b/a-1)*100);}
+// Gercek gozlem: ara deger (interpolasyon) kullanilmaz; tarihten sonraki ilk gercek veri noktasi alinir.
+function fGap(S){return S.meta.res==='m'?32:S.meta.res==='w'?8:5;}
+function fIdx(S,jd){const T=S.T,g=fGap(S);if(jd<T[0]-g||jd>T[T.length-1]+.5)return -1;let lo=0,hi=T.length-1;if(T[0]>=jd-.5)return T[0]-jd<=g?0:-1;while(hi-lo>1){const m=(lo+hi)>>1;if(T[m]>=jd-.5)hi=m;else lo=m;}return T[hi]-jd<=g?hi:-1;}
+function fPrice(S,jd){const i=fIdx(S,jd);return i<0?null:S.V[i];}
+function fPair(S,j1,j2){const H=j2-j1,i=fIdx(S,j1),k=fIdx(S,j2);if(i<0||k<=i)return null;const off=S.T[i]-j1,dt=S.T[k]-S.T[i];if(off>Math.max(.6,H*.5)||Math.abs(dt-H)>Math.max(.6,H*.5))return null;return[S.V[i],S.V[k]];}
+function fBase(S,H,cut){cut=Math.min(cut??S.last,S.last);const k='b'+H+':'+Math.round(cut);if(S[k])return S[k];const ch=[];for(let j=S.from;j+H<=cut;j+=7){const pr=fPair(S,j,j+H),a=pr&&pr[0],b=pr&&pr[1];if(a&&b)ch.push((b/a-1)*100);}
   return S[k]={n:ch.length,up:ch.filter(x=>x>0).length/(ch.length||1),mean:fAvg(ch),med:fMed(ch)};}
 let F_STC={};
 function fStats(S,key,H,cut){
   cut=Math.min(cut??S.last,S.last);const ck=S.key+'|'+S.last+'|'+key+'|'+H+'|'+Math.round(cut);if(F_STC[ck])return F_STC[ck];
-  const rows=[];for(const e of fEvents()){if(e.k!==key||e.rep||e.jd<S.from||e.jd+H>cut)continue;const a=fPrice(S,e.jd),b=fPrice(S,e.jd+H);if(a&&b)rows.push({jd:e.jd,a,b,ch:(b/a-1)*100});}
+  const rows=[];for(const e of fEvents()){if(e.k!==key||e.rep||e.jd<S.from||e.jd+H>cut)continue;const pr=fPair(S,e.jd,e.jd+H),a=pr&&pr[0],b=pr&&pr[1];if(a&&b)rows.push({jd:e.jd,a,b,ch:(b/a-1)*100});}
   const n=rows.length,B=fBase(S,H,cut);if(!n)return F_STC[ck]={n:0,rows,B};
   const up=rows.filter(r=>r.ch>0).length,p=Math.min(.95,Math.max(.05,B.up));
   return F_STC[ck]={n,up,upR:up/n,mean:fAvg(rows.map(r=>r.ch)),med:fMed(rows.map(r=>r.ch)),z:(up-n*p)/Math.sqrt(n*p*(1-p)),B,rows};
@@ -2095,15 +2120,15 @@ let F_TR={};
 function fBacktest(S,H,cut){
   cut=Math.min(cut??S.last,S.last);const k=S.key+':'+S.last+':'+H+':'+Math.round(cut);if(F_TR[k])return F_TR[k];
   const ev=fEvents().filter(e=>!e.rep&&e.t!=='lun'&&e.jd>=S.from&&e.jd<cut),tv=ev.map(e=>fTrad(e,S.key).sc);
-  const out=ev.map(e=>{const a=fPrice(S,e.jd),b=fPrice(S,e.jd+H);return a&&b?(b>a?1:0):-1;});
+  const out=ev.map(e=>{const pr=fPair(S,e.jd,e.jd+H),a=pr&&pr[0],b=pr&&pr[1];return a&&b?(b>a?1:0):-1;});
   const run={};let ri=0,bUp=0,bN=0,bj=S.from;const past=[];let n=0,hit=0,upCalled=0,lo=0;
   for(let t=S.from+3650;t+H<=cut;t+=30){
     while(ri<ev.length&&ev[ri].jd+H<=t){if(out[ri]>=0){const r=run[ev[ri].k]||(run[ev[ri].k]={n:0,up:0});r.n++;r.up+=out[ri];}ri++;}
-    while(bj+H<=t){const a=fPrice(S,bj),b=fPrice(S,bj+H);if(a&&b){bN++;if(b>a)bUp++;}bj+=7;}
+    while(bj+H<=t){const pr=fPair(S,bj,bj+H),a=pr&&pr[0],b=pr&&pr[1];if(a&&b){bN++;if(b>a)bUp++;}bj+=7;}
     const p=Math.min(.95,Math.max(.05,bN?bUp/bN:.5));
     while(lo<ev.length&&ev[lo].jd<t)lo++;let sc=0;
     for(let q=lo;q<ev.length&&ev[q].jd<t+H;q++){const r=run[ev[q].k],st=r&&r.n?{n:r.n,z:(r.up-r.n*p)/Math.sqrt(r.n*p*(1-p))}:null;sc+=fCombine(tv[q],st);}
-    if(past.length>=24){const pc=past.filter(x=>x<sc).length/past.length;const a=fPrice(S,t),b=fPrice(S,t+H);
+    if(past.length>=24){const pc=past.filter(x=>x<sc).length/past.length;const pr=fPair(S,t,t+H),a=pr&&pr[0],b=pr&&pr[1];
       if(a&&b&&(pc>.65||pc<.35)){n++;const up=b>a;if(up)upCalled++;if((pc>.65)===up)hit++;}}
     past.push(sc);
   }
@@ -2160,7 +2185,8 @@ function fAssetOptions(sel){const c=Object.keys(fCustom());return Object.entries
 function secFinAstro(){
   const t=new Date(),e=new Date();e.setMonth(e.getMonth()+3);
   return `<div class="note">Bu bölüm geleneksel finansal astroloji yorumunu ve geçmiş fiyat istatistiğini birlikte sunar. Yatırım tavsiyesi değildir; sonuç garanti edilmez. Her olayın geçmişte ne sıklıkla tuttuğunu aşağıda görebilirsiniz.</div>`+
-  H('Finansal Astroloji — Eğilim Analizi',`<div class="form f2"><label>Varlık<select id="faAsset">${fAssetOptions(STATE.faAsset||'gold')}</select></label><label>Etki süresi (her olaydan sonra)<select id="faH">${[[7,'7 gün'],[30,'30 gün'],[90,'90 gün']].map(([v,l])=>`<option value="${v}" ${(+STATE.faH||30)===v?'selected':''}>${l}</option>`).join('')}</select></label>
+  H('Finansal Astroloji — Eğilim Analizi',`<div class="form f2"><label>Varlık<select id="faAsset">${fAssetOptions(STATE.faAsset||'gold')}</select></label><label>Etki süresi (her olaydan sonra)<select id="faH">${[[1,'1 gün'],[3,'3 gün'],[7,'7 gün'],[15,'15 gün'],[30,'30 gün'],[90,'90 gün']].map(([v,l])=>`<option value="${v}" ${(+STATE.faH||30)===v?'selected':''}>${l}</option>`).join('')}</select></label>
+   <label>İşlem maliyeti (alım+satım, %)<input id="faC" type="number" step="0.05" min="0" max="5" value="${STATE.faC??0.2}"></label>
    <label>Başlangıç<input type="date" id="faA" value="${STATE.faA||isoD(t)}"></label><label>Bitiş<input type="date" id="faB" value="${STATE.faB||isoD(e)}"></label></div>
    <p class="small">Geçmiş bir tarih aralığı seçerseniz o dönemde gökyüzünün ne gösterdiğini ve fiyatın gerçekte ne yaptığını karşılaştırır.</p>
    <button class="btn" id="faGo">Analiz et</button><span id="faProg" class="small" style="margin-left:10px"></span><div id="faOut"></div>
@@ -2186,7 +2212,7 @@ function fChart(S,j1,j2,evs,weeks){
 async function runFinAstro(){
   const out=$('#faOut'),prog=$('#faProg');
   try{
-    const key=$('#faAsset').value,Hd=+$('#faH').value,a=$('#faA').value,b=$('#faB').value;STATE.faAsset=key;STATE.faH=Hd;STATE.faA=a;STATE.faB=b;
+    const key=$('#faAsset').value,Hd=+$('#faH').value,a=$('#faA').value,b=$('#faB').value,Cst=Math.max(0,Math.min(5,+$('#faC').value||0));STATE.faC=Cst;STATE.faAsset=key;STATE.faH=Hd;STATE.faA=a;STATE.faB=b;
     if(!a||!b)throw new Error('Başlangıç ve bitiş tarihini girin.');
     const j1=dateJD(a,NOW_UTC),j2=dateJD(b,NOW_UTC)+1;if(j2<=j1)throw new Error('Bitiş tarihi başlangıçtan sonra olmalı.');if(j2-j1>1100)throw new Error('En fazla 3 yıllık bir aralık seçin.');if(j1<F_SKY0+400)throw new Error('Analiz 1951 ve sonrası için yapılabilir.');
     const S=fSeries(key);if(!S)throw new Error('Varlık verisi bulunamadı.');
@@ -2209,17 +2235,21 @@ async function runFinAstro(){
      <p><b>Yöntemin geçmiş isabeti:</b> Bu ekrandaki yöntem (geleneksel yorum + o güne kadarki fiyat istatistiği), ${fDate(bt.from)} – ${fDate(bt.to)} arasında her ay yalnızca o tarihe kadar bilinen verilerle uygulandığında ${bt.n} kez ${Hd} günlük yön tahmini verdi; isabet oranı <b>%${Math.round(bt.rate*100)}</b>. Aynı dönemlerde her seferinde "yükselir" demenin isabeti %${Math.round(bt.upRate*100)} olurdu. ${bt.n<30?'Tahmin sayısı az olduğu için bu oran güvenilir değildir.':bt.rate-Math.max(bt.upRate,1-bt.upRate)>.04?'Yöntem bu varlıkta basit tahminden biraz daha iyi sonuç vermiş.':'Yöntem bu varlıkta basit tahminden belirgin şekilde daha iyi değil; sonuçları buna göre değerlendirin.'}</p>
      ${fChart(S,j1,j2,rows.map(r=>({jd:r.e.jd,f:r.f})),weeks)}
      <p class="small">Üstte fiyat (gölgeli alan seçtiğiniz aralık), altta haftalık astrolojik eğilim: yeşil çubuk yükseliş, kırmızı çubuk düşüş yönlü.</p></section>`;
+    {const res=S.meta.res==='m'?'aylık ortalama':S.meta.res==='w'?'haftalık':'günlük',ok=B.n>0,minH=S.meta.res==='m'?30:S.meta.res==='w'?7:1;
+     o+=H('Veri kalitesi',`<table class="tbl"><tr><td>Kaynak</td><td>${esc(S.meta.src)}</td></tr><tr><td>Çözünürlük</td><td>${res} (${S.T.length} gerçek veri noktası)</td></tr><tr><td>Kapsam</td><td>${fDate(S.from)} – ${fDate(S.last)}</td></tr><tr><td>Seçilen süre</td><td>${Hd} gün ${Hd<minH?'<b class="dn">— bu veriyle ölçülemez</b>':''}</td></tr><tr><td>Ara değer kullanımı</td><td>Yok: her olayın tarihinden sonraki ilk gerçek veri noktası alınır; ölçüm aralığı seçilen süreden çok saparsa o örnek dışarıda bırakılır.</td></tr></table>${!ok||Hd<minH?`<div class="note err small">${esc(S.meta.n)} için ${res} veri var; ${Hd} günlük değişim bu veriyle güvenilir ölçülemez. ${minH} gün ve üzerini seçin ya da günlük fiyatları "Kendi verinizi ekleyin" bölümünden yükleyin.</div>`:''}<p class="small">Bitcoin, Ethereum, BIST ve döviz/TL için program içinde gerçek fiyat verisi yoktur; bu varlıkları kendi CSV verinizle ekleyebilirsiniz. Veri uydurulmaz.</p>`);}
     // olaylar
     const main=rows.filter(r=>r.e.t!=='lun');const lun=rows.filter(r=>r.e.t==='lun');
     const evRow=r=>{const st=r.st,e=r.e;let hist='';
       if(st.n){const ex=[...st.rows].sort((x,y)=>y.jd-x.jd).slice(0,6),best=st.rows.reduce((x,y)=>y.ch>x.ch?y:x),worst=st.rows.reduce((x,y)=>y.ch<x.ch?y:x);
         const lst=[...ex];if(!lst.includes(best))lst.push(best);if(!lst.includes(worst))lst.push(worst);
-        hist=`<p class="small">Geçmişte ${st.n} kez yaşandı. Sonraki ${Hd} günde ${esc(S.meta.n)} <b>${st.up} kez yükseldi (%${Math.round(st.upR*100)})</b>, ortalama değişim <b>${fPct(st.mean)}</b>. Normal dönemlerde aynı sürede yükselme oranı %${Math.round(st.B.up*100)}, ortalama ${fPct(st.B.mean)}. ${st.n<8?'Örnek sayısı az olduğu için istatistik zayıftır.':Math.abs(st.z)>=2?'Fark kayda değer.':'Fark tesadüf sınırları içinde.'}</p>
+        const sp=S.from+(cut-S.from)*.7,tr=st.rows.filter(x=>x.jd<sp),te=st.rows.filter(x=>x.jd>=sp),ur=a=>a.length?Math.round(a.filter(x=>x.ch>0).length/a.length*100):null;
+        const split=`<p class="small"><b>Eğitim / test ayrımı:</b> ${fDate(sp)} öncesi (eğitim) ${tr.length} örnek${tr.length?`, yükselme %${ur(tr)}`:''}; sonrası (test) ${te.length} örnek${te.length?`, yükselme %${ur(te)}`:''}. İki dönemde sonuçlar çok farklıysa ilişki kararlı değildir. <b>İşlem maliyeti sonrası</b> ortalama: ${fPct(st.mean-Cst)}, medyan: ${fPct(st.med-Cst)}.</p>`;
+        hist=split+`<p class="small">Geçmişte ${st.n} kez yaşandı. Sonraki ${Hd} günde ${esc(S.meta.n)} <b>${st.up} kez yükseldi (%${Math.round(st.upR*100)})</b>, ortalama değişim <b>${fPct(st.mean)}</b>. Normal dönemlerde aynı sürede yükselme oranı %${Math.round(st.B.up*100)}, ortalama ${fPct(st.B.mean)}. ${st.n<8?'Örnek sayısı az olduğu için istatistik zayıftır.':Math.abs(st.z)>=2?'Fark kayda değer.':'Fark tesadüf sınırları içinde.'}</p>
         <table class="tbl ftbl"><tr><th>Tarih</th><th>O gün</th><th>${Hd} gün sonra</th><th>Değişim</th></tr>${lst.sort((x,y)=>y.jd-x.jd).map(x=>`<tr><td>${fDate(x.jd)}${x===best?' <span class="tagx">en iyi</span>':x===worst?' <span class="tagx">en kötü</span>':''}</td><td>${fNum(x.a)}</td><td>${fNum(x.b)}</td><td class="${x.ch>0?'up':'dn'}">${fPct(x.ch)}</td></tr>`).join('')}</table>`;}
       else hist=`<p class="small">Bu olay, fiyat verisinin bulunduğu dönemde yaşanmamış; yorum yalnızca geleneksel bilgiye dayanır.</p>`;
-      let real='';if(e.jd+Hd<=S.last){const x=fPrice(S,e.jd),y=fPrice(S,e.jd+Hd);if(x&&y)real=` <span class="tagx">gerçekleşen ${fPct((y/x-1)*100)}</span>`;}
+      let real='';if(e.jd+Hd<=S.last){const pr=fPair(S,e.jd,e.jd+Hd),x=pr&&pr[0],y=pr&&pr[1];if(x&&y)real=` <span class="tagx">gerçekleşen ${fPct((y/x-1)*100)}</span>`;}
       return `<details class="fev"><summary><span class="fd">${fDate(e.jd)}</span> ${fLabel(e)} — ${fArrow(r.f)}${real}</summary><p>${r.t.why}</p>${hist}</details>`;};
-    o+=H(`Aralıktaki Gökyüzü Olayları (${main.length})`,main.length?`<p class="small">Her satıra dokunarak geleneksel yorumu ve geçmişteki tüm örneklerini görebilirsiniz.</p>`+main.map(evRow).join(''):'<p>Bu aralıkta önemli bir açı, retro ya da burç geçişi yok.</p>');
+    o+=H(`Aralıktaki Gökyüzü Olayları (${main.length})`,main.length?`<p class="small">Her satıra dokunarak geleneksel yorumu ve geçmişteki tüm örneklerini görebilirsiniz. <b>Çoklu karşılaştırma uyarısı:</b> Program onlarca farklı olay türünü aynı anda test eder; hiçbir gerçek etki olmasa bile her 20 olay türünden yaklaşık birinin tesadüfen "anlamlı" görünmesi beklenir. Tek bir olayın yüksek isabeti tek başına kanıt değildir.</p>`+main.map(evRow).join(''):'<p>Bu aralıkta önemli bir açı, retro ya da burç geçişi yok.</p>');
     if(lun.length)o+=H('Yeni Ay ve Dolunaylar',lun.map(evRow).join(''));
     // retro donemleri
     const rr=[];for(const b of [2,3,4,5,6]){for(const[sr,sd]of fRetro(b)){if(sd<j1||sr>j2)continue;const P=fPeriodRows(S,fRetro(b),cut);const len=Math.round(sd-sr),Bm=fBase(S,Math.max(7,len),cut);
@@ -3568,6 +3598,550 @@ function bindPortre(){
   $('#prPrompt').onclick=async()=>{const t=portraitPrompt(m,last.PS,last.X,o);try{await copyText(t);$('#prMsg').innerHTML='Prompt kopyalandı. Claude, ChatGPT, Gemini gibi bir görsel üretim aracına yapıştırabilirsiniz. Promptta isim ve doğum bilgisi yoktur.';}catch(e){$('#prMsg').innerHTML=`<textarea readonly rows="5" style="width:100%">${esc(t)}</textarea>`;}};
 }
 
+// ===== HAYAT YOLCULUGU, GECMIS OLAYLAR, DOGUM SAATI TAHMINI, BUGUN, TAKVIM, ASTROLOJI LABORATUVARI =====
+// Gayb kurali: gelecege dair yorum yapilmaz. Gelecek tarihler yalnizca astronomik olay olarak gosterilir;
+// sembolik temalar yalnizca gecmis donemler icin, uzerinde dusunulecek basliklar olarak verilir.
+const TODAY_JD=()=>{const n=new Date();return julian(n.getUTCFullYear(),n.getUTCMonth()+1,n.getUTCDate(),n.getUTCHours()+n.getUTCMinutes()/60);};
+const fmtJD=(jd,withT)=>{const t=jdToDate(jd+tzOffAtJD({tz:'TR'},jd)/24);return `${pad(t.d)}.${pad(t.m)}.${t.y}${withT?' '+fmtH(t.h):''}`;};
+const yearOf=jd=>jdToDate(jd).y;
+const SLOW=['jupiter','saturn','uranus','neptune','pluto','chiron','node'];
+const ASP_MAIN=[[0,'kavuşum'],[60,'sekstil'],[90,'kare'],[120,'üçgen'],[180,'karşıt']];
+const aspName=a=>(ASP_MAIN.find(x=>x[0]===a)||[0,''])[1];
+// natal hedef noktalari
+function natalPts(ch){const o={};for(const k of ['sun','moon','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto','node','chiron'])if(ch.pos[k])o[k]=ch.pos[k].lon;if(!ch.noTime){o.asc=ch.asc;o.mc=ch.mc;}return o;}
+const ptName=k=>k==='asc'?'Yükselen':k==='mc'?'MC (Tepe)':pn(k);
+// yavas gezegen serisi (tek seferde, onbellekli)
+const SER={};
+function series(j1,j2,step){const key=Math.round(j1)+':'+Math.round(j2)+':'+step;if(SER[key])return SER[key];const t=[],v={};for(const k of SLOW)v[k]=[];
+  for(let j=j1;j<=j2;j+=step){const a=rawPositions(j);t.push(j);for(const k of SLOW)v[k].push(k==='node'?(STATE.nodeType!=='mean'&&a.tnode!=null?a.tnode:a.node):a[k]);}
+  const r={t,v,step};if(Object.keys(SER).length>6)for(const x in SER)delete SER[x];SER[key]=r;return r;}
+function lonAt(jd,k){const a=rawPositions(jd);return k==='node'?(STATE.nodeType!=='mean'&&a.tnode!=null?a.tnode:a.node):a[k];}
+// k gezegeninin L boylamina tam gelis anlari
+function crossings(S,k,L){const out=[],t=S.t,v=S.v[k];let pd=angDiff(v[0],L);
+  for(let i=1;i<t.length;i++){const d=angDiff(v[i],L);if(Math.sign(d)!==Math.sign(pd)&&Math.abs(d-pd)<60){let a=t[i-1],b=t[i],da=pd;for(let n=0;n<26;n++){const m=(a+b)/2,dm=angDiff(lonAt(m,k),L);if(Math.sign(dm)===Math.sign(da)){a=m;da=dm;}else b=m;}out.push((a+b)/2);}pd=d;}
+  return out;}
+// ---------- hayat dongusu olaylari ----------
+const CYC_CATS=[['kar','Kariyer ve sorumluluk'],['mad','Maddi konular'],['ili','İlişkiler'],['ail','Aile'],['egi','Eğitim'],['sos','Sosyal çevre'],['gel','Kişisel gelişim'],['man','Manevi arayış'],['deg','Değişim ve dönüşüm'],['yap','Hayatın yeniden yapılanması']];
+const PT_CAT={sun:'gel',moon:'ail',mercury:'egi',venus:'ili',mars:'gel',jupiter:'egi',saturn:'kar',uranus:'deg',neptune:'man',pluto:'yap',node:'man',chiron:'gel',asc:'gel',mc:'kar'};
+const H_CAT={2:'mad',4:'ail',7:'ili',8:'mad',9:'egi',10:'kar',11:'sos',12:'man',3:'egi',5:'ili',6:'kar',1:'gel'};
+const TR_CAT={uranus:'deg',neptune:'man',pluto:'yap'};
+const TRANS_THEME={jupiter:['genişleme, öğrenme ve fırsat','bolluk ile ölçü arasında denge'],saturn:['sorumluluk, olgunlaşma ve yapı kurma','sınanma, emek ve sabır'],uranus:['yenilik, özgürleşme ve beklenmedik değişim','kopuş ve yeniden ayarlanma'],neptune:['ilham, maneviyat ve hassasiyet','belirsizlik ve hayal kırıklığıyla yüzleşme'],pluto:['derin dönüşüm ve güç kazanma','bırakma, kayıp ve yeniden doğuş'],chiron:['iyileşme ve şefkat','eski yaraların hatırlanması'],node:['yön arayışı ve yeni bağlantılar','yol ayrımları ve yeniden yön bulma']};
+function lifeEvents(ch,p){
+  if(ch._life)return ch._life;const j0=ch.jd,j2=j0+365.25*92,S=series(j0-30,j2,4),N=natalPts(ch),out=[];
+  const plan=[['jupiter',['sun','moon','venus','asc','mc','jupiter'],[0,180]],['saturn',['sun','moon','mercury','venus','mars','asc','mc','saturn'],[0,90,180]],
+    ['uranus',['sun','moon','venus','mars','asc','mc','uranus'],[0,90,180]],['neptune',['sun','moon','venus','asc','mc','neptune'],[0,90,180]],['pluto',['sun','moon','venus','mars','asc','mc','pluto'],[0,90,180]],
+    ['chiron',['chiron'],[0,180]],['node',['node'],[0,180]]];
+  for(const[k,pts,angs]of plan)for(const pt of pts){if(N[pt]==null)continue;const ownRet=pt===k;
+    for(const a of angs){if(ownRet&&k==='jupiter'&&a===180)continue;const targets=a===0||a===180?[a]:[a,-a];
+      for(const ag of targets){const hs=crossings(S,k,nrm(N[pt]+ag)).filter(j=>j>j0+20);
+        // ayni gecisin retro kaynakli tekrarlarini tek doneme topla
+        let grp=[];const flush=()=>{if(!grp.length)return;const hard=a===90||a===180||(a===0&&['saturn','pluto','chiron'].includes(k));const soft=a===120||a===60||(a===0&&k==='jupiter');
+          const h=ch.noTime||['asc','mc'].includes(pt)?null:ch.pos[pt]?ch.pos[pt].house:null;const cats=[ownRet?(k==='saturn'||k==='node'||k==='chiron'?'yap':k==='jupiter'?'gel':TR_CAT[k]||'deg'):PT_CAT[pt]];if(h&&H_CAT[h]&&!cats.includes(H_CAT[h]))cats.push(H_CAT[h]);if(TR_CAT[k]&&!cats.includes(TR_CAT[k]))cats.push(TR_CAT[k]);
+          const nm=ownRet?({jupiter:'Jüpiter dönüşü',saturn:a===0?'Satürn dönüşü':a===180?'Satürn karşıtlığı':'Satürn karesi',uranus:a===180?'Uranüs karşıtlığı':a===90?'Uranüs karesi':'Uranüs dönüşü',neptune:a===90?'Neptün karesi':'Neptün '+aspName(a),pluto:a===90?'Plüton karesi':'Plüton '+aspName(a),chiron:a===0?'Kiron dönüşü':'Kiron karşıtlığı',node:a===0?'Ay düğümü dönüşü':'Ay düğümü ters dönüşü'}[k]):`${pn(k)} ${aspName(a)} ${ptName(pt)}`;
+          out.push({k,pt,a,dates:grp.slice(),jd:grp[0],end:grp[grp.length-1],nm,cats,tone:hard?'hard':soft?'soft':'neu',own:ownRet,age:(grp[0]-j0)/365.25});grp=[];};
+        for(const j of hs){if(grp.length&&j-grp[grp.length-1]>420)flush();grp.push(j);}flush();}}}
+  out.sort((x,y)=>x.jd-y.jd);ch._life=out;return out;}
+function themeOf(e){const t=TRANS_THEME[e.k]||['',''];const base=e.tone==='hard'?t[1]:t[0];const pt=e.own?`${pn(e.k)} döngüsü`:(['asc','mc'].includes(e.pt)?(e.pt==='asc'?'kişilik ve yaşam yaklaşımı':'kariyer ve toplumsal hedefler'):PL[e.pt].theme);
+  return `Geleneksel astrolojide ${base} temasıyla anılır; ${pt} konularıyla ilişkilendirilir.`;}
+function secYolculuk(ch,p){
+  const L=lifeEvents(ch,p),now=TODAY_JD(),y0=yearOf(ch.jd),y1=y0+90,yNow=yearOf(now),W=Math.max(900,(y1-y0)*14+200),rowH=30,Hh=CYC_CATS.length*rowH+50;
+  const x=y=>178+(y-y0)*14;
+  let svg=`<svg viewBox="0 0 ${W} ${Hh}" width="${W}" height="${Hh}" class="tl" role="img" aria-label="Hayat zaman çizelgesi">`;
+  for(let y=y0;y<=y1;y+=10)svg+=`<line x1="${x(y)}" y1="22" x2="${x(y)}" y2="${Hh-8}" stroke="#e5dcc8"/><text x="${x(y)}" y="16" font-size="11" text-anchor="middle" fill="#6b6f86">${y}</text>`;
+  svg+=`<line x1="${x(yNow)}" y1="20" x2="${x(yNow)}" y2="${Hh-4}" stroke="#9c7426" stroke-width="2"/><text x="${x(yNow)+4}" y="${Hh-6}" font-size="11" fill="#9c7426">bugün</text>`;
+  CYC_CATS.forEach(([c,n],i)=>{const yy=40+i*rowH;svg+=`<text x="6" y="${yy+4}" font-size="12" fill="#1f2440">${n}</text><line x1="178" y1="${yy}" x2="${W-10}" y2="${yy}" stroke="#efe8da"/>`;
+    for(const e of L)if(e.cats.includes(c)){const yr=yearOf(e.jd)+(jdToDate(e.jd).m-1)/12,col=e.jd>now?'#b9b4c9':e.tone==='hard'?'#d0654f':e.tone==='soft'?'#4f8fc9':'#8a6cc9';
+      svg+=`<circle cx="${x(yr).toFixed(1)}" cy="${yy}" r="${e.own?6:4.5}" fill="${col}" ${e.own?'stroke="#1f2440" stroke-width="1"':''} data-y="${yearOf(e.jd)}" class="tld"><title>${e.nm} — ${fmtJD(e.jd)}</title></circle>`;}});
+  svg+=`<rect x="178" y="22" width="${W-188}" height="${Hh-30}" fill="transparent" id="tlHit"/></svg>`;
+  const sel=STATE.tlYear||yNow;
+  return `<section class="card hero"><h3>Hayatımın Zaman Çizelgesi</h3><p>Doğumundan itibaren yavaş gezegenlerin doğum haritana yaptığı önemli geçişler ve büyük döngüler (Jüpiter ve Satürn dönüşleri, Uranüs karşıtlığı, Neptün ve Plüton kareleri, Ay düğümü döngüleri) tarihleriyle gösterilir. Bir noktaya ya da yıla dokunarak o yılın listesini aç.</p>
+   <div class="note small"><b>Renkler:</b> <span style="color:#4f8fc9">●</span> geleneksel olarak destekleyici, <span style="color:#d0654f">●</span> zorlayıcı, <span style="color:#8a6cc9">●</span> nötr/dönüştürücü yorumlanan geçişler; <span style="color:#b9b4c9">●</span> gelecekteki tarihler. Bu sınıflandırma sembolik bir gelenektir; ölçülmüş mutluluk, başarı ya da bir olayın yaşanma olasılığı değildir. Senin koyduğun kural gereği gelecekteki tarihler yalnızca astronomik olay olarak verilir, yorum yapılmaz.</div>${ch.noTime?'<div class="note small">Doğum saati bilinmediği için Yükselen ve MC geçişleri hesaplanmadı.</div>':''}</section>
+   <div class="card tlwrap">${svg}</div>
+   <div class="row"><label>Yıl <input type="number" id="tlY" value="${sel}" min="${y0}" max="${y1}" style="width:100px"></label><button class="btn sm" id="tlGo">Göster</button><button class="btn sm ghost" id="tlPrev">◀</button><button class="btn sm ghost" id="tlNext">▶</button></div>
+   <div id="tlOut">${tlYear(ch,sel)}</div>
+   ${SB('Büyük döngüler (tüm hayat)',`<table class="tbl"><tr><th>Döngü</th><th>Tarih(ler)</th><th>Yaş</th></tr>${L.filter(e=>e.own).map(e=>`<tr><td>${e.nm}</td><td>${e.dates.map(j=>fmtJD(j)).join(', ')}</td><td>${e.age.toFixed(1)}</td></tr>`).join('')}</table>`,['Gezegenlerin doğum anındaki kendi konumlarına göre hesaplandı'])}`;
+}
+function tlYear(ch,y){const L=lifeEvents(ch,STATE.p).filter(e=>e.dates.some(j=>yearOf(j)===y)||(yearOf(e.jd)<=y&&yearOf(e.end)>=y)),now=TODAY_JD();
+  if(!L.length)return `<div class="card"><h3>${y}</h3><p>Bu yıl yavaş gezegenlerden doğum haritana tam bir büyük geçiş yok.</p></div>`;
+  return `<div class="card"><h3>${y} yılı (yaş ${y-yearOf(ch.jd)})</h3>${L.map(e=>{const fut=e.end>now;return `<div class="qa"><b><span style="color:${fut?'#8b86a0':e.tone==='hard'?'#d0654f':e.tone==='soft'?'#4f8fc9':'#8a6cc9'}">●</span> ${e.nm}</b> <span class="small">${e.dates.map(j=>fmtJD(j)).join(' · ')} · ${e.cats.map(c=>CYC_CATS.find(x=>x[0]===c)[1]).join(', ')}</span><p>${fut?'<span class="small">Gelecekteki astronomik olay; yorum yapılmaz.</span>':themeOf(e)+' <span class="small">Bu dönemde neler yaşadığını hatırlıyorsan "Geçmişimi Analiz Et" bölümüne yazabilirsin.</span>'}</p></div>`;}).join('')}</div>`;}
+function bindYolculuk(){const ch=STATE.ch;const go=y=>{y=Math.round(y);STATE.tlYear=y;$('#tlY').value=y;$('#tlOut').innerHTML=tlYear(ch,y);};
+  $('#tlGo').onclick=()=>go(+$('#tlY').value);$('#tlPrev').onclick=()=>go(+$('#tlY').value-1);$('#tlNext').onclick=()=>go(+$('#tlY').value+1);
+  $$('.tld').forEach(c=>c.onclick=()=>go(+c.dataset.y));const svg=$('.tl');if(svg){const hit=$('#tlHit');hit.onclick=e=>{const r=svg.getBoundingClientRect(),vx=(e.clientX-r.left)*(svg.viewBox.baseVal.width/r.width);go(yearOf(ch.jd)+(vx-178)/14);};}}
+
+// ---------- GECMISIMI ANALIZ ET ----------
+const EV_TYPES=['İşe başlama','İşten ayrılma','Evlilik','Ayrılık / boşanma','Çocuk sahibi olma','Taşınma','Maddi kazanç','Maddi kayıp','Yakınını kaybetme','Eğitim (başlama / mezuniyet)','Hayatımın en güzel dönemi','Hayatımın en zor dönemi','Önemli başarı','Hayatımı değiştiren olay','Sağlık süreci','Diğer'];
+const evKey=p=>`${p.name||''}|${p.y}-${p.m}-${p.d}`;
+const evAll=()=>store.get('bwEvents',{});
+const evList=p=>(evAll()[evKey(p)]||[]).slice().sort((a,b)=>a.s<b.s?-1:1);
+function evSave(p,l){const A=evAll();A[evKey(p)]=l;return store.set('bwEvents',A);}
+function sigAt(ch,jd){const a=rawPositions(jd),N=natalPts(ch),out=[];
+  for(const k of ['jupiter','saturn','uranus','neptune','pluto']){const tl=a[k];for(const pt in N){if(['uranus','neptune','pluto','chiron'].includes(pt)&&pt!==k)continue;
+    for(const[ag]of ASP_MAIN){const orb=Math.abs(Math.abs(angDiff(tl,N[pt]))-ag);if(orb<=(ag===60?1.5:2))out.push({id:`${k}|${ag}|${pt}`,t:`${pn(k)} ${aspName(ag)} ${ptName(pt)}`,orb});}}}
+  if(!ch.noTime)for(const k of ['jupiter','saturn']){const h=houseOf(a[k],ch.cusps);out.push({id:`${k}|h|${h}`,t:`${pn(k)} ${h}. evde`,orb:0,house:1});}
+  return out;}
+function secGecmis(ch,p){
+  const L=evList(p);
+  return `<section class="card hero"><h3>Geçmişimi Analiz Et</h3><p>Hayatındaki önemli olayları gir; her olayın tarihinde gökyüzünün doğum haritana yaptığı açıları hesaplayıp karşılaştırayım. Ortak görünen açıların yanında, aynı açının olduğu ama olay yaşanmayan dönemleri ve açının olmadığı olayları da gösteririm; böylece yalnızca uyuşan örnekler seçilmiş olmaz.</p>
+   <div class="note small">Benzer gezegen açıları aynı olayların tekrarlanacağı anlamına gelmez. Senin koyduğun kural gereği bu bölüm geleceğe dönük tarih önermez; yalnızca geçmişi inceler. Kayıtlar yalnızca bu cihazda saklanır.</div>
+   <div class="form f2"><label>Başlangıç tarihi<input type="date" id="evS"></label><label>Bitiş tarihi (isteğe bağlı)<input type="date" id="evE"></label>
+   <label>Olay türü<select id="evT">${EV_TYPES.map(t=>`<option>${t}</option>`).join('')}</select></label><label>Açıklama (isteğe bağlı)<input id="evD" maxlength="200" placeholder="ör. İlk işime başladım"></label></div>
+   <div class="actions"><button class="btn" id="evAdd">Olayı ekle</button><button class="btn ghost" id="evExp">Dışa aktar (JSON)</button><label class="btn ghost" style="cursor:pointer">İçe aktar<input type="file" id="evImp" accept=".json" hidden></label><button class="btn ghost" id="evClr">Tümünü sil</button></div><div id="evMsg"></div></section>
+   <div id="evOut">${evAnalysis(ch,p,L)}</div>`;}
+function evAnalysis(ch,p,L){
+  if(!L.length)return '<p class="small">Henüz olay girilmedi. En az iki olay girdiğinde ortak açılar karşılaştırılır.</p>';
+  const rows=L.map(e=>{const[y,m,d]=e.s.split('-').map(Number);const jd=julian(y,m,d,12-3);return{...e,jd,sig:sigAt(ch,jd)};});
+  let o=SB(`Girilen olaylar (${rows.length})`,`<table class="tbl"><tr><th>Tarih</th><th>Tür</th><th>O tarihte doğum haritana yapılan açılar</th><th></th></tr>${rows.map(r=>`<tr><td>${r.s.split('-').reverse().join('.')}${r.e?' – '+r.e.split('-').reverse().join('.'):''}</td><td>${esc(r.type)}${r.desc?`<br><span class="small">${esc(r.desc)}</span>`:''}</td><td class="small">${r.sig.filter(s=>!s.house).map(s=>`${s.t} (${s.orb.toFixed(1)}°)`).join('<br>')||'—'}${r.sig.filter(s=>s.house).map(s=>`<br><i>${s.t}</i>`).join('')}</td><td><button class="btn sm ghost evDel" data-id="${r.id}" aria-label="Sil">✕</button></td></tr>`).join('')}</table>`,['Jüpiter, Satürn, Uranüs, Neptün ve Plüton\'un olay tarihindeki (öğlen) konumları','Orb: 2° (sekstilde 1,5°)']);
+  if(rows.length<2)return o;
+  const cnt={};for(const r of rows)for(const s of r.sig){(cnt[s.id]=cnt[s.id]||{t:s.t,ev:[]}).ev.push(r);}
+  const common=Object.entries(cnt).filter(([,v])=>v.ev.length>=2).sort((a,b)=>b[1].ev.length-a[1].ev.length).slice(0,8);
+  if(!common.length)return o+SB('Ortak açılar','<p>Girdiğin olayların tarihlerinde birden fazla olayda ortak görünen bir açı yok. Bu da önemli bir sonuçtur: bu olaylar arasında astrolojik bir ortaklık görünmüyor.</p>',[]);
+  // taban oran: dogumdan bugune ayda bir ornek
+  const now=TODAY_JD(),samp=[];for(let j=ch.jd+30;j<now;j+=30.44)samp.push(j);const sampSig=samp.map(j=>new Set(sigAt(ch,j).map(s=>s.id)));
+  o+=SB('Ortak açılar ve karşı örnekler',common.map(([id,v])=>{const base=sampSig.filter(s=>s.has(id)).length/sampSig.length,miss=rows.filter(r=>!r.sig.some(s=>s.id===id)),share=v.ev.length/rows.length;
+    // olay kaydi olmayan diger donemler
+    const other=[];let prev=false,start=0;samp.forEach((j,i)=>{const has=sampSig[i].has(id);if(has&&!prev)start=j;if(!has&&prev){const touched=rows.some(r=>r.jd>=start-40&&r.jd<=j+40);if(!touched)other.push([start,j]);}prev=has;});
+    return `<div class="qa"><b>${v.t}</b><p>${v.ev.length} / ${rows.length} olayda var (%${Math.round(share*100)}). Hayatının rastgele bir ayında görülme oranı: %${Math.round(base*100)}. ${share>base*2&&v.ev.length>=3?'Olaylarında ortalamadan belirgin şekilde sık görünüyor; yine de örnek sayısı az olduğu için tesadüf olabilir.':'Olaylardaki sıklığı, sıradan dönemlerdekinden çok farklı değil; anlamlı bir ortaklık sayılmaz.'}</p>
+     <p class="small"><b>Uyuşan olaylar:</b> ${v.ev.map(r=>`${esc(r.type)} (${r.s.split('-').reverse().join('.')})`).join(', ')}<br><b>Uyuşmayan olaylar:</b> ${miss.length?miss.map(r=>`${esc(r.type)} (${r.s.split('-').reverse().join('.')})`).join(', '):'yok'}<br><b>Bu açının olduğu ama olay girmediğin dönemler:</b> ${other.length?other.slice(0,6).map(([a,b])=>`${fmtJD(a)}–${fmtJD(b)}`).join(', ')+(other.length>6?' …':''):'yok'}</p></div>`;}).join('')+`<p class="small">Birçok açı aynı anda karşılaştırıldığında bazılarının tesadüfen ortak çıkması beklenir (çoklu karşılaştırma). Az sayıda olaydan güçlü sonuç çıkarılamaz.</p>`,['Olay tarihlerindeki açılar','Doğumdan bugüne her ay alınan örneklerle taban oran']);
+  return o;}
+function bindGecmis(){const ch=STATE.ch,p=STATE.p;const re=()=>{$('#evOut').innerHTML=evAnalysis(ch,p,evList(p));bindDel();};
+  const bindDel=()=>$$('.evDel').forEach(b=>b.onclick=()=>{evSave(p,evList(p).filter(e=>e.id!==b.dataset.id));re();});bindDel();
+  $('#evAdd').onclick=()=>{const s=$('#evS').value,e=$('#evE').value;if(!s){$('#evMsg').innerHTML='<div class="note err">Başlangıç tarihini girin.</div>';return;}
+    const[y,m,d]=s.split('-').map(Number);if(julian(y,m,d,12)<ch.jd){$('#evMsg').innerHTML='<div class="note err">Olay tarihi doğum tarihinden önce olamaz.</div>';return;}if(e&&e<s){$('#evMsg').innerHTML='<div class="note err">Bitiş tarihi başlangıçtan önce olamaz.</div>';return;}
+    const l=evList(p);l.push({id:Date.now().toString(36),s,e,type:$('#evT').value,desc:$('#evD').value.trim().slice(0,200)});const ok=evSave(p,l);$('#evMsg').innerHTML=ok?'<div class="note">Eklendi.</div>':'<div class="note err">Kaydedilemedi: tarayıcı depolaması dolu ya da kapalı.</div>';$('#evD').value='';re();};
+  $('#evExp').onclick=async()=>{$('#evMsg').innerHTML=`<div class="note">${dlMsg(await saveFile('gokyuzu-olaylarim.json',JSON.stringify(evList(p),null,1)))}</div>`;};
+  $('#evImp').onchange=async e=>{try{const f=e.target.files[0];const d=JSON.parse(await f.text());if(!Array.isArray(d))throw 0;const ok=d.filter(x=>x&&/^\d{4}-\d{2}-\d{2}$/.test(x.s)&&typeof x.type==='string').map(x=>({id:String(x.id||Math.random().toString(36).slice(2)).slice(0,20),s:x.s,e:/^\d{4}-\d{2}-\d{2}$/.test(x.e||'')?x.e:'',type:String(x.type).slice(0,60),desc:String(x.desc||'').slice(0,200)}));evSave(p,evList(p).concat(ok));$('#evMsg').innerHTML=`<div class="note">${ok.length} olay içe aktarıldı.</div>`;re();}catch(_){$('#evMsg').innerHTML='<div class="note err">Dosya okunamadı.</div>';}};
+  $('#evClr').onclick=()=>{if(!evList(p).length)return;if($('#evClr').dataset.ok){evSave(p,[]);re();$('#evClr').textContent='Tümünü sil';delete $('#evClr').dataset.ok;}else{$('#evClr').dataset.ok=1;$('#evClr').textContent='Emin misiniz? Tekrar basın';}};}
+
+// ---------- DOGUM SAATI TAHMINI (olaylara dayali) ----------
+function secRektif(ch,p){const L=evList(p);
+  return `<section class="card hero"><h3>Gelişmiş Doğum Saati Tahmini</h3><p>"Geçmişimi Analiz Et" bölümüne girdiğin olayların tarihlerinde, yavaş gezegenlerin ve Güneş yayı (solar arc) yönlendirmelerinin Yükselen ile MC'ye yaptığı açılar, olası her doğum saati için karşılaştırılır. Olaylarla en çok örtüşen saat aralıkları aday olarak sıralanır.</p>
+   <div class="note small">Bu bir astrolojik yöntemdir; sonuç kesin doğum saati değildir. Doğum saati kişilik özelliklerinden ya da yüz görünümünden bilimsel olarak tespit edilemez. En güvenilir kaynak nüfus ya da hastane kaydıdır.</div>
+   <p>Kayıtlı olay sayısı: <b>${L.length}</b>${L.length<3?' — en az 3 olay gerekli (5 ve üzeri daha anlamlı).':''}</p>
+   <div class="row"><label>Aranacak saat aralığı <input type="time" id="rkA" value="${p.mode==='range'?fmtH(p.h1):p.mode==='exact'?fmtH(Math.max(0,p.h1-2)):'00:00'}"></label><label>– <input type="time" id="rkB" value="${p.mode==='range'?fmtH(p.h2):p.mode==='exact'?fmtH(Math.min(23.98,p.h1+2)):'23:59'}"></label><button class="btn sm" id="rkGo" ${L.length<3?'disabled':''}>Adayları hesapla</button></div></section><div id="rkOut"></div>`;}
+function runRektif(){const ch=STATE.ch,p=STATE.p,L=evList(p);const hA=$('#rkA').value.split(':'),hB=$('#rkB').value.split(':');const a=+hA[0]+hA[1]/60,b=+hB[0]+hB[1]/60;if(!(b>a)){$('#rkOut').innerHTML='<div class="note err">Aralığın sonu başlangıçtan sonra olmalı.</div>';return;}
+  const evs=L.map(e=>{const[y,m,d]=e.s.split('-').map(Number);const jd=julian(y,m,d,9);const r=rawPositions(jd);const age=(jd-ch.jd)/365.25;const prog=rawPositions(ch.jd+age).sun;return{e,tr:{jupiter:r.jupiter,saturn:r.saturn,uranus:r.uranus,neptune:r.neptune,pluto:r.pluto},arc:angDiff(prog,ch.pos.sun.lon)};});
+  const W={pluto:3,uranus:3,saturn:2.5,neptune:2,jupiter:1.5},res=[];
+  for(let h=a;h<=b+1e-9;h+=4/60){const utc=tzOffset(p.city||{tz:'TR'},p.y,p.m,p.d,h);const jd=julian(p.y,p.m,p.d,h-utc);const A=angles(jd,p.lat,p.lon);let sc=0;const hit=new Set();
+    for(const v of evs){for(const k in v.tr)for(const[pt,L0]of[['asc',A.asc],['mc',A.mc]])for(const ag of [0,90,180]){const o=Math.abs(Math.abs(angDiff(v.tr[k],L0))-ag);if(o<1.5){sc+=W[k]*(1-o/1.5);hit.add(v.e.id);}}
+      const dMC=nrm(A.mc+v.arc),dASC=nrm(A.asc+v.arc);for(const k of ['sun','moon','mercury','venus','mars','jupiter','saturn']){for(const[L0]of[[dMC],[dASC]]){const o=Math.abs(angDiff(L0,ch.pos[k].lon));if(o<1){sc+=2*(1-o);hit.add(v.e.id);}}
+        for(const L0 of [A.asc,A.mc]){const o=Math.abs(angDiff(nrm(ch.pos[k].lon+v.arc),L0));if(o<1){sc+=2*(1-o);hit.add(v.e.id);}}}}
+    res.push({h,sc,asc:A.asc,mc:A.mc,hit});}
+  const mx=Math.max(...res.map(r=>r.sc))||1;const win=[];let cur=null;for(const r of res){const good=r.sc>=mx*.7;if(good){if(!cur)cur={a:r.h,b:r.h,best:r};else{cur.b=r.h;if(r.sc>cur.best.sc)cur.best=r;}}else if(cur){win.push(cur);cur=null;}}if(cur)win.push(cur);
+  win.sort((x,y)=>y.best.sc-x.best.sc);
+  $('#rkOut').innerHTML=win.length?SB('Aday doğum saatleri',win.slice(0,5).map((w,i)=>{const r=w.best,mis=evs.filter(v=>!r.hit.has(v.e.id));return `<div class="qa"><b>${i+1}. aday: ${w.b-w.a<0.01?fmtH(r.h):`${fmtH(w.a)}–${fmtH(w.b)} (en iyi ${fmtH(r.h)})`}</b> · Yükselen ${sgn(signOf(r.asc))} ${Math.floor(r.asc%30)}°, MC ${sgn(signOf(r.mc))} · göreli uyum %${Math.round(r.sc/mx*100)}
+     <p class="small"><b>Güçlü tarafı:</b> ${r.hit.size} / ${evs.length} olayda Yükselen ya da MC'ye yakın bir açı var.${mis.length?` <b>Zayıf tarafı:</b> şu olaylarla örtüşmüyor: ${mis.map(v=>esc(v.e.type)).join(', ')}.`:''}</p></div>`;}).join('')+`<p class="small">Uyum yüzdesi adaylar arasındaki göreli bir puandır; olasılık değildir. Adaylar birbirine yakınsa yöntem ayırt edici değildir. Yükselen için kişilik sorularını "Harita" bölümünde de deneyebilirsin.</p>`,['Transit Jüpiter–Plüton: Yükselen/MC kavuşum, kare, karşıt (orb 1,5°)','Güneş yayı: yönlendirilmiş MC/Yükselen ile doğum gezegenleri arası kavuşum (orb 1°)','4 dakikalık adımlarla tarama']):'<p>Aday bulunamadı.</p>';}
+
+// ---------- BUGUN ----------
+const GUN_SORU=['Bugün kime teşekkür etmeyi unuttum?','Bugün ertelediğim küçük bir iyilik var mı?','Şu an beni gerçekten yoran ne, ve ne kadarı benim elimde?','Bugün kimi gerçekten dinledim?','Bugün sabretmem gereken bir an oldu mu; nasıl geçti?','Kendime bugün hangi sözü verebilirim?','Bugün öfkemi neye yönelttim; haklı mıydım?','Hayatımda hangi nimeti fazla alıştığım için görmüyorum?','Bugün hangi düşüncem beni gereksiz yere korkuttu?','Bugün birinin yükünü hafifletebilir miyim?','Neyi kontrol etmeye çalışıp bırakmam gerekiyor?','Bugün kendime karşı fazla sert miydim?','Sevdiğim birine en son ne zaman açıkça değer verdiğimi söyledim?','Bugün öğrendiğim tek bir şey ne?','Hangi alışkanlığım bana zaman kaybettiriyor?','Bugün hangi küçük adım beni hedefime yaklaştırır?','Bir başkasının hatasını affetmek bana ne kazandırır?','Bugün dilimden çıkan bir sözü geri almak ister miydim?','Kalbimi daraltan şey nedir; onu kimseyle paylaştım mı?','Bugün yaptığım işi niyet olarak neye bağladım?','Hayatımda sadeleştirebileceğim bir şey var mı?','Bugün kimi yargıladım; onun yerinde olsam ne yapardım?','Bana iyi gelen sade bir şeyi bugün yaptım mı?','Hangi konuda yardım istemekten çekiniyorum?','Bugünü bir cümleyle anlatsam ne derdim?','Bugün sözümü tuttum mu?','Yarın daha iyi yapabileceğim tek bir şey ne?','Şükrettiğim üç şey nedir?','Bugün kimin hakkını gözettim?','Kendimde değiştirmek istediğim bir tepki var mı?'];
+const ASTRO_BILGI=['Ay bir burcu yaklaşık iki buçuk günde geçer; bu yüzden doğum saati bilinmeyenlerin Ay burcu bazen kesin değildir.','Satürn Güneş çevresindeki turunu yaklaşık 29,5 yılda tamamlar; doğum haritasındaki yerine dönmesine "Satürn dönüşü" denir.','Jüpiter bir turunu yaklaşık 11,9 yılda tamamlar.','Merkür yılda genellikle üç kez, yaklaşık üçer hafta geri hareket (retro) yapıyormuş gibi görünür.','Retro hareket bir yanılsamadır: Dünya bir gezegeni geçerken gezegen gökyüzünde geriye gidiyor gibi görünür.','Yükselen burç, doğum anında doğu ufkunda yükselen burçtur ve yaklaşık her iki saatte bir değişir.','Ay düğümleri, Ay\'ın yörüngesinin ekliptiği kestiği noktalardır; tutulmalar bu noktaların yakınında olur.','Ay düğümleri yaklaşık 18,6 yılda zodyakta tam bir tur atar.','Uranüs bir turunu yaklaşık 84 yılda tamamlar; doğum yerinin karşısına 40\'lı yaşların başında gelir.','Plüton\'un yörüngesi çok basık olduğu için bazı burçlarda 12, bazılarında 30 yıldan fazla kalır.','Güneş tutulması yalnızca yeni ayda, Ay tutulması yalnızca dolunayda olabilir.','Batı astrolojisinde burçlar ekinokslara göre (tropikal), Vedik astrolojide yıldızlara göre (sideral) ölçülür; aralarında bugün yaklaşık 24° fark vardır.','Placidus ev sistemi kutup bölgelerinde tanımsız hale gelebilir; bu yüzden yüksek enlemlerde eşit ya da bütün burç evleri kullanılır.','Venüs yaklaşık her 18 ayda bir, yaklaşık 40 gün retro olur.','Mars yaklaşık iki yılda bir retro olur.','Bir gezegenin kendi yönettiği burçta olmasına "yöneticilik", en güçlü sayıldığı burçta olmasına "yücelim" denir.','Açılar, gezegenler arasındaki açısal mesafedir: 0° kavuşum, 60° sekstil, 90° kare, 120° üçgen, 180° karşıt.','Orb, bir açının tam değerinden ne kadar sapmaya izin verildiğini gösterir.','Kiron, Satürn ile Uranüs arasında dolanan küçük bir gök cismidir; turu yaklaşık 50 yıl sürer.','Şans Noktası, Yükselen ile Güneş ve Ay arasındaki mesafeden hesaplanan sembolik bir noktadır.','Marifetname geleneğinde haftanın her günü bir seyyareyle (gezegenle) anılır: Pazar Güneş, Pazartesi Ay, Salı Mars, Çarşamba Merkür, Perşembe Jüpiter, Cuma Venüs, Cumartesi Satürn.','Gündüz doğanların haritasında Güneş ufkun üstünde, gece doğanlarınkinde altındadır.','Vertex, haritanın batı tarafında ilk dikey ile ekliptiğin kesiştiği noktadır.','Bir haritada aynı burçta üç ya da daha fazla gezegen olmasına "yığılım" denir.','Doğum anında Güneş ile Ay arasındaki açı, doğum Ay evresini verir.','Güneş her yıl aynı tarihlerde aynı dereceye dönmez; Güneş Dönüşü birkaç saat ya da bir gün kayabilir.','Zodyak burçlarının adları, gökyüzündeki takımyıldızlardan gelir ama bugün onlarla tam örtüşmez.','Dolunayda Ay, Güneş\'in tam karşısındadır; gün batımında doğar, gün doğumunda batar.','Hicri takvim Ay\'ın evrelerine göre işler; her yıl Miladi takvime göre yaklaşık 11 gün geriye kayar.','Ekinoks günlerinde gece ve gündüz hemen hemen eşittir; Güneş Koç ve Terazi burçlarına girer.'];
+const SIGN_SYM=['kıvılcım','tohum','kanat','kabuk','taç','başak','terazi','anahtar','ok','merdiven','testi','inci'];
+function personalToday(ch,jd){const pos=positions(jd),N=natalPts(ch),out=[];
+  for(const k of ['sun','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto','moon']){for(const pt in N){for(const[ag]of ASP_MAIN){const o=Math.abs(Math.abs(angDiff(pos[k].lon,N[pt]))-ag);const lim=k==='moon'?1.5:k==='sun'||k==='mercury'||k==='venus'||k==='mars'?1:1;if(o<=lim)out.push({k,pt,ag,o,app:Math.abs(Math.abs(angDiff(pos[k].lon+pos[k].speed*.1,N[pt]))-ag)<o});}}}
+  return out.sort((a,b)=>a.o-b.o);}
+function secBugun(){
+  const now=new Date(),jd=TODAY_JD(),a=positions(jd),el=nrm(a.moon.lon-a.sun.lon),ph=Math.floor(nrm(el+22.5)/45)%8,doy=Math.floor((now-new Date(now.getFullYear(),0,0))/864e5),wd=now.getDay();
+  const ch=STATE.ch,p=STATE.p,seed=ch?CM(ch,p).seed:7,ms=signOf(a.moon.lon),e=esmaBy(GUNUN_ESMA[doy%GUNUN_ESMA.length]);
+  const retro=['mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto'].filter(k=>a[k].retro);
+  let o=`<section class="card hero"><h3>Bugün — ${pad(now.getDate())}.${pad(now.getMonth()+1)}.${now.getFullYear()} ${WD_NAME[wd]}</h3>
+   <div class="big3"><div><span>Güneş</span><b>${SIGNS[signOf(a.sun.lon)].g}${VS} ${SIGNS[signOf(a.sun.lon)].n}</b></div><div><span>Ay</span><b>${SIGNS[ms].g}${VS} ${SIGNS[ms].n}</b></div><div><span>Ay evresi</span><b>${PHASES[ph][0]}</b></div></div>
+   <p class="small">Retro görünen gezegenler: ${retro.length?retro.map(pn).join(', '):'yok'}. Günün seyyaresi (Marifetname geleneğinde ${WD_NAME[wd]} günü): ${CLS[WD_RULER[wd]]} (${PL[WD_RULER[wd]].n}).</p>
+   <div class="note small">Senin koyduğun kural gereği bu ekran gün için yorum ya da tahmin yapmaz: gökyüzünü, doğum haritanla kurduğu açıları, günün esmasını ve üzerinde düşünmen için bir soru gösterir.</div></section>`;
+  if(ch){const T=personalToday(ch,jd).slice(0,8),mh=ch.noTime?null:houseOf(a.moon.lon,ch.cusps);
+    o+=SB('Bugün gökyüzü ile doğum haritan',`${mh?`<p>Ay bugün doğum haritanın <b>${mh}. evinden</b> geçiyor (${HOUSES[mh-1].dom}).</p>`:''}${T.length?`<table class="tbl"><tr><th>Bugünkü gezegen</th><th>Açı</th><th>Doğum haritandaki nokta</th><th>Orb</th></tr>${T.map(t=>`<tr><td>${pn(t.k)}</td><td>${aspName(t.ag)}</td><td>${ptName(t.pt)}</td><td>${t.o.toFixed(1)}° ${t.app?'(yaklaşıyor)':'(ayrılıyor)'}</td></tr>`).join('')}</table>`:'<p>Bugün doğum haritana dar orblu bir açı yok.</p>'}<p class="small">Bu tablo astronomik bir hesaptır; yorum içermez.</p>`,['Bugünün gezegen konumları ile doğum haritan arasındaki açılar (orb 1°, Ay için 1,5°)']);
+    const bd=upcomingBirthdays(14);if(bd.length)o+=SB('Yaklaşan doğum günleri',ul(bd.map(b=>`<b>${esc(b.n)}</b>: ${b.date} ${b.days===0?'(bugün!)':`(${b.days} gün sonra)`}`)),[]);}
+  else o+=`<div class="note">Kendi doğum bilgilerini girip "Haritayı Çıkar"a basarsan bu ekrana doğum haritanla bugünkü gökyüzü arasındaki açılar da eklenir.</div>`;
+  const q=GUN_SORU[(doy+seed)%GUN_SORU.length],bil=ASTRO_BILGI[(doy*7+seed)%ASTRO_BILGI.length],ay=MANEVI_AYET[(doy+3)%MANEVI_AYET.length];
+  o+=`<div class="grid2">${SB('Günün esması',esmaCard(e,e.m),[])}${SB('Günün düşündüren sözü',`<blockquote class="deepq">${ay.t}</blockquote><p class="small">— ${ay.s}</p>`,[])}</div>`;
+  o+=`<div class="grid2">${SB('Günün düşünme sorusu',`<p class="big1" style="font-size:22px">${q}</p>`,[])}${SB('Günün astroloji bilgisi',`<p>${bil}</p>`,[])}</div>`;
+  o+=SB('Günün rengi ve sembolü',`<div class="pal"><div><i style="background:${SIGN_COLOR[ms][0]}"></i><b>${cap(SIGN_COLOR[ms][1])}</b><span>Ay'ın bugün bulunduğu ${SIGNS[ms].n} burcunun geleneksel rengi</span></div><div><i style="background:#f7f4ee;display:flex;align-items:center;justify-content:center;font-size:30px">${SIGNS[ms].g}${VS}</i><b>${cap(SIGN_SYM[ms])}</b><span>Günün sembolü</span></div></div><p class="small">Eğlence ve kişisel düşünme amaçlıdır; bir anlam ya da etki taşıdığı iddia edilmez.</p>`,[]);
+  o+=`<div id="weekOut">${weekMonth(ch,jd,7,'Bu hafta gökyüzünde')}</div><div class="actions"><button class="btn ghost" id="wkMonth">Aylık görünümü aç</button><button class="btn ghost" data-go="tak">Kişisel takvim</button></div>`;
+  return o;}
+function upcomingBirthdays(days){const now=new Date(),t0=Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()),out=[];
+  for(const x of profiles()){if(!x.a_date)continue;const[y,m,d]=x.a_date.split('-').map(Number);let t=Date.UTC(now.getFullYear(),m-1,d);if(t<t0)t=Date.UTC(now.getFullYear()+1,m-1,d);const dd=Math.round((t-t0)/864e5);if(dd<=days)out.push({n:(x.a_name+' '+(x.a_surname||'')).trim()||'Kayıtlı kişi',date:`${pad(d)}.${pad(m)}`,days:dd,age:new Date(t).getUTCFullYear()-y});}
+  return out.sort((a,b)=>a.days-b.days);}
+// haftalik / aylik astronomik olaylar
+function skyEvents(j1,j2,ch){const ev=[];
+  for(const l of lunList(j1,j2)){const ei=l.eclipse?eclipseInfo(l).kind:null;ev.push({jd:l.jd,t:(ei||(l.type==='new'?'Yeni Ay':'Dolunay'))+` — ${fmtDeg(l.lon)}`,c:'lun',h:ch&&!ch.noTime?houseOf(l.lon,ch.cusps):null});}
+  const K=['sun','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto'];let prev=rawPositions(j1-1);
+  for(let j=Math.floor(j1);j<=j2;j++){const c=rawPositions(j+.5);for(const k of K){if(signOf(c[k])!==signOf(prev[k])&&Math.abs(angDiff(c[k],prev[k]))<20)ev.push({jd:j+.5,t:`${pn(k)} ${SIGNS[signOf(c[k])].n} burcuna geçiyor`,c:'ing'});}prev=c;}
+  for(const s of stations(j1,j2,['mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto']))ev.push({jd:s.jd,t:`${pn(s.k)} ${s.retro?'retro hareketine başlıyor':'düz harekete dönüyor'}`,c:'sta'});
+  if(ch){const N=natalPts(ch);for(const k of ['sun','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto']){let pa=rawPositions(j1-.5);for(let j=Math.floor(j1);j<=j2;j++){const c=rawPositions(j+.5);for(const pt in N)for(const[ag]of ASP_MAIN)for(const sgn2 of ag===0||ag===180?[1]:[1,-1]){const L=nrm(N[pt]+ag*sgn2),d0=angDiff(pa[k],L),d1=angDiff(c[k],L);if(Math.sign(d0)!==Math.sign(d1)&&Math.abs(d1-d0)<20)ev.push({jd:j+.5,t:`${pn(k)} ${aspName(ag)} doğum ${ptName(pt)}`,c:'per'});}pa=c;}}}
+  return ev.sort((a,b)=>a.jd-b.jd);}
+function weekMonth(ch,jd,days,title){const ev=skyEvents(jd,jd+days,ch);
+  return SB(`${title} (${days} gün)`,ev.length?`<table class="tbl">${ev.map(e=>`<tr><td style="white-space:nowrap">${fmtJD(e.jd)}</td><td>${e.t}${e.h?` <span class="small">(haritanda ${e.h}. ev)</span>`:''}</td><td class="small">${{lun:'Ay evresi',ing:'Burç geçişi',sta:'Duraklama',per:'Kişisel açı'}[e.c]}</td></tr>`).join('')}</table>`:'<p>Bu aralıkta öne çıkan bir gökyüzü olayı yok.</p>',['Astronomik hesap; yorum içermez']);}
+// ---------- TAKVIM ----------
+function secTakvim(ch){const now=new Date();const ym=STATE.tkYM||[now.getFullYear(),now.getMonth()+1];const[y,m]=ym;const j1=julian(y,m,1,0),dim=new Date(y,m,0).getDate(),j2=j1+dim;
+  const ev=skyEvents(j1,j2,ch),bd=profiles().filter(x=>x.a_date&&+x.a_date.split('-')[1]===m).map(x=>({d:+x.a_date.split('-')[2],t:`🎂 ${(x.a_name||'').trim()||'Kayıtlı kişi'} doğum günü`}));
+  const jr=store.get('bwJournal',[]).filter(x=>{const[a,b]=x.d.split('-').map(Number);return a===y&&b===m;});
+  const byDay={};for(const e of ev){const t=jdToDate(e.jd+3/24);(byDay[t.d]=byDay[t.d]||[]).push(e);}for(const b of bd)(byDay[b.d]=byDay[b.d]||[]).push({c:'bd',t:esc(b.t)});for(const x of jr)(byDay[+x.d.split('-')[2]]=byDay[+x.d.split('-')[2]]||[]).push({c:'jr',t:'📝 Günlük kaydı'});
+  STATE._tkDay={byDay,m};const first=(new Date(y,m-1,1).getDay()+6)%7;let cells='';for(let i=0;i<first;i++)cells+='<div class="cd e"></div>';
+  for(let d=1;d<=dim;d++){const L=byDay[d]||[];const isT=d===now.getDate()&&m===now.getMonth()+1&&y===now.getFullYear();cells+=`<div class="cd${isT?' t':''}" data-d="${d}" role="button" tabindex="0"><b>${d}</b>${L.slice(0,4).map(e=>`<i class="dot ${e.c}" title="${e.t.replace(/<[^>]+>/g,'')}"></i>`).join('')}</div>`;}
+  const AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+  return `<section class="card hero"><h3>Kişisel Astroloji Takvimi</h3><div class="row"><button class="btn sm ghost" id="tkP">◀</button><b style="min-width:150px;text-align:center">${AY[m-1]} ${y}</b><button class="btn sm ghost" id="tkN">▶</button></div>
+   <div class="cal"><div class="cw">Pzt</div><div class="cw">Sal</div><div class="cw">Çar</div><div class="cw">Per</div><div class="cw">Cum</div><div class="cw">Cmt</div><div class="cw">Paz</div>${cells}</div>
+   <p class="small"><i class="dot lun"></i> Ay evresi/tutulma <i class="dot ing"></i> burç geçişi <i class="dot sta"></i> duraklama <i class="dot per"></i> kişisel açı <i class="dot bd"></i> doğum günü <i class="dot jr"></i> günlük kaydı. Takvim astronomik olayları gösterir; yorum içermez.</p></section>
+   <div id="tkDay"></div>${SB('Bu ayın olayları',ev.length||bd.length?`<table class="tbl">${Object.keys(byDay).map(Number).sort((a,b)=>a-b).map(d=>byDay[d].map(e=>`<tr><td>${pad(d)}.${pad(m)}</td><td>${e.t}</td></tr>`).join('')).join('')}</table>`:'<p>Olay yok.</p>',[])}`;}
+function bindTakvim(){$$('.cd[data-d]').forEach(c=>c.onclick=()=>{const{byDay,m}=STATE._tkDay||{},d=+c.dataset.d,L=(byDay||{})[d]||[];$('#tkDay').innerHTML=SB(`${pad(d)}.${pad(m)}`,L.length?ul(L.map(e=>e.t)):'<p>Bu gün için kayıtlı bir olay yok.</p>',[]);$('#tkDay').scrollIntoView({behavior:'smooth',block:'nearest'});});const mv=dl=>{let[y,m]=STATE.tkYM||[new Date().getFullYear(),new Date().getMonth()+1];m+=dl;if(m<1){m=12;y--;}if(m>12){m=1;y++;}STATE.tkYM=[y,m];render();};$('#tkP').onclick=()=>mv(-1);$('#tkN').onclick=()=>mv(1);}
+
+// ---------- ASTROLOJI LABORATUVARI ----------
+const TRAD_RULER=['mars','venus','mercury','moon','sun','mercury','venus','mars','jupiter','saturn','saturn','jupiter'];
+const TERMS=[[['jupiter',6],['venus',12],['mercury',20],['mars',25],['saturn',30]],[['venus',8],['mercury',14],['jupiter',22],['saturn',27],['mars',30]],[['mercury',6],['jupiter',12],['venus',17],['mars',24],['saturn',30]],[['mars',7],['venus',13],['mercury',19],['jupiter',26],['saturn',30]],[['jupiter',6],['venus',11],['saturn',18],['mercury',24],['mars',30]],[['mercury',7],['venus',17],['jupiter',21],['mars',28],['saturn',30]],[['saturn',6],['mercury',14],['jupiter',21],['venus',28],['mars',30]],[['mars',7],['venus',11],['mercury',19],['jupiter',24],['saturn',30]],[['jupiter',12],['venus',17],['mercury',21],['saturn',26],['mars',30]],[['mercury',7],['jupiter',14],['venus',22],['saturn',26],['mars',30]],[['mercury',7],['venus',13],['jupiter',20],['mars',25],['saturn',30]],[['venus',12],['jupiter',16],['mercury',19],['mars',28],['saturn',30]]];
+const CHALD=['saturn','jupiter','mars','sun','venus','mercury','moon'];
+const TRIP=[['sun','jupiter','saturn'],['venus','moon','mars'],['saturn','mercury','jupiter'],['venus','mars','moon']];
+function essDignity(k,lon,day){const s=signOf(lon),d=lon%30,o=[];let sc=0;
+  if(DOMICILE[k]&&DOMICILE[k].includes(s)&&TRAD_RULER[s]===k){sc+=5;o.push('Yönetici (+5)');}
+  if(EXALT[k]===s){sc+=4;o.push('Yücelim (+4)');}const tr=TRIP[SIGNS[s].el];if((day?tr[0]:tr[1])===k){sc+=3;o.push('Üçlük (+3)');}
+  if(TERMS[s].find(t=>d<t[1])[0]===k){sc+=2;o.push('Sınır (+2)');}if(CHALD[(CHALD.indexOf('mars')+s*3+Math.floor(d/10))%7]===k){sc+=1;o.push('Yüz/dekan (+1)');}
+  if(TRAD_RULER[(s+6)%12]===k){sc-=5;o.push('Zarar (−5)');}if(EXALT[k]!==undefined&&(EXALT[k]+6)%12===s){sc-=4;o.push('Düşüş (−4)');}
+  return{sc,o:o.length?o:['Garip (peregrine): hiçbir asalette değil']};}
+const LAHIRI=jd=>23.853+(jd-2451545)/365.2422*0.013969;
+const NAK=['Ashvini','Bharani','Krittika','Rohini','Mrigashira','Ardra','Punarvasu','Pushya','Ashlesha','Magha','Purva Phalguni','Uttara Phalguni','Hasta','Chitra','Swati','Vishakha','Anuradha','Jyeshtha','Mula','Purva Ashadha','Uttara Ashadha','Shravana','Dhanishta','Shatabhisha','Purva Bhadrapada','Uttara Bhadrapada','Revati'];
+const NAK_LORD=['Ketu','Venüs','Güneş','Ay','Mars','Rahu','Jüpiter','Satürn','Merkür'];
+const RASHI=['Mesha','Vrishabha','Mithuna','Karka','Simha','Kanya','Tula','Vrischika','Dhanu','Makara','Kumbha','Meena'];
+const CN_ANIMAL=['Fare','Öküz','Kaplan','Tavşan','Ejderha','Yılan','At','Keçi','Maymun','Horoz','Köpek','Domuz'],CN_EL=['Ağaç','Ateş','Toprak','Metal','Su'];
+function chineseYear(jd){const t=jdToDate(jd);let y=t.y;// Cin yeni yili: kis gundonumunden sonraki ikinci yeni ay (Pekin saati)
+  const ws=(()=>{let j=julian(y-1,12,15,0);for(let i=0;i<40;i++){const s=rawPositions(j).sun;const d=angDiff(270,s);if(Math.abs(d)<1e-4)break;j+=d/0.9856;}return j;})();
+  const nm=lunList(ws,ws+70).filter(l=>l.type==='new');const cny=nm[1]?nm[1].jd:null;if(cny&&jd<cny)y--;
+  const i=((y-4)%60+60)%60;return{y,an:CN_ANIMAL[i%12],el:CN_EL[Math.floor((i%10)/2)],yy:i%2?'Yin':'Yang',cny};}
+function secLab(ch,p){const s=STATE.labS||'prog';const S=[['prog','İkincil İlerletim'],['arc','Güneş Yayı'],['prof','Yıllık Profeksiyon'],['ret','Ay, Jüpiter ve Satürn Dönüşleri'],['lun','Yeni Ay, Dolunay ve Tutulmalar'],['dig','Gezegen Asaletleri'],['rul','Ev Yöneticileri'],['bal','Element ve Nitelik'],['ved','Vedik ve Nakşatra'],['cin','Çin Astrolojisi'],['rek','Doğum Saati Tahmini']];
+  return `<section class="card hero"><h3>Astroloji Laboratuvarı</h3><p>İleri teknikler, her biri kendi hesaplama kuralıyla ve birbirine karıştırılmadan. Senin kuralın gereği bu bölümler hesap ve tablo gösterir; geleceğe dair yorum yapmaz.</p><div class="chips">${S.map(([k,t])=>`<button class="chip chipbtn ${s===k?'on':''}" data-lab="${k}">${t}</button>`).join('')}</div></section><div id="labOut">${labBody(s,ch,p)}</div>`;}
+function labDate(){return STATE.labD||new Date().toISOString().slice(0,10);}
+function labBody(s,ch,p){const dsel=`<div class="row"><label>Tarih <input type="date" id="labD" value="${labDate()}"></label><button class="btn sm" id="labDGo">Hesapla</button></div>`;const[ly,lm,ld]=labDate().split('-').map(Number),jdT=julian(ly,lm,ld,12-3),age=(jdT-ch.jd)/365.2422;
+  if(s==='prog'){const pj=ch.jd+age,P=positions(pj);const pm=P.moon.lon,ps=P.sun.lon,ph=PHASES[Math.floor(nrm(pm-ps+22.5)/45)%8][0];const pMC=nrm(ch.mc+angDiff(ps,ch.pos.sun.lon));
+    return SB('İkincil İlerletim (bir gün = bir yıl)',dsel+`<p>Yaş ${age.toFixed(2)}. İlerletilmiş harita, doğumdan ${age.toFixed(1)} gün sonraki gökyüzüdür.</p><table class="tbl"><tr><th>Gezegen</th><th>Doğum</th><th>İlerletilmiş</th><th>Burç değişti mi?</th></tr>${['sun','moon','mercury','venus','mars','jupiter','saturn'].map(k=>`<tr><td>${pn(k)}</td><td>${fmtDeg(ch.pos[k].lon)}</td><td>${fmtDeg(P[k].lon)}${P[k].retro?' R':''}</td><td>${signOf(P[k].lon)!==ch.pos[k].sign?'evet':'—'}</td></tr>`).join('')}${ch.noTime?'':`<tr><td>MC (Güneş yayıyla)</td><td>${fmtDeg(ch.mc)}</td><td>${fmtDeg(pMC)}</td><td></td></tr>`}</table><p>İlerletilmiş Ay evresi: <b>${ph}</b>. İlerletilmiş Ay yaklaşık 2,5 yılda bir burç değiştirir.</p>`,['Doğumdan sonraki her gün, hayatın bir yılına karşılık gelir (Ptolemaios geleneği)','Hesap tarihi öğlen 12:00']);}
+  if(s==='arc'){const arc=angDiff(positions(ch.jd+age).sun.lon,ch.pos.sun.lon),N=natalPts(ch),hits=[];for(const a in N)for(const b in N)for(const[ag]of [[0],[90],[180]]){const o=Math.abs(Math.abs(angDiff(nrm(N[a]+arc),N[b]))-ag);if(o<1&&a!==b)hits.push(`Yönlendirilmiş ${ptName(a)} ${aspName(ag)} doğum ${ptName(b)} (${o.toFixed(2)}°)`);}
+    return SB('Güneş Yayı Yönlendirmeleri',dsel+`<p>Güneş yayı: <b>${arc.toFixed(2)}°</b> (yaş ${age.toFixed(2)}). Tüm doğum noktaları bu kadar ileri taşınır.</p><table class="tbl"><tr><th>Nokta</th><th>Doğum</th><th>Yönlendirilmiş</th></tr>${Object.keys(N).map(k=>`<tr><td>${ptName(k)}</td><td>${fmtDeg(N[k])}</td><td>${fmtDeg(N[k]+arc)}</td></tr>`).join('')}</table><h4>1° içindeki yönlendirme açıları</h4>${hits.length?ul(hits):'<p>Yok.</p>'}`,['Güneş yayı = ilerletilmiş Güneş − doğum Güneşi']);}
+  if(s==='prof'){if(ch.noTime)return '<div class="note">Profeksiyon için doğum saati (yükselen) gereklidir.</div>';const a0=Math.floor(age),as=signOf(ch.asc);const rows=[];for(let a=0;a<=96;a++){const sg=(as+a)%12;rows.push(`<tr${a===a0?' class="on"':''}><td>${a}</td><td>${(a%12)+1}. ev</td><td>${SIGNS[sg].n}</td><td>${pn(TRAD_RULER[sg])}</td></tr>`);}
+    return SB('Yıllık Profeksiyon (Helenistik)',`<p>Her yaş, yükselenden başlayarak bir burç ilerler. Şu an ${a0} yaşındasın: profeksiyon <b>${(a0%12)+1}. ev, ${SIGNS[(as+a0)%12].n}</b>; geleneksel teknikte yılın yöneticisi <b>${pn(TRAD_RULER[(as+a0)%12])}</b>.</p><details><summary>Tüm yaşlar</summary><table class="tbl"><tr><th>Yaş</th><th>Ev</th><th>Burç</th><th>Yılın yöneticisi</th></tr>${rows.join('')}</table></details>`,['Geleneksel yöneticiler kullanıldı (Akrep: Mars, Kova: Satürn, Balık: Jüpiter)']);}
+  if(s==='ret'){const now=TODAY_JD(),lr=[];let j=now-30;for(let i=0;i<14;i++){let t=j;for(let n=0;n<40;n++){const d=angDiff(ch.pos.moon.lon,rawPositions(t).moon);if(Math.abs(d)<1e-5)break;t+=d/13.176;}if(t>now-28)lr.push(t);j=t+27.3;}
+    const L=lifeEvents(ch,p).filter(e=>e.own);
+    return SB('Ay Dönüşleri',`<p>Ay'ın doğum anındaki derecesine (${fmtDeg(ch.pos.moon.lon)}) döndüğü anlar:</p>${ul([...new Set(lr.map(t=>fmtJD(t,true)))].slice(0,13))}<p class="small">Ay dönüşü haritası bu anların gökyüzüdür; senin kuralın gereği yorum yapılmaz.</p>`,['Ay\'ın gerçek boylamı'])+SB('Gezegen dönüşleri ve büyük döngüler',`<table class="tbl"><tr><th>Döngü</th><th>Tarih(ler)</th><th>Yaş</th></tr>${L.map(e=>`<tr><td>${e.nm}</td><td>${e.dates.map(j=>fmtJD(j)).join(', ')}</td><td>${e.age.toFixed(1)}</td></tr>`).join('')}</table>`,['Jüpiter ~11,9 yıl, Satürn ~29,5 yıl, Kiron ~50 yıl, Ay düğümleri ~18,6 yıl, Uranüs karşıtlığı ~42 yaş']);}
+  if(s==='lun'){const now=TODAY_JD(),N=natalPts(ch),L=lunList(now-1,now+400);
+    return SB('Önümüzdeki yeni ay, dolunay ve tutulmaların doğum haritanla ilişkisi',`<table class="tbl"><tr><th>Tarih</th><th>Olay</th><th>Burç</th>${ch.noTime?'':'<th>Haritanda</th>'}<th>Doğum noktasına 3° yakın</th></tr>${L.map(l=>{const near=Object.keys(N).filter(k=>Math.abs(angDiff(l.lon,N[k]))<3||Math.abs(Math.abs(angDiff(l.lon,N[k]))-180)<3).map(k=>`${ptName(k)} (${Math.abs(angDiff(l.lon,N[k]))<3?'kavuşum':'karşıt'})`);return `<tr${l.eclipse?' class="on"':''}><td>${fmtJD(l.jd,true)}</td><td>${l.eclipse?eclipseInfo(l).kind:l.type==='new'?'Yeni Ay':'Dolunay'}</td><td>${fmtDeg(l.lon)}</td>${ch.noTime?'':`<td>${houseOf(l.lon,ch.cusps)}. ev</td>`}<td>${near.join(', ')||'—'}</td></tr>`;}).join('')}</table><p class="small">Astronomik hesaptır; yorum içermez.</p>`,['Meeus tutulma hesabı','Ay evreleri saniye doğruluğunda']);}
+  if(s==='dig'){const day=!!ch.isDay;let tot=0;const rows=['sun','moon','mercury','venus','mars','jupiter','saturn'].map(k=>{const d=essDignity(k,ch.pos[k].lon,day);tot+=d.sc;return `<tr><td>${pn(k)}</td><td>${fmtDeg(ch.pos[k].lon)}</td><td>${d.o.join(', ')}</td><td><b>${d.sc>0?'+':''}${d.sc}</b></td></tr>`;});
+    return SB('Gezegen Asaletleri (geleneksel)',`<p>${day?'Gündüz':'Gece'} haritası; üçlük yöneticisi buna göre seçildi.</p><table class="tbl"><tr><th>Gezegen</th><th>Konum</th><th>Asaletler</th><th>Puan</th></tr>${rows.join('')}</table><p class="small">Sınırlar: Mısır sınırları. Yüzler: Kalde sırası. Üçlükler: Dorotheus. Modern gezegenler bu sistemde yer almaz.</p>`,['Ptolemaios ve Dorotheus asalet tabloları']);}
+  if(s==='rul'){if(ch.noTime)return '<div class="note">Ev yöneticileri için doğum saati gereklidir.</div>';
+    return SB('Ev yöneticilerinin ayrıntılı tablosu',`<table class="tbl"><tr><th>Ev</th><th>Başlangıç</th><th>Geleneksel yönetici</th><th>Modern yönetici</th><th>Yöneticinin yeri</th><th>Evdeki gezegenler</th></tr>${[...Array(12)].map((_,i)=>{const sg=signOf(ch.cusps[i]),tr=TRAD_RULER[sg],md=SIGNS[sg].ruler,inside=SK.filter(k=>ch.pos[k].house===i+1);return `<tr><td>${i+1}</td><td>${fmtDeg(ch.cusps[i])}</td><td>${pn(tr)}</td><td>${md!==tr?pn(md):'—'}</td><td>${sgn(ch.pos[tr].sign)}, ${ch.pos[tr].house}. ev</td><td>${inside.map(pn).join(', ')||'—'}</td></tr>`;}).join('')}</table>`,[`Ev sistemi: ${ch.sys}`]);}
+  if(s==='bal'){const{el,md}=elementBalance(ch),te=el.reduce((a,b)=>a+b,0),tm=md.reduce((a,b)=>a+b,0);const bar=(v,t,c)=>`<div class="pbar"><i style="width:${(v/t*100).toFixed(0)}%;background:${c}"></i></div>`;
+    return SB('Element ve nitelik dengesi',`<table class="tbl">${EL_N.map((n,i)=>`<tr><td>${cap(n)}</td><td style="width:60%">${bar(el[i],te,['#d0654f','#7c9a52','#7fa7c9','#3f7aa8'][i])}</td><td>%${Math.round(el[i]/te*100)}</td></tr>`).join('')}</table><table class="tbl">${MOD_N.map((n,i)=>`<tr><td>${cap(n)}</td><td style="width:60%">${bar(md[i],tm,'#9c7426')}</td><td>%${Math.round(md[i]/tm*100)}</td></tr>`).join('')}</table>`,['Ağırlıklar: Güneş ve Ay 3, kişisel gezegenler 1,5, Jüpiter ve Satürn 1, dış gezegenler 0,5, yükselen 2,5']);}
+  if(s==='ved'){const ay=LAHIRI(ch.jd),K=['sun','moon','mars','mercury','jupiter','venus','saturn'];const sid=l=>nrm(l-ay);const nk=l=>{const x=sid(l),i=Math.floor(x/(360/27));return{i,n:NAK[i],pada:Math.floor((x%(360/27))/(360/108))+1,lord:NAK_LORD[i%9]};};const rahu=sid(ch.pos.node.lon);
+    return SB('Vedik astroloji (sideral, Lahiri ayanamsa)',`<p>Ayanamsa: ${ay.toFixed(3)}°. Vedik sistem burçları sabit yıldızlara göre ölçer; Batı (tropikal) haritasıyla karıştırılmamalıdır.</p><table class="tbl"><tr><th>Graha</th><th>Rashi</th><th>Derece</th><th>Nakşatra</th><th>Pada</th><th>Nakşatra yöneticisi</th></tr>${K.map(k=>{const x=sid(ch.pos[k].lon),n=nk(ch.pos[k].lon);return `<tr><td>${pn(k)}</td><td>${RASHI[signOf(x)]} (${SIGNS[signOf(x)].n})</td><td>${(x%30).toFixed(2)}°</td><td>${n.n}</td><td>${n.pada}</td><td>${n.lord}</td></tr>`;}).join('')}<tr><td>Rahu</td><td>${RASHI[signOf(rahu)]}</td><td>${(rahu%30).toFixed(2)}°</td><td>${nk(ch.pos.node.lon).n}</td><td>${nk(ch.pos.node.lon).pada}</td><td></td></tr><tr><td>Ketu</td><td>${RASHI[signOf(rahu+180)]}</td><td>${((rahu+180)%30).toFixed(2)}°</td><td>${nk(ch.pos.node.lon+180).n}</td><td>${nk(ch.pos.node.lon+180).pada}</td><td></td></tr>${ch.noTime?'':`<tr><td>Lagna</td><td>${RASHI[signOf(sid(ch.asc))]}</td><td>${(sid(ch.asc)%30).toFixed(2)}°</td><td>${nk(ch.asc).n}</td><td>${nk(ch.asc).pada}</td><td></td></tr>`}</table><p>Ay nakşatran (Janma nakşatra): <b>${nk(ch.pos.moon.lon).n}</b>, ${nk(ch.pos.moon.lon).pada}. pada.</p><p class="small">Vimshottari dasha dönemleri gelecek zamanlaması içerdiği için senin kuralın gereği eklenmedi.</p>`,['Lahiri ayanamsa (J2000: 23,853°, yıllık 50,29″)']);}
+  if(s==='cin'){const c=chineseYear(ch.jd);return SB('Çin astrolojisi (yıl burcu)',`<div class="big3"><div><span>Hayvan</span><b>${c.an}</b></div><div><span>Element</span><b>${c.el}</b></div><div><span>Kutup</span><b>${c.yy}</b></div></div><p>Çin takviminde yıl, kış gündönümünden sonraki ikinci yeni ayda başlar${c.cny?` (o yıl: ${fmtJD(c.cny)})`:''}. Bu yüzden Ocak ya da Şubat başında doğanların Çin yılı bir önceki yıl olabilir.</p><p class="small">Çin astrolojisi Batı astrolojisinden bağımsız bir sistemdir; burada yalnızca yıl hayvanı ve elementi hesaplanır.</p>`,['60 yıllık döngü (10 gök kökü × 12 yer dalı)','Yeni yıl: kış gündönümünden sonraki 2. yeni ay']);}
+  if(s==='rek')return secRektif(ch,p);
+  return '';}
+function bindLab(){$$('[data-lab]').forEach(b=>b.onclick=()=>{STATE.labS=b.dataset.lab;render();});if($('#labDGo'))$('#labDGo').onclick=()=>{STATE.labD=$('#labD').value||null;render();};if($('#rkGo'))$('#rkGo').onclick=runRektif;}
+// ---------- GUNES DONUSU: gelismis (yorumsuz) ----------
+function srExtra(ch,p){const yr=+$('#srYear').value||new Date().getFullYear(),cs=(STATE.srCmp||'İstanbul, Ankara, İzmir, Mersin, Londra, New York').split(',').map(x=>x.trim()).filter(Boolean).slice(0,8);
+  const row=y=>{const jd=solarReturn(ch.pos.sun.lon,y,p.m,p.d),sr=chartFromJD(jd,p.lat,p.lon,p.sys,false);return `<tr${y===yr?' class="on"':''}><td>${y}</td><td>${fmtJD(jd,true)}</td><td>${sgn(signOf(sr.asc))}</td><td>${sgn(signOf(sr.mc))}</td><td>${sr.pos.sun.house}</td><td>${sgn(sr.pos.moon.sign)} (${sr.pos.moon.house}. ev)</td></tr>`;};
+  const jd=solarReturn(ch.pos.sun.lon,yr,p.m,p.d);
+  const cityRows=cs.map(n=>{const c=findCity(n);if(!c)return `<tr><td>${esc(n)}</td><td colspan="4" class="small">listede yok</td></tr>`;const sr=chartFromJD(jd,c.lat,c.lon,p.sys,false);return `<tr><td>${esc(c.n)}</td><td>${sgn(signOf(sr.asc))} ${Math.floor(sr.asc%30)}°</td><td>${sgn(signOf(sr.mc))}</td><td>${sr.pos.sun.house}</td><td>${sr.pos.moon.house}</td></tr>`;}).join('');
+  const sr0=chartFromJD(jd,p.lat,p.lon,p.sys,false);
+  return SB('Doğum haritasıyla çift çember',`<div class="wheelbox">${drawWheel(ch,sr0)}</div><p class="small">İç halka: Güneş Dönüşü (doğum yerine göre). Dış halka: doğum haritası.</p>`,[])+
+   SB('Önceki ve sonraki yıllarla karşılaştırma',`<table class="tbl"><tr><th>Yıl</th><th>An</th><th>Yükselen</th><th>MC</th><th>Güneş evi</th><th>Ay</th></tr>${[yr-2,yr-1,yr,yr+1,yr+2].map(row).join('')}</table>`,['Doğum yerine göre'])+
+   SB('Farklı şehirlerde aynı yılın Güneş Dönüşü',`<div class="row"><input id="srCmp" value="${esc(cs.join(', '))}" style="flex:1"><button class="btn sm" id="srCmpGo">Karşılaştır</button></div><table class="tbl"><tr><th>Şehir</th><th>Yükselen</th><th>MC</th><th>Güneş evi</th><th>Ay evi</th></tr>${cityRows}</table><p class="small">Güneş Dönüşü anı her yerde aynıdır; değişen, o anın yerel yükseleni ve evleridir. Senin kuralın gereği yıllık yorum yapılmaz.</p>`,[]);}
+
+// ===== PARA-KARIYER, COCUGUM, ILISKI REHBERI, SORU SOR =====
+// ---------- PARA, KARIYER VE YETENEK HARITASI (dogum haritasi; gelecek tahmini yok) ----------
+const KR={
+ env:['Hızlı tempolu, rekabetçi ve sonuç odaklı ortamlar; kendi kararını verebildiği yerler.','Düzenli, istikrarlı, emeğin karşılığının net olduğu ortamlar.','Çeşitliliğin, iletişimin ve fikir alışverişinin bol olduğu ortamlar.','Güvenli, insani ilişkilerin önemsendiği, anlamlı bir amaca hizmet eden ortamlar.'],
+ money:['Kazanmayı ve harcamayı hızlı yapar; bütçe planı ve "bekleme süresi" kuralı faydalı olabilir.','Biriktirmeye yatkındır; aşırı temkinin fırsatları kaçırmasına dikkat edilebilir.','Birden fazla gelir fikrine yönelebilir; küçük harcamaları takip etmek faydalı olabilir.','Duygusal harcama ve fazla verme eğilimi olabilir; harcamadan önce bir gün beklemek iyi gelebilir.'],
+ alt:['Danışmanlık, kısa projeler, kendi küçük işi, spor ya da etkinlik organizasyonu','Kira geliri, el emeği ürünler, uzun vadeli birikim ve kalıcı yatırım araçları (uzman görüşüyle)','Yazı, içerik üretimi, eğitim videoları, çeviri, aracılık','Danışmanlık, bakım hizmetleri, sanat ve el yapımı ürünler, topluluk temelli işler']};
+function trait(m,keys){let s=0;for(const[cond,w]of keys)if(cond)s+=w;return Math.max(0,Math.min(10,s));}
+function secKariyer(ch,p){
+  const m=CM(ch,p),{P}=m,hs=h=>m.hasH?m.inH(h):[],cusp=h=>m.hasH?m.cuspS(h):null,mc=m.hasH?signOf(ch.mc):null,sE=k=>SIGNS[P[k].s].el;
+  const emph=s=>[P.sun.s,P.moon.s,m.ascS,mc].filter(x=>x===s).length;
+  const T={
+   bag:trait(m,[[m.el[0]>m.el[1],2],[m.md[0]>=m.md[1],2],[P.uranus.h&&[1,10].includes(P.uranus.h),2],[emph(0)+emph(4)+emph(10)>0,2],[P.mars.dg==='Yönetici'||P.mars.dg==='Yücelim',2]]),
+   kur:trait(m,[[m.el[1]>=m.el[0],2],[emph(9)+emph(5)+emph(1)>0,2],[P.saturn.h&&[6,10].includes(P.saturn.h),2],[m.md[1]>m.md[0],2],[hs(6).length>0,2]]),
+   gir:trait(m,[[m.el[0]>=6,3],[m.md[0]>=m.md[2],2],[hasAsp(m,'mars','jupiter'),2],[m.dom==='mars'||m.dom==='sun'||m.dom==='jupiter',3]]),
+   tic:trait(m,[[emph(2)+emph(5)>0,3],[m.dom==='mercury',3],[hs(3).length>0,2],[hasAsp(m,'mercury','venus')||hasAsp(m,'mercury','jupiter'),2]]),
+   yon:trait(m,[[m.dom==='saturn'||m.dom==='sun',3],[emph(4)+emph(9)>0,2],[hs(10).length>0,3],[hasAsp(m,'sun','saturn'),2]]),
+   egi:trait(m,[[m.dom==='jupiter'||m.dom==='mercury',3],[emph(8)+emph(2)>0,2],[hs(9).length+hs(3).length>0,3],[hasAsp(m,'mercury','jupiter'),2]]),
+   tek:trait(m,[[emph(10)>0,3],[m.dom==='uranus'||m.dom==='mercury',3],[hasAsp(m,'mercury','uranus'),2],[hs(11).length>0,2]]),
+   fin:trait(m,[[emph(1)+emph(7)+emph(9)>0,3],[hs(2).length+hs(8).length>0,3],[m.dom==='saturn'||m.dom==='venus',2],[hasAsp(m,'venus','saturn')||hasAsp(m,'jupiter','saturn'),2]])};
+  const L={bag:'Bağımsız çalışma',kur:'Kurumsal çalışma',gir:'Girişimcilik',tic:'Ticaret ve pazarlama',yon:'Yöneticilik ve sorumluluk',egi:'Eğitim ve öğretme',tek:'Teknoloji',fin:'Finans ve sayılar'};
+  const bars=Object.entries(T).map(([k,v])=>`<tr><td>${L[k]}</td><td style="width:55%"><div class="pbar"><i style="width:${v*10}%;background:#9c7426"></i></div></td><td>${v}/10</td></tr>`).join('');
+  let cd=null;try{cd=careerData(ch,STATE.num||numerology(p)).slice(0,10).map(([c])=>c);}catch(_){}
+  const s2=cusp(2)??P.venus.s,r2=m.hasH?m.ruler(2):null,r10=m.hasH?m.ruler(10):null;
+  let o=`<section class="card hero"><h3>${esc(p.name||'')}${p.name?' — ':''}Para, Kariyer ve Yetenek Haritası</h3><p>2., 6., 8., 10. ve 11. evler, MC, ev yöneticileri, Jüpiter, Satürn, Merkür ve Venüs birlikte değerlendirildi.</p><div class="note small">Bu bölüm zenginlik garantisi, yatırım yönlendirmesi ya da finansal başarı tahmini değildir. Puanlar haritadaki sembolik göstergelerin sayımıdır; yetenek ölçümü değildir. Yatırım kararları için yetkili bir uzmana danışın.</div></section>`+noteTop(m);
+  o+=SB('Sembolik yetenek ve eğilim alanları',`<table class="tbl">${bars}</table><p class="small">Her puan, ilgili alanı geleneksel olarak işaret eden göstergelerin kaç tanesinin haritada bulunduğunu gösterir.</p>`,[elLab(m),`Baskın gezegen: ${pn(m.dom)}`,mc!=null?`MC ${sgn(mc)}`:'']);
+  o+=SB('Hangi meslek türleri ilgisini çekebilir?',`${cd?`<div class="chips">${cd.map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>`:''}<p>${['Hızlı kavrayış ve ikna gücü öne çıkıyor: hitabet, liderlik ve girişimcilik geliştirebileceği alanlar.','Somutlaştırma gücü öne çıkıyor: zanaat, düzenleme, hesap ve el becerisi geliştirebileceği alanlar.','Bağlantı kurma gücü öne çıkıyor: yazı, öğretmek, iletişim ve teknoloji geliştirebileceği alanlar.','Sezgi ve hayal gücü öne çıkıyor: sanat, danışmanlık, şifa veren işler ve hikâye anlatıcılığı geliştirebileceği alanlar.'][sE('mercury')]}</p>${mc!=null?`<p>MC ${sgn(mc)} burcunda: toplumda ${SIGNS[mc].kw.split(', ').slice(0,2).join(' ve ')} biri olarak tanınmak isteyebilir. ${PL[r10]?`10. evin yöneticisi ${pn(r10)} ${P[r10].h}. evde; kariyer ${HOUSES[P[r10].h-1].dom} ile bağlantılı olabilir.`:''}</p>`:''}`,[pLab(m,'mercury'),mc!=null?`MC ${sgn(mc)}, 10. ev yöneticisi ${pn(r10)}`:'',...hs(10).map(k=>pLab(m,k))],'mercury');
+  o+=SB('Nasıl bir çalışma ortamında rahat olabilir?',`<p>${KR.env[m.domEl]}</p><p>${T.bag>T.kur?'Bağımsız çalışma göstergeleri, kurumsal çalışma göstergelerinden fazla: kendi alanını yönetebildiği, özerk işlerde daha rahat olabilir.':T.kur>T.bag?'Kurumsal çalışma göstergeleri öne çıkıyor: net yapısı, sorumlulukları ve süreklilik sunan işlerde daha rahat olabilir.':'Bağımsız ve kurumsal çalışma göstergeleri dengede; iki ortamı birleştiren yapılar (kurum içinde özerk bir rol gibi) uygun olabilir.'}</p>${m.hasH?`<p>6. ev (günlük iş) ${sgn(cusp(6))} burcunda: günlük çalışma temposu ${SIGNS[cusp(6)].style}.</p>`:''}`,[elLab(m),m.hasH?`6. ev ${sgn(cusp(6))}`:'']);
+  o+=SB('Girişimcilik, ticaret, yöneticilik, eğitim, teknoloji ve finans',ul([`<b>Girişimcilik (${T.gir}/10):</b> ${T.gir>=6?'Risk alma ve başlatma göstergeleri güçlü.':T.gir>=3?'Bazı girişimci göstergeleri var; ortaklıkla ya da küçük adımlarla denenebilir.':'Girişimci göstergeleri zayıf; güvence sunan yapılar daha uygun olabilir.'}`,
+   `<b>Ticaret ve pazarlama (${T.tic}/10):</b> ${T.tic>=5?'İletişim ve ikna göstergeleri belirgin.':'İletişim göstergeleri orta düzeyde; ürün ya da içerik tarafı daha uygun olabilir.'}`,
+   `<b>Yöneticilik (${T.yon}/10):</b> ${T.yon>=5?'Sorumluluk alma ve yön verme göstergeleri belirgin.':'Yöneticilik tek başına öne çıkmıyor; uzmanlık rolleri daha rahat olabilir.'}`,
+   `<b>Eğitim ve öğretme (${T.egi}/10):</b> ${T.egi>=5?'Öğrenme ve öğretme göstergeleri güçlü.':'Öğretme, ana uğraş olmaktan çok yan bir yetenek olarak görünüyor.'}`,
+   `<b>Teknoloji (${T.tek}/10) ve finans (${T.fin}/10):</b> ${T.tek>=5?'Teknoloji ve yenilik göstergeleri var. ':''}${T.fin>=5?'Sayılar, kaynak yönetimi ve uzun vade göstergeleri var.':'Finans göstergeleri belirgin değil.'}`]),[elLab(m),`Baskın gezegen ${pn(m.dom)}`,...hs(2).concat(hs(8),hs(11)).map(k=>pLab(m,k))]);
+  o+=SB('Para yönetimi, risk ve sabır',`<p>${KR.money[SIGNS[s2].el]}</p>${r2?`<p>2. evin yöneticisi ${pn(r2)} ${P[r2].h}. evde: kazanç ${HOUSES[P[r2].h-1].dom} ile bağlantılı olabilir.</p>`:''}<p><b>Risk ve sabır dengesi:</b> ${SIGNS[P.mars.s].el===0||hasAsp(m,'mars','jupiter')?'Mars göstergeleri risk almaya yatkınlık işaret ediyor':'Mars göstergeleri temkinli bir tempo işaret ediyor'}; Satürn ${sgn(P.saturn.s)} burcunda${P.saturn.h?`, ${P.saturn.h}. evde`:''}. ${hasAsp(m,'mars','saturn',m.hard)?'Mars–Satürn gerilimi, ya fazla acele ya da fazla bekleme arasında gidip gelmeyi gösterebilir.':'Sabır göstergesi olarak Satürn\'ün konumu dikkate alınabilir.'}</p>
+   <p><b>Maddi hedeflerde güçlü taraf:</b> ${SIGNS[P.jupiter.s].kw.split(', ')[0]} ve ${SIGNS[P.saturn.s].kw.split(', ')[0]} bir yaklaşım. <b>Dikkat edilebilecek taraf:</b> ${SIGNS[P.venus.s].weak.split(', ')[0].toLocaleLowerCase('tr')}.</p>`,[m.hasH?`2. ev ${sgn(s2)}, yöneticisi ${pn(r2)}`:pLab(m,'venus'),pLab(m,'mars'),pLab(m,'saturn'),pLab(m,'jupiter')],'saturn');
+  o+=SB('Kendini geliştirebileceği alanlar ve alternatif gelir fikirleri',`<p>${['Haritada ateş az: kendini öne çıkarmak ve risk almak emek isteyebilir; küçük cesaret adımları (sunum yapmak, fikir önermek) gelişim alanı olabilir.','Haritada toprak az: fikirleri somut plana dökmek ve sürdürmek emek isteyebilir; proje yönetimi ve düzen alışkanlıkları gelişim alanı olabilir.','Haritada hava az: geri çekilip bakmak, iletişim kurmak ve ağ oluşturmak emek isteyebilir; yazılı ve sözlü ifade gelişim alanı olabilir.','Haritada su az: insanların duygularını okumak ve ilişki kurmak emek isteyebilir; empati ve ekip içi iletişim gelişim alanı olabilir.'][m.weakEl]}</p><p><b>Genel fikirler:</b> ${KR.alt[SIGNS[s2].el]}.</p><p class="small">Bunlar genel fikirlerdir; yatırım ya da iş önerisi değildir.</p>`,[elLab(m)]);
+  return o;}
+// ---------- COCUGUMU DAHA IYI TANIYORUM ----------
+const CK={
+ learn:['Hareketle, deneyerek ve kısa, canlı etkinliklerle öğrenmeyi seviyor olabilir.','Somut örneklerle, adım adım ve tekrar ederek öğrenmeyi seviyor olabilir.','Sorular sorarak, konuşarak, okuyarak ve farklı konular arasında geçiş yaparak öğrenmeyi seviyor olabilir.','Hikâyelerle, resimlerle ve güvendiği bir yetişkinin yanında öğrenmeyi seviyor olabilir.'],
+ art:['Ritim, dans, tiyatro, hızlı çizimler','Seramik, kil, el işi, bahçe, yemek yapma','Yazı, şiir, müzik aleti, bilmece ve kelime oyunları','Resim, suluboya, müzik dinleme, hikâye anlatma'],
+ sport:['Takım sporları, koşu, dövüş sporları','Yürüyüş, yüzme, bisiklet, doğa etkinlikleri','Masa tenisi, satranç kulübü, grup oyunları','Yüzme, dans, binicilik, sakin açık hava etkinlikleri'],
+ emo:['Hareket edebilmeye, hızlı tepki görmeye ve takdir edilmeye ihtiyaç duyabilir.','Düzene, öngörülebilir rutinlere ve fiziksel yakınlığa ihtiyaç duyabilir.','Dinlenmeye, sorularının ciddiye alınmasına ve arkadaşlığa ihtiyaç duyabilir.','Güvende hissetmeye, duygularının anlaşılmasına ve sakin bir ortama ihtiyaç duyabilir.'],
+ motive:['Küçük hedefler ve meydan okumalar','Somut ödüller ve ilerlemeyi gösteren çizelgeler','Yeni bilgiler, merak uyandıran sorular','Birlikte yapılan etkinlikler ve sevgi dolu takdir'],
+ self:['Ona sorumluluk ve liderlik fırsatları verin.','Becerisini geliştirdiği uzun soluklu bir uğraş bulun.','Fikirlerini dinleyin, sunmasına fırsat verin.','Duygularını ifade ettiğinde onaylayın, yaratıcı ürünlerini sergileyin.'],
+ disc:['Kısa, net kurallar ve enerjisini boşaltabileceği alanlar','Önceden bildirilen, tutarlı kurallar','Kuralların nedenini açıklamak','Sert ses yerine sakin ve şefkatli sınırlar'],
+ avoid:['Uzun süre hareketsiz bırakmak, sabırsızlığını aşağılamak','Ani değişiklikler, aceleye getirmek','Sorularını geçiştirmek, "çok konuşuyorsun" demek','Duygularını küçümsemek, yüksek sesle azarlamak'],
+ act:['Bir spor kulübüne birkaç hafta deneme katılımı','Bir bitki yetiştirme ya da yemek tarifi projesi','Bir kütüphane üyeliği ve haftalık bir "merak sorusu"','Birlikte bir resim defteri ya da müzik dinleme saati']};
+function secCocuk(ch,p){const m=CM(ch,p),{P}=m,e=k=>SIGNS[P[k].s].el,me=SIGNS[m.moonAlt[0]].el,nm=esc(p.name||'Çocuğunuz');
+  let o=`<section class="card hero"><h3>Çocuğumu Daha İyi Tanıyorum</h3><p>Bu bölüm, haritası açık olan kişiyi (${nm}) bir çocuk olarak düşünür. Ebeveynlere düşünme ve gözlem önerileri sunar.</p><div class="note small">Çocuğu sabit kişilik etiketlerine hapsetmeyin. Astroloji zekâ, hastalık, psikolojik durum ya da meslek tespit etmez. Esas olan çocuğun gerçek davranışlarını gözlemlemek ve onu dinlemektir.</div></section>`+noteTop(m);
+  const Q=(t,x)=>`<div class="qa"><b>${t}</b><p>${x}</p></div>`;
+  o+=SB('İlgi alanları ve öğrenme',Q('Muhtemel ilgi alanları',`${SIGNS[P.sun.s].hobbies?SIGNS[P.sun.s].hobbies.slice(0,4).join(', '):''}`)+Q('Öğrenme biçimi hakkında düşünme önerisi',CK.learn[e('mercury')]+' Bunu gözleyerek doğrulayın.')+Q('Sanatsal faaliyetler',CK.art[e('venus')])+Q('Spor ve sosyal aktiviteler',CK.sport[e('mars')]),[pLab(m,'sun'),pLab(m,'mercury'),pLab(m,'venus'),pLab(m,'mars')],'mercury');
+  o+=SB('Duygusal dünya',Q('Duygusal ihtiyaçları',CK.emo[me])+Q('Anne ve babanın yaklaşımı',AP_MOON[m.moonAlt[0]][0].replace('Üzgünken','Üzgün olduğunda'))+Q('Motivasyon yöntemleri',CK.motive[e('mars')])+Q('Özgüvenini destekleme',CK.self[e('sun')]),[pLab(m,'moon'),pLab(m,'mars'),pLab(m,'sun')],'moon');
+  o+=SB('Sınırlar ve okul',Q('Sağlıklı disiplin',CK.disc[me])+Q('Okul hayatını destekleme',`${CK.learn[e('mercury')]} Ödev zamanı için ${['kısa ve hareketli molalar','sabit bir saat ve sakin bir köşe','konuşarak tekrar','yanında oturan bir yetişkin'][e('mercury')]} faydalı olabilir.`)+Q('Ebeveynlerin kaçınabileceği davranışlar',CK.avoid[me])+Q('Yeteneklerini keşfetmek için etkinlik önerileri',`${CK.act[m.domEl]}; ayrıca ${CK.act[m.secEl].toLocaleLowerCase('tr')}.`),[pLab(m,'moon'),pLab(m,'mercury'),elLab(m)],'saturn');
+  return o;}
+// ---------- ILISKI REHBERI (uyum testine eklenir) ----------
+const REL_T={es:['Eş','eşiniz'],sev:['Sevgili','sevgiliniz'],ac:['Anne ve çocuk','çocuğunuz'],bc:['Baba ve çocuk','çocuğunuz'],kar:['Kardeş','kardeşiniz'],ark:['Arkadaş','arkadaşınız'],ort:['İş ortağı','ortağınız'],yon:['Yönetici ve çalışan','iş arkadaşınız']};
+function relGuide(a,b,rel,bName,pa,pb){
+  const ma=CM(a,pa),mb=CM(b,pb),nb=esc(bName||'diğer kişi'),na=esc(pa.name||'siz'),R=REL_T[rel]||REL_T.ark,romantic=rel==='es'||rel==='sev',work=rel==='ort'||rel==='yon';
+  const E=(m,k)=>SIGNS[m.P[k].s].el,same=(x,y)=>x===y||({0:2,2:0,1:3,3:1})[x]===y;
+  const comp=(k1,k2)=>same(E(ma,k1),E(mb,k2))?'uyumlu (aynı ya da destekleyici element)':'farklı ritimde';
+  const cross=findAspects(a.pos,null,b.pos).filter(x=>SK.includes(x.p)&&SK.includes(x.q)&&!x.asp.minor),soft=cross.filter(x=>x.asp.t==='h').slice(0,5),hard=cross.filter(x=>x.asp.t==='s').slice(0,5);
+  const Q=(t,x)=>`<div class="qa"><b>${t}</b><p>${x}</p></div>`;
+  let o=`<h3 class="sech">${R[0]} İlişkisi Rehberi</h3><div class="note small">Sembolik uyum puanı bilimsel bir ilişki testi ya da ilişkinin başarı olasılığı değildir. Bu rehber iki kişinin birbirini daha iyi anlaması içindir.</div>`;
+  o+=SB('Alan alan karşılaştırma',
+   Q('İletişim',`Siz: ${AP_MERC[E(ma,'mercury')][0]} ${cap(R[1])}: ${AP_MERC[E(mb,'mercury')][0]} Merkürleriniz ${comp('mercury','mercury')}.`)
+   +Q('Duygusal ihtiyaçlar',`Siz: ${AP_MOON[ma.moonAlt[0]][3]} ${cap(R[1])}: ${AP_MOON[mb.moonAlt[0]][3]} Aylarınız ${comp('moon','moon')}.`)
+   +(romantic||rel==='es'?Q('Sevgi gösterme biçimleri',`Siz: ${AP_VENUS[ma.P.venus.s][2]} ${cap(R[1])}: ${AP_VENUS[mb.P.venus.s][2]}`):Q('Takdir gösterme biçimleri',`Siz: ${AP_SUN[E(ma,'sun')][0]} ${cap(R[1])}: ${AP_SUN[E(mb,'sun')][0]}`))
+   +Q('Güven',`Sizin için: ${AP_SAT[E(ma,'saturn')][1]} ${cap(R[1])} için: ${AP_SAT[E(mb,'saturn')][1]}`)
+   +Q('Tartışma tarzı',`Siz: ${AP_MARS[E(ma,'mars')][2]} ${cap(R[1])}: ${AP_MARS[E(mb,'mars')][2]} Marslarınız ${comp('mars','mars')}.`)
+   +Q('Ortak ilgi alanları',`${[...new Set(SIGNS[ma.P.sun.s].likes.filter(x=>SIGNS[mb.P.sun.s].likes.concat(SIGNS[mb.P.venus.s].likes).includes(x)))].join(', ')||'Güneş ve Venüs burçlarınızın sevdiği şeyler farklı; bu, birbirinize yeni dünyalar açma fırsatıdır'}.`)
+   +Q('Maddi konulara yaklaşım',`Siz: ${MONEY3[SIGNS[ma.hasH?ma.cuspS(2):ma.P.venus.s].el]} ${cap(R[1])}: ${MONEY3[SIGNS[mb.hasH?mb.cuspS(2):mb.P.venus.s].el]}`)
+   +(work?'':Q('Aile hayatına yaklaşım',`Siz: ${AP_FAMILY[SIGNS[ma.moonAlt[0]].mod]} ${cap(R[1])}: ${AP_FAMILY[SIGNS[mb.moonAlt[0]].mod]}`)),
+   [pLab(ma,'mercury'),pLab(mb,'mercury'),pLab(ma,'moon'),pLab(mb,'moon'),pLab(ma,'venus'),pLab(mb,'venus'),pLab(ma,'mars'),pLab(mb,'mars')],'mercury');
+  o+=SB('Birbirini destekleme ve zorlayabilecek davranışlar',`<h4>Destekleyici bağlar</h4>${soft.length?ul(soft.map(x=>`Sizin ${pn(x.p)} – ${nb}'nin ${pn(x.q)} ${x.asp.n.toLocaleLowerCase('tr')}: ${SOFT[pkey(x.p,x.q)]||`${PL[x.p].theme.split(',')[0]} ile ${PL[x.q].theme.split(',')[0]} birbirini destekler.`}`)):'<p>Belirgin uyumlu açı yok.</p>'}<h4>Zorlayabilecek davranışlar</h4>${hard.length?ul(hard.map(x=>`Sizin ${pn(x.p)} – ${nb}'nin ${pn(x.q)} ${x.asp.n.toLocaleLowerCase('tr')}: ${(HARD[pkey(x.p,x.q)]||[`${PL[x.p].theme.split(',')[0]} ile ${PL[x.q].theme.split(',')[0]} arasında sürtüşme olabilir.`])[0]}`)):'<p>Belirgin gergin açı yok.</p>'}`,[...soft.concat(hard).map(x=>`${pn(x.p)}(siz)–${pn(x.q)}(o) ${x.asp.n} ${x.orb.toFixed(1)}°`)],'venus');
+  o+=SB('Sağlıklı sınırlar ve karşılıklı yaklaşım rehberi',`<div class="grid2"><div><h4>${cap(R[1])}na nasıl yaklaşabilirsiniz?</h4>${ul([AP_MERC[E(mb,'mercury')][0],AP_MOON[mb.moonAlt[0]][0],AP_MARS[E(mb,'mars')][0],BOUND[SIGNS[mb.moonAlt[0]].el].replace('Sınırlar: ','')])}</div><div><h4>${cap(R[1])} size nasıl yaklaşabilir?</h4>${ul([AP_MERC[E(ma,'mercury')][0],AP_MOON[ma.moonAlt[0]][0],AP_MARS[E(ma,'mars')][0],BOUND[SIGNS[ma.moonAlt[0]].el].replace('Sınırlar: ','')])}</div></div><p class="small">${rel==='ac'||rel==='bc'?'Ebeveyn–çocuk ilişkisinde sorumluluk yetişkindedir; bu rehber çocuğu etiketlemek için değil, onu daha iyi dinlemek içindir.':rel==='yon'?'İş ilişkilerinde rehber, karşılıklı saygı ve açık iletişim içindir; bir tarafın diğerini yönlendirmesi için değil.':'Bir ilişki iki tarafın emeğiyle gelişir; kendi ihtiyaçlarınızı da açıkça söyleyin.'}</p>`,[]);
+  // kompozit ve Davison
+  const mid=(x,y)=>nrm(x+angDiff(y,x)/2),comp2=SK.map(k=>`<tr><td>${pn(k)}</td><td>${fmtDeg(mid(a.pos[k].lon,b.pos[k].lon))}</td></tr>`).join('');
+  const djd=(a.jd+b.jd)/2,dlat=((pa.lat||0)+(pb.lat||0))/2,dlon=(pa.lon||0)+angDiff(pb.lon||0,pa.lon||0)/2,dv=chartFromJD(djd,dlat,dlon,pa.sys||'P',a.noTime||b.noTime);
+  o+=SB('Kompozit ve Davison ilişki haritaları',`<div class="grid2"><div><h4>Kompozit (orta noktalar)</h4><table class="tbl">${comp2}${!a.noTime&&!b.noTime?`<tr><td>Yükselen</td><td>${fmtDeg(mid(a.asc,b.asc))}</td></tr><tr><td>MC</td><td>${fmtDeg(mid(a.mc,b.mc))}</td></tr>`:''}</table></div><div><h4>Davison (zaman ve yer ortası)</h4><p class="small">${fmtJD(djd,true)} · enlem ${dlat.toFixed(2)}°, boylam ${dlon.toFixed(2)}°</p><div class="wheelbox">${drawWheel(dv)}</div></div></div><p class="small">Kompozit harita iki haritanın orta noktalarından, Davison haritası iki doğumun zaman ve mekân ortasındaki gerçek gökyüzünden kurulur. Tablolar hesap amaçlıdır.</p>`,['Kompozit: kısa yay orta noktaları','Davison: doğum anları ve yerlerinin ortası']);
+  return o;}
+// ---------- HARITAMA SORU SOR (kural tabanli) ----------
+const ASK=[
+ {k:['hassas','alıngan','kırılgan','incin'],q:'Ben neden bazı konularda çok hassasım?',f:'sens'},
+ {k:['güçlü','yetenek','iyi olduğum','güçlü yön'],q:'Hangi alanlarda güçlü yönlerim var?',f:'strong'},
+ {k:['iletişim','konuş','anlaş','ifade'],q:'Neden insanlarla iletişimde zorlanabiliyorum?',f:'comm'},
+ {k:['iş','kariyer','meslek','çalış'],q:'İş hayatımda neye dikkat etmeliyim?',f:'work'},
+ {k:['motive','motivasyon','heves','enerji'],q:'Beni en çok ne motive edebilir?',f:'motiv'},
+ {k:['alışkanlık','engel','zorlay','kötü huy'],q:'Hangi alışkanlıklarım beni zorlayabilir?',f:'habit'},
+ {k:['ilişki','aşk','evlilik','eş','sevgi'],q:'İlişkilerimde nelere dikkat etmeliyim?',f:'rel'},
+ {k:['tema','amaç','gelişim','hayat dersi','neden buradayım'],q:'Hayatımın temel gelişim teması nedir?',f:'theme'},
+ {k:['bu yıl','bu sene','döngü','transit'],q:'Bu yıl hangi astrolojik döngüler öne çıkıyor?',f:'year'},
+ {k:['geçmiş','yaşadığım','olay','dönem'],q:'Geçmişte yaşadığım önemli dönemlerde hangi açılar bulunuyordu?',f:'past'},
+ {k:['gezegen','anlatan','baskın'],q:'Beni en iyi anlatan gezegen hangisi?',f:'planet'},
+ {k:['para','maddi','harcama','birikim'],q:'Para konusunda nelere dikkat etmeliyim?',f:'money'},
+ {k:['öfke','sinir','kızgın'],q:'Öfkemle nasıl baş edebilirim?',f:'anger'},
+ {k:['yalnız','içe kapan'],q:'Yalnızlıkla ilişkim nasıl?',f:'alone'}];
+function askAnswer(f,ch,p){const m=CM(ch,p),S=deepParts(m),strip=h=>h;const pick=k=>`${S[k].b}${basis(S[k].bs)}`;
+  if(f==='sens')return pick('sens');if(f==='strong')return pick('strong');if(f==='motiv')return pick('motiv');if(f==='anger')return pick('anger');if(f==='alone')return pick('alone');if(f==='money')return pick('money');
+  if(f==='comm'){const hd=m.hard.filter(a=>[a.p,a.q].includes('mercury')&&HARD[pkey(a.p,a.q)]);return `<p class="dtext">${DEEP_MERC[m.P.mercury.s]}</p>${hd.length?ul(hd.map(a=>HARD[pkey(a.p,a.q)][0])):'<p>Merkür\'e belirgin bir gergin açı yok; zorlanma daha çok ruh hâline ve ortama bağlı olabilir.</p>'}<p>${AP_MERC[elOf(m,'mercury')][1]}</p>`+basis([pLab(m,'mercury'),...hd.map(aspLabel)]);}
+  if(f==='work')return pick('power')+pick('talent');if(f==='rel')return pick('love')+`<p>${HARD[pkey('venus','saturn')]&&hasAsp(m,'venus','saturn',m.hard)?HARD['venus-saturn'][0]:''}</p>`;
+  if(f==='habit')return pick('shadow');if(f==='theme')return `<p class="dtext">Temel gelişim teması: <b>${NODE_SIGN[m.nodeS].go}</b>. Olgunlaşma alanı: <b>${SAT_SIGN[m.P.saturn.s]}</b>.</p>`+basis([pLab(m,'node'),pLab(m,'saturn')]);
+  if(f==='planet')return `<p class="dtext">${DP_PLANET_CORE[m.dom]}</p>`+basis([`Baskın gezegen: ${pn(m.dom)}`,'Yükselen yöneticisi, açısal konum, asalet ve açı sayısından puanlandı']);
+  if(f==='year'){const y=new Date().getFullYear(),L=lifeEvents(ch,p).filter(e=>e.dates.some(j=>yearOf(j)===y));return L.length?`<p>${y} yılında doğum haritana tam açı yapan yavaş gezegen geçişleri (astronomik):</p>${ul(L.map(e=>`${e.nm}: ${e.dates.filter(j=>yearOf(j)===y).map(j=>fmtJD(j)).join(', ')}`))}<p class="small">Senin kuralın gereği bu yılın geçişleri yorumlanmaz.</p>`:`<p>${y} yılında yavaş gezegenlerden doğum haritana tam bir büyük geçiş yok.</p>`;}
+  if(f==='past'){const L=evList(p);return L.length?`<p>Girdiğin olayların tarihlerindeki açılar:</p>${ul(L.map(e=>{const[y,mm,d]=e.s.split('-').map(Number);return `<b>${esc(e.type)}</b> (${e.s.split('-').reverse().join('.')}): ${sigAt(ch,julian(y,mm,d,9)).filter(s=>!s.house).map(s=>s.t).join(', ')||'dar orblu açı yok'}`;}))}`:'<p>Henüz olay girmedin. "Geçmişimi Analiz Et" bölümüne olaylarını yazarsan bu soruyu cevaplayabilirim.</p>';}
+  return '';}
+function secSor(ch,p){return `<section class="card hero"><h3>Haritama Soru Sor</h3><p>Hazır sorulardan birini seç ya da kendi sorunu yaz. Cevaplar doğum haritandaki göstergelerden kural tabanlı olarak üretilir.</p><div class="note small">Bu bir yapay zekâ sohbeti değildir; anahtar kelimelere göre hazır bölümlerden cevap getirir. Anlayamadığı soruda bunu açıkça söyler. Geleceğe dair sorular senin kuralın gereği cevaplanmaz.</div>
+  <div class="chips">${ASK.map((a,i)=>`<button class="chip chipbtn" data-ask="${i}">${a.q}</button>`).join('')}</div><div class="row" style="margin-top:10px"><input id="askIn" placeholder="ör. Neden bu kadar hassasım?" style="flex:1" maxlength="200"><button class="btn sm" id="askGo">Sor</button></div></section><div id="askOut"></div>`;}
+function bindSor(){const ch=STATE.ch,p=STATE.p;const show=(i,qtext)=>{const a=ASK[i];$('#askOut').innerHTML=SB(qtext?`“${esc(qtext)}”`:a.q,askAnswer(a.f,ch,p)+(qtext?`<p class="small">Bu soruyu "${a.q}" olarak anladım.</p>`:''),[]);};
+  $$('[data-ask]').forEach(b=>b.onclick=()=>show(+b.dataset.ask));
+  const go=()=>{const q=$('#askIn').value.trim(),ql=q.toLocaleLowerCase('tr');if(!q)return;if(/(gelecek|olacak mı|ne zaman|evlenecek|zengin|kazanacak|ölüm|ömür|boşan|şanslı mı|kaç yaşında)/.test(ql)){$('#askOut').innerHTML=SB(`“${esc(q)}”`,'<p>Bu soru geleceğe dair bir bilgi istiyor. Gaybı yalnızca Allah bilir; senin koyduğun kural gereği bu program geleceğe dair soruları cevaplamaz.</p>',[]);return;}
+    let best=-1,bs=0;ASK.forEach((a,i)=>{const s=a.k.filter(k=>ql.includes(k)).length;if(s>bs){bs=s;best=i;}});
+    if(best<0)$('#askOut').innerHTML=SB(`“${esc(q)}”`,`<p>Bu soruyu yanıtlayamıyorum. Şu konularda sorabilirsin: hassasiyet, güçlü yönler, iletişim, iş, motivasyon, alışkanlıklar, ilişkiler, para, öfke, yalnızlık, gelişim teması, bu yılın döngüleri, geçmiş olaylar, baskın gezegen.</p>`,[]);else show(best,q);};
+  $('#askGo').onclick=go;$('#askIn').onkeydown=e=>{if(e.key==='Enter')go();};}
+
+// ===== MANEVI DUNYAM, DEFTERLER (gunluk, ruya, sukur, dua), ZIKIR, FAVORILER, OGREN, YARISMA =====
+// Mealler kisaltilmis ve sadelestirilmistir; kaynaklar sure:ayet ve hadis kitabi/bab olarak verilir.
+const MANEVI_AYET=[
+ {t:'Şüphesiz güçlükle beraber bir kolaylık vardır.',s:'İnşirâh 94:5-6'},{t:'Kalpler ancak Allah\'ı anmakla huzur bulur.',s:'Ra\'d 13:28'},
+ {t:'Allah hiç kimseye gücünün yetmediği bir yük yüklemez.',s:'Bakara 2:286'},{t:'Kim Allah\'a tevekkül ederse, O ona yeter.',s:'Talâk 65:3'},
+ {t:'Sabır ve namazla yardım dileyin. Şüphesiz Allah sabredenlerle beraberdir.',s:'Bakara 2:153'},{t:'Allah\'ın rahmetinden ümidinizi kesmeyin.',s:'Zümer 39:53'},
+ {t:'Şüphesiz Allah adaleti, iyiliği ve yakınlara yardım etmeyi emreder.',s:'Nahl 16:90'},{t:'Eğer şükrederseniz, elbette size nimetimi artırırım.',s:'İbrâhîm 14:7'},
+ {t:'İnsan için ancak çalıştığının karşılığı vardır.',s:'Necm 53:39'},{t:'İyilikle kötülük bir olmaz. Kötülüğü en güzel olanla sav.',s:'Fussilet 41:34'},
+ {t:'Sizi birbirinizle tanışasınız diye milletlere ve kabilelere ayırdık.',s:'Hucurât 49:13'},{t:'İnsanlara karşı büyüklenme ve yeryüzünde böbürlenerek yürüme.',s:'Lokmân 31:18'},
+ {t:'Eğer kaba ve katı kalpli olsaydın, etrafından dağılıp giderlerdi.',s:'Âl-i İmrân 3:159'},{t:'Rabbim, ilmimi artır.',s:'Tâhâ 20:114'},
+ {t:'O, hanginizin daha güzel amel işleyeceğini sınamak için ölümü ve hayatı yaratandır.',s:'Mülk 67:2'},{t:'Gaybın anahtarları O\'nun katındadır; onları O\'ndan başkası bilmez.',s:'En\'âm 6:59'},
+ {t:'Biz her şeyi bir ölçüye göre yarattık.',s:'Kamer 54:49'},{t:'Güneş ve Ay bir hesaba göre hareket eder.',s:'Rahmân 55:5'},
+ {t:'Güneş\'i bir aydınlık, Ay\'ı bir nur yapan ve yılların sayısını ve hesabı bilesiniz diye Ay\'a menziller takdir eden O\'dur.',s:'Yûnus 10:5'},
+ {t:'Zannın birçoğundan kaçının; çünkü zannın bir kısmı günahtır.',s:'Hucurât 49:12'}];
+const MANEVI_HADIS=[
+ {t:'Ameller ancak niyetlere göredir.',s:'Buhârî, Bed\'ü\'l-vahy 1; Müslim, İmâre 155'},{t:'Kolaylaştırınız, zorlaştırmayınız; müjdeleyiniz, nefret ettirmeyiniz.',s:'Buhârî, İlim 11'},
+ {t:'Merhamet etmeyene merhamet olunmaz.',s:'Buhârî, Edeb 18; Müslim, Fezâil 65'},{t:'Güçlü kimse güreşte rakibini yenen değil, öfke anında kendine hâkim olandır.',s:'Buhârî, Edeb 76; Müslim, Birr 107'},
+ {t:'Allah sizin dış görünüşünüze ve mallarınıza bakmaz; kalplerinize ve amellerinize bakar.',s:'Müslim, Birr 34'},{t:'Müslüman, elinden ve dilinden Müslümanların güvende olduğu kimsedir.',s:'Buhârî, Îmân 4'},
+ {t:'Allah\'a ve ahiret gününe inanan ya hayır söylesin ya da sussun.',s:'Buhârî, Edeb 31; Müslim, Îmân 74'},{t:'Kişi sevdiği ile beraberdir.',s:'Buhârî, Edeb 96; Müslim, Birr 165'}];
+const YUNUS=[{t:'Gelin tanış olalım, işi kolay kılalım / Sevelim sevilelim, bu dünya kimseye kalmaz.',s:'Yunus Emre, Divan'},{t:'Dövene elsiz gerek, sövene dilsiz gerek / Derviş gönülsüz gerek, sen derviş olamazsın.',s:'Yunus Emre, Divan'}];
+const TEFEKKUR=[['Sabır','Sabır katlanmak değil, doğru zamanı beklerken doğru davranmaktır.',4],['Tevekkül','Tevekkül, elinden geleni yaptıktan sonra sonucu Allah\'a bırakmaktır.',3],['Merhamet','Merhamet, başkasının yükünü kendi yükün gibi hissetmektir.',2],['Adalet','Adalet, sevdiğine de sevmediğine de aynı ölçüyle bakmaktır.',6],['Şükür','Şükür, nimeti fark etmek ve onu yerinde kullanmaktır.',7],['Tevazu','Tevazu, kendini küçültmek değil, kendini olduğundan büyük görmemektir.',11],['Niyet','Niyet, yapılan işin yönünü ve değerini belirler.',null]];
+const AHLAK=['Güler yüz, verilebilecek en kolay sadakadır.','Bir sözü tartmadan söylememek, çoğu pişmanlığı önler.','Emanete riayet, güvenin temelidir.','Küçük bir iyiliği küçümseme.','Kimseyi arkasından konuşma; yüzüne söyleyemeyeceğini söyleme.','Komşunun hakkını gözet.','Söz verdiğinde tut; tutamayacaksan söz verme.','Yardım ettiğini başa kakma.','Öfkeliyken karar verme.','Az da olsa devamlı olan iyilik, çok ama kesik olandan iyidir.','Kusur aramak yerine özür bulmaya çalış.','Selamı yaymak gönülleri yakınlaştırır.','Hakkını aramak ile kin tutmak aynı şey değildir.','Bilmediğin konuda susmak da bir ilimdir.','İsrafın küçüğü de israftır.'];
+const KITAP=[['Riyâzü\'s-Sâlihîn','İmam Nevevî — ahlak ve ibadet hadisleri'],['İhyâu Ulûmi\'d-Dîn','İmam Gazzâlî — ibadet, ahlak ve kalp hayatı'],['Kimyâ-yı Saâdet','İmam Gazzâlî — mutluluğun yolu üzerine'],['Marifetname','Erzurumlu İbrahim Hakkı — 18. yüzyıl ansiklopedisi'],['Mesnevî','Mevlânâ Celâleddîn-i Rûmî — hikâyelerle tasavvuf'],['Yunus Emre Divanı','Yunus Emre — sade Türkçe ile gönül şiiri'],['Hadislerle İslam','Diyanet İşleri Başkanlığı — konularına göre hadisler']];
+function secManevi(){const doy=Math.floor((new Date()-new Date(new Date().getFullYear(),0,0))/864e5),e=esmaBy(GUNUN_ESMA[doy%GUNUN_ESMA.length]),ay=MANEVI_AYET[doy%MANEVI_AYET.length],hd=MANEVI_HADIS[doy%MANEVI_HADIS.length],zk=store.get('bwZikir',{n:0,t:33});
+  return `<section class="card hero"><h3>Manevi Dünyam</h3><p>Bu bölüm astrolojiden bağımsızdır; doğum haritası gerekmez.</p><div class="note small">Gaybı yalnızca Allah bilir. Gezegenlere kaderi belirleyen bağımsız güçler atfedilmez; astrolojik göstergelerden Allah'ın rızası, gazabı ya da bir ceza çıkarılmaz. Ebced hesapları dini hüküm değildir. Esma ve zikir sayılarının belirli dünyevi sonuçlar sağlayacağı iddia edilmez. Mealler kısaltılmış ve sadeleştirilmiştir; tam metin için Diyanet mealine ve hadis kaynaklarına bakınız.</div></section>
+   <div class="grid2">${SB('Günün esması',esmaCard(e,e.m),[])}${SB('Günün ayeti',`<blockquote class="deepq">${ay.t}</blockquote><p class="small">— ${ay.s}</p>`,[])}</div>
+   <div class="grid2">${SB('Günün hadisi',`<blockquote class="deepq">${hd.t}</blockquote><p class="small">— ${hd.s}</p>`,[])}${SB('Güzel ahlak üzerine günün düşüncesi',`<p class="big1" style="font-size:22px">${AHLAK[doy%AHLAK.length]}</p>`,[])}</div>
+   ${SB('Tefekkür konuları',TEFEKKUR.map(([t,x,i])=>`<div class="qa"><b>${t}</b><p>${x}${i!=null?` <span class="small">“${MANEVI_AYET[i].t}” (${MANEVI_AYET[i].s})</span>`:` <span class="small">“${MANEVI_HADIS[0].t}” (${MANEVI_HADIS[0].s})</span>`}</p></div>`).join(''),[])}
+   ${SB('Zikir sayacı (isteğe bağlı)',`<div class="zk"><button id="zkBtn" class="zkb" aria-label="Say">${zk.n}</button><div><label>Hedef <select id="zkT">${[33,99,100,500,1000].map(v=>`<option ${zk.t===v?'selected':''}>${v}</option>`).join('')}</select></label><button class="btn sm ghost" id="zkR">Sıfırla</button><p class="small" id="zkM">${zk.n>=zk.t?'Hedefe ulaşıldı.':`Hedefe ${zk.t-zk.n} kaldı.`}</p></div></div><p class="small">Sayaç yalnızca bu cihazda tutulur. Sayıların belirli bir sonuç doğuracağı iddia edilmez.</p>`,[])}
+   <div class="grid2">${SB('İslam büyüklerinden',YUNUS.map(y=>`<blockquote class="deepq">${y.t.replace(' / ','<br>')}</blockquote><p class="small">— ${y.s}</p>`).join(''),[])}${SB('Manevi kitap önerileri',ul(KITAP.map(([a,b])=>`<b>${a}</b> — ${b}`)),[])}</div>
+   ${SB('Marifetname hakkında',`<p>Programdaki Marifetname bölümü, Erzurumlu İbrahim Hakkı'nın 18. yüzyıldaki görüşlerini tarihsel bir metin olarak aktarır. Bu eserdeki gök ve beden bilgisi kendi döneminin bilgisidir; günümüz bilimsel bilgisiyle aynı şey değildir.</p><div class="actions"><button class="btn ghost" data-go="mar">Marifetname bölümü</button><button class="btn ghost" data-go="esm">Esmalar</button><button class="btn ghost" data-go="def">Şükür günlüğü ve dua defteri</button></div>`,[])}`;}
+function bindManevi(){const z=store.get('bwZikir',{n:0,t:33});const up=()=>{$('#zkBtn').textContent=z.n;$('#zkM').textContent=z.n>=z.t?'Hedefe ulaşıldı.':`Hedefe ${z.t-z.n} kaldı.`;store.set('bwZikir',z);};
+  $('#zkBtn').onclick=()=>{z.n++;if(z.n===z.t&&navigator.vibrate)try{navigator.vibrate(120);}catch(_){}up();};$('#zkR').onclick=()=>{z.n=0;up();};$('#zkT').onchange=e=>{z.t=+e.target.value;up();};}
+// ---------- DEFTERLER ----------
+const NB={jr:{k:'bwJournal',t:'Kişisel günlük',f:[['d','Tarih','date'],['x','Bugün neler yaşadım, neler düşündüm?','area']]},
+ sk:{k:'bwShukur',t:'Şükür günlüğü',f:[['d','Tarih','date'],['x','Bugün şükrettiğim üç şey','area']]},
+ du:{k:'bwDua',t:'Kişisel dua defteri',f:[['d','Tarih','date'],['b','Başlık','text'],['x','Dua ya da niyet','area']]},
+ ry:{k:'bwRuya',t:'Rüya günlüğü',f:[['d','Tarih','date'],['b','Rüyanın konusu','text'],['s','Görülen semboller (virgülle)','text'],['e','Hissedilen duygular (virgülle)','text'],['r','Tekrarlayan bir rüya mı?','check'],['x','Rüyanın anlatımı','area']]}};
+const RUYA_Q=['Bu rüyada en güçlü hissettiğin duygu, bu günlerde hayatında nerede karşına çıkıyor?','Rüyadaki semboller sana hangi kişiyi, yeri ya da anıyı çağrıştırıyor?','Rüyada kontrol sende miydi, yoksa olaylar seni mi sürükledi? Gündelik hayatında buna benzeyen bir durum var mı?','Bu rüyayı bir başlıkla anlatsan ne derdin?','Rüyadan uyandığında ilk ne düşündün?','Bu rüya tekrar ediyorsa, son tekrarından önce hayatında neler oluyordu?'];
+function secDefter(){const s=STATE.nbS||'jr',N=NB[s],L=store.get(N.k,[]).slice().sort((a,b)=>a.d<b.d?1:-1),today=new Date().toISOString().slice(0,10);
+  let extra='';if(s==='ry'){const cnt={};L.forEach(r=>String(r.s||'').split(',').map(x=>x.trim().toLocaleLowerCase('tr')).filter(Boolean).forEach(x=>cnt[x]=(cnt[x]||0)+1));const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1]).slice(0,12);
+    extra=SB('Rüya arşivin',`<p>${L.length} rüya kaydı, ${L.filter(r=>r.r).length} tekrarlayan.</p>${top.length?`<p><b>En sık görülen semboller:</b></p><div class="chips">${top.map(([a,b])=>`<span class="chip">${esc(a)} (${b})</span>`).join('')}</div>`:''}<h4>Üzerinde düşünmen için sorular</h4>${ul(RUYA_Q)}<div class="note small">Rüyalar burada kesin gelecek haberi, dini işaret ya da psikolojik teşhis olarak yorumlanmaz. Senin kuralın gereği sembol tabiri yapılmaz; bu bölüm rüyalarını kaydetmen ve kendi çağrışımların üzerine düşünmen içindir.</div>`,[]);}
+  return `<section class="card hero"><h3>Defterlerim</h3><div class="chips">${Object.entries(NB).map(([k,v])=>`<button class="chip chipbtn ${s===k?'on':''}" data-nb="${k}">${v.t}</button>`).join('')}</div><p class="small">Kayıtlar yalnızca bu cihazda saklanır; Hesabım bölümündeki yedekle birlikte dışa aktarılır.</p></section>
+   ${SB(N.t+' — yeni kayıt',`<div class="form f2">${N.f.map(([k,l,t])=>t==='area'?`<label style="grid-column:1/-1">${l}<textarea id="nb_${k}" rows="4" maxlength="3000"></textarea></label>`:t==='check'?`<label class="chk"><input type="checkbox" id="nb_${k}"> ${l}</label>`:`<label>${l}<input type="${t}" id="nb_${k}" ${t==='date'?`value="${today}"`:'maxlength="200"'}></label>`).join('')}</div><div class="actions"><button class="btn" id="nbAdd">Kaydet</button><button class="btn ghost" id="nbExp">Dışa aktar</button></div><div id="nbMsg"></div>`,[])}${extra}
+   ${SB(`Kayıtlar (${L.length})`,L.length?L.map(r=>`<div class="qa"><b>${r.d.split('-').reverse().join('.')}${r.b?' — '+esc(r.b):''}</b>${r.r?' <span class="chip">tekrarlayan</span>':''}${r.s?`<p class="small">Semboller: ${esc(r.s)}</p>`:''}${r.e?`<p class="small">Duygular: ${esc(r.e)}</p>`:''}<p style="white-space:pre-wrap">${esc(r.x||'')}</p><button class="btn sm ghost nbDel" data-id="${r.id}">Sil</button></div>`).join(''):'<p class="small">Henüz kayıt yok.</p>',[])}`;}
+function bindDefter(){const s=STATE.nbS||'jr',N=NB[s];$$('[data-nb]').forEach(b=>b.onclick=()=>{STATE.nbS=b.dataset.nb;render();});
+  $('#nbAdd').onclick=()=>{const r={id:Date.now().toString(36)};for(const[k,,t]of N.f)r[k]=t==='check'?$('#nb_'+k).checked:$('#nb_'+k).value.trim();if(!r.d||!(r.x||r.b)){$('#nbMsg').innerHTML='<div class="note err">Tarih ve en az bir metin alanı gerekli.</div>';return;}
+    const L=store.get(N.k,[]);L.push(r);if(!store.set(N.k,L.slice(-1000))){$('#nbMsg').innerHTML='<div class="note err">Kaydedilemedi: depolama dolu ya da kapalı.</div>';return;}render();};
+  $('#nbExp').onclick=async()=>{$('#nbMsg').innerHTML=`<div class="note">${dlMsg(await saveFile(`gokyuzu-${s}.json`,JSON.stringify(store.get(N.k,[]),null,1)))}</div>`;};
+  $$('.nbDel').forEach(b=>b.onclick=()=>{store.set(N.k,store.get(N.k,[]).filter(r=>r.id!==b.dataset.id));render();});}
+// ---------- FAVORILER VE SON OKUNANLAR ----------
+function addFavButtons(){$$('#out .sb').forEach(sec=>{if(sec.querySelector('.favb'))return;const h=sec.querySelector('h3');if(!h)return;const b=document.createElement('button');b.className='favb';b.type='button';b.title='Favorilere ekle';b.setAttribute('aria-label','Favorilere ekle');
+  const key=(STATE.tab+'|'+h.textContent).slice(0,120),F=store.get('bwFav',[]);b.textContent=F.some(f=>f.key===key)?'★':'☆';
+  b.onclick=()=>{let F=store.get('bwFav',[]);if(F.some(f=>f.key===key)){F=F.filter(f=>f.key!==key);b.textContent='☆';}else{const txt=sec.innerText.replace(/Bu yorum neye dayanıyor\?[\s\S]*$/,'').replace(/[☆★✓✗]|Bu benim|Değil/g,'').trim().slice(0,700);F.unshift({key,t:h.textContent,tab:STATE.tab,txt,who:STATE.p?STATE.p.name||'':'',d:new Date().toISOString().slice(0,10)});b.textContent='★';}store.set('bwFav',F.slice(0,200));};
+  sec.appendChild(b);});}
+function trackRecent(){if(!STATE.ch||['hesap','upd','fav'].includes(STATE.tab))return;const t=(TABS.find(x=>x[0]===STATE.tab)||[])[1];if(!t)return;let R=store.get('bwRecent',[]);R=R.filter(r=>!(r.tab===STATE.tab&&r.who===(STATE.p.name||'')));R.unshift({tab:STATE.tab,t,who:STATE.p.name||'',d:new Date().toLocaleString('tr-TR')});store.set('bwRecent',R.slice(0,12));}
+function secFav(){const F=store.get('bwFav',[]),R=store.get('bwRecent',[]),bd=upcomingBirthdays(60),ns=store.get('bwNotif',false);
+  return `<section class="card hero"><h3>Favorilerim</h3><p>Herhangi bir yorum kartının köşesindeki ☆ işaretine basarak buraya ekleyebilirsin.</p></section>
+   ${SB(`Favori yorumlar (${F.length})`,F.length?F.map((f,i)=>`<div class="qa"><b>${esc(f.t)}</b> <span class="small">${esc(f.who)} · ${f.d}</span><p class="small" style="white-space:pre-wrap">${esc(f.txt)}</p><button class="btn sm ghost" data-go="${esc(f.tab)}">Bölüme git</button> <button class="btn sm ghost favDel" data-i="${i}">Kaldır</button></div>`).join(''):'<p class="small">Henüz favori yok.</p>',[])}
+   <div class="grid2">${SB('Son okunanlar',R.length?ul(R.map(r=>`<button class="lnk" data-go="${esc(r.tab)}">${esc(r.t)}</button> <span class="small">${esc(r.who)} · ${esc(r.d)}</span>`)):'<p class="small">Boş.</p>',[])}${SB('Doğum günleri (60 gün)',bd.length?ul(bd.map(b=>`<b>${esc(b.n)}</b> ${b.date} — ${b.days===0?'bugün':b.days+' gün sonra'} (${b.age} yaşına giriyor)`)):'<p class="small">Kayıtlı kişilerde yaklaşan doğum günü yok. Kişileri "Kaydet" ile kaydettiğinde burada görünür.</p>',[])}</div>
+   ${SB('Bildirimler',`<label class="chk"><input type="checkbox" id="ntf" ${ns?'checked':''}> Uygulama açıldığında yaklaşan doğum günlerini bildirim olarak göster</label><p class="small">Varsayılan olarak kapalıdır. Bildirimler yalnızca uygulamayı açtığında, en fazla günde bir kez gösterilir; arka planda sürekli bildirim gönderilmez. Kutuyu kaldırarak tamamen kapatabilirsin.</p><div id="ntfMsg" class="small"></div>`,[])}`;}
+function bindFav(){$$('.favDel').forEach(b=>b.onclick=()=>{const F=store.get('bwFav',[]);F.splice(+b.dataset.i,1);store.set('bwFav',F);render();});
+  $('#ntf').onchange=async e=>{if(e.target.checked){if(!('Notification' in window)){$('#ntfMsg').textContent='Bu cihaz bildirimleri desteklemiyor.';e.target.checked=false;return;}const r=await Notification.requestPermission();if(r!=='granted'){$('#ntfMsg').textContent='Bildirim izni verilmedi.';e.target.checked=false;store.set('bwNotif',false);return;}}store.set('bwNotif',e.target.checked);$('#ntfMsg').textContent=e.target.checked?'Açıldı.':'Kapatıldı.';};}
+function maybeNotify(){try{if(!store.get('bwNotif',false)||!('Notification' in window)||Notification.permission!=='granted')return;const t=new Date().toISOString().slice(0,10);if(store.get('bwNotifDay','')===t)return;const b=upcomingBirthdays(3);if(b.length){new Notification('Gökyüzü Haritam',{body:b.map(x=>`${x.n}: ${x.days===0?'bugün doğum günü':x.days+' gün sonra doğum günü'}`).join('\n')});}store.set('bwNotifDay',t);}catch(_){}}
+// ---------- OGREN VE YARISMA ----------
+const LESSONS=[['Burçlar','Zodyak 12 eşit parçadan oluşur. Her burç bir element (ateş, toprak, hava, su) ve bir nitelik (öncü, sabit, değişken) taşır.',m=>`Senin Güneş burcun ${sgn(m.P.sun.s)}: ${EL_N[SIGNS[m.P.sun.s].el]} elementi, ${MOD_N[SIGNS[m.P.sun.s].mod]} nitelik.`],
+ ['Gezegenler','Her gezegen bir hayat alanını temsil eder: Güneş kimlik, Ay duygular, Merkür zihin, Venüs sevgi, Mars enerji, Jüpiter büyüme, Satürn sorumluluk.',m=>`Senin haritanda en baskın gezegen ${pn(m.dom)}.`],
+ ['Evler','Harita, doğum anındaki ufka göre 12 eve bölünür. Evler, gezegenlerin enerjisinin hayatın hangi alanında yaşandığını gösterir. Evler için doğum saati gerekir.',m=>m.hasH?`Senin Güneşin ${m.P.sun.h}. evde (${HOUSES[m.P.sun.h-1].dom}).`:'Doğum saatin olmadığı için evlerin hesaplanmadı.'],
+ ['Açılar','Gezegenler arasındaki açısal mesafelerdir. Kavuşum birleştirir, üçgen ve sekstil destekler, kare ve karşıt gerilim yaratır.',m=>m.asp[0]?`Haritandaki en dar açı: ${aspLabel(m.asp[0])}.`:''],
+ ['Yükselen','Doğum anında doğu ufkunda yükselen burçtur; dış görünüşü ve yaşam yaklaşımını anlatır. Yaklaşık iki saatte bir değişir.',m=>m.ascS!=null?`Senin yükselenin ${sgn(m.ascS)}.`:'Yükselenin için doğum saati gerekli.'],
+ ['Ay düğümleri','Ay\'ın yörüngesinin ekliptiği kestiği iki noktadır. Geleneksel yorumda Kuzey Düğüm gelişim yönünü, Güney Düğüm alışkanlıkları anlatır.',m=>`Kuzey Düğümün ${sgn(m.nodeS)} burcunda.`],
+ ['Retro','Bir gezegenin Dünya\'dan bakınca geriye gidiyormuş gibi görünmesidir. Gerçekte gezegen geri gitmez; bu bir bakış açısı etkisidir.',m=>m.retro.length?`Doğduğunda retro olan gezegenler: ${m.retro.map(pn).join(', ')}.`:'Doğduğunda retro gezegen yoktu.'],
+ ['Haritanı okumaya başla','1) Güneş, Ay ve yükselenle başla. 2) Baskın elementi ve niteliği bul. 3) En dar açıları oku. 4) Evlerdeki yığılımlara bak. 5) Her yorumun "neye dayanıyor" kısmını incele.',m=>`Senin için başlangıç: ${sgn(m.P.sun.s)} Güneşi, ${sgn(m.moonAlt[0])} Ayı${m.ascS!=null?', '+sgn(m.ascS)+' yükselen':''}.`]];
+const QUIZ=[['Satürn Güneş çevresindeki turunu yaklaşık kaç yılda tamamlar?',['12','29,5','84','165'],1],['Hangi açı 90 derecedir?',['Üçgen','Sekstil','Kare','Karşıt'],2],['Yükselen burç yaklaşık ne sıklıkla değişir?',['2 saatte bir','Günde bir','Ayda bir','Yılda bir'],0],['Güneş tutulması hangi Ay evresinde olur?',['Dolunay','Yeni ay','İlk dördün','Son dördün'],1],['Ay düğümleri zodyakta tam turunu kaç yılda tamamlar?',['7','12','18,6','29,5'],2],['Hangisi su elementinden bir burçtur?',['Terazi','Akrep','Başak','Koç'],1],['Retro hareket nedir?',['Gezegenin gerçekten geri gitmesi','Dünya\'dan bakınca geri gidiyormuş gibi görünmesi','Tutulma türü','Ev sistemi'],1],['Jüpiter turunu yaklaşık kaç yılda tamamlar?',['1','12','29','84'],1],['Marifetname geleneğinde Cuma günü hangi seyyareyle anılır?',['Mars','Venüs','Satürn','Merkür'],1],['Vedik astrolojide burçlar neye göre ölçülür?',['Ekinokslara','Sabit yıldızlara','Ay evrelerine','Güneş lekelerine'],1]];
+function secOgren(ch,p){const m=ch?CM(ch,p):null;return `<section class="card hero"><h3>Kendi Haritanı Okumayı Öğren</h3><p>Kısa dersler ve küçük bir bilgi yarışması. Her derste kendi haritandan bir örnek var.</p></section>
+  ${LESSONS.map(([t,x,f],i)=>SB(`${i+1}. ${t}`,`<p>${x}</p>${m?`<p class="note small">${f(m)}</p>`:''}`,[])).join('')}
+  ${SB('Astroloji bilgi yarışması',`<div id="qz">${QUIZ.map(([q,o],i)=>`<div class="qa"><b>${i+1}. ${q}</b><div class="chips">${o.map((x,j)=>`<button class="chip chipbtn qzb" data-q="${i}" data-j="${j}">${x}</button>`).join('')}</div></div>`).join('')}</div><p id="qzS" class="big1" style="font-size:22px"></p>`,[])}`;}
+function bindOgren(){const done={};$$('.qzb').forEach(b=>b.onclick=()=>{const i=+b.dataset.q,j=+b.dataset.j;if(done[i]!==undefined)return;done[i]=j===QUIZ[i][2];$$(`.qzb[data-q="${i}"]`).forEach(x=>{if(+x.dataset.j===QUIZ[i][2])x.classList.add('ok');else if(x===b)x.classList.add('bad');});const n=Object.keys(done).length;$('#qzS').textContent=`${Object.values(done).filter(Boolean).length} / ${n} doğru${n===QUIZ.length?' — yarışma bitti!':''}`;});}
+
+// ===== UNLULERLE BENZERLIK, ASTROKARTOGRAFI, PAYLASIM KARTLARI =====
+// Unlu dogum tarihleri yaygin biyografik kaynaklardandir; dogum saatleri kullanilmaz (ev ve yukselen karsilastirilmaz).
+const CELEB=[['Albert Einstein','1879-03-14','Bilim insanı'],['Isaac Newton','1643-01-04','Bilim insanı'],['Marie Curie','1867-11-07','Bilim insanı'],['Nikola Tesla','1856-07-10','Bilim insanı'],['Charles Darwin','1809-02-12','Bilim insanı'],['Stephen Hawking','1942-01-08','Bilim insanı'],['Ada Lovelace','1815-12-10','Bilim insanı'],['Cahit Arf','1910-10-11','Bilim insanı'],['Aziz Sancar','1946-09-08','Bilim insanı'],
+ ['Wolfgang Amadeus Mozart','1756-01-27','Sanatçı'],['Ludwig van Beethoven','1770-12-16','Sanatçı'],['Johann Sebastian Bach','1685-03-31','Sanatçı'],['Vincent van Gogh','1853-03-30','Sanatçı'],['Pablo Picasso','1881-10-25','Sanatçı'],['Frida Kahlo','1907-07-06','Sanatçı'],['Barış Manço','1943-01-02','Sanatçı'],
+ ['Lev Tolstoy','1828-09-09','Yazar'],['Fyodor Dostoyevski','1821-11-11','Yazar'],['Jane Austen','1775-12-16','Yazar'],['Victor Hugo','1802-02-26','Yazar'],['Mehmet Âkif Ersoy','1873-12-20','Yazar'],['Yahya Kemal Beyatlı','1884-12-02','Yazar'],['Orhan Pamuk','1952-06-07','Yazar'],
+ ['Immanuel Kant','1724-04-22','Filozof'],['Friedrich Nietzsche','1844-10-15','Filozof'],
+ ['Muhammad Ali','1942-01-17','Sporcu'],['Pelé','1940-10-23','Sporcu'],['Naim Süleymanoğlu','1967-01-23','Sporcu'],
+ ['Steve Jobs','1955-02-24','İş insanı'],['Bill Gates','1955-10-28','İş insanı'],['Mahatma Gandhi','1869-10-02','Tarihi şahsiyet'],['Florence Nightingale','1820-05-12','Tarihi şahsiyet']];
+const CELEB_W={sun:3,moon:2.5,mercury:1.5,venus:1.5,mars:1.5,jupiter:.6,saturn:.6};
+function celebSigns(d){const[y,m,dd]=d.split('-').map(Number),a=rawPositions(julian(y,m,dd,0)),b=rawPositions(julian(y,m,dd,24)),c=rawPositions(julian(y,m,dd,12)),o={};for(const k in CELEB_W)o[k]=k==='moon'?(signOf(a.moon)===signOf(b.moon)?signOf(c.moon):null):signOf(c[k]);return o;}
+function secUnlu(ch,p){const me={};for(const k in CELEB_W)me[k]=ch.pos[k].sign;const mi=moonInfo(ch);if(!mi.sure)me.moon=null;
+  const R=CELEB.map(([n,d,cat])=>{const s=celebSigns(d);let sc=0;const mt=[];for(const k in CELEB_W){if(s[k]!=null&&me[k]!=null&&s[k]===me[k]){sc+=CELEB_W[k];mt.push(`${pn(k)} ${sgn(s[k])}`);}else if(s[k]!=null&&me[k]!=null&&SIGNS[s[k]].el===SIGNS[me[k]].el)sc+=CELEB_W[k]*.2;}return{n,d,cat,sc,mt,s};}).sort((a,b)=>b.sc-a.sc);
+  const max=Object.values(CELEB_W).reduce((a,b)=>a+b,0);
+  return `<section class="card hero"><h3>Ünlülerle Benzerlik</h3><p>Haritandaki Güneş, Ay, Merkür, Venüs, Mars, Jüpiter ve Satürn burçları, tanınmış kişilerin doğum tarihindeki burçlarla karşılaştırılır. Aynı burç tam puan, aynı element küçük bir puan verir.</p><div class="note small">Doğum tarihleri yaygın biyografik kaynaklardan alınmıştır. Doğum saatleri güvenilir şekilde bilinmediği için yükselen ve evler karşılaştırılmaz; o gün burç değiştiren Ay da hesaba katılmaz. Benzer harita, aynı karaktere, başarıya ya da kadere sahip olunacağı anlamına gelmez.</div></section>
+  ${SB('Haritana en çok benzeyenler',`<table class="tbl"><tr><th>Kişi</th><th>Alan</th><th>Doğum</th><th>Ortak yerleşimler</th><th>Benzerlik</th></tr>${R.slice(0,12).map(r=>`<tr><td><b>${r.n}</b></td><td>${r.cat}</td><td>${r.d.split('-').reverse().join('.')}</td><td class="small">${r.mt.join(', ')||'—'}</td><td>%${Math.round(r.sc/max*100)}</td></tr>`).join('')}</table>`,['Güneş 3, Ay 2,5, Merkür/Venüs/Mars 1,5, Jüpiter/Satürn 0,6 puan; aynı element 0,2 kat','Ünlülerin konumları doğum gününün öğlen saatine göre'])}
+  ${SB('Tüm liste',`<details><summary>${CELEB.length} kişi</summary><table class="tbl">${R.map(r=>`<tr><td>${r.n}</td><td>${r.cat}</td><td>Güneş ${sgn(r.s.sun)}${r.s.moon!=null?', Ay '+sgn(r.s.moon):''}</td><td>%${Math.round(r.sc/max*100)}</td></tr>`).join('')}</table></details>`,[])}`;}
+// ---------- ASTROKARTOGRAFI ----------
+// Kitalar SEMATIKTIR (dusuk cozunurluklu el cizimi); gezegen hatlari ve sehirler gercek koordinatlardadir.
+const LANDS=[[-168,66,-162,70,-156,71,-140,70,-128,70,-115,68,-100,68,-95,72,-85,70,-80,63,-90,58,-94,59,-85,55,-80,52,-78,60,-70,59,-64,60,-60,55,-56,52,-60,47,-66,45,-70,42,-74,40,-76,35,-81,31,-80,26,-82,25,-83,29,-90,30,-97,27,-97,22,-92,19,-87,21,-88,16,-84,15,-83,10,-79,9,-77,8,-80,7,-85,10,-88,13,-92,15,-96,16,-105,20,-106,23,-112,29,-110,23,-115,30,-118,34,-121,36,-124,40,-124,46,-123,49,-128,51,-134,57,-140,60,-147,61,-152,59,-158,57,-162,55,-158,59,-163,60,-166,62,-165,65],
+ [-73,78,-60,82,-30,83,-20,80,-20,73,-25,69,-35,66,-43,60,-48,61,-52,65,-55,70,-60,76],
+ [-80,9,-77,8,-72,12,-63,11,-60,8,-52,5,-50,0,-44,-2,-35,-5,-35,-9,-39,-15,-40,-22,-48,-26,-53,-34,-58,-38,-62,-39,-65,-42,-67,-46,-69,-51,-72,-54,-68,-55,-74,-50,-75,-44,-73,-37,-71,-30,-70,-18,-76,-14,-81,-6,-80,-2,-80,1,-78,3,-77,7],
+ [-9,37,-9,43,-2,43.5,-1,46,-5,48,2,51,4,52,8,54,8,57,10,55,13,54,19,54.5,21,57,24,59,29,60,22,60.5,21,63,25,65,21,65.5,18,63,17,61,18,59,16,56,13,55.5,11,58,8,58,5,59,5,62,11,64.5,15,68,19,70,25,71,31,70,40,67,33,66,41,64,44,68,54,69,60,70,68,69,73,72,80,73,87,75,100,77,105,78,113,74,128,73,140,72,150,71,160,70,170,70,180,69,180,65,178,62,170,60,163,59,162,55,156,51,156,57,160,61,152,59,143,59,137,54,141,52,140,48,135,43,130,42,129,35,127,35,126,38,125,40,122,40,121,37,119,35,121,31,122,29,119,25,114,22,110,21,108,22,106,20,106,16,109,12,105,9,105,10,101,13,100,7,103,2,101,3,98,8,98,16,94,17,91,22,87,22,80,15,80,9,77,8,73,16,72,21,67,24,62,25,57,26,56,24,59,22,55,17,52,16,45,13,43,13,39,20,35,28,34,27.5,33,31,35,33,36,36,30,36.3,27,37,26,40,29,41,26,41,24,40,23,38,21,37,19,40,16,41.5,13,45.5,12,44,16,40,16,38,15.5,40,12,42,10,44,7.5,43.8,4,43.4,3,42,0,40,-1,37.5,-5,36],
+ [-17,21,-16,28,-10,30,-6,35.8,10,37,11,33.5,20,31,30,31.5,32.5,31,34,27.5,35,24,37,18,39,15,43,12,51,12,48,5,40,-3,39,-8,40,-15,35,-22,32,-29,27,-34,20,-35,18,-32,15,-27,12,-18,13,-12,9,-1,9,4,4,6,-3,5,-8,4.5,-13,8,-17,14],
+ [44,-16,50,-15,48,-24,45,-25,43.5,-21],[114,-22,122,-18,130,-12,137,-12,136,-16,141,-17,142,-11,146,-19,153,-25,153,-31,150,-37,144,-38.5,140,-38,135,-35,131,-31.5,124,-34,115,-34,115,-30,113,-25],
+ [-5,50,1.5,51,1.7,53,-0.2,54.5,-2,57.6,-5,58.6,-6.5,56.5,-5,55,-3.2,54,-4.5,53,-5,51.6],[-10,51.6,-6,52,-6,54,-8,55.3,-10,54],[-24,65.5,-18,66.5,-13.5,65,-18,63.4,-22,63.8],
+ [130,31,132,34,135,34,140,35,141,38,142,41.5,145,43.5,141,45.5,139,42,140,40,136,36.5,131,34.3],[95,5.5,100,1,106,-5.8,102,-4,96,2],[109,1.5,117,7,119,5,117,0,116,-4,110,-3],[131,-1,141,-2.5,150,-10,143,-9,138,-8,132,-4],[105,-6,114,-7.5,106,-7.5],
+ [172,-34.5,178,-37.5,175,-41.5,172,-41],[166.5,-46,170,-46.5,174,-41,172,-41],[120,18.5,122,18.5,126,7,125,6,122,7,120,14],[-85,22,-74,20,-77,20,-82,23],[80,9.5,82,7,80,6]];
+const SEAS=[[28,41.2,28.5,43.5,30,45.5,33,44.5,36.5,45.3,39,47,38,45,41.5,41.5,36,41.7,33,42],[47,45,50,46.5,53,45,51,43,53,41,54,37,51,36.8,49,38,49,40.5,47,43]];
+const ACG_COL={sun:'#e0a526',moon:'#8f96b8',mercury:'#4f9f8a',venus:'#d77fa1',mars:'#d0453a',jupiter:'#8a5cc9',saturn:'#5b5446',uranus:'#2fa3c7',neptune:'#3f6fd6',pluto:'#7a1f3d'};
+const ACG_TH={sun:['görünürlük ve özgüven','liderlik ve tanınma','öğretmen ve rol model arayışı','kendini ortaya koyan ilişkiler','kimlik ve amaç','iç ışığı fark etme'],moon:['ev ve aidiyet','halkla ilişkiler ve bakım işleri','duygusal öğrenme','yakınlık ve aile','duygusal farkındalık','sezgi ve tefekkür'],mercury:['hareketli ve meraklı bir yaşam','ticaret, yazı ve iletişim','dil ve öğrenme','sohbet ve fikir ortaklığı','zihinsel gelişim','düşünce ve okuma'],venus:['güzellik ve uyum','sanat, tasarım ve diplomasi','estetik eğitim','sevgi ve sosyal ilişkiler','kendini değerli görme','gönül inceliği'],mars:['enerji ve hareket','rekabet ve girişim','yoğun tempo','tutku ve çatışma','cesaret','mücadele ve sabır'],jupiter:['genişleme ve iyimserlik','fırsat ve büyüme','yüksek öğrenim','cömert ilişkiler','anlam arayışı','inanç ve ilim'],saturn:['sorumluluk ve yapı','emek ve kalıcılık','disiplinli çalışma','ciddi bağlar','olgunlaşma','sabır ve sükût'],uranus:['değişim ve özgürlük','yenilik ve teknoloji','alışılmadık öğrenme','bağımsız ilişkiler','özgünlük','sorgulama'],neptune:['hayal ve ilham','sanat ve şifa','sezgisel öğrenme','idealleştirme','hassasiyet','maneviyat ve teslimiyet'],pluto:['derin dönüşüm','güç ve kriz yönetimi','araştırma','yoğun bağlar','yeniden doğuş','derin iç yolculuk']};
+const ACG_CATS=['Yaşam','Kariyer','Eğitim','İlişkiler','Kişisel gelişim','Manevi arayış'];
+function acgLines(ch){const T=(ch.jd-2451545)/36525,gmst=nrm(280.46061837+360.98564736629*(ch.jd-2451545)),eps=23.4392911-0.0130042*T,out={};
+  for(const k of SK){const l=ch.pos[k].lon,ra=nrm(atan2d(sind(l)*cosd(eps),cosd(l))),dec=Math.asin(sind(eps)*sind(l))/RD;const mc=((ra-gmst+540)%360)-180,ic=((mc+360)%360)-180;const asc=[],dsc=[];
+    for(let la=-66;la<=72;la+=2){const x=-Math.tan(la*RD)*Math.tan(dec*RD);if(Math.abs(x)>1)continue;const H0=Math.acos(x)/RD;asc.push([((ra-H0-gmst+540)%360)-180,la]);dsc.push([((ra+H0-gmst+540)%360)-180,la]);}
+    out[k]={mc,ic,asc,dsc,dec};}return out;}
+function secAcg(ch,p){if(ch.noTime)return '<div class="note">Astrokartografi için doğum saati gereklidir; hatlar doğum anındaki yerel yıldız zamanına bağlıdır.</div>';
+  const L=acgLines(ch),W=1000,Hh=520,X=lo=>(lo+180)/360*W,Y=la=>(80-la)/140*Hh,vis=STATE.acgV||SK.slice(0,7);
+  let svg=`<svg viewBox="0 0 ${W} ${Hh}" class="acg" role="img" aria-label="Astrokartografi dünya haritası"><rect width="${W}" height="${Hh}" fill="#dfe9f1"/>`;
+  for(let lo=-180;lo<=180;lo+=30)svg+=`<line x1="${X(lo)}" y1="0" x2="${X(lo)}" y2="${Hh}" stroke="#c9d6e2" stroke-width=".6"/>`;for(let la=-60;la<=80;la+=20)svg+=`<line x1="0" y1="${Y(la)}" x2="${W}" y2="${Y(la)}" stroke="#c9d6e2" stroke-width=".6"/>`;
+  const path=a=>{let d='';for(let i=0;i<a.length;i+=2)d+=(i?'L':'M')+X(a[i]).toFixed(1)+','+Y(a[i+1]).toFixed(1);return d+'Z';};
+  svg+=LANDS.map(a=>`<path d="${path(a)}" fill="#efe6d2" stroke="#b9a782" stroke-width=".7"/>`).join('')+SEAS.map(a=>`<path d="${path(a)}" fill="#dfe9f1" stroke="#b9a782" stroke-width=".5"/>`).join('');
+  for(const k of vis){const l=L[k],c=ACG_COL[k];svg+=`<line x1="${X(l.mc)}" y1="0" x2="${X(l.mc)}" y2="${Hh}" stroke="${c}" stroke-width="1.8"/><line x1="${X(l.ic)}" y1="0" x2="${X(l.ic)}" y2="${Hh}" stroke="${c}" stroke-width="1.8" stroke-dasharray="6 4"/>`;
+    for(const[arr,dash]of[[l.asc,''],[l.dsc,'2 4']]){let seg=[];const flush=()=>{if(seg.length>1)svg+=`<polyline points="${seg.map(q=>X(q[0]).toFixed(1)+','+Y(q[1]).toFixed(1)).join(' ')}" fill="none" stroke="${c}" stroke-width="1.6" ${dash?`stroke-dasharray="${dash}"`:''}/>`;seg=[];};arr.forEach((q,i)=>{if(i&&Math.abs(q[0]-arr[i-1][0])>90)flush();seg.push(q);});flush();}
+    svg+=`<text x="${X(l.mc)+3}" y="14" font-size="13" fill="${c}">${PL[k].g}${VS}</text>`;}
+  const cityN=STATE.acgCity||p.cityName||'İstanbul',city=findCity(cityN);
+  svg+=`<circle cx="${X(p.lon)}" cy="${Y(p.lat)}" r="5" fill="#1f2440"/><text x="${X(p.lon)+7}" y="${Y(p.lat)+4}" font-size="11" fill="#1f2440">doğum yeri</text>`;
+  if(city)svg+=`<circle cx="${X(city.lon)}" cy="${Y(city.lat)}" r="6" fill="none" stroke="#9c7426" stroke-width="2.5"/><text x="${X(city.lon)+8}" y="${Y(city.lat)-6}" font-size="12" fill="#9c7426">${esc(city.n)}</text>`;
+  svg+='</svg>';
+  let near='';if(city){const km=(dlo,la)=>Math.abs(((dlo+540)%360)-180)*111*Math.cos(la*RD);const rows=[];
+    for(const k of SK){const l=L[k];const cand=[['MC',km(city.lon-l.mc,city.lat)],['IC',km(city.lon-l.ic,city.lat)]];for(const[nm,arr]of[['ASC',l.asc],['DSC',l.dsc]]){const q=arr.reduce((b,x)=>Math.abs(x[1]-city.lat)<Math.abs(b[1]-city.lat)?x:b,arr[0]||[999,999]);if(q&&Math.abs(q[1]-city.lat)<=2)cand.push([nm,km(city.lon-q[0],city.lat)]);}
+      for(const[nm,d]of cand)if(d<=800)rows.push({k,nm,d});}
+    rows.sort((a,b)=>a.d-b.d);
+    near=SB(`${esc(city.n)} ile haritanın sembolik ilişkisi`,rows.length?`<table class="tbl"><tr><th>Hat</th><th>Uzaklık</th>${ACG_CATS.map(c=>`<th>${c}</th>`).join('')}</tr>${rows.map(r=>`<tr><td><span style="color:${ACG_COL[r.k]}">●</span> ${pn(r.k)} ${r.nm}</td><td>~${Math.round(r.d)} km</td>${ACG_TH[r.k].map(t=>`<td class="small">${t}</td>`).join('')}</tr>`).join('')}</table><p class="small">Geleneksel astrokartografi yorumunda bir gezegen hattına yakın yerler o gezegenin temalarıyla ilişkilendirilir. Bu, bir şehirde başarılı ya da başarısız olacağınızı göstermez.</p>`:`<p>${esc(city.n)} 800 km içinde hiçbir gezegen hattına yakın değil; geleneksel yorumda "nötr" bir yer sayılır.</p>`,['Hat uzaklığı şehrin enlemindeki doğu–batı mesafesidir','Gezegenlerin ekliptik enlemi ihmal edildi (Ay ve Plüton için birkaç derece fark olabilir)']);}
+  return `<section class="card hero"><h3>Astrokartografi</h3><p>Doğduğun anda her gezegenin dünyanın hangi noktalarında yükselmekte (ASC), batmakta (DSC), tepe noktasında (MC) ya da en alt noktada (IC) olduğunu gösteren hatlar.</p><div class="note small">Hatlar ve şehirler gerçek enlem–boylamla çizilir. Kıta sınırları çevrimdışı çalışabilmek için düşük çözünürlüklü ve şematiktir. Düz çizgi: MC, kesikli: IC; eğri düz: ASC, eğri noktalı: DSC.</div>
+   <div class="chips">${SK.map(k=>`<label class="chip"><input type="checkbox" class="acgk" value="${k}" ${vis.includes(k)?'checked':''}> <span style="color:${ACG_COL[k]}">●</span> ${pn(k)}</label>`).join('')}</div>
+   <div class="row"><label>Şehir <input id="acgC" list="cityList" value="${esc(cityN)}"></label><button class="btn sm" id="acgGo">Göster</button></div></section><div class="card tlwrap">${svg}</div>${near}`;}
+function bindAcg(){$$('.acgk').forEach(c=>c.onchange=()=>{STATE.acgV=$$('.acgk').filter(x=>x.checked).map(x=>x.value);render();});if($('#acgGo'))$('#acgGo').onclick=()=>{STATE.acgCity=$('#acgC').value;render();};}
+// ---------- PAYLASIM KARTLARI ----------
+const CARD_T=[['ben','Ben kimim?'],['bes','Beni anlatan 5 özellik'],['guc','Benim güçlü yönlerim'],['mis','Benim mistik portrem'],['hay','Benim sembolik hayvanım'],['ren','Benim renk paletim'],['tem','Hayatımın temel gelişim konusu'],['yak','Bana nasıl yaklaşılmalı?'],['sev','Nelerden hoşlanırım?'],['sevm','Nelerden hoşlanmam?'],['uyum','Burç uyumumuz'],['har','Benim doğum haritam'],['yil','Benim yıllık haritam'],['soz','Beni anlatan söz'],['kit','Benim hayatım bir kitap olsaydı'],['fil','Benim hayatım bir film olsaydı']];
+function privSub(p){const v=store.get('bwPriv',{date:false,time:false,sur:false,loc:false}),a=[];if(v.date)a.push(`${pad(p.d)}.${pad(p.m)}.${p.y}`);if(v.time&&p.mode==='exact')a.push(fmtH(p.h1));if(v.loc&&p.cityName)a.push(p.cityName);return a.join(' · ');}
+function privName(p){const v=store.get('bwPriv',{});return (p.name||'')+(v.sur&&p.surname?' '+p.surname:'');}
+function secKart(ch,p){const v=store.get('bwPriv',{date:false,time:false,sur:false,loc:false});
+  return `<section class="card hero"><h3>Paylaşım Kartları</h3><p>Instagram hikâyesi, WhatsApp, Telegram ve X için 1080×1920 kartlar. Uygulamanın adı kartın altında küçük olarak yer alır.</p>
+   <div class="note small"><b>Gizlilik:</b> Varsayılan olarak kartlarda yalnızca adın görünür. Paylaşmak istediklerini aşağıdan ayrı ayrı açabilirsin.</div>
+   <div class="chips">${[['date','Doğum tarihi'],['time','Doğum saati'],['sur','Soyadı'],['loc','Doğum yeri']].map(([k,l])=>`<label class="chip"><input type="checkbox" class="pv" value="${k}" ${v[k]?'checked':''}> ${l}</label>`).join('')}</div></section>
+   ${SB('Kart seç',`<div class="cardgrid">${CARD_T.map(([k,t])=>`<button class="btn ghost kb" data-k="${k}">${t}</button>`).join('')}</div><div id="kMsg" class="small"></div>`,[])}`;}
+async function makeShareCard(k){const ch=STATE.ch,p=STATE.p,m=CM(ch,p),S=deepParts(m),X=deepExtras(m,S),nm=privName(p)||'Ben',sub=privSub(p);
+  const sec=(t,a)=>[t,a];const base={title:nm,subtitle:sub};let o;
+  if(k==='ben')o={...base,planet:'sun',big:[['Güneş',sgn(m.P.sun.s)],['Ay',m.moonAlt.length>1?'?':sgn(m.moonAlt[0])],['Yükselen',m.ascS!=null?sgn(m.ascS):'?']],sections:[sec('Ben kimim?',[sent1(DEEP_SUN[m.P.sun.s]),sent1(DP_PLANET_CORE[m.dom])])]};
+  else if(k==='bes')o={...base,center:'✦',sections:[sec('Beni anlatan 5 özellik',X.kw.slice(0,5))]};
+  else if(k==='guc')o={...base,planet:m.dom,sections:[sec('Güçlü yönlerim',[...new Set([...SIGNS[m.P.sun.s].str.split(', '),...SIGNS[m.moonAlt[0]].str.split(', ').slice(0,2)])].slice(0,6).map(cap))]};
+  else if(k==='hay'){const PS=portraitSymbols(m);o={...base,center:'✦',sections:[sec(`Sembolik hayvanım: ${PS.an.n}`,[cap(PS.an.why)+'.'])]};}
+  else if(k==='ren')o={...base,center:' ',sections:[sec('Renk paletim',X.pal.map(c=>`${cap(c[1])}: ${c[2]}`))],swatch:X.pal.map(c=>c[0])};
+  else if(k==='tem')o={...base,planet:'node',sections:[sec('Hayatımın temel gelişim konusu',[cap(NODE_SIGN[m.nodeS].go)+'.',`Olgunlaşma alanım: ${SAT_SIGN[m.P.saturn.s]}.`])]};
+  else if(k==='yak'){const me=elOf(m,'mercury');o={...base,planet:'moon',sections:[sec('Bana nasıl yaklaşılmalı?',[AP_MERC[me][0],AP_MOON[m.moonAlt[0]][0],AP_SUN[elOf(m,'sun')][0]])]};}
+  else if(k==='sev')o={...base,planet:'venus',sections:[sec('Nelerden hoşlanırım?',[...new Set([...SIGNS[m.P.sun.s].likes,...SIGNS[m.P.venus.s].likes])].slice(0,7))]};
+  else if(k==='sevm')o={...base,planet:'mars',sections:[sec('Nelerden hoşlanmam?',[...new Set([...SIGNS[m.P.sun.s].dislikes,...SIGNS[m.moonAlt[0]].dislikes])].slice(0,7))]};
+  else if(k==='soz')o={...base,center:'❝',sections:[sec('Beni anlatan söz',[X.ten[m.seed%Math.max(1,X.ten.length)]||X.ten[0]])]};
+  else if(k==='kit')o={...base,center:'📖',sections:[sec('Hayatım bir kitap olsaydı',[`“${X.bk}”`,`Alt başlık: ${NODE_SIGN[m.nodeS].go} üzerine`])]};
+  else if(k==='fil'){const ar=X.ar;o={...base,center:'🎬',sections:[sec('Hayatım bir film olsaydı',[`Türü: ${ar.n} hikâyesi`,`Mekân: ${LAND_BASE[m.domEl]}`,`Sınavı: ${SAT_SIGN[m.P.saturn.s]}`,`Finali: ${NODE_SIGN[m.nodeS].go}`])]};}
+  else if(k==='har'){o={...base,img:await svgImg(drawWheel(ch)),imgSize:560,sections:[sec('Doğum haritam',[`Güneş ${sgn(m.P.sun.s)} · Ay ${m.moonAlt.map(sgn).join('/')}${m.ascS!=null?' · Yükselen '+sgn(m.ascS):''}`])]};}
+  else if(k==='yil'){const y=new Date().getFullYear(),jd=solarReturn(ch.pos.sun.lon,y,p.m,p.d),sr=chartFromJD(jd,p.lat,p.lon,p.sys,false);o={...base,img:await svgImg(drawWheel(sr)),imgSize:560,sections:[sec(`${y} Güneş Dönüşü haritam`,[`Güneş doğum dereceme ${fmtJD(jd)} tarihinde döndü.`,'Astronomik hesap; yorum içermez.'])]};}
+  else if(k==='mis'){const cv=document.createElement('canvas');drawPortrait(cv,m,{fmt:'v',style:(STATE.pr&&STATE.pr.style)||'gece',alt:(STATE.pr&&STATE.pr.alt)||0,named:!!nm&&nm!=='Ben',name:nm});return showShare(cv,'mistik-portrem.png');}
+  else if(k==='uyum'){if(!STATE.lastSyn){$('#kMsg').textContent='Önce Uyum Testi bölümünde bir karşılaştırma yapın.';return;}return shareSyn();}
+  const cv=await makeCard(o);if(o.swatch){const c=cv.getContext('2d');o.swatch.forEach((h,i)=>{c.fillStyle=h;c.strokeStyle='#ffffff';c.lineWidth=4;c.beginPath();c.arc(540+(i-2)*82,340,40,0,7);c.fill();c.stroke();});}
+  showShare(cv,`gokyuzu-${k}.png`);}
+function bindKart(){$$('.pv').forEach(c=>c.onchange=()=>{const v=store.get('bwPriv',{});v[c.value]=c.checked;store.set('bwPriv',v);});$$('.kb').forEach(b=>b.onclick=()=>makeShareCard(b.dataset.k).catch(e=>{$('#kMsg').textContent='Kart oluşturulamadı.';}));}
+
+// ===== MENU: 10 KATEGORI + ALT SEKMELER, MOBIL ALT MENU, TANITIM =====
+const CATS=[['bug','Bugün','☀',['bug','ozet','tak']],['ben','Ben Kimim?','✦',['der','sum','per','pla','hou','pos','life','fear','phy']],['yol','Hayat Yolculuğum','⟡',['sin','yol','gec','sr','lun','ecl']],
+ ['ask','Aşk ve Ailem','♡',['yak','syn','rel','coc','isim']],['par','Para ve Kariyer','◈',['kar','car','fin']],['man','Manevi Dünyam','☾',['man','esm','mar','mzt','def']],
+ ['mis','Mistik Portrem','◐',['mis','kart']],['lab','Astroloji Laboratuvarı','⚗',['lab','tech','acg','num','unl','ogr']],['sor','Haritama Soru Sor','?',['sor']],['hes','Hesabım','⚙',['hesap','fav','rap','upd']]];
+const catOf=t=>(CATS.find(c=>c[3].includes(t))||CATS[0]);
+function goTab(k){STATE.tab=k;render();}
+function navHTML(shown){const cur=catOf(STATE.tab),ok=new Set(shown.map(x=>x[0])),TN=Object.fromEntries(TABS);
+  const cats=CATS.map(c=>`<button class="cat ${c===cur?'on':''}" data-cat="${c[0]}"><span aria-hidden="true">${c[2]}</span>${c[1]}</button>`).join('')+`<button class="cat mode" id="modeBtn">${STATE.mode==='simple'?'Astrolog modu ▸':'◂ Sade mod'}</button>`;
+  const subs=cur[3].filter(k=>ok.has(k)&&TN[k]).map(k=>`<button class="tab ${STATE.tab===k?'on':''}" data-tab="${k}">${TN[k]}</button>`).join('');
+  return `<div class="cats">${cats}</div>${subs?`<div class="subs">${subs}</div>`:''}`;}
+function bindNav(){bindWipe();$$('.cat[data-cat]').forEach(b=>b.onclick=()=>{const c=CATS.find(x=>x[0]===b.dataset.cat);const ok=c[3].filter(k=>SIMPLE_TABS.includes(k)||STATE.mode!=='simple');STATE.tab=ok[0]||c[3][0];if(!SIMPLE_TABS.includes(STATE.tab))STATE.mode='full';render();});
+  let bn=$('#bnav');if(!bn){bn=document.createElement('nav');bn.id='bnav';bn.setAttribute('aria-label','Alt menü');document.body.appendChild(bn);}
+  bn.innerHTML=[['bug','⌂','Ana Sayfa'],['sum','◎','Haritam'],['tak','▦','Takvim'],['fav','★','Favoriler'],['hesap','⚙','Hesabım']].map(([k,i,t])=>`<button data-bn="${k}" class="${STATE.tab===k?'on':''}"><span aria-hidden="true">${i}</span>${t}</button>`).join('');
+  $$('#bnav [data-bn]').forEach(b=>b.onclick=()=>{STATE.tab=b.dataset.bn;if(!STATE.ch&&!NOCHART_TABS.includes(STATE.tab)){document.querySelector('#a_date').scrollIntoView({behavior:'smooth',block:'center'});}render();window.scrollTo({top:$('#nav').offsetTop-8,behavior:'smooth'});});}
+function bindWipe(){const b=$('#wipeBtn');if(!b)return;b.onclick=()=>{if(!b.dataset.ok){b.dataset.ok=1;b.textContent='Emin misiniz? Silmek için tekrar basın';return;}
+  try{Object.keys(localStorage).filter(k=>k.startsWith('bw')).forEach(k=>localStorage.removeItem(k));}catch(_){}fillProfiles();$('#wipeMsg').textContent='Tüm veriler bu cihazdan silindi.';delete b.dataset.ok;b.textContent='Tüm verilerimi bu cihazdan sil';};}
+function onboardHTML(){if(store.get('bwOnb',false))return '';return `<section class="card onb"><h3>Gökyüzü Haritam'a hoş geldin</h3><ol><li><b>Doğum bilgilerini gir</b> (tarih, saat, şehir) ve "Haritayı Çıkar"a bas. Saatini bilmiyorsan "bilmiyorum" seçebilirsin.</li><li><b>Ben Kimim?</b> bölümünde derin portreni, <b>Hayat Yolculuğum</b>'da hayatın sınavlarını ve zaman çizelgeni, <b>Aşk ve Ailem</b>'de yakınlarına nasıl yaklaşacağını oku.</li><li><b>Mistik Portrem</b>'de sana özel resmini oluştur, <b>Hesabım</b>'da kayıtlarını yedekle.</li></ol><p class="small">Bu program geleceğe dair yorum yapmaz; astronomik hesapları ve haritanın sembolik dilini sunar. Bilgilerin yalnızca bu cihazda saklanır.</p><button class="btn sm" id="onbOk">Anladım</button></section>`;}
+function bindOnboard(){if($('#onbOk'))$('#onbOk').onclick=()=>{store.set('bwOnb',true);$('.onb').remove();};}
+function relHook(){if($('#synBtn')&&!$('#b_rel')){$('#synBtn').insertAdjacentHTML('beforebegin',`<label style="display:block;margin:8px 0">İlişki türü <select id="b_rel">${Object.entries(REL_T).map(([k,v])=>`<option value="${k}" ${STATE.relT===k?'selected':''}>${v[0]}</option>`).join('')}</select></label>`);
+  $('#synBtn').onclick=()=>{STATE.relT=$('#b_rel').value;runSyn();const S=STATE._synChart;if(S&&$('#synOut')&&!$('#synOut .err')){try{$('#synOut').insertAdjacentHTML('beforeend',relGuide(STATE.ch,S.b,STATE.relT,S.pb.name,STATE.p,S.pb));addFavButtons();}catch(e){console.error(e);}}};}}
+
 // ===== UYGULAMA =====
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -4021,6 +4595,7 @@ function runSyn(){
     if(!city&&!(Number.isFinite(bl)&&Number.isFinite(blo)))throw new Error('İkinci kişinin doğum yerini listeden seçin.');
     const lat=city?city.lat:bl,lon=city?city.lon:blo,utc=city?tzOffset(city,y,m,d,hr):(Number.isFinite(bu)?bu:(inTurkey(lat,lon)?tzOffset({tz:'TR'},y,m,d,hr):3));
     const b=chartFromJD(julian(y,m,d,hr-utc),lat,lon,STATE.p.sys,!t);
+    STATE._synChart={b,pb:{name:fake.name,mode:t?'exact':'unknown',lat,lon,sys:STATE.p.sys,est:false}};
     const a=STATE.ch;
     const asp=findAspects(a.pos,null,b.pos).filter(x=>(PERSONAL.includes(x.p)||PERSONAL.includes(x.q))&&!(!t&&(x.q==='moon'&&x.orb>4)));
     const pw=x=>(PERSONAL.includes(x.p)&&PERSONAL.includes(x.q)?0:4)+x.orb;asp.sort((u,v)=>pw(u)-pw(v));
@@ -4078,14 +4653,14 @@ function bindUpdate(){
 }
 
 // ---- Ana akis ----
-const TABS=[['ozet','Özet'],['der','Derin Portre'],['sin','Hayatın Sınavları'],['yak','Nasıl Yaklaşılmalı'],['mis','Mistik Portre'],['sum','Harita'],['per','Kişilik'],['hou','Evler'],['pla','Gezegenler'],['pos','Konum Yorumu'],['tech','Teknik Analiz'],['car','Meslek'],['life','Yaşam & Zevkler'],['fear','Korkular & Gelişim'],['rel','İlişkiler'],['phy','Fiziksel'],['mar','Marifetname'],['esm','Esmalar'],['isim','İsim Önerisi'],['mzt','Mizaç Testi'],['lun','Ay Takvimi'],['ecl','Tutulma Takvimi'],['sr','Güneş Dönüşü'],['num','Numeroloji'],['syn','Uyum Testi'],['fin','Finansal Astroloji'],['rap','Tam Rapor'],['hesap','Hesabım'],['upd','Güncelleme']];
+const TABS=[['ozet','Özet'],['bug','Bugün'],['tak','Takvim'],['der','Derin Portre'],['yol','Zaman Çizelgesi'],['gec','Geçmişimi Analiz Et'],['coc','Çocuğum'],['kar','Para ve Kariyer Haritası'],['man','Manevi Dünyam'],['def','Defterlerim'],['kart','Paylaşım Kartları'],['lab','İleri Teknikler'],['acg','Astrokartografi'],['unl','Ünlülerle Benzerlik'],['ogr','Öğren ve Yarış'],['sor','Haritama Soru Sor'],['fav','Favorilerim'],['sin','Hayatın Sınavları'],['yak','Nasıl Yaklaşılmalı'],['mis','Mistik Portre'],['sum','Harita'],['per','Kişilik'],['hou','Evler'],['pla','Gezegenler'],['pos','Konum Yorumu'],['tech','Teknik Analiz'],['car','Meslek'],['life','Yaşam & Zevkler'],['fear','Korkular & Gelişim'],['rel','İlişkiler'],['phy','Fiziksel'],['mar','Marifetname'],['esm','Esmalar'],['isim','İsim Önerisi'],['mzt','Mizaç Testi'],['lun','Ay Takvimi'],['ecl','Tutulma Takvimi'],['sr','Güneş Dönüşü'],['num','Numeroloji'],['syn','Uyum Testi'],['fin','Finansal Astroloji'],['rap','Tam Rapor'],['hesap','Hesabım'],['upd','Güncelleme']];
 const STATE={tab:'ozet'};
 function render(){
   const{ch,p,num}=STATE;STATE.mode=STATE.mode||store.get('bwMode','simple');
   const vis=STATE.mode==='simple'?TABS.filter(t=>SIMPLE_TABS.includes(t[0])):TABS;
   if(STATE.mode==='simple'&&!SIMPLE_TABS.includes(STATE.tab)&&!['hesap','upd'].includes(STATE.tab))STATE.mode='full';
   const shown=STATE.mode==='simple'?TABS.filter(t=>SIMPLE_TABS.includes(t[0])):TABS;
-  const nav=shown.map(([k,t])=>`<button class="tab ${STATE.tab===k?'on':''}" data-tab="${k}">${t}</button>`).join('')+`<button class="tab mode" id="modeBtn">${STATE.mode==='simple'?'Astrolog modu ▸':'◂ Sade mod'}</button>`;
+  const nav=navHTML(shown);
   let body='';
   if(!ch&&!NOCHART_TABS.includes(STATE.tab))body='<p class="small">Önce bilgileri girip "Haritayı Çıkar" düğmesine basın.</p>';
   else switch(STATE.tab){
@@ -4096,11 +4671,11 @@ function render(){
     case 'sr':body=`<div class="row"><label>Yıl <input id="srYear" type="number" value="${STATE.srYear||new Date().getFullYear()}" style="width:90px"></label><label>Bulunacağınız şehir <input id="srCity" list="cityList" value="${esc(STATE.srCity||($('#srCityMain').value||p.cityName))}"></label><button class="btn sm" id="srGo">Hesapla</button></div>`+'<div id="srBody"></div>';break;
     case 'num':body=secNum(ch,p,num);break;case 'phy':body=secPhys(ch);break;case 'mar':body=secMarifet(ch,p);break;case 'esm':body=secEsma(ch,p);break;
     case 'pos':body=secPlacement(ch);break;case 'tech':body=secTech(ch,p);break;case 'lun':body=secLunForm();break;case 'ecl':body=secEclForm();break;case 'fin':body=secFinAstro()+secFinForm();break;case 'syn':body=secSyn();break;case 'upd':body=secUpdate();break;
-    case 'mzt':body=secMizacTest();break;case 'der':body=secDeep(ch,p);break;case 'sin':body=secSinav(ch,p);break;case 'yak':body=secYaklas(ch,p);break;case 'mis':body=secPortre(ch,p);break;case 'isim':body=secIsim();break;case 'rap':body=secRapor(ch,p);break;case 'hesap':body=secHesap();break;
+    case 'mzt':body=secMizacTest();break;case 'der':body=secDeep(ch,p);break;case 'sin':body=secSinav(ch,p);break;case 'yak':body=secYaklas(ch,p);break;case 'mis':body=secPortre(ch,p);break;case 'bug':body=onboardHTML()+secBugun();break;case 'tak':body=secTakvim(ch);break;case 'yol':body=secYolculuk(ch,p);break;case 'gec':body=secGecmis(ch,p);break;case 'coc':body=secCocuk(ch,p);break;case 'kar':body=secKariyer(ch,p);break;case 'man':body=secManevi();break;case 'def':body=secDefter();break;case 'kart':body=secKart(ch,p);break;case 'lab':body=secLab(ch,p);break;case 'acg':body=secAcg(ch,p);break;case 'unl':body=secUnlu(ch,p);break;case 'ogr':body=secOgren(ch,p);break;case 'sor':body=secSor(ch,p);break;case 'fav':body=secFav();break;case 'isim':body=secIsim();break;case 'rap':body=secRapor(ch,p);break;case 'hesap':body=secHesap();break;
   }
   $('#nav').innerHTML=nav;$('#out').innerHTML=body;
   $$('.tab[data-tab]').forEach(b=>b.onclick=()=>{STATE.tab=b.dataset.tab;render();window.scrollTo({top:$('#nav').offsetTop-8,behavior:'smooth'});});
-  $('#modeBtn').onclick=()=>{STATE.mode=STATE.mode==='simple'?'full':'simple';store.set('bwMode',STATE.mode);if(STATE.mode==='simple'&&!SIMPLE_TABS.includes(STATE.tab))STATE.tab='ozet';render();};
+  $('#modeBtn').onclick=()=>{STATE.mode=STATE.mode==='simple'?'full':'simple';store.set('bwMode',STATE.mode);if(STATE.mode==='simple'&&!SIMPLE_TABS.includes(STATE.tab))STATE.tab='bug';render();};
   $$('[data-go]').forEach(b=>b.onclick=()=>{STATE.tab=b.dataset.go;render();});
   if(STATE.tab==='sr'&&ch){const go=()=>{STATE.srYear=$('#srYear').value;STATE.srCity=$('#srCity').value;$('#srBody').innerHTML=secSR(ch,p);};$('#srGo').onclick=go;go();}
   if(STATE.tab==='syn'){if($('#synBtn'))$('#synBtn').onclick=runSyn;if($('#invLoad'))$('#invLoad').onclick=()=>{const inv=decodeInvite($('#invIn').value);if(!inv){$('#invIn').value='';$('#invIn').placeholder='Kod okunamadı, tekrar deneyin';return;}STATE.invite=inv;render();};if($('#invRun'))$('#invRun').onclick=runInvite;if($('#mkInvite2'))$('#mkInvite2').onclick=()=>{$('#invBox').innerHTML=inviteBox();bindCopy();};}
@@ -4114,6 +4689,13 @@ function render(){
   if(STATE.tab==='mzt')$('#mzGo').onclick=runMizacTest;
   if(STATE.tab==='isim')bindIsim();
   if(STATE.tab==='mis'&&ch)bindPortre();
+  bindNav();
+  if(STATE.tab==='bug'){bindOnboard();if($('#wkMonth'))$('#wkMonth').onclick=()=>{$('#weekOut').innerHTML=weekMonth(STATE.ch,TODAY_JD(),30,'Bu ay gökyüzünde');};}
+  if(STATE.tab==='tak')bindTakvim();if(STATE.tab==='yol'&&ch)bindYolculuk();if(STATE.tab==='gec'&&ch)bindGecmis();if(STATE.tab==='lab'&&ch)bindLab();if(STATE.tab==='acg'&&ch)bindAcg();
+  if(STATE.tab==='man')bindManevi();if(STATE.tab==='def')bindDefter();if(STATE.tab==='kart'&&ch)bindKart();if(STATE.tab==='sor'&&ch)bindSor();if(STATE.tab==='fav')bindFav();if(STATE.tab==='ogr')bindOgren();
+  if(STATE.tab==='sr'&&ch&&$('#srBody')){const ex=()=>{try{$('#srBody').insertAdjacentHTML('beforeend',srExtra(ch,p));if($('#srCmpGo'))$('#srCmpGo').onclick=()=>{STATE.srCmp=$('#srCmp').value;$('#srGo').click();};}catch(e){}};const og=$('#srGo').onclick;$('#srGo').onclick=()=>{og();ex();};ex();}
+  if(STATE.tab==='syn')relHook();
+  addFavButtons();trackRecent();
   if(STATE.tab==='rap')bindRapor();
   if(STATE.tab==='hesap')bindHesap();
   if(STATE.tab==='fin'){bindFinAstro();$('#fnGo').onclick=runFin;$('#fnSearch').onclick=wdSearch;$('#fnQ').onkeydown=e=>{if(e.key==='Enter')wdSearch();};$('#fnAsset').onchange=()=>{$('#fnManual').style.display=$('#fnAsset').value==='manual'?'':'none';};}
@@ -4149,10 +4731,10 @@ function init(){
   $('#profSel').onchange=()=>{const x=profiles()[$('#profSel').value];if(!x)return;PF.forEach(k=>{if($('#'+k))$('#'+k).value=x[k]||'';});$('#a_manual').checked=!!x.manual;if(x.sys)$('#sys').value=x.sys;if(x.nodeT)$('#nodeT').value=x.nodeT;if(x.manual)document.querySelector('details').open=true;$$('input[name=a_tm]').forEach(r=>r.checked=r.value===(x.tm||'exact'));toggleTime();calc();};
   $('#srCityMain').setAttribute('list','cityList');
   $('#updBtn').onclick=()=>checkUpdates(false);
-  STATE.tab='ozet';const hv=decodeURIComponent(location.hash||'');if(/^#uyum2?-/.test(hv)){const inv=decodeInvite(hv);if(inv){STATE.invite=inv;STATE.tab='syn';STATE.mode='simple';}}
+  STATE.tab='bug';const hv=decodeURIComponent(location.hash||'');if(/^#uyum2?-/.test(hv)){const inv=decodeInvite(hv);if(inv){STATE.invite=inv;STATE.tab='syn';STATE.mode='simple';}}
   if('serviceWorker' in navigator&&location.protocol.startsWith('http')&&!inFrame()&&!APP())navigator.serviceWorker.register('sw.js').catch(()=>{});
   $('#hdrLogo').innerHTML=planetSVG('saturn',56);$('#hdrPlanets').innerHTML=['sun','moon','mercury','venus','mars','jupiter','neptune'].map((k,i)=>planetSVG(k,[46,30,22,28,26,40,30][i])).join('');
-  fillProfiles();render();setTimeout(()=>dlNS(),50);
+  fillProfiles();render();setTimeout(()=>dlNS(),50);setTimeout(maybeNotify,1500);
   if(store.get('bwAstroLastCheck','')!==new Date().toISOString().slice(0,10))checkUpdates(true);
 }
 document.addEventListener('DOMContentLoaded',init);

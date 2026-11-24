@@ -8,8 +8,8 @@ android {
         applicationId 'com.shortatolye.gokyuzuharitam'
         minSdk 24
         targetSdk 34
-        versionCode 5
-        versionName '1.4'
+        versionCode 6
+        versionName '1.5'
     }
 
     // Kisisel kullanim icin imza anahtari (sifresi herkese acik; Play Store icin ayri, gizli anahtar olusturulmali)
